@@ -17,6 +17,9 @@
 		00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */; };
 		00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */; };
 		7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */; };
+		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
+		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
+		FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,10 @@
 		00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractor.swift; sourceTree = "<group>"; };
 		00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomPresenter.swift; sourceTree = "<group>"; };
 		7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
+		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
+		FF6FD1CF2AB4A67600A2D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +107,7 @@
 		00BFF8F82AB4914B0068A5F2 /* clio-app */ = {
 			isa = PBXGroup;
 			children = (
+				FF6FD1CF2AB4A67600A2D681 /* Info.plist */,
 				00BFF9252AB491A80068A5F2 /* Source */,
 				00BFF9242AB4919D0068A5F2 /* Application */,
 				00BFF9232AB491910068A5F2 /* Resource */,
@@ -136,7 +144,9 @@
 		00BFF9232AB491910068A5F2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				FF6FD1CB2AB49D8700A2D681 /* Fonts */,
 				00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */,
+				FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */,
 				7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */,
 			);
 			path = Resource;
@@ -174,6 +184,15 @@
 				00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */,
 			);
 			path = CreateRoomView;
+			sourceTree = "<group>";
+		};
+		FF6FD1CB2AB49D8700A2D681 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */,
+				FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +300,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				00BFF9012AB4914D0068A5F2 /* Preview Assets.xcassets in Resources */,
+				FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */,
+				FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */,
 				00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +330,7 @@
 				00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
 				00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */,
+				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
 			);
@@ -472,6 +494,7 @@
 				DEVELOPMENT_TEAM = 685GVH2XJC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "clio-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -501,6 +524,7 @@
 				DEVELOPMENT_TEAM = 685GVH2XJC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "clio-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
