@@ -16,6 +16,7 @@
 		00BFF9172AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */; };
 		00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */; };
 		00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */; };
+		7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractor.swift; sourceTree = "<group>"; };
 		00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomPresenter.swift; sourceTree = "<group>"; };
+		7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */,
+				7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */,
+				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
 				00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
