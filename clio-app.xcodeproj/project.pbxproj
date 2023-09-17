@@ -17,6 +17,7 @@
 		00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */; };
 		00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */; };
 		7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */; };
+		7E52115A2AB7305C0080F92C /* CreateRoomComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211592AB7305C0080F92C /* CreateRoomComponents.swift */; };
 		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
 		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
 		FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */; };
@@ -53,6 +54,7 @@
 		00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractor.swift; sourceTree = "<group>"; };
 		00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomPresenter.swift; sourceTree = "<group>"; };
 		7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		7E5211592AB7305C0080F92C /* CreateRoomComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomComponents.swift; sourceTree = "<group>"; };
 		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
 		FF6FD1CF2AB4A67600A2D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -182,8 +184,17 @@
 				00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */,
 				00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */,
 				00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */,
+				7E52115B2AB730600080F92C /* Components */,
 			);
 			path = CreateRoomView;
+			sourceTree = "<group>";
+		};
+		7E52115B2AB730600080F92C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E5211592AB7305C0080F92C /* CreateRoomComponents.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FF6FD1CB2AB49D8700A2D681 /* Fonts */ = {
@@ -329,6 +340,7 @@
 			files = (
 				00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
+				7E52115A2AB7305C0080F92C /* CreateRoomComponents.swift in Sources */,
 				00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */,
 				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,

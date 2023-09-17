@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 extension UIColor {
     static var brick: UIColor {
@@ -34,5 +35,35 @@ extension UIColor {
     }
     static var yellow: UIColor {
         return UIColor(named: "Yellow") ?? .clear
+    }
+}
+
+extension Color {
+    static var brick: Color {
+        return Color("Brick")
+    }
+    static var customPink: Color {
+        return Color("CustomPink")
+    }
+    static var lapisLazuli: Color {
+        return Color("LapisLazuli")
+    }
+    static var lilac: Color {
+        return Color("Lilac")
+    }
+    static var offWhite: Color {
+        return Color("OffWhite")
+    }
+    static var peach: Color {
+        return Color("Peach")
+    }
+    static var sky: Color {
+        return Color("Sky")
+    }
+    static var softGreen: Color {
+        return Color("SoftGreen")
+    }
+    static var yellow: Color {
+        return Color("Yellow")
     }
 }
