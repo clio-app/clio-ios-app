@@ -15,7 +15,7 @@ struct UserInputPopup: View {
     var body: some View {
         TextField("Escreva o código", text: $inputUser)
             .padding()
-            .background(BorderedBackground(foregroundColor: .brick, backgroundColor: .yellow, hasBorder: true))
+            .background(BorderedBackground(foregroundColor: .offWhite, backgroundColor: .yellow, hasBorder: true))
     }
 }
 
