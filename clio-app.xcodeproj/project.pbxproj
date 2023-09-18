@@ -179,6 +179,7 @@
 		00BFF9262AB491AE0068A5F2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7E310AC92AB8895200AF20C7 /* GeneralComponents */,
 				00BFF9272AB491B50068A5F2 /* CreateRoomView */,
 			);
 			path = Presentation;
@@ -195,11 +196,18 @@
 			path = CreateRoomView;
 			sourceTree = "<group>";
 		};
+		7E310AC92AB8895200AF20C7 /* GeneralComponents */ = {
+			isa = PBXGroup;
+			children = (
+				7E310AC32AB7828200AF20C7 /* ActionButton.swift */,
+			);
+			path = GeneralComponents;
+			sourceTree = "<group>";
+		};
 		7E52115B2AB730600080F92C /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */,
-				7E310AC32AB7828200AF20C7 /* ActionButton.swift */,
 				7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */,
 				7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */,
 			);
