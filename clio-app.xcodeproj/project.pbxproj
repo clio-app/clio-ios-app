@@ -16,7 +16,16 @@
 		00BFF9172AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */; };
 		00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */; };
 		00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */; };
+		7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC32AB7828200AF20C7 /* ActionButton.swift */; };
+		7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */; };
+		7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */; };
+		7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310ACA2AB88E2300AF20C7 /* BorderedBackground.swift */; };
+		7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310ACC2AB88F2700AF20C7 /* UserInputPopup.swift */; };
+		7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310ACE2AB8954C00AF20C7 /* LandingScreenView.swift */; };
+		7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AD12AB8956300AF20C7 /* LandingScreenInteractor.swift */; };
+		7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */; };
 		7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */; };
+		7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */; };
 		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
 		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
 		FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */; };
@@ -52,7 +61,16 @@
 		00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractor.swift; sourceTree = "<group>"; };
 		00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomPresenter.swift; sourceTree = "<group>"; };
+		7E310AC32AB7828200AF20C7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonContainer.swift; sourceTree = "<group>"; };
+		7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMove.swift; sourceTree = "<group>"; };
+		7E310ACA2AB88E2300AF20C7 /* BorderedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedBackground.swift; sourceTree = "<group>"; };
+		7E310ACC2AB88F2700AF20C7 /* UserInputPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputPopup.swift; sourceTree = "<group>"; };
+		7E310ACE2AB8954C00AF20C7 /* LandingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenView.swift; sourceTree = "<group>"; };
+		7E310AD12AB8956300AF20C7 /* LandingScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenInteractor.swift; sourceTree = "<group>"; };
+		7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenPresenter.swift; sourceTree = "<group>"; };
 		7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserHeader.swift; sourceTree = "<group>"; };
 		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
 		FF6FD1CF2AB4A67600A2D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -171,6 +189,8 @@
 		00BFF9262AB491AE0068A5F2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7E310AC92AB8895200AF20C7 /* GeneralComponents */,
+				7E310AD02AB8955200AF20C7 /* LandingScreenView */,
 				00BFF9272AB491B50068A5F2 /* CreateRoomView */,
 			);
 			path = Presentation;
@@ -184,6 +204,37 @@
 				00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */,
 			);
 			path = CreateRoomView;
+			sourceTree = "<group>";
+		};
+		7E310AC92AB8895200AF20C7 /* GeneralComponents */ = {
+			isa = PBXGroup;
+			children = (
+				7E310AC32AB7828200AF20C7 /* ActionButton.swift */,
+				7E310ACA2AB88E2300AF20C7 /* BorderedBackground.swift */,
+			);
+			path = GeneralComponents;
+			sourceTree = "<group>";
+		};
+		7E310AD02AB8955200AF20C7 /* LandingScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				7E310ACE2AB8954C00AF20C7 /* LandingScreenView.swift */,
+				7E310AD12AB8956300AF20C7 /* LandingScreenInteractor.swift */,
+				7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */,
+				7E52115B2AB730600080F92C /* Components */,
+			);
+			path = LandingScreenView;
+			sourceTree = "<group>";
+		};
+		7E52115B2AB730600080F92C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */,
+				7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */,
+				7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */,
+				7E310ACC2AB88F2700AF20C7 /* UserInputPopup.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FF6FD1CB2AB49D8700A2D681 /* Fonts */ = {
@@ -327,11 +378,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
+				7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */,
+				7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */,
+				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
 				00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
+				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
+				7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */,
+				7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */,
+				7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */,
 				00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */,
 				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
+				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,7 +551,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 685GVH2XJC;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
@@ -521,7 +581,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 685GVH2XJC;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
