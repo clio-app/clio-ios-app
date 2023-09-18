@@ -48,7 +48,7 @@ import SwiftUI
      }
  }
 
- struct SwiftUIButton_Previews: PreviewProvider {
+ struct SwiftUIButton2_Previews: PreviewProvider {
      static var previews: some View {
          ActionButton2(title: "crie uma sessão", foregroundColor: .white, backgroundColor: Color("Brick"), hasBorder: true) {
          }
