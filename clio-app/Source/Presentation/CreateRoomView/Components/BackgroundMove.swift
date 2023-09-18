@@ -8,24 +8,28 @@
 import SwiftUI
 
 struct Background: View {
-    @Binding var moveImage:Bool
-    @Binding var time: Double
-    @Binding var move: Bool
+    @Binding var shouldAnimate:Bool
+    @Binding var animationDuration: Double
+    @Binding var shouldMoveUp: Bool
+
 
     var body: some View {
         GeometryReader { geo in
+            let midWidth: CGFloat = geo.size.width / 2
+            let fullHeight: CGFloat = geo.size.height
+            let offsetMultiplier: CGFloat = 0.9
+
             ZStack {
                 Image("liquid-bg")
-                    .position(x: geo.size.width / 2,
-                              y: move ? (-geo.size.height/2) : (geo.size.height/3))
-                    .scaleEffect(moveImage ?  2.0 : 1.1 )
-                    .offset(y: moveImage ? (move ? (-geo.size.height) : geo.size.height) : (move ? geo.size.height : 0 ))
-                    .animation(.easeInOut(duration: time), value: moveImage)
+                    .position(x: midWidth, y: fullHeight * 0.3)
+                    .scaleEffect(shouldAnimate ?  shouldMoveUp ? (1.1) : ((2.0)) : 1.1 )
+                    .offset(y: shouldAnimate ? (shouldMoveUp ? (-fullHeight) : (fullHeight*offsetMultiplier)) : 0)
+                    .animation(.easeInOut(duration: animationDuration), value: shouldAnimate)
 
                 Rectangle()
                     .fill(Color.customPink)
-                    .offset(y: moveImage ? (move ? (-geo.size.height*1.3) : 0) : (-geo.size.height))
-                    .animation(.easeInOut(duration: time), value: moveImage)
+                    .offset(y: shouldAnimate ? (shouldMoveUp ? (-fullHeight*1.3) : 0) : (-fullHeight + 100))
+                    .animation(.easeInOut(duration: animationDuration), value: shouldAnimate)
                     .ignoresSafeArea()
             }
         }

@@ -22,7 +22,7 @@ struct TextButtonContainer: View {
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: geo.size.width, maxHeight: geo.size.height)
 
-                SwiftUIButton(title: buttonText, foregroundColor: buttonColor, hasBorder: false, action: buttonAction)
+                ActionButton(title: buttonText, foregroundColor: buttonColor, hasBorder: false, action: buttonAction)
             }
         }
     }

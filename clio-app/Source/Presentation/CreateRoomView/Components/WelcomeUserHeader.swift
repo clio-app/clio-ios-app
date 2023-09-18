@@ -15,6 +15,7 @@ struct WelcomeUserHeader: View {
             VStack(alignment: .leading) {
                 Text("Olá,").font(.itimRegular(size: 24))
                 Text(user).font(.nightyDemo(fontType: .largeTitle)).truncationMode(.tail)
+
             }
             Spacer(minLength: 50)
             Circle()
@@ -24,6 +25,7 @@ struct WelcomeUserHeader: View {
                         .background(Circle().fill(Color.offWhite))
                         .overlay {
                             Circle().stroke(style: StrokeStyle(lineWidth: 2.0))
+
                         }
                 }
         }
@@ -35,6 +37,7 @@ struct WelcomeUserHeader: View {
             RoundedRectangle(cornerRadius: 15, style: .continuous)
                 .stroke(style: StrokeStyle(lineWidth: 2.0))
         }
+        .foregroundColor(.black)
     }
 }
 

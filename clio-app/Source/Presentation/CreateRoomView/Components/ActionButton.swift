@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SwiftUIButton: View {
+struct ActionButton: View {
     var title: String
     var foregroundColor: Color
     var backgroundColor: Color?
@@ -39,7 +39,7 @@ struct SwiftUIButton: View {
                 
                 Text(title)
                     .foregroundColor(.black)
-                    .font(.system(size: 24))
+                    .font(.itimRegular(fontType: .button))
             }
         }
     }
@@ -47,7 +47,7 @@ struct SwiftUIButton: View {
 
 struct SwiftUIButton_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIButton(title: "crie uma sessão", foregroundColor: .white, backgroundColor: Color("Brick"), hasBorder: true) {
+        ActionButton(title: "crie uma sessão", foregroundColor: .white, backgroundColor: Color("Brick"), hasBorder: true) {
         }
     }
 }
