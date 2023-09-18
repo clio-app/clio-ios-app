@@ -36,10 +36,10 @@ struct SwiftUIButton: View {
                             .stroke(style: StrokeStyle(lineWidth: 2.0))
                             .fill(.black)
                     }
+                
                 Text(title)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .font(.system(size: 24))
-//                    .glowBorder(color: .black, lineWidth: 2)
             }
         }
     }

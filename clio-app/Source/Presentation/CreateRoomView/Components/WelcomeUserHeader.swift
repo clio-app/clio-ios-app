@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WelcomeUserHeader: View {
     @Binding var user: String
+    @ScaledMetric(relativeTo: .largeTitle) var paddingWidth = 14.5
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -16,8 +17,15 @@ struct WelcomeUserHeader: View {
                 Text(user).font(.nightyDemo(fontType: .largeTitle)).truncationMode(.tail)
             }
             Spacer(minLength: 50)
-            Circle().stroke(style: StrokeStyle(lineWidth: 2.0)).frame(width: 60, height: 60)
-
+            Circle()
+                .overlay {
+                    Image("profile-picture-eye")
+                        .resizable()
+                        .background(Circle().fill(Color.offWhite))
+                        .overlay {
+                            Circle().stroke(style: StrokeStyle(lineWidth: 2.0))
+                        }
+                }
         }
 
         .padding(EdgeInsets(top: 16, leading: 36, bottom: 16, trailing: 31))

@@ -33,7 +33,7 @@ extension UIColor {
     static var softGreen: UIColor {
         return UIColor(named: "SoftGreen") ?? .clear
     }
-    static var yellow: UIColor {
+    static var customYellow: UIColor {
         return UIColor(named: "Yellow") ?? .clear
     }
 }
@@ -63,7 +63,7 @@ extension Color {
     static var softGreen: Color {
         return Color("SoftGreen")
     }
-    static var yellow: Color {
+    static var customYellow: Color {
         return Color("Yellow")
     }
 }
