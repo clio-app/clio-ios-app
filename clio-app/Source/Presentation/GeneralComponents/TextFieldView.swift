@@ -20,24 +20,18 @@ struct TextFieldView: View {
                 text: $inputText,
                 prompt: Text(placeholder)
                     .font(.itimRegular())
-                    .foregroundColor(.gray))
+                    .foregroundColor(.gray)
+            )
             .font(.itimRegular())
             .padding(.vertical, 10)
             .padding(.horizontal)
             .background { Color.white }
             .cornerRadius(16)
-            .overlay {
-                RoundedRectangle(cornerRadius: 16)
-                    .stroke(.black, lineWidth: 2)
-            }
             .background {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(Color(UIColor.lapisLazuli))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(.black, lineWidth: 2)
-                    }
-                    .offset(x: 5, y: 7)
+                BorderedBackground(
+                    foregroundColor: .lapisLazuli,
+                    backgroundColor: .lapisLazuli,
+                    hasBorder: true)
             }
         }
     }

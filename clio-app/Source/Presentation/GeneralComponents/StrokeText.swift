@@ -37,6 +37,6 @@ struct StrokeText_Previews: PreviewProvider {
     static var previews: some View {
         StrokeText(text: "Sample Text", borderWidth: 2, borderColor: .black)
             .foregroundColor(.white)
-                    .font(.nightyDemo(size: 48))
+            .font(.nightyDemo(fontType: .title3))
     }
 }
