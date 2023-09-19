@@ -26,6 +26,8 @@
 		7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */; };
 		7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */; };
 		7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */; };
+		FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */; };
+		FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15ED2ABA03E600E31DCA /* RadialUsers.swift */; };
 		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
 		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
 		FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */; };
@@ -71,6 +73,8 @@
 		7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenPresenter.swift; sourceTree = "<group>"; };
 		7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserHeader.swift; sourceTree = "<group>"; };
+		FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
+		FF3A15ED2ABA03E600E31DCA /* RadialUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialUsers.swift; sourceTree = "<group>"; };
 		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
 		FF6FD1CF2AB4A67600A2D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 			children = (
 				7E310AC32AB7828200AF20C7 /* ActionButton.swift */,
 				7E310ACA2AB88E2300AF20C7 /* BorderedBackground.swift */,
+				FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */,
+				FF3A15ED2ABA03E600E31DCA /* RadialUsers.swift */,
 			);
 			path = GeneralComponents;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
+				FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */,
 				7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */,
 				7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */,
 				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
@@ -392,6 +399,7 @@
 				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
 				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
+				FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
