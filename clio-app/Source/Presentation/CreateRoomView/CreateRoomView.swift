@@ -16,37 +16,43 @@ struct CreateRoomView: View {
     public var buttonPressedSubject = PassthroughSubject<Void, Never>()
     
     var body: some View {
-        ZStack {
-            Color.white
-                .ignoresSafeArea()
-            
-            VStack {
-                titleView
-                    .padding(.top, 15)
-                
-                Spacer()
-                
-                formView
-                
-                Spacer()
-                Spacer()
-                
-                ActionButton(
-                    title: "Criar sala",
-                    foregroundColor: .lapisLazuli,
-                    hasBorder: false,
-                    action: {
-                        UIApplication.shared.endEditing()
-                        buttonPressedSubject.send()
-                    })
-                .frame(height: 62)
-                
+        GeometryReader { geometry in
+            ScrollView {
+                ZStack {
+                    Color.white
+                        .ignoresSafeArea()
+                    
+                    VStack {
+                        titleView
+                            .padding(.top, 15)
+                        
+                        Spacer()
+                        
+                        formView
+                        
+                        Spacer()
+                        Spacer()
+                        
+                        ActionButton(
+                            title: "Criar sala",
+                            foregroundColor: .lapisLazuli,
+                            hasBorder: false,
+                            action: {
+                                UIApplication.shared.endEditing()
+                                buttonPressedSubject.send()
+                            })
+                        .frame(height: 62)
+                        
+                    }
+                    .padding()
+                }
+                .onTapGesture {
+                    UIApplication.shared.endEditing()
+                }
+                .frame(minHeight: geometry.size.height)
             }
-            .padding()
         }
-        .onTapGesture {
-            UIApplication.shared.endEditing()
-        }
+        .ignoresSafeArea(.keyboard)
     }
 }
 
