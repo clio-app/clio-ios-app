@@ -12,47 +12,51 @@ struct CreateRoomView: View {
     
     @State private var roomNameInput: String = ""
     @State private var roomThemeInput: String = ""
+    
+    @State private var isTextFieldActive: Bool = false
         
     public var buttonPressedSubject = PassthroughSubject<Void, Never>()
-    
+        
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
-                ZStack {
-                    Color.white
-                        .ignoresSafeArea()
+                VStack {
+                    titleView
+                        .padding(.top, 15)
                     
-                    VStack {
-                        titleView
-                            .padding(.top, 15)
-                        
-                        Spacer()
-                        
-                        formView
-                        
-                        Spacer()
-                        Spacer()
-                        
-                        ActionButton(
-                            title: "Criar sala",
-                            foregroundColor: .lapisLazuli,
-                            hasBorder: false,
-                            action: {
-                                UIApplication.shared.endEditing()
-                                buttonPressedSubject.send()
-                            })
-                        .frame(height: 62)
-                        
-                    }
-                    .padding()
+                    Spacer()
+                    
+                    formView
+                    
+                    Spacer()
+                    Spacer()
+                    
+                    ActionButton(
+                        title: "Criar sala",
+                        foregroundColor: .lapisLazuli,
+                        hasBorder: false,
+                        action: {
+                            UIApplication.shared.endEditing()
+                            buttonPressedSubject.send()
+                        })
+                    .frame(height: 60)
+                    
                 }
-                .onTapGesture {
-                    UIApplication.shared.endEditing()
-                }
-                .frame(minHeight: geometry.size.height)
+                .padding()
+                .frame(height: geometry.size.height)
             }
+            .keyboardAdaptive()
         }
         .ignoresSafeArea(.keyboard)
+        .background(
+            Color.white
+                .ignoresSafeArea()
+        )
+        .onTapGesture {
+            UIApplication.shared.endEditing()
+            self.isTextFieldActive = false
+        }
+        
     }
 }
 
@@ -93,6 +97,9 @@ extension CreateRoomView {
                 placeholder: placeHolder,
                 color: .lapisLazuli
             )
+            .onTapGesture {
+                self.isTextFieldActive = true
+            }
         }
     }
 }
@@ -100,11 +107,5 @@ extension CreateRoomView {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         CreateRoomView()
-    }
-}
-
-extension UIApplication {
-    func endEditing() {
-        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }

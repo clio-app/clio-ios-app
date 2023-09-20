@@ -23,6 +23,7 @@ struct TextFieldView: View {
                     .foregroundColor(.gray)
             )
             .font(.itimRegular())
+            .foregroundColor(.black)
             .padding(.vertical, 10)
             .padding(.horizontal)
             .background { Color.white }
