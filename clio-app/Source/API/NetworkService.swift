@@ -14,19 +14,22 @@ final class NetworkService: Network {
         self.session = session
     }
     
-    func makeRequest<T: Codable>(for endpoint: Endpoint) async throws -> T {
+    func makeRequest<T: Decodable>(for endpoint: Endpoint) async throws -> T {
         guard let url = endpoint.makeURL() else { throw HTTPError.transportError }
     
         var request = URLRequest(url: url)
         request.allHTTPHeaderFields = endpoint.headers
-        request.httpMethod = endpoint.httpMethod.rawValue
         request.httpBody = endpoint.body
+        request.httpMethod = endpoint.httpMethod?.rawValue
         
         do {
-            let (data, _) = try await session.data(for: request)
+            let (data, response) = try await session.data(for: request)
+            let httpResponse = response as! HTTPURLResponse
+            let status = httpResponse.statusCode
+            guard (200...299).contains(status) else { throw HTTPError.serverSideError(status) }
             return try NetworkingLoader<T>().loadData(data)
         } catch {
-            throw HTTPError.transportError
+            throw error
         }
     }
 }

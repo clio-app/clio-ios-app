@@ -11,7 +11,8 @@ protocol Endpoint {
 }
 
 enum CommunicationProtocol: String {
-    case HTTP = "https"
+    case HTTP = "http"
+    case HTTPS = "https"
     case WS = "ws"
 }
 
@@ -36,7 +37,7 @@ extension Endpoint {
     var body: Data? { return nil }
     
     func makeURL() -> URL? {
-        guard var component = URLComponents(string: "\(urlBase)\(path)") else { return nil }
+        guard var component = URLComponents(string: "\(communicationProtocol.rawValue)://\(urlBase)\(path)") else { return nil }
         component.scheme = communicationProtocol.rawValue
         component.queryItems = queries.isEmpty ? nil : queries
         return component.url

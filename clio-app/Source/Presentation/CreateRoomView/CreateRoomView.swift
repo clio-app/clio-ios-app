@@ -8,12 +8,9 @@
 import SwiftUI
 import Combine
 
-struct CreateRoomView: View {
-    @State private var roomNameInput: String = ""
-    @State private var roomThemeInput: String = ""
-    
-    @State private var isTextFieldActive: Bool = false
-        
+struct CreateRoomView: View {    
+    @StateObject private var vm = CreateRoomViewModel()
+    @State private var isTextFieldActive: Bool = false        
     public var buttonPressedSubject = PassthroughSubject<Void, Never>()
         
     var body: some View {
@@ -37,7 +34,16 @@ struct CreateRoomView: View {
                         action: {
                             UIApplication.shared.endEditing()
                             buttonPressedSubject.send()
-                        })
+                            Task {
+                                await vm.createRoom(
+                                    request: CreateRoomModel.Create.Request(
+                                        name: vm.roomNameInput,
+                                        theme: .init(title: vm.roomThemeInput)
+                                    )
+                                )
+                            }
+                        }
+                    )
                     .frame(height: 60)
                     
                 }
@@ -75,12 +81,12 @@ extension CreateRoomView {
             formField(
                 labelText: "Escolha um nome para a sala",
                 placeHolder: "Escreva o nome da sala...",
-                input: $roomNameInput)
+                input: $vm.roomNameInput)
             
             formField(
                 labelText: "Escolha um tema",
                 placeHolder: "Escreva o tema da sala...",
-                input: $roomThemeInput)
+                input: $vm.roomThemeInput)
             
         }
     }
