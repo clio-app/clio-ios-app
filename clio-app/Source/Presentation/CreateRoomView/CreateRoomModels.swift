@@ -8,16 +8,18 @@
 import Foundation
 
 enum CreateRoom {
-    struct Request {
-        let name: String
-        let theme: String
-    }
-    
-    struct Response {
-        let roomCode: String
-    }
-    
-    struct ViewModel {
-        let roomCode: String
+    enum Create {
+        struct Request {
+            let name: String
+            let theme: String
+        }
+        
+        struct Response {
+            let roomCode: String
+        }
+        
+        struct ViewModel {
+            let roomCode: String
+        }
     }
 }

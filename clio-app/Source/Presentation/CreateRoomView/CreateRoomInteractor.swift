@@ -8,13 +8,13 @@
 import Foundation
 
 protocol CreateRoomBusinessLogic {
-    func createRoom(request: CreateRoom.Request)
+    func createRoom(request: CreateRoom.Create.Request)
 }
 
 final class CreateRoomInteractor: CreateRoomBusinessLogic {
     var presenter: CreateRoomPresentationLogic?
     
-    func createRoom(request: CreateRoom.Request) {
+    func createRoom(request: CreateRoom.Create.Request) {
         
     }
 }

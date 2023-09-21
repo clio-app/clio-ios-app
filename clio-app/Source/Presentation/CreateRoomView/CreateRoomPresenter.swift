@@ -8,13 +8,13 @@
 import Foundation
 
 protocol CreateRoomPresentationLogic {
-    func presentRoomCode(request: CreateRoom.Response)
+    func presentRoomCode(request: CreateRoom.Create.Response)
 }
 
-class CreateRoomPresenter: CreateRoomPresentationLogic {
+final class CreateRoomPresenter: CreateRoomPresentationLogic {
     var view: CreateRoomDisplayLogic?
     
-    func presentRoomCode(request: CreateRoom.Response) {
+    func presentRoomCode(request: CreateRoom.Create.Response) {
         
     }
 }

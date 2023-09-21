@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 protocol CreateRoomDisplayLogic {
-    func displayRoomCode(viewModel: CreateRoom.ViewModel)
+    func displayRoomCode(viewModel: CreateRoom.Create.ViewModel)
 }
 
 struct CreateRoomView: View {
@@ -108,7 +108,7 @@ extension CreateRoomView {
 }
 
 extension CreateRoomView: CreateRoomDisplayLogic {
-    func displayRoomCode(viewModel: CreateRoom.ViewModel) {
+    func displayRoomCode(viewModel: CreateRoom.Create.ViewModel) {
         
     }
 }

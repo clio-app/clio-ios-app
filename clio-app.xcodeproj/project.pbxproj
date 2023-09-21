@@ -17,6 +17,7 @@
 		00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */; };
 		00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */; };
 		00D9C9B92ABC6CDD00F66421 /* CreateRoomModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9B82ABC6CDD00F66421 /* CreateRoomModels.swift */; };
+		00D9C9BE2ABC725C00F66421 /* CreateRoomWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9BD2ABC725C00F66421 /* CreateRoomWorker.swift */; };
 		7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */; };
 		7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC32AB7828200AF20C7 /* ActionButton.swift */; };
 		7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */; };
@@ -73,6 +74,7 @@
 		00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractor.swift; sourceTree = "<group>"; };
 		00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomPresenter.swift; sourceTree = "<group>"; };
 		00D9C9B82ABC6CDD00F66421 /* CreateRoomModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModels.swift; sourceTree = "<group>"; };
+		00D9C9BD2ABC725C00F66421 /* CreateRoomWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomWorker.swift; sourceTree = "<group>"; };
 		7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		7E310AC32AB7828200AF20C7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonContainer.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */,
 				00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */,
 				00D9C9B82ABC6CDD00F66421 /* CreateRoomModels.swift */,
+				00D9C9BD2ABC725C00F66421 /* CreateRoomWorker.swift */,
 			);
 			path = CreateRoomView;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */,
 				00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */,
 				FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */,
+				00D9C9BE2ABC725C00F66421 /* CreateRoomWorker.swift in Sources */,
 				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
 				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
