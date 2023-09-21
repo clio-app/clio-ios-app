@@ -184,6 +184,7 @@
 		00BFF9232AB491910068A5F2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				00D9C9BC2ABC701C00F66421 /* Modifiers */,
 				FF6FD1CB2AB49D8700A2D681 /* Fonts */,
 				00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */,
 				FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */,
@@ -223,7 +224,6 @@
 		00BFF9272AB491B50068A5F2 /* CreateRoomView */ = {
 			isa = PBXGroup;
 			children = (
-				00D9C9BB2ABC6D6E00F66421 /* Modifiers */,
 				00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */,
 				00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */,
 				00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */,
@@ -232,7 +232,7 @@
 			path = CreateRoomView;
 			sourceTree = "<group>";
 		};
-		00D9C9BB2ABC6D6E00F66421 /* Modifiers */ = {
+		00D9C9BC2ABC701C00F66421 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
 				FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */,
