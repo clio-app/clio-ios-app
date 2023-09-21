@@ -13,8 +13,8 @@ struct LimitedInputTextField: View {
 
     var body: some View {
         VStack {
-            ScrollView(.vertical){
                 TextField(text: $inputUser, axis: .vertical) {
+                TextField(text: $inputUser) {
                     Text(placeholder)
                         .foregroundColor(.gray)
                 }
@@ -26,7 +26,6 @@ struct LimitedInputTextField: View {
                         Spacer()
                     })
             }
-            .scrollIndicators(.hidden)
 
             HStack(alignment: .center) {
                 Spacer()
