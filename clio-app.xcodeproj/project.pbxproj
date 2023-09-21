@@ -16,6 +16,12 @@
 		00BFF9172AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */; };
 		00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */; };
 		00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */; };
+		7E124DC02ABB1AC900ABC962 /* MasterInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DBF2ABB1AC900ABC962 /* MasterInputView.swift */; };
+		7E124DC32ABB1B1900ABC962 /* MasterInputInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC22ABB1B1900ABC962 /* MasterInputInteractor.swift */; };
+		7E124DC52ABB1B2400ABC962 /* MasterInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC42ABB1B2400ABC962 /* MasterInputPresenter.swift */; };
+		7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC62ABB1B6E00ABC962 /* Header.swift */; };
+		7E124DC92ABB1D6E00ABC962 /* LimitedInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC82ABB1D6E00ABC962 /* LimitedInputTextField.swift */; };
+		7E124DCC2ABB36F300ABC962 /* MasterInputCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DCB2ABB36F300ABC962 /* MasterInputCard.swift */; };
 		7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC32AB7828200AF20C7 /* ActionButton.swift */; };
 		7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */; };
 		7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */; };
@@ -26,6 +32,7 @@
 		7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */; };
 		7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */; };
 		7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */; };
+		7E83E5B22ABBC10200F0690C /* ImageInputCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83E5B12ABBC10200F0690C /* ImageInputCard.swift */; };
 		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
 		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
 		FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */; };
@@ -61,6 +68,12 @@
 		00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractor.swift; sourceTree = "<group>"; };
 		00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomPresenter.swift; sourceTree = "<group>"; };
+		7E124DBF2ABB1AC900ABC962 /* MasterInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInputView.swift; sourceTree = "<group>"; };
+		7E124DC22ABB1B1900ABC962 /* MasterInputInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInputInteractor.swift; sourceTree = "<group>"; };
+		7E124DC42ABB1B2400ABC962 /* MasterInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInputPresenter.swift; sourceTree = "<group>"; };
+		7E124DC62ABB1B6E00ABC962 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		7E124DC82ABB1D6E00ABC962 /* LimitedInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitedInputTextField.swift; sourceTree = "<group>"; };
+		7E124DCB2ABB36F300ABC962 /* MasterInputCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInputCard.swift; sourceTree = "<group>"; };
 		7E310AC32AB7828200AF20C7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonContainer.swift; sourceTree = "<group>"; };
 		7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMove.swift; sourceTree = "<group>"; };
@@ -71,6 +84,7 @@
 		7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenPresenter.swift; sourceTree = "<group>"; };
 		7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserHeader.swift; sourceTree = "<group>"; };
+		7E83E5B12ABBC10200F0690C /* ImageInputCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInputCard.swift; sourceTree = "<group>"; };
 		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
 		FF6FD1CF2AB4A67600A2D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -192,6 +206,7 @@
 				7E310AC92AB8895200AF20C7 /* GeneralComponents */,
 				7E310AD02AB8955200AF20C7 /* LandingScreenView */,
 				00BFF9272AB491B50068A5F2 /* CreateRoomView */,
+				7E124DC12ABB1ACE00ABC962 /* MasterInput */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -206,11 +221,33 @@
 			path = CreateRoomView;
 			sourceTree = "<group>";
 		};
+		7E124DC12ABB1ACE00ABC962 /* MasterInput */ = {
+			isa = PBXGroup;
+			children = (
+				7E124DCA2ABB362F00ABC962 /* Components */,
+				7E124DBF2ABB1AC900ABC962 /* MasterInputView.swift */,
+				7E124DC22ABB1B1900ABC962 /* MasterInputInteractor.swift */,
+				7E124DC42ABB1B2400ABC962 /* MasterInputPresenter.swift */,
+			);
+			path = MasterInput;
+			sourceTree = "<group>";
+		};
+		7E124DCA2ABB362F00ABC962 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E124DC82ABB1D6E00ABC962 /* LimitedInputTextField.swift */,
+				7E124DCB2ABB36F300ABC962 /* MasterInputCard.swift */,
+				7E83E5B12ABBC10200F0690C /* ImageInputCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		7E310AC92AB8895200AF20C7 /* GeneralComponents */ = {
 			isa = PBXGroup;
 			children = (
 				7E310AC32AB7828200AF20C7 /* ActionButton.swift */,
 				7E310ACA2AB88E2300AF20C7 /* BorderedBackground.swift */,
+				7E124DC62ABB1B6E00ABC962 /* Header.swift */,
 			);
 			path = GeneralComponents;
 			sourceTree = "<group>";
@@ -378,21 +415,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */,
 				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
 				7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */,
 				7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */,
 				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
+				7E83E5B22ABBC10200F0690C /* ImageInputCard.swift in Sources */,
+				7E124DCC2ABB36F300ABC962 /* MasterInputCard.swift in Sources */,
 				00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
+				7E124DC32ABB1B1900ABC962 /* MasterInputInteractor.swift in Sources */,
 				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
+				7E124DC02ABB1AC900ABC962 /* MasterInputView.swift in Sources */,
 				7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */,
 				7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */,
 				7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */,
 				00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */,
+				7E124DC52ABB1B2400ABC962 /* MasterInputPresenter.swift in Sources */,
 				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
 				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
+				7E124DC92ABB1D6E00ABC962 /* LimitedInputTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
