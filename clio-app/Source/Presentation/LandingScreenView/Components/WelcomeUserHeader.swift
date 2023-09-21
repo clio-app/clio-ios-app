@@ -12,8 +12,8 @@ struct WelcomeUserHeader: View {
     @ScaledMetric(relativeTo: .largeTitle) var paddingWidth = 14.5
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
-                Text("Olá,").font(.itimRegular(size: 24))
+            VStack(alignment: .leading, spacing: 2.0) {
+                Text("Olá,").font(.itimRegular(fontType: .title3))
                 Text(user).font(.nightyDemo(fontType: .largeTitle)).truncationMode(.tail)
 
             }

@@ -37,9 +37,15 @@ struct ActionButton: View {
                             .fill(.black)
                     }
                 
-                Text(title)
-                    .foregroundColor(.black)
-                    .font(.itimRegular(fontType: .button))
+                StrokeText(
+                   text: title,
+                   borderWidth: 2,
+                   borderColor: .black)
+                .foregroundColor(.white)
+                .font(.itimRegular(fontType: .button))
+//                Text(title)
+//                    .foregroundColor(.black)
+//                    .font(.itimRegular(fontType: .button))
             }
         }
     }

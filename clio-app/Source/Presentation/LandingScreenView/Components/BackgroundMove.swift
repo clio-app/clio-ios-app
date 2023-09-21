@@ -21,16 +21,28 @@ struct Background: View {
 
             ZStack {
                 Image("liquid-bg")
-                    .position(x: midWidth, y: fullHeight * 0.3)
-                    .scaleEffect(shouldAnimate ?  shouldMoveUp ? (1.1) : ((2.0)) : 1.1 )
-                    .offset(y: shouldAnimate ? (shouldMoveUp ? (-fullHeight) : (fullHeight*offsetMultiplier)) : 0)
+                    .resizable()
+                    .position(x: midWidth, y: fullHeight * 0.2)
+                    .scaleEffect(shouldAnimate ?  shouldMoveUp ? (1.1) : ((5.0)) : 1.1 )
+                    .offset(y: shouldAnimate ? (shouldMoveUp ? 0 : (fullHeight*offsetMultiplier)) : 0)
+//                    .offset(y: shouldAnimate ? (shouldMoveUp ? (-fullHeight) : (fullHeight*offsetMultiplier)) : 0)
                     .animation(.easeInOut(duration: animationDuration), value: shouldAnimate)
+
 
                 Rectangle()
                     .fill(Color.customPink)
-                    .offset(y: shouldAnimate ? (shouldMoveUp ? (-fullHeight*1.3) : 0) : (-fullHeight + 100))
+                    .position(x: midWidth, y: 0)
+//                    .offset(y: shouldAnimate ? (shouldMoveUp ? (-fullHeight*1.3) : 0) : (-fullHeight + 100))
                     .animation(.easeInOut(duration: animationDuration), value: shouldAnimate)
                     .ignoresSafeArea()
+
+
+                // MARK: - Transition color
+//                Rectangle()
+//                    .fill(Color.offWhite)
+//                    .opacity(shouldAnimate ? 1.0 : 0.0)
+//                    .animation(.bouncy(duration: animationDuration).delay(animationDuration), value: shouldAnimate)
+//                    .ignoresSafeArea()
             }
         }
     }
