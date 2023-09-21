@@ -11,27 +11,30 @@ struct RoomHeader: View {
     let roomName: String
     let roomTheme: String
     @State var withBorderBackground: Bool
-    let masterImageName = "profile-picture-eye"
-    @State var usersList: [String] = ["profile-picture-eye", "circles-picture", "bonfire-picture"]
+    @Binding var masterImageName: String
+    @Binding var usersImages: [String]
     
     var body: some View {
-        HStack(spacing: 25) {
+        HStack(spacing: 30) {
             VStack(alignment: .leading) {
                 Text(roomName)
                     .font(.nightyDemo(fontType: .largeTitle))
                 Text(roomTheme)
                     .font(.itimRegular(fontType: .title3))
             }
+            .padding()
+            .lineLimit(2)
+            .foregroundColor(.black)
+            
+            Spacer()
             
             RadialUsers(
-                usersList: $usersList,
-                masterUser: masterImageName
+                usersList: $usersImages,
+                masterUser: $masterImageName
             )
-            .padding()
-            .padding(.trailing, 10)
-            .padding(.vertical,5)
+            .padding(.trailing, 40)
+            .padding(.vertical, 40)
         }
-        .padding()
         .background {
             BorderedBackground(
                 foregroundColor: .white,
@@ -43,5 +46,10 @@ struct RoomHeader: View {
 
 
 #Preview {
-    RoomHeader(roomName: "Nome da Sala", roomTheme: "Tema da sala com um tema muito comprido", withBorderBackground: false)
+    RoomHeader(
+        roomName: "Nome da Sala",
+        roomTheme: "Tema da sala com um tema muito comprido",
+        withBorderBackground: false,
+        masterImageName: .constant("profile-picture-eye"),
+        usersImages: .constant(["bonfire-picture", "bonfire-picture", "bonfire-picture"]))
 }

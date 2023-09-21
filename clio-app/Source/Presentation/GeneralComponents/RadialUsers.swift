@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RadialUsers: View {
     @Binding var usersList: [String]
-    let masterUser: String
+    @Binding var masterUser: String
     
     @State private var isAnimating = false
     
@@ -42,7 +42,8 @@ struct RadialUsers: View {
                     .resizable()
                     .overlay {
                         Circle()
-                            .stroke(style: StrokeStyle(lineWidth: 2))
+                            .stroke(style: StrokeStyle(lineWidth: 1))
+                            .foregroundColor(.black)
                     }
             }
             .frame(width: isMaster ? 45 : 25)
@@ -53,6 +54,6 @@ struct RadialUsers: View {
 #Preview {
     RadialUsers(
         usersList: .constant(["circles-picture"]),
-        masterUser: "profile-picture-eye"
+        masterUser: .constant("profile-picture-eye")
     )
 }
