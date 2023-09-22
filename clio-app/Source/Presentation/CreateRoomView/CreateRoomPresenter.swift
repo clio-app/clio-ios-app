@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+protocol CreateRoomPresentationLogic {
+    func presentRoomCode(request: CreateRoom.Response)
+}
+
+class CreateRoomPresenter: CreateRoomPresentationLogic {
+    var view: CreateRoomDisplayLogic?
+    
+    func presentRoomCode(request: CreateRoom.Response) {
+        
+    }
+}

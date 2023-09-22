@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+protocol CreateRoomBusinessLogic {
+    func createRoom(request: CreateRoom.Request)
+}
+
+final class CreateRoomInteractor: CreateRoomBusinessLogic {
+    var presenter: CreateRoomPresentationLogic?
+    
+    func createRoom(request: CreateRoom.Request) {
+        
+    }
+}

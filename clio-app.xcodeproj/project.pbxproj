@@ -16,6 +16,7 @@
 		00BFF9172AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */; };
 		00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */; };
 		00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */; };
+		00D9C9B92ABC6CDD00F66421 /* CreateRoomModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9B82ABC6CDD00F66421 /* CreateRoomModels.swift */; };
 		7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */; };
 		7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC32AB7828200AF20C7 /* ActionButton.swift */; };
 		7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */; };
@@ -71,6 +72,7 @@
 		00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractor.swift; sourceTree = "<group>"; };
 		00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomPresenter.swift; sourceTree = "<group>"; };
+		00D9C9B82ABC6CDD00F66421 /* CreateRoomModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModels.swift; sourceTree = "<group>"; };
 		7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		7E310AC32AB7828200AF20C7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonContainer.swift; sourceTree = "<group>"; };
@@ -221,12 +223,21 @@
 		00BFF9272AB491B50068A5F2 /* CreateRoomView */ = {
 			isa = PBXGroup;
 			children = (
+				00D9C9BB2ABC6D6E00F66421 /* Modifiers */,
 				00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */,
 				00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */,
 				00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */,
-				FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */,
+				00D9C9B82ABC6CDD00F66421 /* CreateRoomModels.swift */,
 			);
 			path = CreateRoomView;
+			sourceTree = "<group>";
+		};
+		00D9C9BB2ABC6D6E00F66421 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		7E310AC92AB8895200AF20C7 /* GeneralComponents */ = {
@@ -448,6 +459,7 @@
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
 				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
 				FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */,
+				00D9C9B92ABC6CDD00F66421 /* CreateRoomModels.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
