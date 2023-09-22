@@ -29,6 +29,13 @@ struct CreateRoomView: View {
                     formView
                     
                     Spacer()
+                    
+                    Text("Cada sala pode haver no máximo 8 pessoas (com o professor).")
+                        .multilineTextAlignment(.center)
+                        .font(.itimRegular(size: 20))
+                        .foregroundColor(.lapisLazuli)
+                    
+                    Spacer()
                     Spacer()
                     
                     ActionButton(
@@ -36,6 +43,7 @@ struct CreateRoomView: View {
                         foregroundColor: .lapisLazuli,
                         hasBorder: false,
                         action: {
+                            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
                             UIApplication.shared.endEditing()
                             buttonPressedSubject.send()
                         })
