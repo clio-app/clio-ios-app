@@ -22,7 +22,7 @@ struct RadialUsers: View {
                 
                 generateUserIcon(imageName: usersList[index])
                     .scaleEffect(isAnimating ? 1 : 0)
-                    .animation(.easeInOut(duration: 0.5), value: isAnimating)
+                    .animation(.easeInOut(duration: 0.5).delay(0.25*Double(index)), value: isAnimating)
                     .offset(x: xOffset, y: yOffset)
             }
             
