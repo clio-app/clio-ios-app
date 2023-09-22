@@ -14,7 +14,7 @@ enum HTTPError: Error, LocalizedError {
     var errorDescription: String? {
         switch self {
             case .transportError:
-                return "Error while sending data to server!"
+                return "Erro ao enviar dados ao servidor!"
             case .serverSideError(let statusCode):
                 return getDescription(of: statusCode)
         }
@@ -24,13 +24,13 @@ enum HTTPError: Error, LocalizedError {
 extension HTTPError {
     private func getDescription(of statusCode: Int) -> String {
         if (400...499).contains(statusCode) {
-            return "Please make sure you filled in the all the required fields correctly. \(statusCode)"
+            return "Por favor, certifique-se de preencher todos os campos obrigatórios corretamente."
         } else if (500...599).contains(statusCode) {
-            return "Sorry, couldn't reach our server. \(statusCode)"
+            return "Desculpe, não foi possível acessar nosso servidor."
         } else if (700...).contains(statusCode) {
-            return "Sorry, something went wrong. Try again later. \(statusCode)"
+            return "Desculpe, algo deu errado. Tente mais tarde."
         }
         
-        return "Unknown"
+        return "Desconhecido"
     }
 }

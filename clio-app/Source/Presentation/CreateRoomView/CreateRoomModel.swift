@@ -22,7 +22,7 @@ enum CreateRoomModel {
             }
         }
         
-        struct Response: Decodable {
+        struct Response: Decodable, Equatable {
             let id: String
         }
         
