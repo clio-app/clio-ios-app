@@ -14,8 +14,14 @@
 		00BFF90B2AB4914D0068A5F2 /* clio_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF90A2AB4914D0068A5F2 /* clio_appTests.swift */; };
 		00BFF9152AB4914D0068A5F2 /* clio_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9142AB4914D0068A5F2 /* clio_appUITests.swift */; };
 		00BFF9172AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */; };
-		00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */; };
-		00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */; };
+		00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C02ABC7D6900F66421 /* Endpoint.swift */; };
+		00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C22ABC7EAF00F66421 /* Loader.swift */; };
+		00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C42ABC7ECC00F66421 /* HttpError.swift */; };
+		00D9C9C72ABC7EF100F66421 /* MapperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C62ABC7EF100F66421 /* MapperError.swift */; };
+		00D9C9CF2ABC806E00F66421 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9CE2ABC806E00F66421 /* NetworkService.swift */; };
+		00D9C9D32ABC814700F66421 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D22ABC814700F66421 /* Network.swift */; };
+		00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D42ABC8D8A00F66421 /* CreateRoomViewModel.swift */; };
+		00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */; };
 		7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */; };
 		7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC32AB7828200AF20C7 /* ActionButton.swift */; };
 		7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */; };
@@ -69,8 +75,14 @@
 		00BFF9102AB4914D0068A5F2 /* clio-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clio-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BFF9142AB4914D0068A5F2 /* clio_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITests.swift; sourceTree = "<group>"; };
 		00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractor.swift; sourceTree = "<group>"; };
-		00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomPresenter.swift; sourceTree = "<group>"; };
+		00D9C9C02ABC7D6900F66421 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		00D9C9C22ABC7EAF00F66421 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		00D9C9C42ABC7ECC00F66421 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
+		00D9C9C62ABC7EF100F66421 /* MapperError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperError.swift; sourceTree = "<group>"; };
+		00D9C9CE2ABC806E00F66421 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		00D9C9D22ABC814700F66421 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		00D9C9D42ABC8D8A00F66421 /* CreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewModel.swift; sourceTree = "<group>"; };
+		00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModel.swift; sourceTree = "<group>"; };
 		7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		7E310AC32AB7828200AF20C7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonContainer.swift; sourceTree = "<group>"; };
@@ -182,6 +194,7 @@
 		00BFF9232AB491910068A5F2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				00D9C9BC2ABC701C00F66421 /* Modifiers */,
 				FF6FD1CB2AB49D8700A2D681 /* Fonts */,
 				00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */,
 				FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */,
@@ -202,6 +215,7 @@
 		00BFF9252AB491A80068A5F2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				00D9C9BF2ABC7D5A00F66421 /* API */,
 				00BFF9262AB491AE0068A5F2 /* Presentation */,
 			);
 			path = Source;
@@ -222,11 +236,55 @@
 			isa = PBXGroup;
 			children = (
 				00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */,
-				00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */,
-				00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */,
-				FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */,
+				00D9C9D42ABC8D8A00F66421 /* CreateRoomViewModel.swift */,
+				00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */,
 			);
 			path = CreateRoomView;
+			sourceTree = "<group>";
+		};
+		00D9C9BC2ABC701C00F66421 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		00D9C9BF2ABC7D5A00F66421 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				00D9C9D12ABC813100F66421 /* Helpers */,
+				00D9C9D02ABC809A00F66421 /* Protocol */,
+				00D9C9C82ABC7EFA00F66421 /* Error */,
+				00D9C9CE2ABC806E00F66421 /* NetworkService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		00D9C9C82ABC7EFA00F66421 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				00D9C9C42ABC7ECC00F66421 /* HttpError.swift */,
+				00D9C9C62ABC7EF100F66421 /* MapperError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		00D9C9D02ABC809A00F66421 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				00D9C9C02ABC7D6900F66421 /* Endpoint.swift */,
+				00D9C9D22ABC814700F66421 /* Network.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		00D9C9D12ABC813100F66421 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				00D9C9C22ABC7EAF00F66421 /* Loader.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		7E310AC92AB8895200AF20C7 /* GeneralComponents */ = {
@@ -308,6 +366,8 @@
 			dependencies = (
 			);
 			name = "clio-app";
+			packageProductDependencies = (
+			);
 			productName = "clio-app";
 			productReference = 00BFF8F62AB4914B0068A5F2 /* clio-app.app */;
 			productType = "com.apple.product-type.application";
@@ -380,6 +440,8 @@
 				Base,
 			);
 			mainGroup = 00BFF8ED2AB4914B0068A5F2;
+			packageReferences = (
+			);
 			productRefGroup = 00BFF8F72AB4914B0068A5F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -424,6 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */,
 				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
 				FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */,
 				FF3A15F52ABA1BA700E31DCA /* AnonymousLoginPresenter.swift in Sources */,
@@ -432,22 +495,28 @@
 				FF3A15F32ABA1B9600E31DCA /* AnonymousLoginInteractor.swift in Sources */,
 				7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */,
 				7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */,
+				00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */,
+				00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */,
 				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
 				FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */,
-				00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */,
 				FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
+				00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */,
 				7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */,
 				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
 				7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */,
 				7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */,
 				7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */,
-				00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */,
 				FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */,
 				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
 				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
 				FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */,
+				00D9C9B92ABC6CDD00F66421 /* CreateRoomModels.swift in Sources */,
+				00D9C9C72ABC7EF100F66421 /* MapperError.swift in Sources */,
+				00D9C9D32ABC814700F66421 /* Network.swift in Sources */,
+				00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */,
+				00D9C9CF2ABC806E00F66421 /* NetworkService.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
