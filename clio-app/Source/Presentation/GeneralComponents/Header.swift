@@ -13,8 +13,10 @@ struct Header: View {
             VStack(alignment: .leading) {
                 Text("Turma A").font(.nightyDemo(fontType: .largeTitle))
                 Text("1ª Guerra Mundial").font(.itimRegular(fontType: .title3))
-            }.foregroundStyle(Color.black)
-            
+            }
+            .lineLimit(1)
+            .foregroundStyle(Color.black).truncationMode(.tail).fixedSize(horizontal: false, vertical: true)
+
              // TODO: Add Radial Participants Component
             Image("profile-picture-eye").scaledToFit()
         }
