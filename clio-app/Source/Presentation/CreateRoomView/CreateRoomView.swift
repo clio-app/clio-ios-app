@@ -8,10 +8,6 @@
 import SwiftUI
 import Combine
 
-protocol CreateRoomDisplayLogic {
-    func displayRoomCode(viewModel: CreateRoom.Create.ViewModel)
-}
-
 struct CreateRoomView: View {
     @State private var roomNameInput: String = ""
     @State private var roomThemeInput: String = ""
@@ -104,12 +100,6 @@ extension CreateRoomView {
                 self.isTextFieldActive = true
             }
         }
-    }
-}
-
-extension CreateRoomView: CreateRoomDisplayLogic {
-    func displayRoomCode(viewModel: CreateRoom.Create.ViewModel) {
-        
     }
 }
 
