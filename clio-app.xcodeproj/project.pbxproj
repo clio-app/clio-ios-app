@@ -23,8 +23,6 @@
 		00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D42ABC8D8A00F66421 /* CreateRoomViewModel.swift */; };
 		00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */; };
 		7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */; };
-		00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */; };
-		00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */; };
 		7E124DC02ABB1AC900ABC962 /* MasterInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DBF2ABB1AC900ABC962 /* MasterInputView.swift */; };
 		7E124DC32ABB1B1900ABC962 /* MasterInputInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC22ABB1B1900ABC962 /* MasterInputInteractor.swift */; };
 		7E124DC52ABB1B2400ABC962 /* MasterInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC42ABB1B2400ABC962 /* MasterInputPresenter.swift */; };
@@ -41,6 +39,7 @@
 		7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */; };
 		7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */; };
 		7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */; };
+		7E83E5B22ABBC10200F0690C /* ImageInputCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83E5B12ABBC10200F0690C /* ImageInputCard.swift */; };
 		FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04AC922AB8BCFF00516135 /* StrokeText.swift */; };
 		FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04AC932AB8BCFF00516135 /* TextFieldView.swift */; };
 		FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */; };
@@ -49,7 +48,6 @@
 		FF3A15F32ABA1B9600E31DCA /* AnonymousLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F22ABA1B9600E31DCA /* AnonymousLoginInteractor.swift */; };
 		FF3A15F52ABA1BA700E31DCA /* AnonymousLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F42ABA1BA700E31DCA /* AnonymousLoginPresenter.swift */; };
 		FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */; };
-		7E83E5B22ABBC10200F0690C /* ImageInputCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83E5B12ABBC10200F0690C /* ImageInputCard.swift */; };
 		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
 		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
 		FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */; };
@@ -93,8 +91,6 @@
 		00D9C9D42ABC8D8A00F66421 /* CreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewModel.swift; sourceTree = "<group>"; };
 		00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModel.swift; sourceTree = "<group>"; };
 		7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
-		00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractor.swift; sourceTree = "<group>"; };
-		00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomPresenter.swift; sourceTree = "<group>"; };
 		7E124DBF2ABB1AC900ABC962 /* MasterInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInputView.swift; sourceTree = "<group>"; };
 		7E124DC22ABB1B1900ABC962 /* MasterInputInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInputInteractor.swift; sourceTree = "<group>"; };
 		7E124DC42ABB1B2400ABC962 /* MasterInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInputPresenter.swift; sourceTree = "<group>"; };
@@ -111,6 +107,7 @@
 		7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenPresenter.swift; sourceTree = "<group>"; };
 		7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserHeader.swift; sourceTree = "<group>"; };
+		7E83E5B12ABBC10200F0690C /* ImageInputCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInputCard.swift; sourceTree = "<group>"; };
 		FF04AC922AB8BCFF00516135 /* StrokeText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
 		FF04AC932AB8BCFF00516135 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
@@ -119,7 +116,6 @@
 		FF3A15F22ABA1B9600E31DCA /* AnonymousLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginInteractor.swift; sourceTree = "<group>"; };
 		FF3A15F42ABA1BA700E31DCA /* AnonymousLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginPresenter.swift; sourceTree = "<group>"; };
 		FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptative.swift; sourceTree = "<group>"; };
-		7E83E5B12ABBC10200F0690C /* ImageInputCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInputCard.swift; sourceTree = "<group>"; };
 		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
 		FF6FD1CF2AB4A67600A2D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -159,6 +155,7 @@
 				00BFF9092AB4914D0068A5F2 /* clio-appTests */,
 				00BFF9132AB4914D0068A5F2 /* clio-appUITests */,
 				00BFF8F72AB4914B0068A5F2 /* Products */,
+				7E56BFED2AC0F3880022B733 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -304,13 +301,15 @@
 				00D9C9C22ABC7EAF00F66421 /* Loader.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
 		7E124DC12ABB1ACE00ABC962 /* MasterInput */ = {
 			isa = PBXGroup;
 			children = (
-				7E124DCA2ABB362F00ABC962 /* Components */,
 				7E124DBF2ABB1AC900ABC962 /* MasterInputView.swift */,
 				7E124DC22ABB1B1900ABC962 /* MasterInputInteractor.swift */,
 				7E124DC42ABB1B2400ABC962 /* MasterInputPresenter.swift */,
+				7E124DCA2ABB362F00ABC962 /* Components */,
 			);
 			path = MasterInput;
 			sourceTree = "<group>";
@@ -359,6 +358,14 @@
 				7E310ACC2AB88F2700AF20C7 /* UserInputPopup.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		7E56BFED2AC0F3880022B733 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		FF3A15EF2ABA1B5600E31DCA /* AnonymousLogin */ = {
@@ -545,8 +552,6 @@
 				7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */,
 				7E83E5B22ABBC10200F0690C /* ImageInputCard.swift in Sources */,
 				7E124DCC2ABB36F300ABC962 /* MasterInputCard.swift in Sources */,
-				00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */,
-				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
 				7E124DC32ABB1B1900ABC962 /* MasterInputInteractor.swift in Sources */,
 				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
 				7E124DC02ABB1AC900ABC962 /* MasterInputView.swift in Sources */,
@@ -554,13 +559,11 @@
 				7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */,
 				7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */,
 				FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */,
-				00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */,
 				7E124DC52ABB1B2400ABC962 /* MasterInputPresenter.swift in Sources */,
 				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
 				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
 				FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */,
-				00D9C9B92ABC6CDD00F66421 /* CreateRoomModels.swift in Sources */,
 				00D9C9C72ABC7EF100F66421 /* MapperError.swift in Sources */,
 				00D9C9D32ABC814700F66421 /* Network.swift in Sources */,
 				00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */,
@@ -734,7 +737,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -765,7 +768,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
