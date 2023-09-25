@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct Header: View {
+
+    // userList and masterUser receives and shows profile picture name
+    @Binding var userList: [String]
+    @Binding var masterUser: String
+
     var body: some View {
-        HStack(alignment: .center, spacing: 12) {
+        HStack(alignment: .center, spacing: 24) {
             VStack(alignment: .leading) {
                 Text("Turma A").font(.nightyDemo(fontType: .largeTitle))
                 Text("1ª Guerra Mundial").font(.itimRegular(fontType: .title3))
             }
             .lineLimit(1)
-            .foregroundStyle(Color.black).truncationMode(.tail).fixedSize(horizontal: false, vertical: true)
+            .foregroundStyle(Color.black).truncationMode(.tail)
+//            .fixedSize(horizontal: false, vertical: true)
 
-             // TODO: Add Radial Participants Component
-            Image("profile-picture-eye").scaledToFit()
+            RadialUsers(usersList: $userList, masterUser: $masterUser)
+                .padding(.all, 24)
         }
         .padding(EdgeInsets(top: 28, leading: 17, bottom: 15, trailing: 15))
         .overlay {
@@ -29,5 +35,5 @@ struct Header: View {
 }
 
 #Preview {
-    Header()
+    Header(userList: .constant(["User 1", "User 2", "User 3", "User 4", "User 5", "User 6", "User 7"]), masterUser: .constant("Professor"))
 }
