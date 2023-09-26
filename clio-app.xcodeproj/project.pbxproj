@@ -72,14 +72,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00BFF8F62AB4914B0068A5F2 /* clio-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "clio-app.app"; path = "/Users/lucianaadriao/Documents/Challenges/FinalChallenge/clio-ios-app/build/Debug-iphoneos/clio-app.app"; sourceTree = "<absolute>"; };
 		00BFF8F92AB4914B0068A5F2 /* clio_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appApp.swift; sourceTree = "<group>"; };
 		00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
 		00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		00BFF9062AB4914D0068A5F2 /* clio-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "clio-appTests.xctest"; path = "/Users/lucianaadriao/Documents/Challenges/FinalChallenge/clio-ios-app/build/Debug-iphoneos/clio-appTests.xctest"; sourceTree = "<absolute>"; };
 		00BFF90A2AB4914D0068A5F2 /* clio_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appTests.swift; sourceTree = "<group>"; };
-		00BFF9102AB4914D0068A5F2 /* clio-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "clio-appUITests.xctest"; path = "/Users/lucianaadriao/Documents/Challenges/FinalChallenge/clio-ios-app/build/Debug-iphoneos/clio-appUITests.xctest"; sourceTree = "<absolute>"; };
 		00BFF9142AB4914D0068A5F2 /* clio_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITests.swift; sourceTree = "<group>"; };
 		00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00D9C9C02ABC7D6900F66421 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -107,6 +104,9 @@
 		7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenPresenter.swift; sourceTree = "<group>"; };
 		7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserHeader.swift; sourceTree = "<group>"; };
+		7E56BFEE2AC3177E0022B733 /* clio-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "clio-app.app"; path = "/Users/lucianaadriao/Documents/Challenges/FinalChallenge/clio-ios-app/build/Debug-iphoneos/clio-app.app"; sourceTree = "<absolute>"; };
+		7E56BFEF2AC3177E0022B733 /* clio-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "clio-appTests.xctest"; path = "/Users/lucianaadriao/Documents/Challenges/FinalChallenge/clio-ios-app/build/Debug-iphoneos/clio-appTests.xctest"; sourceTree = "<absolute>"; };
+		7E56BFF02AC3177E0022B733 /* clio-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "clio-appUITests.xctest"; path = "/Users/lucianaadriao/Documents/Challenges/FinalChallenge/clio-ios-app/build/Debug-iphoneos/clio-appUITests.xctest"; sourceTree = "<absolute>"; };
 		7E83E5B12ABBC10200F0690C /* ImageInputCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInputCard.swift; sourceTree = "<group>"; };
 		FF04AC922AB8BCFF00516135 /* StrokeText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
 		FF04AC932AB8BCFF00516135 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
@@ -395,7 +395,7 @@
 			packageProductDependencies = (
 			);
 			productName = "clio-app";
-			productReference = 00BFF8F62AB4914B0068A5F2 /* clio-app.app */;
+			productReference = 7E56BFEE2AC3177E0022B733 /* clio-app.app */;
 			productType = "com.apple.product-type.application";
 		};
 		00BFF9052AB4914D0068A5F2 /* clio-appTests */ = {
@@ -413,7 +413,7 @@
 			);
 			name = "clio-appTests";
 			productName = "clio-appTests";
-			productReference = 00BFF9062AB4914D0068A5F2 /* clio-appTests.xctest */;
+			productReference = 7E56BFEF2AC3177E0022B733 /* clio-appTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		00BFF90F2AB4914D0068A5F2 /* clio-appUITests */ = {
@@ -431,7 +431,7 @@
 			);
 			name = "clio-appUITests";
 			productName = "clio-appUITests";
-			productReference = 00BFF9102AB4914D0068A5F2 /* clio-appUITests.xctest */;
+			productReference = 7E56BFF02AC3177E0022B733 /* clio-appUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
