@@ -83,6 +83,7 @@
 		00D9C9D22ABC814700F66421 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		00D9C9D42ABC8D8A00F66421 /* CreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewModel.swift; sourceTree = "<group>"; };
 		00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModel.swift; sourceTree = "<group>"; };
+		00FFA63B2AC345740092E203 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		7E310AC32AB7828200AF20C7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonContainer.swift; sourceTree = "<group>"; };
@@ -162,6 +163,7 @@
 				00BFF9242AB4919D0068A5F2 /* Application */,
 				00BFF9232AB491910068A5F2 /* Resource */,
 				00BFF8FF2AB4914D0068A5F2 /* Preview Content */,
+				00FFA63B2AC345740092E203 /* Config.xcconfig */,
 			);
 			path = "clio-app";
 			sourceTree = "<group>";
@@ -512,7 +514,6 @@
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
 				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
 				FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */,
-				00D9C9B92ABC6CDD00F66421 /* CreateRoomModels.swift in Sources */,
 				00D9C9C72ABC7EF100F66421 /* MapperError.swift in Sources */,
 				00D9C9D32ABC814700F66421 /* Network.swift in Sources */,
 				00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */,
@@ -556,6 +557,7 @@
 /* Begin XCBuildConfiguration section */
 		00BFF9182AB4914D0068A5F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00FFA63B2AC345740092E203 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -616,6 +618,7 @@
 		};
 		00BFF9192AB4914D0068A5F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00FFA63B2AC345740092E203 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
