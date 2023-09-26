@@ -35,7 +35,7 @@ final class clio_appUITests: XCTestCase {
             // This measures how long it takes to launch your application.
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
-            }
+                                            }
         }
     }
 }

@@ -72,14 +72,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00BFF8F62AB4914B0068A5F2 /* clio-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clio-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00BFF8F62AB4914B0068A5F2 /* clio-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "clio-app.app"; path = "/Users/lucianaadriao/Documents/Challenges/FinalChallenge/clio-ios-app/build/Debug-iphoneos/clio-app.app"; sourceTree = "<absolute>"; };
 		00BFF8F92AB4914B0068A5F2 /* clio_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appApp.swift; sourceTree = "<group>"; };
 		00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
 		00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		00BFF9062AB4914D0068A5F2 /* clio-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clio-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00BFF9062AB4914D0068A5F2 /* clio-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "clio-appTests.xctest"; path = "/Users/lucianaadriao/Documents/Challenges/FinalChallenge/clio-ios-app/build/Debug-iphoneos/clio-appTests.xctest"; sourceTree = "<absolute>"; };
 		00BFF90A2AB4914D0068A5F2 /* clio_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appTests.swift; sourceTree = "<group>"; };
-		00BFF9102AB4914D0068A5F2 /* clio-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clio-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00BFF9102AB4914D0068A5F2 /* clio-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "clio-appUITests.xctest"; path = "/Users/lucianaadriao/Documents/Challenges/FinalChallenge/clio-ios-app/build/Debug-iphoneos/clio-appUITests.xctest"; sourceTree = "<absolute>"; };
 		00BFF9142AB4914D0068A5F2 /* clio_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITests.swift; sourceTree = "<group>"; };
 		00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00D9C9C02ABC7D6900F66421 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -154,19 +154,7 @@
 				00BFF8F82AB4914B0068A5F2 /* clio-app */,
 				00BFF9092AB4914D0068A5F2 /* clio-appTests */,
 				00BFF9132AB4914D0068A5F2 /* clio-appUITests */,
-				00BFF8F72AB4914B0068A5F2 /* Products */,
-				7E56BFED2AC0F3880022B733 /* Recovered References */,
 			);
-			sourceTree = "<group>";
-		};
-		00BFF8F72AB4914B0068A5F2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				00BFF8F62AB4914B0068A5F2 /* clio-app.app */,
-				00BFF9062AB4914D0068A5F2 /* clio-appTests.xctest */,
-				00BFF9102AB4914D0068A5F2 /* clio-appUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		00BFF8F82AB4914B0068A5F2 /* clio-app */ = {
@@ -360,14 +348,6 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		7E56BFED2AC0F3880022B733 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		FF3A15EF2ABA1B5600E31DCA /* AnonymousLogin */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,7 +468,7 @@
 			mainGroup = 00BFF8ED2AB4914B0068A5F2;
 			packageReferences = (
 			);
-			productRefGroup = 00BFF8F72AB4914B0068A5F2 /* Products */;
+			productRefGroup = 00BFF8ED2AB4914B0068A5F2;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
