@@ -37,21 +37,30 @@ struct UserInputPopup: View {
 
                 Text("Entrar").font(.nightyDemo(fontType: .largeTitle))
                 Text("Digite o código da sala:").font(.itimRegular(fontType: .title3))
-                TextField("Escreva o código", text: $inputUser).font(.itimRegular(fontType: .body)).padding(.leading, 14.0)
-                    .frame(width: geo.size.width * 0.81, height: geo.size.height * 0.12)
-                .background(BorderedBackground(foregroundColor: .offWhite, backgroundColor: .customPink, hasBorder: true))
+                
+                TextFieldView(
+                    inputText: $inputUser,
+                    placeholder: "Escreva o código",
+                    color: .customPink
+                )
+                .padding(.horizontal, geo.size.width * 0.1)
 
                 ActionButton(title: "Entre", foregroundColor: .customPink, hasBorder: false) {
+                    UIApplication.shared.endEditing()
                     print(inputUser)
                 }
-                .frame(height: geo.size.height * 0.10).padding(.horizontal, 70)
-                .padding(.top, 63)
+                .frame(height: geo.size.height * 0.10)
+                .padding(.horizontal, geo.size.width * 0.1)
+                .padding(.top, 50)
                 .padding(.bottom, 35)
 
             }
             .padding()
             .background(BorderedBackground(foregroundColor: .offWhite,backgroundColor: .customPink,  hasBorder: true))
             .ignoresSafeArea(.keyboard)
+            .onTapGesture {
+                UIApplication.shared.endEditing()
+            }
         }
     }
 }
