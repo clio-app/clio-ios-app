@@ -22,6 +22,9 @@ struct TextFieldView: View {
                     .font(.itimRegular())
                     .foregroundColor(.gray)
             )
+            .onTapGesture {
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            }
             .font(.itimRegular())
             .foregroundColor(.black)
             .padding(.vertical, 10)

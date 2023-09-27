@@ -43,7 +43,6 @@ struct CreateRoomView: View {
                         foregroundColor: .lapisLazuli,
                         hasBorder: false,
                         action: {
-                            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
                             UIApplication.shared.endEditing()
                             buttonPressedSubject.send()
                         })
