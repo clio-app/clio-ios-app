@@ -18,7 +18,7 @@ struct MasterContainer: View {
                     Image("profile-picture-eye")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: geo.size.width * 0.3, height: geo.size.width * 0.3)
+                        .frame(maxWidth: geo.size.width * 0.4)
 
                     VStack {
                         Text(username) // Use username directly

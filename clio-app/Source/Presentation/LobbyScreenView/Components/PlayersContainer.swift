@@ -15,10 +15,13 @@ struct PlayersContainer: View {
 
     // Sample data for players (get from model)
     let players: [Player] = [
-//        .init(name: "Name 1"),
-//        .init(name: "Name 2"),
-//        .init(name: "Name 3"),
-//        .init(name: "Name 4")
+        .init(name: "Name 1"),
+        .init(name: "Name 2"),
+        .init(name: "Name 3"),
+        .init(name: "Name 4"),
+        .init(name: "Name 5"),
+        .init(name: "Name 6"),
+        .init(name: "Name 7")
     ]
 
     // TODO: Array of player that are NOT the master
@@ -26,15 +29,13 @@ struct PlayersContainer: View {
         GeometryReader { geo in
             VStack {
                 ScrollView(.vertical) {
-                    activePlayersText
-
-                    if players.isEmpty { emptyLobby } else { playerGridView.padding(.horizontal, 8.0) }
-
+                    if players.isEmpty {
+                        emptyLobby
+                    } else {
+                        playerGridView.padding(.horizontal, 8.0)
+                    }
                 }
-
-                Spacer()
             }
-            .frame(width: geo.size.width * 0.84)
             .frame(width: geo.size.width, height: geo.size.height)
         }
     }
@@ -49,6 +50,7 @@ extension PlayersContainer {
         LazyVGrid(columns: Array(repeating: .init(.flexible(), spacing: gridHSpacing), count: columnCount), spacing: gridVSpacing) {
             ForEach(players, id: \.id) { player in
                 PlayerGridItem(player: .constant(player))
+                    .offset(y: 1.0)
             }
             .scaledToFill()
         }
@@ -57,27 +59,14 @@ extension PlayersContainer {
     // MARK: - empty Lobby
     private var emptyLobby: some View {
         VStack(alignment: .center, spacing: 12.0) {
-            Text("Sem jogadores ativos ainda.").padding(.bottom, 24.0)
+            Text("Sem jogadores ativos ainda.")
+                .padding(.bottom, 24.0)
             Text("Convide seus alunos pelo código:")
             Text("\(lobbyID)")
         }
+        .multilineTextAlignment(.center)
         .font(.itimRegular(fontType: .body))
     }
-    // MARK: - Active Players Label
-    private var activePlayersText: some View {
-        StrokeText(
-            text: "Jogadores ativos",
-            borderWidth: 2,
-            borderColor: .black
-        )
-        .foregroundColor(.white)
-        .font(.itimRegular(fontType: .title3))
-
-    }
-
-
-    // MARK: - Action Button
-
 }
 
 
@@ -88,8 +77,6 @@ struct Player: Identifiable {
     let name: String
     let playerScore: Int = 0
 }
-
-
 
 #Preview(body: {
     PlayersContainer(lobbyID: .constant(UUID()))

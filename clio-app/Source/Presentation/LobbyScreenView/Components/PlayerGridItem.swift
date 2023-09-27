@@ -11,23 +11,22 @@ struct PlayerGridItem: View {
     @Binding var player: Player
 
     var body: some View {
-        VStack(alignment: .center) {
-            
-            Spacer()
-
-            Image("profile-picture-eye")
-                .resizable()
-                .scaledToFit()
-                .padding(.horizontal, 24.0)
-                .frame(minWidth: 40.0, maxWidth: .infinity, minHeight: 40.0, maxHeight: .infinity)
-
-            Group {
-                Text("\(player.name)")
-                Text("\(player.playerScore) pontos").padding(.bottom, 12.0)
-            }
-            .font(.itimRegular(fontType: .body))
-        }
-        .background(BorderedBackground(foregroundColor: .offWhite, hasBorder: false))
+        GeometryReader { geo in
+            VStack(alignment: .center) {
+                Image("profile-picture-eye")
+                    .resizable()
+                    .scaledToFit()
+                    .offset(y: geo.size.height * 0.05)
+                    .frame(maxHeight: geo.size.height * 0.3)
+                Group {
+                    Text("\(player.name)")
+                    Text("\(player.playerScore) pontos")
+                }
+                .font(.itimRegular(fontType: .body))
+                .frame(maxHeight: geo.size.height * 0.2)
+                .frame(minWidth: geo.size.width)
+            }.frame(height: geo.size.height)
+        }.background(BorderedBackground(foregroundColor: .offWhite, hasBorder: false))
     }
 }
 
