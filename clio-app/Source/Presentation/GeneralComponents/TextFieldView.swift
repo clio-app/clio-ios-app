@@ -11,7 +11,7 @@ struct TextFieldView: View {
     
     @Binding var inputText: String
     let placeholder: String
-    let color: UIColor
+    let color: Color
     
     var body: some View {
         ZStack {
@@ -30,8 +30,8 @@ struct TextFieldView: View {
             .cornerRadius(16)
             .background {
                 BorderedBackground(
-                    foregroundColor: .lapisLazuli,
-                    backgroundColor: .lapisLazuli,
+                    foregroundColor: color,
+                    backgroundColor: color,
                     hasBorder: true)
             }
         }

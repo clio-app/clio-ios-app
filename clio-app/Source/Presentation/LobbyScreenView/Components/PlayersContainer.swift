@@ -35,6 +35,7 @@ struct PlayersContainer: View {
                         playerGridView.padding(.horizontal, 8.0)
                     }
                 }
+                .scrollIndicators(.hidden)
             }
             .frame(width: geo.size.width, height: geo.size.height)
         }
