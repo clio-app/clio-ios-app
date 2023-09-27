@@ -8,13 +8,20 @@
 import SwiftUI
 import Combine
 
-struct CreateRoomView: View {
+struct ErrorAlert {
+    var showAlert: Bool
+    let title: String
+    let description: String
     
-    @State private var roomNameInput: String = ""
-    @State private var roomThemeInput: String = ""
-    
+    static func initialState() -> ErrorAlert {
+        return ErrorAlert(showAlert: false, title: "", description: "")
+    }
+}
+
+struct CreateRoomView: View {    
+    @StateObject private var vm = CreateRoomViewModel()
     @State private var isTextFieldActive: Bool = false
-        
+    @State private var errorAlert: ErrorAlert = ErrorAlert.initialState()
     public var buttonPressedSubject = PassthroughSubject<Void, Never>()
         
     var body: some View {
@@ -45,14 +52,37 @@ struct CreateRoomView: View {
                         action: {
                             UIApplication.shared.endEditing()
                             buttonPressedSubject.send()
-                        })
+                            Task {
+                                await vm.createRoom(
+                                    request: CreateRoomModel.Create.Request(
+                                        name: vm.roomNameInput,
+                                        theme: .init(title: vm.roomThemeInput)
+                                    )
+                                )
+                            }
+                        }
+                    )
                     .frame(height: 60)
-                    
                 }
                 .padding()
                 .frame(height: geometry.size.height)
+                .disabled(vm.viewState == .loading)
+                .opacity(vm.viewState == .loading ? 0.3 : 1)
+                .overlay {
+                    if vm.viewState == .loading {
+                        ProgressView()
+                            .frame(width: 60, height: 60, alignment: .center)
+                    }
+                }
             }
             .keyboardAdaptive()
+        }
+        .alert(isPresented: $errorAlert.showAlert) {
+            Alert(
+                title: Text(errorAlert.title),
+                message: Text(errorAlert.description),
+                dismissButton: Alert.Button.cancel()
+            )
         }
         .ignoresSafeArea(.keyboard)
         .background(
@@ -63,7 +93,18 @@ struct CreateRoomView: View {
             UIApplication.shared.endEditing()
             self.isTextFieldActive = false
         }
-        
+        .onChange(of: vm.viewState, perform: { value in
+            switch value {
+                case let .failed(title, description):
+                    errorAlert = ErrorAlert(
+                        showAlert: true,
+                        title: title,
+                        description: description
+                    )
+                default:
+                    return
+            }
+        })
     }
 }
 
@@ -83,12 +124,12 @@ extension CreateRoomView {
             formField(
                 labelText: "Escolha um nome para a sala",
                 placeHolder: "Escreva o nome da sala...",
-                input: $roomNameInput)
+                input: $vm.roomNameInput)
             
             formField(
                 labelText: "Escolha um tema",
                 placeHolder: "Escreva o tema da sala...",
-                input: $roomThemeInput)
+                input: $vm.roomThemeInput)
             
         }
     }
