@@ -11,9 +11,6 @@
 		00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */; };
 		00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */; };
 		00BFF9012AB4914D0068A5F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */; };
-		00BFF90B2AB4914D0068A5F2 /* clio_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF90A2AB4914D0068A5F2 /* clio_appTests.swift */; };
-		00BFF9152AB4914D0068A5F2 /* clio_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9142AB4914D0068A5F2 /* clio_appUITests.swift */; };
-		00BFF9172AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */; };
 		00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C02ABC7D6900F66421 /* Endpoint.swift */; };
 		00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C22ABC7EAF00F66421 /* Loader.swift */; };
 		00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C42ABC7ECC00F66421 /* HttpError.swift */; };
@@ -29,6 +26,7 @@
 		7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC62ABB1B6E00ABC962 /* Header.swift */; };
 		7E124DC92ABB1D6E00ABC962 /* LimitedInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC82ABB1D6E00ABC962 /* LimitedInputTextField.swift */; };
 		7E124DCC2ABB36F300ABC962 /* MasterInputCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DCB2ABB36F300ABC962 /* MasterInputCard.swift */; };
+		7E302BBF2ABFC5EE0015E10D /* PlayerGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E302BBE2ABFC5EE0015E10D /* PlayerGridItem.swift */; };
 		7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC32AB7828200AF20C7 /* ActionButton.swift */; };
 		7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */; };
 		7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */; };
@@ -37,9 +35,14 @@
 		7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310ACE2AB8954C00AF20C7 /* LandingScreenView.swift */; };
 		7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AD12AB8956300AF20C7 /* LandingScreenInteractor.swift */; };
 		7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */; };
+		7E32B06C2AC5B57600A62D28 /* clio_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E32B06B2AC5B57600A62D28 /* clio_appTests.swift */; };
 		7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */; };
 		7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */; };
 		7E83E5B22ABBC10200F0690C /* ImageInputCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83E5B12ABBC10200F0690C /* ImageInputCard.swift */; };
+		7E83E5B52ABDB3BE00F0690C /* LobbyScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83E5B42ABDB3BE00F0690C /* LobbyScreenView.swift */; };
+		7E83E5B72ABDB42200F0690C /* MasterContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83E5B62ABDB42200F0690C /* MasterContainer.swift */; };
+		7E83E5BA2ABDCA9B00F0690C /* PlayersContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83E5B92ABDCA9B00F0690C /* PlayersContainer.swift */; };
+		7EB603982AC45D38007B8306 /* LobbyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB603972AC45D38007B8306 /* LobbyHeader.swift */; };
 		FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04AC922AB8BCFF00516135 /* StrokeText.swift */; };
 		FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04AC932AB8BCFF00516135 /* TextFieldView.swift */; };
 		FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */; };
@@ -55,14 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		00BFF9072AB4914D0068A5F2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00BFF8EE2AB4914B0068A5F2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 00BFF8F52AB4914B0068A5F2;
-			remoteInfo = "clio-app";
-		};
-		00BFF9112AB4914D0068A5F2 /* PBXContainerItemProxy */ = {
+		7E32B06D2AC5B57600A62D28 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00BFF8EE2AB4914B0068A5F2 /* Project object */;
 			proxyType = 1;
@@ -76,9 +72,6 @@
 		00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
 		00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		00BFF90A2AB4914D0068A5F2 /* clio_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appTests.swift; sourceTree = "<group>"; };
-		00BFF9142AB4914D0068A5F2 /* clio_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITests.swift; sourceTree = "<group>"; };
-		00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00D9C9C02ABC7D6900F66421 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		00D9C9C22ABC7EAF00F66421 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		00D9C9C42ABC7ECC00F66421 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
@@ -94,6 +87,7 @@
 		7E124DC62ABB1B6E00ABC962 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		7E124DC82ABB1D6E00ABC962 /* LimitedInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitedInputTextField.swift; sourceTree = "<group>"; };
 		7E124DCB2ABB36F300ABC962 /* MasterInputCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInputCard.swift; sourceTree = "<group>"; };
+		7E302BBE2ABFC5EE0015E10D /* PlayerGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerGridItem.swift; sourceTree = "<group>"; };
 		7E310AC32AB7828200AF20C7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonContainer.swift; sourceTree = "<group>"; };
 		7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMove.swift; sourceTree = "<group>"; };
@@ -102,12 +96,17 @@
 		7E310ACE2AB8954C00AF20C7 /* LandingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenView.swift; sourceTree = "<group>"; };
 		7E310AD12AB8956300AF20C7 /* LandingScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenInteractor.swift; sourceTree = "<group>"; };
 		7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenPresenter.swift; sourceTree = "<group>"; };
+		7E32B0692AC5B57600A62D28 /* clio-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clio-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E32B06B2AC5B57600A62D28 /* clio_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appTests.swift; sourceTree = "<group>"; };
+		7E32B0722AC5B5D000A62D28 /* clio-app.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "clio-app.xctestplan"; sourceTree = "<group>"; };
 		7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserHeader.swift; sourceTree = "<group>"; };
-		7E56BFEE2AC3177E0022B733 /* clio-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "clio-app.app"; path = "/Users/lucianaadriao/Documents/Challenges/FinalChallenge/clio-ios-app/build/Debug-iphoneos/clio-app.app"; sourceTree = "<absolute>"; };
-		7E56BFEF2AC3177E0022B733 /* clio-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "clio-appTests.xctest"; path = "/Users/lucianaadriao/Documents/Challenges/FinalChallenge/clio-ios-app/build/Debug-iphoneos/clio-appTests.xctest"; sourceTree = "<absolute>"; };
-		7E56BFF02AC3177E0022B733 /* clio-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "clio-appUITests.xctest"; path = "/Users/lucianaadriao/Documents/Challenges/FinalChallenge/clio-ios-app/build/Debug-iphoneos/clio-appUITests.xctest"; sourceTree = "<absolute>"; };
+		7E7667302AC47045009064C8 /* clio-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clio-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E83E5B12ABBC10200F0690C /* ImageInputCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInputCard.swift; sourceTree = "<group>"; };
+		7E83E5B42ABDB3BE00F0690C /* LobbyScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyScreenView.swift; sourceTree = "<group>"; };
+		7E83E5B62ABDB42200F0690C /* MasterContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterContainer.swift; sourceTree = "<group>"; };
+		7E83E5B92ABDCA9B00F0690C /* PlayersContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersContainer.swift; sourceTree = "<group>"; };
+		7EB603972AC45D38007B8306 /* LobbyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyHeader.swift; sourceTree = "<group>"; };
 		FF04AC922AB8BCFF00516135 /* StrokeText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
 		FF04AC932AB8BCFF00516135 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
@@ -131,14 +130,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		00BFF9032AB4914D0068A5F2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00BFF90D2AB4914D0068A5F2 /* Frameworks */ = {
+		7E32B0662AC5B57600A62D28 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -151,9 +143,11 @@
 		00BFF8ED2AB4914B0068A5F2 = {
 			isa = PBXGroup;
 			children = (
+				7E32B0722AC5B5D000A62D28 /* clio-app.xctestplan */,
 				00BFF8F82AB4914B0068A5F2 /* clio-app */,
-				00BFF9092AB4914D0068A5F2 /* clio-appTests */,
-				00BFF9132AB4914D0068A5F2 /* clio-appUITests */,
+				7E7667302AC47045009064C8 /* clio-app.app */,
+				7E32B0692AC5B57600A62D28 /* clio-appTests.xctest */,
+				7E32B06A2AC5B57600A62D28 /* clio-appTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,23 +169,6 @@
 				00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		00BFF9092AB4914D0068A5F2 /* clio-appTests */ = {
-			isa = PBXGroup;
-			children = (
-				00BFF90A2AB4914D0068A5F2 /* clio_appTests.swift */,
-			);
-			path = "clio-appTests";
-			sourceTree = "<group>";
-		};
-		00BFF9132AB4914D0068A5F2 /* clio-appUITests */ = {
-			isa = PBXGroup;
-			children = (
-				00BFF9142AB4914D0068A5F2 /* clio_appUITests.swift */,
-				00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */,
-			);
-			path = "clio-appUITests";
 			sourceTree = "<group>";
 		};
 		00BFF9232AB491910068A5F2 /* Resource */ = {
@@ -230,6 +207,7 @@
 				7E310AC92AB8895200AF20C7 /* GeneralComponents */,
 				7E310AD02AB8955200AF20C7 /* LandingScreenView */,
 				00BFF9272AB491B50068A5F2 /* CreateRoomView */,
+				7E83E5B32ABDB10400F0690C /* LobbyScreenView */,
 				FF3A15EF2ABA1B5600E31DCA /* AnonymousLogin */,
 				7E124DC12ABB1ACE00ABC962 /* MasterInput */,
 			);
@@ -337,6 +315,14 @@
 			path = LandingScreenView;
 			sourceTree = "<group>";
 		};
+		7E32B06A2AC5B57600A62D28 /* clio-appTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E32B06B2AC5B57600A62D28 /* clio_appTests.swift */,
+			);
+			path = "clio-appTests";
+			sourceTree = "<group>";
+		};
 		7E52115B2AB730600080F92C /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +330,26 @@
 				7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */,
 				7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */,
 				7E310ACC2AB88F2700AF20C7 /* UserInputPopup.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7E83E5B32ABDB10400F0690C /* LobbyScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				7E83E5B42ABDB3BE00F0690C /* LobbyScreenView.swift */,
+				7E83E5B82ABDBF8100F0690C /* Components */,
+			);
+			path = LobbyScreenView;
+			sourceTree = "<group>";
+		};
+		7E83E5B82ABDBF8100F0690C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E83E5B62ABDB42200F0690C /* MasterContainer.swift */,
+				7E83E5B92ABDCA9B00F0690C /* PlayersContainer.swift */,
+				7E302BBE2ABFC5EE0015E10D /* PlayerGridItem.swift */,
+				7EB603972AC45D38007B8306 /* LobbyHeader.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -395,44 +401,26 @@
 			packageProductDependencies = (
 			);
 			productName = "clio-app";
-			productReference = 7E56BFEE2AC3177E0022B733 /* clio-app.app */;
+			productReference = 7E7667302AC47045009064C8 /* clio-app.app */;
 			productType = "com.apple.product-type.application";
 		};
-		00BFF9052AB4914D0068A5F2 /* clio-appTests */ = {
+		7E32B0682AC5B57600A62D28 /* clio-appTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00BFF91D2AB4914D0068A5F2 /* Build configuration list for PBXNativeTarget "clio-appTests" */;
+			buildConfigurationList = 7E32B06F2AC5B57600A62D28 /* Build configuration list for PBXNativeTarget "clio-appTests" */;
 			buildPhases = (
-				00BFF9022AB4914D0068A5F2 /* Sources */,
-				00BFF9032AB4914D0068A5F2 /* Frameworks */,
-				00BFF9042AB4914D0068A5F2 /* Resources */,
+				7E32B0652AC5B57600A62D28 /* Sources */,
+				7E32B0662AC5B57600A62D28 /* Frameworks */,
+				7E32B0672AC5B57600A62D28 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				00BFF9082AB4914D0068A5F2 /* PBXTargetDependency */,
+				7E32B06E2AC5B57600A62D28 /* PBXTargetDependency */,
 			);
 			name = "clio-appTests";
 			productName = "clio-appTests";
-			productReference = 7E56BFEF2AC3177E0022B733 /* clio-appTests.xctest */;
+			productReference = 7E32B0692AC5B57600A62D28 /* clio-appTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		00BFF90F2AB4914D0068A5F2 /* clio-appUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00BFF9202AB4914D0068A5F2 /* Build configuration list for PBXNativeTarget "clio-appUITests" */;
-			buildPhases = (
-				00BFF90C2AB4914D0068A5F2 /* Sources */,
-				00BFF90D2AB4914D0068A5F2 /* Frameworks */,
-				00BFF90E2AB4914D0068A5F2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00BFF9122AB4914D0068A5F2 /* PBXTargetDependency */,
-			);
-			name = "clio-appUITests";
-			productName = "clio-appUITests";
-			productReference = 7E56BFF02AC3177E0022B733 /* clio-appUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -441,18 +429,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					00BFF8F52AB4914B0068A5F2 = {
 						CreatedOnToolsVersion = 14.3;
 					};
-					00BFF9052AB4914D0068A5F2 = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = 00BFF8F52AB4914B0068A5F2;
-					};
-					00BFF90F2AB4914D0068A5F2 = {
-						CreatedOnToolsVersion = 14.3;
+					7E32B0682AC5B57600A62D28 = {
+						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 00BFF8F52AB4914B0068A5F2;
 					};
 				};
@@ -473,8 +457,7 @@
 			projectRoot = "";
 			targets = (
 				00BFF8F52AB4914B0068A5F2 /* clio-app */,
-				00BFF9052AB4914D0068A5F2 /* clio-appTests */,
-				00BFF90F2AB4914D0068A5F2 /* clio-appUITests */,
+				7E32B0682AC5B57600A62D28 /* clio-appTests */,
 			);
 		};
 /* End PBXProject section */
@@ -491,14 +474,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		00BFF9042AB4914D0068A5F2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00BFF90E2AB4914D0068A5F2 /* Resources */ = {
+		7E32B0672AC5B57600A62D28 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -526,6 +502,7 @@
 				00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */,
 				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
 				FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */,
+				7EB603982AC45D38007B8306 /* LobbyHeader.swift in Sources */,
 				FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
 				00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */,
@@ -536,7 +513,11 @@
 				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
 				7E124DC02ABB1AC900ABC962 /* MasterInputView.swift in Sources */,
 				7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */,
+				7E83E5BA2ABDCA9B00F0690C /* PlayersContainer.swift in Sources */,
+				7E302BBF2ABFC5EE0015E10D /* PlayerGridItem.swift in Sources */,
+				7E83E5B52ABDB3BE00F0690C /* LobbyScreenView.swift in Sources */,
 				7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */,
+				7E83E5B72ABDB42200F0690C /* MasterContainer.swift in Sources */,
 				7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */,
 				FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */,
 				7E124DC52ABB1B2400ABC962 /* MasterInputPresenter.swift in Sources */,
@@ -553,35 +534,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		00BFF9022AB4914D0068A5F2 /* Sources */ = {
+		7E32B0652AC5B57600A62D28 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00BFF90B2AB4914D0068A5F2 /* clio_appTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00BFF90C2AB4914D0068A5F2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00BFF9172AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift in Sources */,
-				00BFF9152AB4914D0068A5F2 /* clio_appUITests.swift in Sources */,
+				7E32B06C2AC5B57600A62D28 /* clio_appTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		00BFF9082AB4914D0068A5F2 /* PBXTargetDependency */ = {
+		7E32B06E2AC5B57600A62D28 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 00BFF8F52AB4914B0068A5F2 /* clio-app */;
-			targetProxy = 00BFF9072AB4914D0068A5F2 /* PBXContainerItemProxy */;
-		};
-		00BFF9122AB4914D0068A5F2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 00BFF8F52AB4914B0068A5F2 /* clio-app */;
-			targetProxy = 00BFF9112AB4914D0068A5F2 /* PBXContainerItemProxy */;
+			targetProxy = 7E32B06D2AC5B57600A62D28 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -708,7 +675,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = NTS86MKTBV;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
@@ -739,7 +706,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = NTS86MKTBV;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
@@ -762,19 +729,23 @@
 			};
 			name = Release;
 		};
-		00BFF91E2AB4914D0068A5F2 /* Debug */ = {
+		7E32B0702AC5B57600A62D28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 685GVH2XJC;
+				DEVELOPMENT_TEAM = 44U668YQTW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "thiagohba.com.clio-appTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luciana.clio-appTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -782,59 +753,26 @@
 			};
 			name = Debug;
 		};
-		00BFF91F2AB4914D0068A5F2 /* Release */ = {
+		7E32B0712AC5B57600A62D28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 685GVH2XJC;
+				DEVELOPMENT_TEAM = 44U668YQTW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "thiagohba.com.clio-appTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luciana.clio-appTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/clio-app.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/clio-app";
-			};
-			name = Release;
-		};
-		00BFF9212AB4914D0068A5F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 685GVH2XJC;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "thiagohba.com.clio-appUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "clio-app";
-			};
-			name = Debug;
-		};
-		00BFF9222AB4914D0068A5F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 685GVH2XJC;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "thiagohba.com.clio-appUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "clio-app";
 			};
 			name = Release;
 		};
@@ -859,20 +797,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		00BFF91D2AB4914D0068A5F2 /* Build configuration list for PBXNativeTarget "clio-appTests" */ = {
+		7E32B06F2AC5B57600A62D28 /* Build configuration list for PBXNativeTarget "clio-appTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00BFF91E2AB4914D0068A5F2 /* Debug */,
-				00BFF91F2AB4914D0068A5F2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		00BFF9202AB4914D0068A5F2 /* Build configuration list for PBXNativeTarget "clio-appUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00BFF9212AB4914D0068A5F2 /* Debug */,
-				00BFF9222AB4914D0068A5F2 /* Release */,
+				7E32B0702AC5B57600A62D28 /* Debug */,
+				7E32B0712AC5B57600A62D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

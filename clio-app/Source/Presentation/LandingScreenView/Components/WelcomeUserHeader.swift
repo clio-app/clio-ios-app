@@ -25,14 +25,13 @@ struct WelcomeUserHeader: View {
                         .background(Circle().fill(Color.offWhite))
                         .overlay {
                             Circle().stroke(style: StrokeStyle(lineWidth: 2.0))
-
                         }
                 }
         }
 
         .padding(EdgeInsets(top: 16, leading: 36, bottom: 16, trailing: 31))
         .background(RoundedRectangle(cornerRadius: 15, style: .continuous)
-                .foregroundColor(.offWhite))
+        .foregroundColor(.offWhite))
         .overlay {
             RoundedRectangle(cornerRadius: 15, style: .continuous)
                 .stroke(style: StrokeStyle(lineWidth: 2.0))

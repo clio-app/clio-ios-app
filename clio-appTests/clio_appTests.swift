@@ -2,11 +2,10 @@
 //  clio_appTests.swift
 //  clio-appTests
 //
-//  Created by Thiago Henrique on 15/09/23.
+//  Created by Luciana Adrião on 28/09/23.
 //
 
 import XCTest
-@testable import clio_app
 
 final class clio_appTests: XCTestCase {
 
@@ -28,7 +27,7 @@ final class clio_appTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
