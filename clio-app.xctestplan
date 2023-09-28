@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "498717BD-6990-47B0-A3C4-025E4FD1F95F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:clio-app.xcodeproj",
+      "identifier" : "00BFF8F52AB4914B0068A5F2",
+      "name" : "clio-app"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:clio-app.xcodeproj",
+        "identifier" : "7E32B0682AC5B57600A62D28",
+        "name" : "clio-appTests"
+      }
+    }
+  ],
+  "version" : 1
+}
