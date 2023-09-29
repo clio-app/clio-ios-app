@@ -18,6 +18,7 @@ final class CreateRoomViewModel: ObservableObject {
     @Published var roomNameInput: String = ""
     @Published var roomThemeInput: String = ""
     @Published var viewState: ViewState = .idle
+    
     let service: NetworkService
     
     init(service: NetworkService = NetworkService()) {
