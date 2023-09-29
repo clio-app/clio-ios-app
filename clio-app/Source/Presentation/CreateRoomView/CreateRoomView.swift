@@ -22,6 +22,7 @@ struct CreateRoomView: View {
     @StateObject private var vm = CreateRoomViewModel()
     @State private var isTextFieldActive: Bool = false
     @State private var errorAlert: ErrorAlert = ErrorAlert.initialState()
+    @State private var goToCreateUserView = false
     public var buttonPressedSubject = PassthroughSubject<Void, Never>()
         
     var body: some View {
@@ -52,16 +53,20 @@ struct CreateRoomView: View {
                         action: {
                             UIApplication.shared.endEditing()
                             buttonPressedSubject.send()
-                            Task {
-                                await vm.createRoom(
-                                    request: CreateRoomModel.Create.Request(
-                                        name: vm.roomNameInput,
-                                        theme: .init(title: vm.roomThemeInput)
-                                    )
-                                )
-                            }
+                            goToCreateUserView = true
+//                            Task {
+//                                await vm.createRoom(
+//                                    request: CreateRoomModel.Create.Request(
+//                                        name: vm.roomNameInput,
+//                                        theme: .init(title: vm.roomThemeInput)
+//                                    )
+//                                )
+//                            }
+                            
                         }
                     )
+                    .disabled(vm.roomNameInput == "" && vm.roomThemeInput == "")
+                    .opacity((vm.roomNameInput == "" && vm.roomThemeInput == "") ? 0.2 : 1)
                     .frame(height: 60)
                 }
                 .padding()
@@ -76,6 +81,9 @@ struct CreateRoomView: View {
                 }
             }
             .keyboardAdaptive()
+        }
+        .navigationDestination(isPresented: $goToCreateUserView) {
+            AnonymousLoginView()
         }
         .alert(isPresented: $errorAlert.showAlert) {
             Alert(

@@ -12,6 +12,7 @@ struct LandingScreenView: View {
     @State private var moveImage: Bool = false
     @State private var isMovingUp: Bool = false
     @State private var isPopupPresented: Bool = false
+    @State private var goToCreateRoomView = false
 
     var body: some View {
         GeometryReader { geo in
@@ -28,8 +29,17 @@ struct LandingScreenView: View {
                         WelcomeUserHeader(user: $user)
                             .frame(maxWidth: geo.size.width*0.89, maxHeight: geo.size.height*0.13)
                             .frame(width: geo.size.width)
-
-                        TextButtonContainer(textExplanation: "Crie uma sala e comece a jogar", buttonText: "Crie uma sala", buttonColor: .customYellow ) { withAnimation { isMovingUp = false; moveImage.toggle() }
+                        
+                        TextButtonContainer(
+                            textExplanation: "Crie uma sala e comece a jogar",
+                            buttonText: "Crie uma sala",
+                            buttonColor: .customYellow
+                        ) {
+                            withAnimation {
+                                isMovingUp = false
+                                moveImage.toggle()
+                                goToCreateRoomView = true
+                            }
                         }
                         .frame(height: geo.size.height*0.17)
 
@@ -42,7 +52,9 @@ struct LandingScreenView: View {
                         .frame(width: geo.size.width*0.6, height: geo.size.height*0.17)
                         Spacer()
                     }.frame(maxWidth: geo.size.width*0.86).frame(width: geo.size.width)
-
+                }
+                .navigationDestination(isPresented: $goToCreateRoomView) {
+                    CreateRoomView()
                 }
             }
             .onAppear(perform: {
@@ -50,7 +62,6 @@ struct LandingScreenView: View {
                 moveImage = false
                 isPopupPresented = false
             })
-
             .popupNavigationView(show: $isPopupPresented) {
                 UserInputPopup(isShowing: $isPopupPresented)
             }

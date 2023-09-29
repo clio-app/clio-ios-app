@@ -16,6 +16,7 @@ struct AnonymousLoginView: View {
     @State var masterImage: String = "circles-picture"
     @State var usersImages: [String]
     @State var userName: String = ""
+    @State var goToCreatedRoom: Bool = false
     @State var currentImage: String {
         didSet {
             if usersImages.isEmpty {
@@ -81,6 +82,7 @@ struct AnonymousLoginView: View {
                             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
                             UIApplication.shared.endEditing()
                             buttonPressedSubject.send()
+                            goToCreatedRoom = true
                         }
                         .frame(height: 62)
                 }
@@ -93,6 +95,11 @@ struct AnonymousLoginView: View {
                 )
             }
             .keyboardAdaptive()
+        }
+        .navigationDestination(isPresented: $goToCreatedRoom) {
+            Text("Você entrou na sala!")
+                .font(.largeTitle)
+                .bold()
         }
         .ignoresSafeArea(.keyboard)
         .onTapGesture {
