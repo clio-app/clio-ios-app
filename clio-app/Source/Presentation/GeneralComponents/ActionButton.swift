@@ -17,7 +17,10 @@ struct ActionButton: View {
     var action: () -> Void
 
     var body: some View {
-        Button(action: action) {
+        Button(action: {
+            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+            action()
+        }) {
             ZStack {
                 if hasBorder {
                     RoundedRectangle(cornerRadius: radius)

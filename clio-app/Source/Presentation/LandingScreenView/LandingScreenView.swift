@@ -15,8 +15,11 @@ struct LandingScreenView: View {
 
     var body: some View {
         GeometryReader { geo in
-            NavigationView {
+            NavigationStack {
                 ZStack {
+                    Color.white
+                        .ignoresSafeArea()
+                    
                     // MARK: - Background
                     Background(shouldAnimate: $moveImage, animationDuration: .constant(0.5), shouldMoveUp: $isMovingUp)
 
