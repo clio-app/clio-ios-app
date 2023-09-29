@@ -6,9 +6,11 @@
 	<string>${API_KEY}</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>${API_KEY}</key>
+			<key>127.0.0.1:8080</key>
 			<dict>
 				<key>NSTemporaryExceptionMinimumTLSVersion</key>
 				<string>TLSv1.1</string>

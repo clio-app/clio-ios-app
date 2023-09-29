@@ -46,9 +46,6 @@ struct ActionButton: View {
                    borderColor: .black)
                 .foregroundColor(.white)
                 .font(.itimRegular(fontType: .button))
-//                Text(title)
-//                    .foregroundColor(.black)
-//                    .font(.itimRegular(fontType: .button))
             }
         }
     }
