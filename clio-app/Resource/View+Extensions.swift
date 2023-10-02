@@ -17,6 +17,11 @@ extension View {
                         Color.black
                             .opacity(0.5)
                             .ignoresSafeArea()
+                            .onTapGesture {
+                                withAnimation {
+                                    show.wrappedValue = false                                    
+                                }
+                            }
 
                         content()
                             .frame(maxWidth: geo.size.width * 0.87, maxHeight: geo.size.height * 0.6)
