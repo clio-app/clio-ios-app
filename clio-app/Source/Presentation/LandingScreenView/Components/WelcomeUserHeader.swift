@@ -17,7 +17,7 @@ struct WelcomeUserHeader: View {
                 Text(user).font(.nightyDemo(fontType: .largeTitle)).truncationMode(.tail)
 
             }
-            Spacer(minLength: 50)
+            Spacer()
             Circle()
                 .overlay {
                     Image("profile-picture-eye")
