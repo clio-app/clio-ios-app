@@ -11,15 +11,13 @@ struct TextButtonContainer: View {
     var textExplanation: String
     var buttonText: String
     var buttonColor: Color
-    var textColor: Color?
     var isStroke: Bool = false
     var buttonAction: () -> Void
 
-    init(textExplanation: String, buttonText: String, buttonColor: Color, textColor: Color = .black, buttonAction: @escaping () -> Void) {
+    init(textExplanation: String, buttonText: String, buttonColor: Color, buttonAction: @escaping () -> Void) {
         self.textExplanation = textExplanation
         self.buttonText = buttonText
         self.buttonColor = buttonColor
-        self.textColor = textColor
         self.buttonAction = buttonAction
     }
     
@@ -34,13 +32,11 @@ struct TextButtonContainer: View {
                     )
                     .multilineTextAlignment(.center)
                     .font(.itimRegular(fontType: .title3))
-                    .foregroundColor(textColor)
                     .frame(maxWidth: geo.size.width - 20, maxHeight: geo.size.height)
                 }
                 else {
                     Text(textExplanation)
                         .font(.itimRegular(fontType: .title3))
-                        .foregroundColor(textColor)
                         .multilineTextAlignment(.center)
                         .frame(maxWidth: geo.size.width - 20, maxHeight: geo.size.height)
                 }
@@ -59,9 +55,10 @@ struct TextButtonContainer: View {
 
 struct TextButtonContainer_Previews: PreviewProvider {
     static var previews: some View {
-        TextButtonContainer(textExplanation: "Explicação do funcionamento do botão", buttonText: "Ele explica", buttonColor: .brick, textColor: .pink) {
+        TextButtonContainer(textExplanation: "Explicação do funcionamento do botão", buttonText: "Ele explica", buttonColor: .pink) {
                 print("button Tapped")
         }
         .isStroke(true)
+        .foregroundColor(.white)
     }
 }

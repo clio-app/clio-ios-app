@@ -35,8 +35,7 @@ struct LandingScreenView: View {
                             TextButtonContainer(
                                 textExplanation: "Crie uma sala e comece\n a jogar!",
                                 buttonText: "Crie uma sala",
-                                buttonColor: .customYellow,
-                                textColor: .white
+                                buttonColor: .customYellow
                             ) {
                                 withAnimation {
                                     isMovingUp = false
@@ -51,6 +50,7 @@ struct LandingScreenView: View {
                                 }
                             }
                             .isStroke(true)
+                            .foregroundColor(.white)
                             .padding(.bottom)
                             .offset(y: -geo.size.height*0.07)
                             .frame(height: geo.size.height*0.22)
