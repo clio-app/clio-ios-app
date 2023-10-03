@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-struct LobbyScreenView: View {
+struct LobbyView: View {
+    @StateObject private var model = LobbyViewModel()
+
+
+
     var body: some View {
         GeometryReader { geo in
             VStack {
@@ -25,6 +29,9 @@ struct LobbyScreenView: View {
                 // TODO: Opacity controlled by players status -> empty or not
                 ActionButton(title: "Iniciar partida", foregroundColor: .blue, hasBorder: false) {
                     // Button action
+                    Task {
+                        await model.fetchRoom()
+                    }
                 }
                 .frame(height: geo.size.height * 0.08)
 
@@ -32,16 +39,17 @@ struct LobbyScreenView: View {
             .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.9)
             .frame(width: geo.size.width, height: geo.size.height)
             .background(Color.offWhite)
-        }.foregroundColor(.black)
-            .ignoresSafeArea()
+        }
+        .foregroundColor(.black)
+        .ignoresSafeArea()
     }
 }
 
 #Preview {
-    LobbyScreenView()
+    LobbyView()
 }
 
-extension LobbyScreenView {
+extension LobbyView {
     // MARK: - Active Players Label
     private var activePlayersText: some View {
         StrokeText(
