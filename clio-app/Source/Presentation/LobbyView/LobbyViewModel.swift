@@ -10,7 +10,7 @@ import Foundation
 class LobbyViewModel: ObservableObject {
 //    @Published var players: [User] = []
     @Published var roomName: String = ""
-    private var loaded: LobbyModel.Acess.Response = .init()
+//    private var loaded: LobbyModel.Acess.Response = .init()
     let service: NetworkService
 
     init(service: NetworkService = NetworkService()) {
@@ -36,10 +36,11 @@ class LobbyViewModel: ObservableObject {
     func fetchRoom() async {
         do {
             let endpoint = LobbyModel.Acess.NetworkingEndpoint()
-            let responseData: LobbyModel.Acess.Response = try await service.makeRequest(for: endpoint)
-            loaded = responseData
+            let responseData: [LobbyModel.Acess.Response.Room] = try await service.makeRequest(for: endpoint)
+            print(responseData)
+//            loaded = responseData
 
-            print(loaded)
+//            print(loaded)
         } catch {
             print(error.localizedDescription)
         }
