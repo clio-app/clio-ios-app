@@ -23,40 +23,62 @@ struct LandingScreenView: View {
                     
                     // MARK: - Background
                     Background(shouldAnimate: $moveImage, animationDuration: .constant(0.5), shouldMoveUp: $isMovingUp)
-
+                        .ignoresSafeArea()
+                    
                     // MARK: - Components
-                    VStack(spacing: geo.size.height/6) {
-                        WelcomeUserHeader(user: $user)
-                            .frame(maxWidth: geo.size.width*0.89, maxHeight: geo.size.height*0.13)
-                            .frame(width: geo.size.width)
-                        
-                        TextButtonContainer(
-                            textExplanation: "Crie uma sala e comece a jogar",
-                            buttonText: "Crie uma sala",
-                            buttonColor: .customYellow
-                        ) {
-                            withAnimation {
-                                isMovingUp = false
-                                moveImage.toggle()
-                                goToCreateRoomView = true
+                    ScrollView {
+                        VStack(spacing: geo.size.height/6) {
+                            WelcomeUserHeader(user: $user)
+                                .frame(maxWidth: geo.size.width*0.89, maxHeight: geo.size.height*0.13)
+                                .frame(width: geo.size.width)
+                            
+                            TextButtonContainer(
+                                textExplanation: "Crie uma sala e comece\n a jogar!",
+                                buttonText: "Crie uma sala",
+                                buttonColor: .customYellow
+                            ) {
+                                withAnimation {
+                                    isMovingUp = false
+                                    moveImage.toggle()
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                    goToCreateRoomView = true
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    moveImage.toggle()
+                                    isMovingUp = true
+                                }
                             }
+                            .isStroke(true)
+                            .foregroundColor(.white)
+                            .padding(.bottom)
+                            .offset(y: -geo.size.height*0.07)
+                            .frame(height: geo.size.height*0.22)
+                            
+                            TextButtonContainer(
+                                textExplanation: "É aluno?",
+                                buttonText: "Entre em uma sala",
+                                buttonColor: .blue
+                            ) {
+                                isMovingUp = true
+                                moveImage.toggle()
+                                isPopupPresented.toggle()
+                                
+                            }
+                            .frame(width: geo.size.width*0.6, height: geo.size.height*0.17)
+                            Spacer()
                         }
-                        .frame(height: geo.size.height*0.17)
-
-                        TextButtonContainer(textExplanation: "É aluno?", buttonText: "Entre em uma sala", buttonColor: .blue) {
-                            isMovingUp = true
-                            moveImage.toggle()
-                            isPopupPresented.toggle()
-
-                        }
-                        .frame(width: geo.size.width*0.6, height: geo.size.height*0.17)
-                        Spacer()
-                    }.frame(maxWidth: geo.size.width*0.86).frame(width: geo.size.width)
+                        .padding(.top, 20)
+                        .frame(maxWidth: geo.size.width*0.86).frame(width: geo.size.width)
+                    }
+                    .scrollDisabled(true)
                 }
                 .navigationDestination(isPresented: $goToCreateRoomView) {
                     CreateRoomView()
                 }
+                .navigationTitle("")
             }
+            .frame(width: geo.size.width, height: geo.size.height)
             .onAppear(perform: {
                 isMovingUp = false
                 moveImage = false
@@ -64,8 +86,10 @@ struct LandingScreenView: View {
             })
             .popupNavigationView(show: $isPopupPresented) {
                 UserInputPopup(isShowing: $isPopupPresented)
+                    .frame(height: geo.size.height)
             }
         }
+        .ignoresSafeArea(.keyboard)
         .foregroundColor(.black)
         .background(Color.offWhite)
     }
