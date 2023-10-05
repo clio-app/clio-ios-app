@@ -18,16 +18,6 @@ class LobbyViewModel: ObservableObject {
     }
 
     //  TODO: Waiting for ws for RT player update
-    //    func findRoom(id: String) async {
-    //        do {
-    //            var endpoint = LobbyModel.Acess.NetworkingEndpoint()
-    //            endpoint.path.append(roomID)
-    //            let responseData: LobbyModel.Acess.Response.Room = try await service.makeRequest(for: endpoint)
-    //
-    //        } catch {
-    //            print(error.localizedDescription)
-    //        }
-    //    }
     func findRoom(id: String) async {
         do {
             var endpoint = LobbyModel.Acess.NetworkingEndpoint()
@@ -39,11 +29,5 @@ class LobbyViewModel: ObservableObject {
         } catch {
             print(error.localizedDescription)
         }
-    }
-
-    func getRoomInfo() -> (name: String, theme: String) {
-        let name = room?.name ?? "NAME_NOT_FOUND"
-        let theme = room?.theme.title ?? "THEME_NOT_FOUND"
-        return (name, theme)
     }
 }
