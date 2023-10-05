@@ -8,58 +8,42 @@
 import Foundation
 
 class LobbyViewModel: ObservableObject {
-//    @Published var players: [User] = []
-    @Published var roomName: String = ""
-//    private var loaded: LobbyModel.Acess.Response = .init()
+    // TODO: String for test only, modify for UUID when updating. CreateRoom is gonna pass the roomID
+    @Published var room: LobbyModel.Acess.Response.Room?
+
     let service: NetworkService
 
     init(service: NetworkService = NetworkService()) {
         self.service = service
     }
 
-//  TODO: Waiting for ws for RT player update
-
-    // get room ID
-
-//    func fetchRoom() async {
-//        do {
-//            let endpoint = LobbyModel.Acess.NetworkingEndpoint()
-//            let value: LobbyModel.Acess.Response = try await service.makeRequest(for: endpoint)
-//            loaded = value
-//            print(loaded)
-//
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }
-
-    func fetchRoom() async {
+    //  TODO: Waiting for ws for RT player update
+    //    func findRoom(id: String) async {
+    //        do {
+    //            var endpoint = LobbyModel.Acess.NetworkingEndpoint()
+    //            endpoint.path.append(roomID)
+    //            let responseData: LobbyModel.Acess.Response.Room = try await service.makeRequest(for: endpoint)
+    //
+    //        } catch {
+    //            print(error.localizedDescription)
+    //        }
+    //    }
+    func findRoom(id: String) async {
         do {
-            let endpoint = LobbyModel.Acess.NetworkingEndpoint()
-            let responseData: [LobbyModel.Acess.Response.Room] = try await service.makeRequest(for: endpoint)
-            print(responseData)
-//            loaded = responseData
-
-//            print(loaded)
+            var endpoint = LobbyModel.Acess.NetworkingEndpoint()
+            endpoint.path.append(id)
+            let responseData: LobbyModel.Acess.Response.Room = try await service.makeRequest(for: endpoint)
+            DispatchQueue.main.async {
+                self.room = responseData
+            }
         } catch {
             print(error.localizedDescription)
         }
     }
 
-    func change() {
-        DispatchQueue.main.async {
-//            self.roomName = 
-        }
+    func getRoomInfo() -> (name: String, theme: String) {
+        let name = room?.name ?? "NAME_NOT_FOUND"
+        let theme = room?.theme.title ?? "THEME_NOT_FOUND"
+        return (name, theme)
     }
-}
-
-
-
-// User data
-struct User {
-    let name: String
-    let score: Int
-    let userProfileImage: String
-    //
-    //
 }

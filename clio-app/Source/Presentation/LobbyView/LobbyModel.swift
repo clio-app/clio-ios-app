@@ -8,6 +8,7 @@
 import Foundation
 
 enum LobbyModel {
+    
     enum Acess {
 //         sent to the API. 
 //        It conforms to the Encodable protocol, which means you can convert instances of this struct to JSON data using the encodeToTransfer method.
@@ -37,7 +38,7 @@ enum LobbyModel {
             var urlBase: String {
                 return "127.0.0.1:8080"
             }
-            var path: String = "/room"
+            var path: String = "/room/"
             var body: Data?
             var httpMethod: HTTPMethod? = .get
         }
