@@ -44,6 +44,7 @@
 		7E83E5B52ABDB3BE00F0690C /* LobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83E5B42ABDB3BE00F0690C /* LobbyView.swift */; };
 		7E83E5B72ABDB42200F0690C /* MasterContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83E5B62ABDB42200F0690C /* MasterContainer.swift */; };
 		7E83E5BA2ABDCA9B00F0690C /* PlayersContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83E5B92ABDCA9B00F0690C /* PlayersContainer.swift */; };
+		7E8612382AD02502008F2FAA /* ClioEntities in Frameworks */ = {isa = PBXBuildFile; productRef = 7E8612372AD02502008F2FAA /* ClioEntities */; };
 		7EB603982AC45D38007B8306 /* LobbyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB603972AC45D38007B8306 /* LobbyHeader.swift */; };
 		FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04AC922AB8BCFF00516135 /* StrokeText.swift */; };
 		FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04AC932AB8BCFF00516135 /* TextFieldView.swift */; };
@@ -131,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8612382AD02502008F2FAA /* ClioEntities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +407,7 @@
 			);
 			name = "clio-app";
 			packageProductDependencies = (
+				7E8612372AD02502008F2FAA /* ClioEntities */,
 			);
 			productName = "clio-app";
 			productReference = 7E7667302AC47045009064C8 /* clio-app.app */;
@@ -457,6 +460,7 @@
 			);
 			mainGroup = 00BFF8ED2AB4914B0068A5F2;
 			packageReferences = (
+				7E8612362AD02502008F2FAA /* XCRemoteSwiftPackageReference "clio-entities" */,
 			);
 			productRefGroup = 00BFF8ED2AB4914B0068A5F2;
 			projectDirPath = "";
@@ -821,6 +825,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7E8612362AD02502008F2FAA /* XCRemoteSwiftPackageReference "clio-entities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/clio-app/clio-entities.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E8612372AD02502008F2FAA /* ClioEntities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E8612362AD02502008F2FAA /* XCRemoteSwiftPackageReference "clio-entities" */;
+			productName = ClioEntities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00BFF8EE2AB4914B0068A5F2 /* Project object */;
 }

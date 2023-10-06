@@ -6,11 +6,10 @@
 //
 
 import Foundation
+import ClioEntities
 
 class LobbyViewModel: ObservableObject {
-    // TODO: String for test only, modify for UUID when updating. CreateRoom is gonna pass the roomID
-    @Published var room: LobbyModel.Acess.Response.Room?
-
+    @Published var currentRoom: LobbyModel.Acess.Response?
     let service: NetworkService
 
     init(service: NetworkService = NetworkService()) {
@@ -22,9 +21,9 @@ class LobbyViewModel: ObservableObject {
         do {
             var endpoint = LobbyModel.Acess.NetworkingEndpoint()
             endpoint.path.append(id)
-            let responseData: LobbyModel.Acess.Response.Room = try await service.makeRequest(for: endpoint)
+            let responseData: LobbyModel.Acess.Response = LobbyModel.Acess.Response(room: try await service.makeRequest(for: endpoint))
             DispatchQueue.main.async {
-                self.room = responseData
+                self.currentRoom = responseData
             }
         } catch {
             print(error.localizedDescription)
