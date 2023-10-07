@@ -10,8 +10,6 @@ import SwiftUI
 struct LobbyView: View {
     @StateObject private var vm = LobbyViewModel()
 
-
-
     var body: some View {
         GeometryReader { geo in
             VStack {
