@@ -11,6 +11,9 @@
 		00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */; };
 		00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */; };
 		00BFF9012AB4914D0068A5F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */; };
+		00D97FDD2AD4277B00B65A4A /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FDC2AD4277B00B65A4A /* WebSocketClient.swift */; };
+		00D97FE02AD4279000B65A4A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FDF2AD4279000B65A4A /* Client.swift */; };
+		00D97FE22AD427D900B65A4A /* ClientOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FE12AD427D900B65A4A /* ClientOutput.swift */; };
 		00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C02ABC7D6900F66421 /* Endpoint.swift */; };
 		00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C22ABC7EAF00F66421 /* Loader.swift */; };
 		00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C42ABC7ECC00F66421 /* HttpError.swift */; };
@@ -75,6 +78,9 @@
 		00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
 		00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		00D97FDC2AD4277B00B65A4A /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
+		00D97FDF2AD4279000B65A4A /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		00D97FE12AD427D900B65A4A /* ClientOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientOutput.swift; sourceTree = "<group>"; };
 		00D9C9C02ABC7D6900F66421 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		00D9C9C22ABC7EAF00F66421 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		00D9C9C42ABC7ECC00F66421 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 		00BFF9252AB491A80068A5F2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				00D97FDB2AD4276D00B65A4A /* WebSocket */,
 				00D9C9BF2ABC7D5A00F66421 /* API */,
 				00BFF9262AB491AE0068A5F2 /* Presentation */,
 			);
@@ -228,6 +235,24 @@
 				00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */,
 			);
 			path = CreateRoomView;
+			sourceTree = "<group>";
+		};
+		00D97FDB2AD4276D00B65A4A /* WebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				00D97FDE2AD4278700B65A4A /* Protocol */,
+				00D97FDC2AD4277B00B65A4A /* WebSocketClient.swift */,
+			);
+			path = WebSocket;
+			sourceTree = "<group>";
+		};
+		00D97FDE2AD4278700B65A4A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				00D97FDF2AD4279000B65A4A /* Client.swift */,
+				00D97FE12AD427D900B65A4A /* ClientOutput.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		00D9C9BC2ABC701C00F66421 /* Modifiers */ = {
@@ -500,6 +525,7 @@
 			files = (
 				00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */,
 				7E32B0772AC6F5A000A62D28 /* LobbyViewModel.swift in Sources */,
+				00D97FDD2AD4277B00B65A4A /* WebSocketClient.swift in Sources */,
 				7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */,
 				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
 				FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */,
@@ -510,6 +536,7 @@
 				7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */,
 				7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */,
 				00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */,
+				00D97FE22AD427D900B65A4A /* ClientOutput.swift in Sources */,
 				00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */,
 				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
 				FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */,
@@ -537,6 +564,7 @@
 				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
 				FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */,
 				00D9C9C72ABC7EF100F66421 /* MapperError.swift in Sources */,
+				00D97FE02AD4279000B65A4A /* Client.swift in Sources */,
 				00D9C9D32ABC814700F66421 /* Network.swift in Sources */,
 				00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */,
 				00D9C9CF2ABC806E00F66421 /* NetworkService.swift in Sources */,
