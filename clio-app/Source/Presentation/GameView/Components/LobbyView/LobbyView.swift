@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct LobbyView: View {
+    @EnvironmentObject private var gameViewModel: GameViewModel
     @StateObject private var vm = LobbyViewModel()
-
-
+    var roomCode: String
 
     var body: some View {
         GeometryReader { geo in
@@ -25,7 +25,7 @@ struct LobbyView: View {
 
                 activePlayersText
 
-                PlayersContainer(lobbyID: .constant(UUID()))
+                PlayersContainer(lobbyID: roomCode)
 
                 // TODO: Opacity controlled by players status -> empty or not
                 ActionButton(title: "Iniciar partida", foregroundColor: .blue, hasBorder: false) {
@@ -43,14 +43,15 @@ struct LobbyView: View {
         .onAppear {
             // TODO: This part will be done by the createRoom when a room is created the roomID should be parsed to findRoom(id) to update the lobby view
             Task {
-                await vm.findRoom(id: "4A3D6D")
+                await vm.findRoom(id: roomCode)
             }
         }
     }
 }
 
 #Preview {
-    LobbyView()
+    LobbyView(roomCode: "A12312")
+        .environmentObject(GameViewModel())
 }
 
 extension LobbyView {

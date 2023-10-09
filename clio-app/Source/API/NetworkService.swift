@@ -27,6 +27,7 @@ final class NetworkService: Network {
             let httpResponse = response as! HTTPURLResponse
             let status = httpResponse.statusCode
             guard (200...299).contains(status) else { throw HTTPError.serverSideError(status) }
+            print(try! JSONSerialization.jsonObject(with: data))
             return try NetworkingLoader<T>().loadData(data)
         } catch {
             throw error

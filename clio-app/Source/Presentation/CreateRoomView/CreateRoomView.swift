@@ -22,7 +22,7 @@ struct CreateRoomView: View {
     @StateObject private var vm = CreateRoomViewModel()
     @State private var isTextFieldActive: Bool = false
     @State private var errorAlert: ErrorAlert = ErrorAlert.initialState()
-    @State private var goToCreateUserView = false
+    @State private var goToGameFlowView = false
     @State private var createdRoom: CreateRoomModel.Create.Response? = nil
     public var buttonPressedSubject = PassthroughSubject<Void, Never>()
         
@@ -81,9 +81,9 @@ struct CreateRoomView: View {
             }
             .keyboardAdaptive()
         }
-        .navigationDestination(isPresented: $goToCreateUserView) {
+        .navigationDestination(isPresented: $goToGameFlowView) {
             if let roomId = createdRoom?.id {
-                AnonymousLoginView(roomCode: roomId)
+                GameView(roomCode: roomId)
             }
         }
         .alert(isPresented: $errorAlert.showAlert) {
@@ -112,7 +112,7 @@ struct CreateRoomView: View {
                     )
                 case let .loaded(response):
                     createdRoom = response
-                    goToCreateUserView = true
+                goToGameFlowView = true
                 default:
                     return
             }

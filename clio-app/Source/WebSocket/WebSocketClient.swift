@@ -20,7 +20,7 @@ final class WebSocketClient: NSObject, Client {
 
     weak var clientOutput: ClientOutput?
     
-    func connectToServer(path: String, completion: @escaping (Bool) -> ()) {
+    func connectToServer(path: String) {
         if !opened { openWebSocket(URL(string: path)!) }
         guard let webSocket = webSocket else { return }
         
@@ -33,7 +33,7 @@ final class WebSocketClient: NSObject, Client {
                 case .success(let message):
                     self?.decodeServerMessage(message)
                 }
-                self?.connectToServer(path: path, completion: completion)
+                self?.connectToServer(path: path)
             }
         )
     }
@@ -85,12 +85,23 @@ final class WebSocketClient: NSObject, Client {
     
     func handleMessageFromServer(_ message: TransferMessage, _ state: MessageState.ServerMessages) {
         switch state {
-            case .connection(_):
-                break
+            case .connection(let connectionMessage):
+                handleWithConnectionMessage(message, connectionMessage)
             case .gameFlow(let gameFlowMessage):
                 handleWithGameflowMessage(message, gameFlowMessage)
             case .error:
                 break
+        }
+    }
+    
+    func handleWithConnectionMessage(
+        _ message: TransferMessage,
+        _ state: MessageState.ServerMessages.ServerConnection
+    ) {
+        switch state {
+            case .playerConnected:
+                let dto = UpdatePlayersRoomDTO.decodeFromMessage(message.data)
+                clientOutput?.didConnectAPlayer(dto.master, players: dto.users)
         }
     }
     

@@ -6,23 +6,16 @@
 //
 
 import SwiftUI
+import ClioEntities
 
 struct PlayersContainer: View {
-    @Binding var lobbyID: UUID
+    let lobbyID: String
     let columnCount: Int = 3
     let gridVSpacing: CGFloat = 12.0
     let gridHSpacing: CGFloat = 20.0
 
     // Sample data for players (get from model)
-    let players: [Player] = [
-        .init(name: "Name 1"),
-        .init(name: "Name 2"),
-        .init(name: "Name 3"),
-        .init(name: "Name 4"),
-        .init(name: "Name 5"),
-        .init(name: "Name 6"),
-        .init(name: "Name 7")
-    ]
+    @State var players: [RoomUser] = []
 
     // TODO: Array of player that are NOT the master
     var body: some View {
@@ -49,8 +42,10 @@ extension PlayersContainer {
     // MARK: - Grid View
     private var playerGridView: some View {
         LazyVGrid(columns: Array(repeating: .init(.flexible(), spacing: gridHSpacing), count: columnCount), spacing: gridVSpacing) {
-            ForEach(players, id: \.id) { player in
-                PlayerGridItem(player: .constant(player))
+            ForEach(players, id: \.user.id) { player in
+                PlayerGridItem(
+                    player: player
+                )
                     .offset(y: 1.0)
             }
             .scaledToFill()
@@ -70,15 +65,6 @@ extension PlayersContainer {
     }
 }
 
-
-
-// MARK: - *temporary* player model
-struct Player: Identifiable {
-    let id = UUID()
-    let name: String
-    let playerScore: Int = 0
-}
-
 #Preview(body: {
-    PlayersContainer(lobbyID: .constant(UUID()))
+    PlayersContainer(lobbyID: "ABC123")
 })
