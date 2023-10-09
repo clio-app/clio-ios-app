@@ -22,7 +22,7 @@ struct BorderedBackground: View {
                         RoundedRectangle(cornerRadius: radius)
                             .stroke(style: StrokeStyle(lineWidth: 2.0))
                             .foregroundColor(.black)
-                    }.offset(x: 7, y: 5)
+                    }.offset(x: 7, y: 7)
             }
             
             RoundedRectangle(cornerRadius: radius)
