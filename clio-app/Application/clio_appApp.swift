@@ -11,7 +11,7 @@ import SwiftUI
 struct clio_appApp: App {
     var body: some Scene {
         WindowGroup {
-            CameraView(showingCamera: .constant(true), theme: "Guerra Fria")
+            CameraView(vm: .init(roomTheme: "Guerra Fria"), showingCameraView: .constant(true))
         }
     }
 }

@@ -57,6 +57,7 @@
 		FF3FECD12AD40E5E00D3D617 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FECD02AD40E5E00D3D617 /* CameraView.swift */; };
 		FF3FECD32AD40EAE00D3D617 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FECD22AD40EAE00D3D617 /* ImagePicker.swift */; };
 		FF3FECD62AD41A8D00D3D617 /* HintOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FECD52AD41A8D00D3D617 /* HintOverlay.swift */; };
+		FF3FECDA2AD4468400D3D617 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FECD92AD4468400D3D617 /* CameraViewModel.swift */; };
 		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
 		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
 		FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */; };
@@ -126,6 +127,7 @@
 		FF3FECD02AD40E5E00D3D617 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		FF3FECD22AD40EAE00D3D617 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FF3FECD52AD41A8D00D3D617 /* HintOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintOverlay.swift; sourceTree = "<group>"; };
+		FF3FECD92AD4468400D3D617 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
 		FF6FD1CF2AB4A67600A2D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -216,8 +218,8 @@
 		00BFF9262AB491AE0068A5F2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FF3FECCF2AD40E4600D3D617 /* CameraView */,
 				7E310AC92AB8895200AF20C7 /* GeneralComponents */,
+				FF3FECCF2AD40E4600D3D617 /* CameraView */,
 				7E310AD02AB8955200AF20C7 /* LandingScreenView */,
 				00BFF9272AB491B50068A5F2 /* CreateRoomView */,
 				7E83E5B32ABDB10400F0690C /* LobbyView */,
@@ -392,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				FF3FECD02AD40E5E00D3D617 /* CameraView.swift */,
+				FF3FECD92AD4468400D3D617 /* CameraViewModel.swift */,
 				FF3FECD42AD41A6B00D3D617 /* Components */,
 			);
 			path = CameraView;
@@ -570,6 +573,7 @@
 				00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */,
 				00D9C9CF2ABC806E00F66421 /* NetworkService.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
+				FF3FECDA2AD4468400D3D617 /* CameraViewModel.swift in Sources */,
 				7E32B0792AC6F63B00A62D28 /* LobbyModel.swift in Sources */,
 				7E124DC92ABB1D6E00ABC962 /* LimitedInputTextField.swift in Sources */,
 			);
