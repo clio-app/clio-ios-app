@@ -9,7 +9,10 @@ import Foundation
 
 final class AnonymousLoginViewModel: ObservableObject {
     
-    func createRoom() {
-        
+    func connectInRoom(_ roomId: String) {
+        let client = WebSocketClient.shared
+        client.connectToServer(path: "ws://127.0.0.1:8080/game/\(roomId)") { success in
+            
+        }
     }
 }

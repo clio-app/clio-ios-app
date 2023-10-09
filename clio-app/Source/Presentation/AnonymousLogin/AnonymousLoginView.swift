@@ -99,10 +99,7 @@ struct AnonymousLoginView: View {
             .keyboardAdaptive()
         }
         .onAppear {
-            let client = WebSocketClient.shared
-            client.connectToServer(path: "ws://127.0.0.1:8080/game/\(roomCode)") { success in
-                
-            }
+            vm.connectInRoom(roomCode)
         }
         .navigationDestination(isPresented: $goToCreatedRoom) {
             Text("Você entrou na sala!")
