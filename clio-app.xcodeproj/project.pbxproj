@@ -14,6 +14,8 @@
 		00D97FDD2AD4277B00B65A4A /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FDC2AD4277B00B65A4A /* WebSocketClient.swift */; };
 		00D97FE02AD4279000B65A4A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FDF2AD4279000B65A4A /* Client.swift */; };
 		00D97FE22AD427D900B65A4A /* ClientOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FE12AD427D900B65A4A /* ClientOutput.swift */; };
+		00D97FE42AD42C9B00B65A4A /* AnonymousLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FE32AD42C9B00B65A4A /* AnonymousLoginViewModel.swift */; };
+		00D97FE62AD42CA600B65A4A /* AnonymousLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FE52AD42CA600B65A4A /* AnonymousLoginModel.swift */; };
 		00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C02ABC7D6900F66421 /* Endpoint.swift */; };
 		00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C22ABC7EAF00F66421 /* Loader.swift */; };
 		00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C42ABC7ECC00F66421 /* HttpError.swift */; };
@@ -54,8 +56,6 @@
 		FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */; };
 		FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15ED2ABA03E600E31DCA /* RadialUsers.swift */; };
 		FF3A15F12ABA1B7C00E31DCA /* AnonymousLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F02ABA1B7C00E31DCA /* AnonymousLoginView.swift */; };
-		FF3A15F32ABA1B9600E31DCA /* AnonymousLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F22ABA1B9600E31DCA /* AnonymousLoginInteractor.swift */; };
-		FF3A15F52ABA1BA700E31DCA /* AnonymousLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F42ABA1BA700E31DCA /* AnonymousLoginPresenter.swift */; };
 		FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */; };
 		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
 		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
@@ -81,6 +81,8 @@
 		00D97FDC2AD4277B00B65A4A /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
 		00D97FDF2AD4279000B65A4A /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		00D97FE12AD427D900B65A4A /* ClientOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientOutput.swift; sourceTree = "<group>"; };
+		00D97FE32AD42C9B00B65A4A /* AnonymousLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginViewModel.swift; sourceTree = "<group>"; };
+		00D97FE52AD42CA600B65A4A /* AnonymousLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginModel.swift; sourceTree = "<group>"; };
 		00D9C9C02ABC7D6900F66421 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		00D9C9C22ABC7EAF00F66421 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		00D9C9C42ABC7ECC00F66421 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
@@ -123,8 +125,6 @@
 		FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
 		FF3A15ED2ABA03E600E31DCA /* RadialUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialUsers.swift; sourceTree = "<group>"; };
 		FF3A15F02ABA1B7C00E31DCA /* AnonymousLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginView.swift; sourceTree = "<group>"; };
-		FF3A15F22ABA1B9600E31DCA /* AnonymousLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginInteractor.swift; sourceTree = "<group>"; };
-		FF3A15F42ABA1BA700E31DCA /* AnonymousLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginPresenter.swift; sourceTree = "<group>"; };
 		FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptative.swift; sourceTree = "<group>"; };
 		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
@@ -391,8 +391,8 @@
 			isa = PBXGroup;
 			children = (
 				FF3A15F02ABA1B7C00E31DCA /* AnonymousLoginView.swift */,
-				FF3A15F22ABA1B9600E31DCA /* AnonymousLoginInteractor.swift */,
-				FF3A15F42ABA1BA700E31DCA /* AnonymousLoginPresenter.swift */,
+				00D97FE32AD42C9B00B65A4A /* AnonymousLoginViewModel.swift */,
+				00D97FE52AD42CA600B65A4A /* AnonymousLoginModel.swift */,
 				FF3A15FC2ABB587B00E31DCA /* Components */,
 			);
 			path = AnonymousLogin;
@@ -529,10 +529,8 @@
 				7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */,
 				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
 				FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */,
-				FF3A15F52ABA1BA700E31DCA /* AnonymousLoginPresenter.swift in Sources */,
 				FF3A15F12ABA1B7C00E31DCA /* AnonymousLoginView.swift in Sources */,
 				FFFF9D4F2ABC50AD000DB11A /* SelectImageProfile.swift in Sources */,
-				FF3A15F32ABA1B9600E31DCA /* AnonymousLoginInteractor.swift in Sources */,
 				7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */,
 				7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */,
 				00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */,
@@ -548,6 +546,7 @@
 				7E83E5B22ABBC10200F0690C /* ImageInputCard.swift in Sources */,
 				7E124DCC2ABB36F300ABC962 /* MasterInputCard.swift in Sources */,
 				7E124DC32ABB1B1900ABC962 /* MasterInputInteractor.swift in Sources */,
+				00D97FE62AD42CA600B65A4A /* AnonymousLoginModel.swift in Sources */,
 				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
 				7E124DC02ABB1AC900ABC962 /* MasterInputView.swift in Sources */,
 				7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */,
@@ -558,6 +557,7 @@
 				7E83E5B72ABDB42200F0690C /* MasterContainer.swift in Sources */,
 				7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */,
 				FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */,
+				00D97FE42AD42C9B00B65A4A /* AnonymousLoginViewModel.swift in Sources */,
 				7E124DC52ABB1B2400ABC962 /* MasterInputPresenter.swift in Sources */,
 				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,

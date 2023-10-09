@@ -23,6 +23,7 @@ struct CreateRoomView: View {
     @State private var isTextFieldActive: Bool = false
     @State private var errorAlert: ErrorAlert = ErrorAlert.initialState()
     @State private var goToCreateUserView = false
+    @State private var createdRoom: CreateRoomModel.Create.Response? = nil
     public var buttonPressedSubject = PassthroughSubject<Void, Never>()
         
     var body: some View {
@@ -53,16 +54,14 @@ struct CreateRoomView: View {
                         action: {
                             UIApplication.shared.endEditing()
                             buttonPressedSubject.send()
-                            goToCreateUserView = true
-//                            Task {
-//                                await vm.createRoom(
-//                                    request: CreateRoomModel.Create.Request(
-//                                        name: vm.roomNameInput,
-//                                        theme: .init(title: vm.roomThemeInput)
-//                                    )
-//                                )
-//                            }
-                            
+                            Task {
+                                await vm.createRoom(
+                                    request: CreateRoomModel.Create.Request(
+                                        name: vm.roomNameInput,
+                                        theme: .init(title: vm.roomThemeInput)
+                                    )
+                                )
+                            }
                         }
                     )
                     .disabled(vm.roomNameInput == "" && vm.roomThemeInput == "")
@@ -83,7 +82,9 @@ struct CreateRoomView: View {
             .keyboardAdaptive()
         }
         .navigationDestination(isPresented: $goToCreateUserView) {
-            AnonymousLoginView()
+            if let roomId = createdRoom?.id {
+                AnonymousLoginView(roomCode: roomId)
+            }
         }
         .alert(isPresented: $errorAlert.showAlert) {
             Alert(
@@ -109,6 +110,9 @@ struct CreateRoomView: View {
                         title: title,
                         description: description
                     )
+                case let .loaded(response):
+                    createdRoom = response
+                    goToCreateUserView = true
                 default:
                     return
             }

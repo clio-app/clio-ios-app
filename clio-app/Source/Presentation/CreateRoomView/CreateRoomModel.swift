@@ -28,9 +28,10 @@ enum CreateRoomModel {
         
         struct NetworkingEndpoint: Endpoint {
             var communicationProtocol: CommunicationProtocol = .HTTP
-            var urlBase: String {
-                return Bundle.main.infoDictionary?["API_KEY"] as! String
-            }
+//            var urlBase: String {
+//                return Bundle.main.infoDictionary?["API_KEY"] as! String
+//            }
+            var urlBase: String = "127.0.0.1:8080"
             var path: String = "/room/create"
             var body: Data?
             var httpMethod: HTTPMethod? = .post

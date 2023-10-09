@@ -10,9 +10,10 @@ import Combine
 
 struct AnonymousLoginView: View {
     private let imagesList = ["bonfire-picture", "circles-picture", "profile-picture-eye"]
-    
     public var buttonPressedSubject = PassthroughSubject<Void, Never>()
+    var roomCode: String
     
+    @StateObject var vm: AnonymousLoginViewModel = AnonymousLoginViewModel()
     @State var masterImage: String = "circles-picture"
     @State var usersImages: [String]
     @State var userName: String = ""
@@ -21,7 +22,7 @@ struct AnonymousLoginView: View {
         didSet {
             if usersImages.isEmpty {
                 masterImage = currentImage
-            } 
+            }
             else {
                 let lastIndex = usersImages.count - 1
                 usersImages[lastIndex] = currentImage
@@ -29,7 +30,8 @@ struct AnonymousLoginView: View {
         }
     }
     
-    init(masterImage: String? = nil, usersImages: [String] = []) {
+    init(roomCode: String, masterImage: String? = nil, usersImages: [String] = []) {
+        self.roomCode = roomCode
         if let masterImage = masterImage {
             self.masterImage = masterImage
             self.usersImages = usersImages + ["bonfire-picture"]
@@ -96,6 +98,12 @@ struct AnonymousLoginView: View {
             }
             .keyboardAdaptive()
         }
+        .onAppear {
+            let client = WebSocketClient.shared
+            client.connectToServer(path: "ws://127.0.0.1:8080/game/\(roomCode)") { success in
+                
+            }
+        }
         .navigationDestination(isPresented: $goToCreatedRoom) {
             Text("Você entrou na sala!")
                 .font(.largeTitle)
@@ -141,5 +149,5 @@ struct AnonymousLoginView: View {
 }
 
 #Preview {
-    AnonymousLoginView(masterImage: "bonfire-picture", usersImages: ["bonfire-picture", "bonfire-picture", "bonfire-picture"])
+    AnonymousLoginView(roomCode: "ABC123",masterImage: "bonfire-picture", usersImages: ["bonfire-picture", "bonfire-picture", "bonfire-picture"])
 }
