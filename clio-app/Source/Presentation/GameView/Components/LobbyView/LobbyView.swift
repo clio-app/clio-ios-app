@@ -28,13 +28,13 @@ struct LobbyView: View {
 
                 // TODO: Opacity controlled by players status -> empty or not
                 ActionButton(title: "Iniciar partida", foregroundColor: .blue, hasBorder: false) {
-                    if gameViewModel.players.count > 3 {
+                    if gameViewModel.players.count > 2 {
                         Task {
                             await gameViewModel.startGame()
                         }
                     }
                 }
-                .opacity(gameViewModel.players.count > 3 ? 1 : 0.2)
+                .opacity(gameViewModel.players.count > 2 ? 1 : 0.2)
                 .frame(height: geo.size.height * 0.08)
 
             }
