@@ -11,7 +11,7 @@ import SwiftUI
 struct CameraPicker: UIViewControllerRepresentable {
     @Binding var image: Data
     @Binding var navigateToNextView: Bool
-    @Binding var showingCameraView: Bool
+    var cancellationAction: () -> Void
     typealias UIViewControllerType = UIImagePickerController
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<CameraPicker>) -> UIImagePickerController {
@@ -42,8 +42,7 @@ struct CameraPicker: UIViewControllerRepresentable {
         }
         
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            // TODO: Voltar para tela anterior a câmera
-            parent.showingCameraView = false
+            parent.cancellationAction()
         }
     }
 }

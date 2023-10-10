@@ -12,17 +12,21 @@ struct Header: View {
     // userList and masterUser receives and shows profile picture name
     @Binding var userList: [String]
     @Binding var masterUser: String
+    @Binding var roomName: String
+    @Binding var roomTheme: String
 
     var body: some View {
         HStack(alignment: .center, spacing: 24) {
             VStack(alignment: .leading) {
-                Text("Turma A").font(.nightyDemo(fontType: .largeTitle))
-                Text("1ª Guerra Mundial").font(.itimRegular(fontType: .title3))
+                Text(roomName).font(.nightyDemo(fontType: .largeTitle))
+                Text(roomTheme).font(.itimRegular(fontType: .title3))
             }
             .lineLimit(1)
             .foregroundStyle(Color.black).truncationMode(.tail)
 //            .fixedSize(horizontal: false, vertical: true)
-
+ 
+            Spacer()
+            
             RadialUsers(usersList: $userList, masterUser: $masterUser)
                 .padding(.all, 24)
         }
@@ -34,6 +38,6 @@ struct Header: View {
     }
 }
 
-//#Preview {
-//    Header(userList: .constant(["User 1", "User 2", "User 3", "User 4", "User 5", "User 6", "User 7"]), masterUser: .constant("Professor"))
-//}
+#Preview {
+    Header(userList: .constant(["User 1", "User 2", "User 3", "User 4", "User 5", "User 6", "User 7"]), masterUser: .constant("Professor"), roomName: .constant("nome"), roomTheme: .constant("Tema"))
+}

@@ -8,21 +8,32 @@
 import SwiftUI
 
 struct CameraView: View {
+    @EnvironmentObject var gameViewModel: GameViewModel
     
     @ObservedObject var vm: CameraViewModel
-    @Binding var showingCameraView: Bool
+    @Binding var navigateToNextView: Bool
     
-    @State var navigateToNextView = false
+    @State var showingCameraView = true {
+        didSet {
+            if !showingCameraView {
+                DispatchQueue.main.async {
+                    gameViewModel.gameState = .waitingUsers
+                }
+            }
+        }
+    }
     @State private var errorAlert: ErrorAlert = ErrorAlert.initialState()
         
     var body: some View {
         NavigationStack {
             ZStack {
                 CameraPicker(
-                    image: $vm.imageData,
-                    navigateToNextView: $navigateToNextView,
-                    showingCameraView: $showingCameraView
-                )
+                    image: $gameViewModel.imageData,
+                    navigateToNextView: $navigateToNextView
+                ) {
+                    showingCameraView = false
+                }
+                .ignoresSafeArea()
                 HintOverlay(theme: $vm.roomTheme)
             }
         }
@@ -61,5 +72,5 @@ struct CameraView: View {
 
 
 #Preview {
-    CameraView(vm: .init(roomTheme: "Guerra Fria"), showingCameraView: .constant(true))
+    CameraView(vm: .init(roomTheme: "Guerra Fria"),  navigateToNextView: .constant(false))
 }

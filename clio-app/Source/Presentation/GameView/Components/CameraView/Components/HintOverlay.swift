@@ -24,6 +24,7 @@ struct HintOverlay: View {
                         Image(systemName: buttonName)
                             .symbolRenderingMode(.hierarchical)
                             .resizable()
+                            .foregroundColor(.gray)
                             .frame(width: 40, height: 40)
                             .onTapGesture {
                                 toggleHintCard()

@@ -19,6 +19,9 @@ final class GameViewModel: ObservableObject {
         case gameEnd(users: [RoomUser])
     }
     
+    @Published var imageData: Data = Data()
+    @Published var roomName: String = ""
+    @Published var roomTheme: String = ""
     @Published var gameState: GameState = .registerUser
     @Published var master: RoomUser?
     @Published var players: [RoomUser] = []

@@ -55,6 +55,8 @@ struct AnonymousLoginView: View {
                         hasBorder: false) {
                             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
                             UIApplication.shared.endEditing()
+                            gameViewModel.roomName = (vm.currentRoom?.room.name)!
+                            gameViewModel.roomTheme = (vm.currentRoom?.room.theme.title)!
                             Task {
                                 guard let user = await vm.createUser() else { return }
                                 await gameViewModel.registerUserInRoom(user)

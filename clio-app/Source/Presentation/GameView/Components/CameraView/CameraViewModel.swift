@@ -17,7 +17,6 @@ final class CameraViewModel: ObservableObject {
     }
     
     @Published var viewState: ViewState = .notDetermined
-    @Published var imageData: Data = Data()
     @Published var roomTheme: String
     
     init(roomTheme: String) {

@@ -16,10 +16,13 @@ struct MasterInputView: View {
     @State var userList: [String]
     @State var masterUser: String
     @State var sended = false
+    
+    @Binding var roomName: String
+    @Binding var roomTheme: String
 
     // TODO: MOVE setup variables to an easy access file and setup enum
     private let maxWordCount: Int = 280
-    var sendImageTapped: ((Data, String) -> ())?
+    var sendImageTapped: ((String) -> ())?
 
     var body: some View {
         GeometryReader { geo in
@@ -28,7 +31,13 @@ struct MasterInputView: View {
 
                     // MARK: - Header and radial player view
                         HStack {
-                            Header(userList: $userList, masterUser: $masterUser).scaledToFill()
+                            Header(
+                                userList: $userList,
+                                masterUser: $masterUser,
+                                roomName: $roomName,
+                                roomTheme: $roomTheme
+                            )
+                                .scaledToFill()
                         }
                         .frame(height: geo.size.height * 0.12)
 
@@ -48,7 +57,7 @@ struct MasterInputView: View {
                     ) {
                         if sended { return }
                         if let imageData = userInputImage.pngData() {
-                            sendImageTapped?(imageData, userEntryText)
+                            sendImageTapped?(userEntryText)
                             sended = true
                         }
                     }
@@ -67,6 +76,9 @@ struct MasterInputView: View {
         .onTapGesture {
             UIApplication.shared.endEditing()
         }
+        .onAppear {
+            userInputImage =  UIImage(data: gameViewModel.imageData) ?? UIImage()
+        }
     }
 }
 
@@ -75,5 +87,8 @@ struct MasterInputView: View {
     MasterInputView(userEntryText: "",
                     userList: ["bonfire-picture", "circles-picture", "profile-picture-eye",
                                          "bonfire-picture", "circles-picture", "profile-picture-eye"],
-                    masterUser: "profile-picture-eye")
+                    masterUser: "profile-picture-eye",
+                    roomName: .constant("Nome"),
+                    roomTheme: .constant("Tema")
+    )
 }
