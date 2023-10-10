@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import ClioEntities
 
 struct PlayerGridItem: View {
-    @Binding var player: Player
+    @State var player: RoomUser
 
     var body: some View {
         GeometryReader { geo in
@@ -19,8 +20,8 @@ struct PlayerGridItem: View {
                     .offset(y: geo.size.height * 0.05)
                     .frame(maxHeight: geo.size.height * 0.3)
                 Group {
-                    Text("\(player.name)")
-                    Text("\(player.playerScore) pontos")
+                    Text("\(player.user.name)")
+                    Text("\(player.points) pontos")
                 }
                 .font(.itimRegular(fontType: .body))
                 .frame(maxHeight: geo.size.height * 0.2)
@@ -31,5 +32,16 @@ struct PlayerGridItem: View {
 }
 
 #Preview {
-    PlayerGridItem(player: .constant(Player(name: "Name")))
+    PlayerGridItem(player:
+        RoomUser(
+            rankingPosition: 0, 
+            points: 0,
+            didVote: false,
+            user: User(
+                    id: UUID(),
+                    name: "Name",
+                    picture: "picture"
+                )
+            )
+        )
 }

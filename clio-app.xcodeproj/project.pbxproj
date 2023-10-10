@@ -11,6 +11,13 @@
 		00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */; };
 		00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */; };
 		00BFF9012AB4914D0068A5F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */; };
+		00D97FDD2AD4277B00B65A4A /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FDC2AD4277B00B65A4A /* WebSocketClient.swift */; };
+		00D97FE02AD4279000B65A4A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FDF2AD4279000B65A4A /* Client.swift */; };
+		00D97FE22AD427D900B65A4A /* ClientOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FE12AD427D900B65A4A /* ClientOutput.swift */; };
+		00D97FE92AD436B500B65A4A /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FE82AD436B500B65A4A /* GameViewModel.swift */; };
+		00D97FEE2AD4371100B65A4A /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FED2AD4371100B65A4A /* GameView.swift */; };
+		00D97FF12AD43B7E00B65A4A /* AnonymousLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FF02AD43B7E00B65A4A /* AnonymousLoginViewModel.swift */; };
+		00D97FF32AD43BAF00B65A4A /* AnonymousLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FF22AD43BAF00B65A4A /* AnonymousLoginModel.swift */; };
 		00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C02ABC7D6900F66421 /* Endpoint.swift */; };
 		00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C22ABC7EAF00F66421 /* Loader.swift */; };
 		00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C42ABC7ECC00F66421 /* HttpError.swift */; };
@@ -21,8 +28,6 @@
 		00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */; };
 		7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */; };
 		7E124DC02ABB1AC900ABC962 /* MasterInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DBF2ABB1AC900ABC962 /* MasterInputView.swift */; };
-		7E124DC32ABB1B1900ABC962 /* MasterInputInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC22ABB1B1900ABC962 /* MasterInputInteractor.swift */; };
-		7E124DC52ABB1B2400ABC962 /* MasterInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC42ABB1B2400ABC962 /* MasterInputPresenter.swift */; };
 		7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC62ABB1B6E00ABC962 /* Header.swift */; };
 		7E124DC92ABB1D6E00ABC962 /* LimitedInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC82ABB1D6E00ABC962 /* LimitedInputTextField.swift */; };
 		7E124DCC2ABB36F300ABC962 /* MasterInputCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DCB2ABB36F300ABC962 /* MasterInputCard.swift */; };
@@ -51,8 +56,6 @@
 		FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */; };
 		FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15ED2ABA03E600E31DCA /* RadialUsers.swift */; };
 		FF3A15F12ABA1B7C00E31DCA /* AnonymousLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F02ABA1B7C00E31DCA /* AnonymousLoginView.swift */; };
-		FF3A15F32ABA1B9600E31DCA /* AnonymousLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F22ABA1B9600E31DCA /* AnonymousLoginInteractor.swift */; };
-		FF3A15F52ABA1BA700E31DCA /* AnonymousLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F42ABA1BA700E31DCA /* AnonymousLoginPresenter.swift */; };
 		FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */; };
 		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
 		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
@@ -75,6 +78,13 @@
 		00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
 		00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		00D97FDC2AD4277B00B65A4A /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
+		00D97FDF2AD4279000B65A4A /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		00D97FE12AD427D900B65A4A /* ClientOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientOutput.swift; sourceTree = "<group>"; };
+		00D97FE82AD436B500B65A4A /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		00D97FED2AD4371100B65A4A /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		00D97FF02AD43B7E00B65A4A /* AnonymousLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginViewModel.swift; sourceTree = "<group>"; };
+		00D97FF22AD43BAF00B65A4A /* AnonymousLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginModel.swift; sourceTree = "<group>"; };
 		00D9C9C02ABC7D6900F66421 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		00D9C9C22ABC7EAF00F66421 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		00D9C9C42ABC7ECC00F66421 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
@@ -85,8 +95,6 @@
 		00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModel.swift; sourceTree = "<group>"; };
 		7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		7E124DBF2ABB1AC900ABC962 /* MasterInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInputView.swift; sourceTree = "<group>"; };
-		7E124DC22ABB1B1900ABC962 /* MasterInputInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInputInteractor.swift; sourceTree = "<group>"; };
-		7E124DC42ABB1B2400ABC962 /* MasterInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInputPresenter.swift; sourceTree = "<group>"; };
 		7E124DC62ABB1B6E00ABC962 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		7E124DC82ABB1D6E00ABC962 /* LimitedInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitedInputTextField.swift; sourceTree = "<group>"; };
 		7E124DCB2ABB36F300ABC962 /* MasterInputCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInputCard.swift; sourceTree = "<group>"; };
@@ -117,8 +125,6 @@
 		FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
 		FF3A15ED2ABA03E600E31DCA /* RadialUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialUsers.swift; sourceTree = "<group>"; };
 		FF3A15F02ABA1B7C00E31DCA /* AnonymousLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginView.swift; sourceTree = "<group>"; };
-		FF3A15F22ABA1B9600E31DCA /* AnonymousLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginInteractor.swift; sourceTree = "<group>"; };
-		FF3A15F42ABA1BA700E31DCA /* AnonymousLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginPresenter.swift; sourceTree = "<group>"; };
 		FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptative.swift; sourceTree = "<group>"; };
 		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 		00BFF9252AB491A80068A5F2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				00D97FDB2AD4276D00B65A4A /* WebSocket */,
 				00D9C9BF2ABC7D5A00F66421 /* API */,
 				00BFF9262AB491AE0068A5F2 /* Presentation */,
 			);
@@ -211,11 +218,9 @@
 			isa = PBXGroup;
 			children = (
 				7E310AC92AB8895200AF20C7 /* GeneralComponents */,
+				00D97FE72AD436A400B65A4A /* GameView */,
 				7E310AD02AB8955200AF20C7 /* LandingScreenView */,
 				00BFF9272AB491B50068A5F2 /* CreateRoomView */,
-				7E83E5B32ABDB10400F0690C /* LobbyView */,
-				FF3A15EF2ABA1B5600E31DCA /* AnonymousLogin */,
-				7E124DC12ABB1ACE00ABC962 /* MasterInput */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -228,6 +233,44 @@
 				00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */,
 			);
 			path = CreateRoomView;
+			sourceTree = "<group>";
+		};
+		00D97FDB2AD4276D00B65A4A /* WebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				00D97FDE2AD4278700B65A4A /* Protocol */,
+				00D97FDC2AD4277B00B65A4A /* WebSocketClient.swift */,
+			);
+			path = WebSocket;
+			sourceTree = "<group>";
+		};
+		00D97FDE2AD4278700B65A4A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				00D97FDF2AD4279000B65A4A /* Client.swift */,
+				00D97FE12AD427D900B65A4A /* ClientOutput.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		00D97FE72AD436A400B65A4A /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				00D97FEF2AD438DA00B65A4A /* Components */,
+				00D97FE82AD436B500B65A4A /* GameViewModel.swift */,
+				00D97FED2AD4371100B65A4A /* GameView.swift */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		00D97FEF2AD438DA00B65A4A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E124DC12ABB1ACE00ABC962 /* MasterInput */,
+				FF3A15EF2ABA1B5600E31DCA /* AnonymousLogin */,
+				7E83E5B32ABDB10400F0690C /* LobbyView */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		00D9C9BC2ABC701C00F66421 /* Modifiers */ = {
@@ -279,8 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				7E124DBF2ABB1AC900ABC962 /* MasterInputView.swift */,
-				7E124DC22ABB1B1900ABC962 /* MasterInputInteractor.swift */,
-				7E124DC42ABB1B2400ABC962 /* MasterInputPresenter.swift */,
 				7E124DCA2ABB362F00ABC962 /* Components */,
 			);
 			path = MasterInput;
@@ -366,8 +407,8 @@
 			isa = PBXGroup;
 			children = (
 				FF3A15F02ABA1B7C00E31DCA /* AnonymousLoginView.swift */,
-				FF3A15F22ABA1B9600E31DCA /* AnonymousLoginInteractor.swift */,
-				FF3A15F42ABA1BA700E31DCA /* AnonymousLoginPresenter.swift */,
+				00D97FF02AD43B7E00B65A4A /* AnonymousLoginViewModel.swift */,
+				00D97FF22AD43BAF00B65A4A /* AnonymousLoginModel.swift */,
 				FF3A15FC2ABB587B00E31DCA /* Components */,
 			);
 			path = AnonymousLogin;
@@ -500,16 +541,16 @@
 			files = (
 				00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */,
 				7E32B0772AC6F5A000A62D28 /* LobbyViewModel.swift in Sources */,
+				00D97FDD2AD4277B00B65A4A /* WebSocketClient.swift in Sources */,
 				7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */,
 				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
 				FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */,
-				FF3A15F52ABA1BA700E31DCA /* AnonymousLoginPresenter.swift in Sources */,
 				FF3A15F12ABA1B7C00E31DCA /* AnonymousLoginView.swift in Sources */,
 				FFFF9D4F2ABC50AD000DB11A /* SelectImageProfile.swift in Sources */,
-				FF3A15F32ABA1B9600E31DCA /* AnonymousLoginInteractor.swift in Sources */,
 				7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */,
 				7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */,
 				00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */,
+				00D97FE22AD427D900B65A4A /* ClientOutput.swift in Sources */,
 				00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */,
 				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
 				FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */,
@@ -520,8 +561,8 @@
 				7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */,
 				7E83E5B22ABBC10200F0690C /* ImageInputCard.swift in Sources */,
 				7E124DCC2ABB36F300ABC962 /* MasterInputCard.swift in Sources */,
-				7E124DC32ABB1B1900ABC962 /* MasterInputInteractor.swift in Sources */,
 				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
+				00D97FF32AD43BAF00B65A4A /* AnonymousLoginModel.swift in Sources */,
 				7E124DC02ABB1AC900ABC962 /* MasterInputView.swift in Sources */,
 				7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */,
 				7E83E5BA2ABDCA9B00F0690C /* PlayersContainer.swift in Sources */,
@@ -531,17 +572,20 @@
 				7E83E5B72ABDB42200F0690C /* MasterContainer.swift in Sources */,
 				7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */,
 				FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */,
-				7E124DC52ABB1B2400ABC962 /* MasterInputPresenter.swift in Sources */,
 				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
+				00D97FF12AD43B7E00B65A4A /* AnonymousLoginViewModel.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
 				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
 				FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */,
 				00D9C9C72ABC7EF100F66421 /* MapperError.swift in Sources */,
+				00D97FE92AD436B500B65A4A /* GameViewModel.swift in Sources */,
+				00D97FE02AD4279000B65A4A /* Client.swift in Sources */,
 				00D9C9D32ABC814700F66421 /* Network.swift in Sources */,
 				00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */,
 				00D9C9CF2ABC806E00F66421 /* NetworkService.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
 				7E32B0792AC6F63B00A62D28 /* LobbyModel.swift in Sources */,
+				00D97FEE2AD4371100B65A4A /* GameView.swift in Sources */,
 				7E124DC92ABB1D6E00ABC962 /* LimitedInputTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

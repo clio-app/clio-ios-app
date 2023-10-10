@@ -9,37 +9,11 @@ import SwiftUI
 import Combine
 
 struct AnonymousLoginView: View {
-    private let imagesList = ["bonfire-picture", "circles-picture", "profile-picture-eye"]
-    
+    @EnvironmentObject var gameViewModel: GameViewModel
+    @StateObject var vm = AnonymousLoginViewModel()
+
+    var roomCode: String
     public var buttonPressedSubject = PassthroughSubject<Void, Never>()
-    
-    @State var masterImage: String = "circles-picture"
-    @State var usersImages: [String]
-    @State var userName: String = ""
-    @State var goToCreatedRoom: Bool = false
-    @State var currentImage: String {
-        didSet {
-            if usersImages.isEmpty {
-                masterImage = currentImage
-            } 
-            else {
-                let lastIndex = usersImages.count - 1
-                usersImages[lastIndex] = currentImage
-            }
-        }
-    }
-    
-    init(masterImage: String? = nil, usersImages: [String] = []) {
-        if let masterImage = masterImage {
-            self.masterImage = masterImage
-            self.usersImages = usersImages + ["bonfire-picture"]
-            self.currentImage = "bonfire-picture"
-        } else {
-            self.masterImage = "profile-picture-eye"
-            self.currentImage = "profile-picture-eye"
-            self.usersImages = usersImages
-        }
-    }
     
     var body: some View {
         GeometryReader { geometry in
@@ -49,17 +23,17 @@ struct AnonymousLoginView: View {
                         roomName: "Nome da Sala",
                         roomTheme: "Tema da Sala",
                         withBorderBackground: false,
-                        masterImageName: $masterImage,
-                        usersImages: $usersImages
+                        masterImageName: $vm.masterImage,
+                        usersImages: $vm.usersImages
                     )
                     
                     Spacer()
                     
-                    SelectImageProfile(selectedImage: $currentImage) {
+                    SelectImageProfile(selectedImage: $vm.currentImage) {
                         withAnimation {
                             UIImpactFeedbackGenerator(style: .light).impactOccurred()
                             UIApplication.shared.endEditing()
-                            currentImage = changePicture(currentImageName: currentImage) ?? currentImage
+                            vm.currentImage = changePicture(currentImageName: vm.currentImage) ?? vm.currentImage
                         }
                     }
                     .frame(
@@ -70,7 +44,7 @@ struct AnonymousLoginView: View {
                     formField(
                         labelText: "Insira um nome para jogar",
                         placeHolder: "Escreva seu nome...",
-                        input: $userName
+                        input: $vm.userName
                     )
                     
                     Spacer()
@@ -81,8 +55,10 @@ struct AnonymousLoginView: View {
                         hasBorder: false) {
                             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
                             UIApplication.shared.endEditing()
-                            buttonPressedSubject.send()
-                            goToCreatedRoom = true
+                            Task {
+                                guard let user = await vm.createUser() else { return }
+                                await gameViewModel.registerUserInRoom(user)
+                            }
                         }
                         .frame(height: 62)
                 }
@@ -96,11 +72,7 @@ struct AnonymousLoginView: View {
             }
             .keyboardAdaptive()
         }
-        .navigationDestination(isPresented: $goToCreatedRoom) {
-            Text("Você entrou na sala!")
-                .font(.largeTitle)
-                .bold()
-        }
+        .onAppear { gameViewModel.connectInRoom(roomCode) }
         .ignoresSafeArea(.keyboard)
         .onTapGesture {
             UIApplication.shared.endEditing()
@@ -126,20 +98,20 @@ struct AnonymousLoginView: View {
     }
     
     private func changePicture(currentImageName: String) -> String? {
-        guard let currentIndex = imagesList.firstIndex(of: currentImageName) else {
+        guard let currentIndex = vm.imagesList.firstIndex(of: currentImageName) else {
             return nil
         }
         
-        let lastIndex = imagesList.count - 1
+        let lastIndex = vm.imagesList.count - 1
         var nextImageIndex = 0
         
         if currentIndex != lastIndex {
             nextImageIndex = currentIndex + 1
         }
-        return imagesList[nextImageIndex]
+        return vm.imagesList[nextImageIndex]
     }
 }
 
 #Preview {
-    AnonymousLoginView(masterImage: "bonfire-picture", usersImages: ["bonfire-picture", "bonfire-picture", "bonfire-picture"])
+    AnonymousLoginView(roomCode: "ABC123")
 }

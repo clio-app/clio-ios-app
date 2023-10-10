@@ -21,7 +21,9 @@ class LobbyViewModel: ObservableObject {
         do {
             var endpoint = LobbyModel.Acess.NetworkingEndpoint()
             endpoint.path.append(id)
-            let responseData: LobbyModel.Acess.Response = LobbyModel.Acess.Response(room: try await service.makeRequest(for: endpoint))
+            let responseData: LobbyModel.Acess.Response = LobbyModel.Acess.Response(
+                room: try await service.makeRequest(for: endpoint)
+            )
             DispatchQueue.main.async {
                 self.currentRoom = responseData
             }

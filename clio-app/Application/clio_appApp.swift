@@ -11,8 +11,9 @@ import SwiftUI
 struct clio_appApp: App {
     var body: some Scene {
         WindowGroup {
+            LandingScreenView()
 //            CreateRoomView()
-            LobbyView()
+//            LobbyView()
         }
     }
 }
