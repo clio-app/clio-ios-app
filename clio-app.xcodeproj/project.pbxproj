@@ -18,6 +18,10 @@
 		00D97FEE2AD4371100B65A4A /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FED2AD4371100B65A4A /* GameView.swift */; };
 		00D97FF12AD43B7E00B65A4A /* AnonymousLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FF02AD43B7E00B65A4A /* AnonymousLoginViewModel.swift */; };
 		00D97FF32AD43BAF00B65A4A /* AnonymousLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FF22AD43BAF00B65A4A /* AnonymousLoginModel.swift */; };
+		00D97FF62AD58A0900B65A4A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FF52AD58A0900B65A4A /* ImagePicker.swift */; };
+		00D97FFB2AD591E800B65A4A /* DescribingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FFA2AD591E800B65A4A /* DescribingImageView.swift */; };
+		00D97FFE2AD594C000B65A4A /* VotingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D97FFD2AD594C000B65A4A /* VotingView.swift */; };
+		00D980012AD596F600B65A4A /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D980002AD596F600B65A4A /* GameEndView.swift */; };
 		00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C02ABC7D6900F66421 /* Endpoint.swift */; };
 		00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C22ABC7EAF00F66421 /* Loader.swift */; };
 		00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C42ABC7ECC00F66421 /* HttpError.swift */; };
@@ -85,6 +89,10 @@
 		00D97FED2AD4371100B65A4A /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		00D97FF02AD43B7E00B65A4A /* AnonymousLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginViewModel.swift; sourceTree = "<group>"; };
 		00D97FF22AD43BAF00B65A4A /* AnonymousLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginModel.swift; sourceTree = "<group>"; };
+		00D97FF52AD58A0900B65A4A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		00D97FFA2AD591E800B65A4A /* DescribingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescribingImageView.swift; sourceTree = "<group>"; };
+		00D97FFD2AD594C000B65A4A /* VotingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingView.swift; sourceTree = "<group>"; };
+		00D980002AD596F600B65A4A /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
 		00D9C9C02ABC7D6900F66421 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		00D9C9C22ABC7EAF00F66421 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		00D9C9C42ABC7ECC00F66421 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
@@ -266,11 +274,38 @@
 		00D97FEF2AD438DA00B65A4A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				00D97FFF2AD596EB00B65A4A /* GameEndView */,
+				00D97FFC2AD594AD00B65A4A /* VotingView */,
+				00D97FF72AD591CD00B65A4A /* DescribingImageView */,
 				7E124DC12ABB1ACE00ABC962 /* MasterInput */,
 				FF3A15EF2ABA1B5600E31DCA /* AnonymousLogin */,
 				7E83E5B32ABDB10400F0690C /* LobbyView */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		00D97FF72AD591CD00B65A4A /* DescribingImageView */ = {
+			isa = PBXGroup;
+			children = (
+				00D97FFA2AD591E800B65A4A /* DescribingImageView.swift */,
+			);
+			path = DescribingImageView;
+			sourceTree = "<group>";
+		};
+		00D97FFC2AD594AD00B65A4A /* VotingView */ = {
+			isa = PBXGroup;
+			children = (
+				00D97FFD2AD594C000B65A4A /* VotingView.swift */,
+			);
+			path = VotingView;
+			sourceTree = "<group>";
+		};
+		00D97FFF2AD596EB00B65A4A /* GameEndView */ = {
+			isa = PBXGroup;
+			children = (
+				00D980002AD596F600B65A4A /* GameEndView.swift */,
+			);
+			path = GameEndView;
 			sourceTree = "<group>";
 		};
 		00D9C9BC2ABC701C00F66421 /* Modifiers */ = {
@@ -333,6 +368,7 @@
 				7E124DC82ABB1D6E00ABC962 /* LimitedInputTextField.swift */,
 				7E124DCB2ABB36F300ABC962 /* MasterInputCard.swift */,
 				7E83E5B12ABBC10200F0690C /* ImageInputCard.swift */,
+				00D97FF52AD58A0900B65A4A /* ImagePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -551,11 +587,14 @@
 				7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */,
 				00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */,
 				00D97FE22AD427D900B65A4A /* ClientOutput.swift in Sources */,
+				00D980012AD596F600B65A4A /* GameEndView.swift in Sources */,
 				00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */,
 				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
 				FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */,
+				00D97FFE2AD594C000B65A4A /* VotingView.swift in Sources */,
 				7EB603982AC45D38007B8306 /* LobbyHeader.swift in Sources */,
 				FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */,
+				00D97FF62AD58A0900B65A4A /* ImagePicker.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
 				00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */,
 				7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */,
@@ -568,6 +607,7 @@
 				7E83E5BA2ABDCA9B00F0690C /* PlayersContainer.swift in Sources */,
 				7E302BBF2ABFC5EE0015E10D /* PlayerGridItem.swift in Sources */,
 				7E83E5B52ABDB3BE00F0690C /* LobbyView.swift in Sources */,
+				00D97FFB2AD591E800B65A4A /* DescribingImageView.swift in Sources */,
 				7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */,
 				7E83E5B72ABDB42200F0690C /* MasterContainer.swift in Sources */,
 				7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */,

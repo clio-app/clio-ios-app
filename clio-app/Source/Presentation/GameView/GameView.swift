@@ -24,19 +24,36 @@ struct GameView: View {
                         MasterInputView(
                             userEntryText: "",
                             userList: users.compactMap { $0.user.picture },
-                            masterUser: master.user.picture
+                            masterUser: master.user.picture,
+                            sendImageTapped: { image, description in
+                                Task {
+                                    vm.connectInRoom(roomCode)
+                                    await vm.sendMasterArtefacts(
+                                        picture: image,
+                                        description: description
+                                    )
+                                }
+                            }
                         )
                     } else {
                         Text("Aguardando mestre")
+                            .bold()
+                        .navigationBarBackButtonHidden()
                     }
-                case .describingImage:
-                    EmptyView()
+                case .describingImage(let image):
+                    DescribingImageView(imageData: image)
                 case .waitingAwnsers:
-                    EmptyView()
+                    Text("Aguardando respostas")
+                    .bold()
+                case .voting(descriptions: let descriptions):
+                    VotingView(descriptions: descriptions)
+                case .gameEnd(users: let users):
+                   GameEndView(users: users)
             }
         }
         .onAppear {
             vm.client.clientOutput = vm
+            vm.isHost = host
         }
         .environmentObject(vm)
     }

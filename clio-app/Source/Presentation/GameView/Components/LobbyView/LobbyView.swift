@@ -27,15 +27,17 @@ struct LobbyView: View {
                 PlayersContainer(lobbyID: roomCode, players: $gameViewModel.players)
 
                 // TODO: Opacity controlled by players status -> empty or not
-                ActionButton(title: "Iniciar partida", foregroundColor: .blue, hasBorder: false) {
-                    if gameViewModel.players.count > 2 {
-                        Task {
-                            await gameViewModel.startGame()
+                if gameViewModel.isHost {
+                    ActionButton(title: "Iniciar partida", foregroundColor: .blue, hasBorder: false) {
+                        if gameViewModel.players.count > 1 {
+                            Task {
+                                await gameViewModel.startGame()
+                            }
                         }
                     }
+                    .opacity(gameViewModel.players.count > 1 ? 1 : 0.2)
+                    .frame(height: geo.size.height * 0.08)
                 }
-                .opacity(gameViewModel.players.count > 2 ? 1 : 0.2)
-                .frame(height: geo.size.height * 0.08)
 
             }
             .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.9)

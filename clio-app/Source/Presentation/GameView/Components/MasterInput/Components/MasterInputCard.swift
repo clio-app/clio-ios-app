@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MasterInputCard: View {
-    @Binding var userInputImage: String
+    @Binding var userInputImage: UIImage
     @Binding var userEntryText: String
 
     @State private var isFocused: Bool = false
@@ -32,6 +32,6 @@ struct MasterInputCard: View {
     }
 }
 
-#Preview {
-    MasterInputCard(userInputImage: .constant("liquid-bg"), userEntryText: .constant(""))
-}
+//#Preview {
+//    MasterInputCard(userInputImage: .constant("liquid-bg"), userEntryText: .constant(""))
+//}

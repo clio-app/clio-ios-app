@@ -115,22 +115,20 @@ final class WebSocketClient: NSObject, Client {
                 clientOutput?.didGameStarted(dto.master)
             case .masterSharing:
                 let dto = MasterSharingDTO.decodeFromMessage(message.data)
-                print("\(state): \(dto)")
-                break
+                clientOutput?.didMasterShared(dto.picture)
             case .userDidAct:
-                let dto = UserDidActDTO.decodeFromMessage(message.data)
-                print("\(state): \(dto)")
+                let _ = UserDidActDTO.decodeFromMessage(message.data)
                 break
             case .startVoting:
                 let dto = StartVotingDTO.decodeFromMessage(message.data)
-                print("\(state): \(dto)")
-                break
+                clientOutput?.didStartVoting(dto.descriptions)
             case .userDidVote:
                 let dto = UserDidVoteDTO.decodeFromMessage(message.data)
                 print("\(state): \(dto)")
                 break
             case .roundEnd:
                 let dto = RoundEndDTO.decodeFromMessage(message.data)
+                clientOutput?.didGameFinish(dto.ranking)
                 print("\(state): \(dto)")
                 break
         }
