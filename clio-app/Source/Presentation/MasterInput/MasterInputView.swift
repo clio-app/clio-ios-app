@@ -11,8 +11,8 @@ struct MasterInputView: View {
     @State var userInputImage: String = "profile-picture-eye"
 
     // userList and masterUser receives and shows profile picture name
-    @Binding var userList: [String]
-    @Binding var masterUser: String
+    @State var userList: [String]
+    @State var masterUser: String
 
     // TODO: MOVE setup variables to an easy access file and setup enum
     private let maxWordCount: Int = 280
@@ -58,7 +58,7 @@ struct MasterInputView: View {
 
 #Preview {
     MasterInputView(userEntryText: "",
-                    userList: .constant(["bonfire-picture", "circles-picture", "profile-picture-eye",
-                                         "bonfire-picture", "circles-picture", "profile-picture-eye"]),
-                    masterUser: .constant("profile-picture-eye"))
+                    userList: ["bonfire-picture", "circles-picture", "profile-picture-eye",
+                                         "bonfire-picture", "circles-picture", "profile-picture-eye"],
+                    masterUser: "profile-picture-eye")
 }

@@ -24,6 +24,9 @@ struct AnswerGrid: View {
                 )
                 .font(.itimRegular(fontType: .body))
                 .padding(.horizontal, 12)
+                .onTapGesture {
+                    UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+                }
             }
         }
     }
