@@ -13,6 +13,7 @@ final class AnonymousLoginViewModel: ObservableObject {
     @Published var masterImage: String = "circles-picture"
     @Published var usersImages: [String] = []
     @Published var userName: String = String()
+    @Published var currentRoom: AnonymousLoginModel.Acess.Response?
     @Published var currentImage: String {
         didSet {
             if usersImages.isEmpty {
@@ -51,5 +52,20 @@ final class AnonymousLoginViewModel: ObservableObject {
             print(error.localizedDescription)
         }
         return nil
+    }
+    
+    func findRoom(id: String) async {
+        do {
+            var endpoint = LobbyModel.Acess.NetworkingEndpoint()
+            endpoint.path.append(id)
+            let responseData: AnonymousLoginModel.Acess.Response = AnonymousLoginModel.Acess.Response(
+                room: try await service.makeRequest(for: endpoint)
+            )
+            DispatchQueue.main.async {
+                self.currentRoom = responseData
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }

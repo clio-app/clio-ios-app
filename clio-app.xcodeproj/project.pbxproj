@@ -235,7 +235,6 @@
 			children = (
 				7E310AC92AB8895200AF20C7 /* GeneralComponents */,
 				00D97FE72AD436A400B65A4A /* GameView */,
-				FF3FECCF2AD40E4600D3D617 /* CameraView */,
 				7E310AD02AB8955200AF20C7 /* LandingScreenView */,
 				00BFF9272AB491B50068A5F2 /* CreateRoomView */,
 			);
@@ -283,6 +282,7 @@
 		00D97FEF2AD438DA00B65A4A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FF3FECCF2AD40E4600D3D617 /* CameraView */,
 				00D97FFF2AD596EB00B65A4A /* GameEndView */,
 				00D97FFC2AD594AD00B65A4A /* VotingView */,
 				00D97FF72AD591CD00B65A4A /* DescribingImageView */,

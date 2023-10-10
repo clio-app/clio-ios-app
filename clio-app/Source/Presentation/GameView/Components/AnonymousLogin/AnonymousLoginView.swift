@@ -11,7 +11,7 @@ import Combine
 struct AnonymousLoginView: View {
     @EnvironmentObject var gameViewModel: GameViewModel
     @StateObject var vm = AnonymousLoginViewModel()
-
+    
     var roomCode: String
     public var buttonPressedSubject = PassthroughSubject<Void, Never>()
     
@@ -20,8 +20,8 @@ struct AnonymousLoginView: View {
             ScrollView {
                 VStack {
                     RoomHeader(
-                        roomName: "Nome da Sala",
-                        roomTheme: "Tema da Sala",
+                        roomName: vm.currentRoom?.room.name ?? "NAME_NOT_FOUND",
+                        roomTheme: vm.currentRoom?.room.theme.title ?? "THEME_NOT_FOUND",
                         withBorderBackground: false,
                         masterImageName: $vm.masterImage,
                         usersImages: $vm.usersImages
@@ -72,7 +72,12 @@ struct AnonymousLoginView: View {
             }
             .keyboardAdaptive()
         }
-        .onAppear { gameViewModel.connectInRoom(roomCode) }
+        .onAppear {
+            Task {
+                await vm.findRoom(id: roomCode)
+            }
+            gameViewModel.connectInRoom(roomCode)
+        }
         .ignoresSafeArea(.keyboard)
         .onTapGesture {
             UIApplication.shared.endEditing()

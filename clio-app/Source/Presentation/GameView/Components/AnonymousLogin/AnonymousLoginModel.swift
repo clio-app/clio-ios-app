@@ -31,4 +31,22 @@ enum AnonymousLoginModel {
             var httpMethod: HTTPMethod? = .post
         }
     }
+    
+    enum Acess {
+        struct Request: Encodable {}
+        
+        struct Response: Decodable, Equatable {
+            let room: ClioEntities.Room
+        }
+        
+        struct NetworkingEndpoint: Endpoint {
+            var communicationProtocol: CommunicationProtocol = .HTTP
+            var urlBase: String {
+                return "127.0.0.1:8080"
+            }
+            var path: String = "/room/"
+            var body: Data?
+            var httpMethod: HTTPMethod? = .get
+        }
+    }
 }
