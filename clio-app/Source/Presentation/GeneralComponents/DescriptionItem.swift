@@ -12,6 +12,7 @@ struct DescriptionItem: View {
     @Binding var foregroundColor: Color
     @Binding var backgroundColor: Color
     var isSelected = false
+    var descriptionTapped: ((String) -> ())?
 
     var body: some View {
         Group {
@@ -20,7 +21,8 @@ struct DescriptionItem: View {
                 BorderedBackground(foregroundColor: .softGreen, hasBorder: false)
                 BorderedBackground(foregroundColor: .offWhite, hasBorder: false).padding(12)
             }
-            
+
+            // TODO: Add ribbon when tapped
             HStack {
                 Spacer()
                 if isSelected {
@@ -29,6 +31,9 @@ struct DescriptionItem: View {
                 }
             }
             .frame(height: 32)
+        }
+        .onTapGesture {
+            descriptionTapped?(description)
         }
     }
 }

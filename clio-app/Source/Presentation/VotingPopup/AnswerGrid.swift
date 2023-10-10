@@ -2,7 +2,7 @@
 //  VotingPopupGrid.swift
 //  clio-app
 //
-//  Created by Luciana Adrião on 09/10/23.
+//  Created by Luciana AdriÃ£o on 09/10/23.
 //
 
 import SwiftUI
@@ -11,6 +11,7 @@ import ClioEntities
 struct AnswerGrid: View {
     var columnCount = 1
     @Binding var descriptonArray: [ClioEntities.Description]
+    var descriptionTapped: ((String) -> ())?
 
     var body: some View {
         LazyVGrid(columns: Array(repeating: .init(.flexible()), count: columnCount), spacing: 20.0) {
@@ -18,7 +19,9 @@ struct AnswerGrid: View {
                 DescriptionItem(
                     description: .constant(descriptonArray[index].text),
                     foregroundColor: .constant(.offWhite),
-                    backgroundColor: .constant(.softGreen))
+                    backgroundColor: .constant(.softGreen),
+                    descriptionTapped: descriptionTapped
+                )
                 .font(.itimRegular(fontType: .body))
                 .padding(.horizontal, 12)
             }

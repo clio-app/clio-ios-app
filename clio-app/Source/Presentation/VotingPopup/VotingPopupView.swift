@@ -11,6 +11,7 @@ import ClioEntities
 struct VotingPopupView: View {
     @State var progressValue: Float = 0.0
     @Binding var isShowingPopup: Bool
+    var descriptionTapped: ((String) -> ())?
 
     @State var desc: [ClioEntities.Description] = [
         Description(id: UUID(), userID: UUID(), text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu justo in ligula accumsan fermentum. Nulla facilisi. Curabitur interdum, libero eget consectetur tincidunt, metus augue varius velit, a rhoncus lectus urna eu risus.", voteCount: 0),
@@ -27,6 +28,7 @@ struct VotingPopupView: View {
                 Button(action: {
                     // Dismiss self
                     isShowingPopup.toggle()
+                    UIImpactFeedbackGenerator(style: .soft).impactOccurred()
 
                 }, label: {
                     Image(systemName: "x.circle.fill")
@@ -46,7 +48,8 @@ struct VotingPopupView: View {
                 .padding(.bottom, 22)
 
             ScrollView(.vertical) {
-                AnswerGrid(descriptonArray: $desc)
+                AnswerGrid(
+                    descriptonArray: $desc, descriptionTapped: descriptionTapped)
                     .offset(y: 8.0)
             }
             .scrollIndicators(.hidden)

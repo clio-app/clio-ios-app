@@ -11,6 +11,7 @@ struct VotingInstructionView: View {
     @StateObject private var vm = VotingInstructionViewModel()
     @State var answerPopupShow: Bool = false
     @State var hasVoted: Bool = false
+    @State var textDescription = ""
 
     var body: some View {
         VStack {
@@ -37,9 +38,9 @@ struct VotingInstructionView: View {
 
                     Spacer()
 
-                    if hasVoted {
-                        AnswerSelected(hasVoted: $hasVoted, selectedText: .constant(vm.selectedText.text), geo: geo)
-                        
+                    if !(self.textDescription.isEmpty) {
+                        AnswerSelected(isVoting: $answerPopupShow, selectedText: $textDescription, geo: geo)
+
                     } else {
                         ActionButton(title: "Ver respostas", foregroundColor: .customPink, hasBorder: false) {
                             answerPopupShow.toggle()
@@ -56,8 +57,11 @@ struct VotingInstructionView: View {
         .padding(.vertical, 12.0)
         .background(Color.offWhite)
         .popupNavigationView(show: $answerPopupShow) {
-            VotingPopupView(isShowingPopup: $answerPopupShow)
-                .frame(width: UIScreen.main.bounds.width - 36 ,height: UIScreen.main.bounds.height - 130)
+            VotingPopupView(isShowingPopup: $answerPopupShow, descriptionTapped: { description in
+                self.textDescription = description
+                answerPopupShow.toggle()
+            })
+            .frame(width: UIScreen.main.bounds.width - 36 ,height: UIScreen.main.bounds.height - 130)
         }
         .foregroundColor(.black)
     }
