@@ -27,7 +27,7 @@ final class CameraViewModel: ObservableObject {
     func checkCameraAuthorization() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .notDetermined:
-            changeViewState(to: .notDetermined)
+            requestPermission()
         case .restricted:
             changeViewState(to: ViewState.restricted(
                 title: "Sem acesso à câmera!",
@@ -46,7 +46,9 @@ final class CameraViewModel: ObservableObject {
     }
     
     func requestPermission() {
-        AVCaptureDevice.requestAccess(for: .video) { _ in}
+        AVCaptureDevice.requestAccess(for: .video) { [weak self] _ in
+            self?.checkCameraAuthorization()
+        }
     }
     
     func changeViewState(to newState: ViewState) {

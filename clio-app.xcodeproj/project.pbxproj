@@ -54,13 +54,13 @@
 		FF3A15F32ABA1B9600E31DCA /* AnonymousLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F22ABA1B9600E31DCA /* AnonymousLoginInteractor.swift */; };
 		FF3A15F52ABA1BA700E31DCA /* AnonymousLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F42ABA1BA700E31DCA /* AnonymousLoginPresenter.swift */; };
 		FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */; };
-		FF3FECD12AD40E5E00D3D617 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FECD02AD40E5E00D3D617 /* CameraView.swift */; };
-		FF3FECD32AD40EAE00D3D617 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FECD22AD40EAE00D3D617 /* ImagePicker.swift */; };
-		FF3FECD62AD41A8D00D3D617 /* HintOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FECD52AD41A8D00D3D617 /* HintOverlay.swift */; };
 		FF3FECDA2AD4468400D3D617 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FECD92AD4468400D3D617 /* CameraViewModel.swift */; };
 		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
 		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
 		FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */; };
+		FFC58FF22AD591EA0070F977 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC58FF12AD591EA0070F977 /* CameraView.swift */; };
+		FFC58FF42AD592110070F977 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC58FF32AD592110070F977 /* CameraPicker.swift */; };
+		FFC58FF62AD592F80070F977 /* HintOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC58FF52AD592F80070F977 /* HintOverlay.swift */; };
 		FFFF9D4F2ABC50AD000DB11A /* SelectImageProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF9D4E2ABC50AD000DB11A /* SelectImageProfile.swift */; };
 /* End PBXBuildFile section */
 
@@ -124,14 +124,14 @@
 		FF3A15F22ABA1B9600E31DCA /* AnonymousLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginInteractor.swift; sourceTree = "<group>"; };
 		FF3A15F42ABA1BA700E31DCA /* AnonymousLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginPresenter.swift; sourceTree = "<group>"; };
 		FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptative.swift; sourceTree = "<group>"; };
-		FF3FECD02AD40E5E00D3D617 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		FF3FECD22AD40EAE00D3D617 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		FF3FECD52AD41A8D00D3D617 /* HintOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintOverlay.swift; sourceTree = "<group>"; };
 		FF3FECD92AD4468400D3D617 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
 		FF6FD1CF2AB4A67600A2D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		FFC58FF12AD591EA0070F977 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		FFC58FF32AD592110070F977 /* CameraPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
+		FFC58FF52AD592F80070F977 /* HintOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintOverlay.swift; sourceTree = "<group>"; };
 		FFFF9D4E2ABC50AD000DB11A /* SelectImageProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -393,7 +393,7 @@
 		FF3FECCF2AD40E4600D3D617 /* CameraView */ = {
 			isa = PBXGroup;
 			children = (
-				FF3FECD02AD40E5E00D3D617 /* CameraView.swift */,
+				FFC58FF12AD591EA0070F977 /* CameraView.swift */,
 				FF3FECD92AD4468400D3D617 /* CameraViewModel.swift */,
 				FF3FECD42AD41A6B00D3D617 /* Components */,
 			);
@@ -403,8 +403,8 @@
 		FF3FECD42AD41A6B00D3D617 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FF3FECD22AD40EAE00D3D617 /* ImagePicker.swift */,
-				FF3FECD52AD41A8D00D3D617 /* HintOverlay.swift */,
+				FFC58FF32AD592110070F977 /* CameraPicker.swift */,
+				FFC58FF52AD592F80070F977 /* HintOverlay.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -530,17 +530,16 @@
 				00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */,
 				7E32B0772AC6F5A000A62D28 /* LobbyViewModel.swift in Sources */,
 				7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */,
+				FFC58FF42AD592110070F977 /* CameraPicker.swift in Sources */,
 				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
 				FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */,
 				FF3A15F52ABA1BA700E31DCA /* AnonymousLoginPresenter.swift in Sources */,
 				FF3A15F12ABA1B7C00E31DCA /* AnonymousLoginView.swift in Sources */,
 				FFFF9D4F2ABC50AD000DB11A /* SelectImageProfile.swift in Sources */,
-				FF3FECD12AD40E5E00D3D617 /* CameraView.swift in Sources */,
 				FF3A15F32ABA1B9600E31DCA /* AnonymousLoginInteractor.swift in Sources */,
 				7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */,
 				7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */,
 				00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */,
-				FF3FECD32AD40EAE00D3D617 /* ImagePicker.swift in Sources */,
 				00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */,
 				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
 				FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */,
@@ -553,6 +552,7 @@
 				7E124DCC2ABB36F300ABC962 /* MasterInputCard.swift in Sources */,
 				7E124DC32ABB1B1900ABC962 /* MasterInputInteractor.swift in Sources */,
 				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
+				FFC58FF22AD591EA0070F977 /* CameraView.swift in Sources */,
 				7E124DC02ABB1AC900ABC962 /* MasterInputView.swift in Sources */,
 				7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */,
 				7E83E5BA2ABDCA9B00F0690C /* PlayersContainer.swift in Sources */,
@@ -569,9 +569,9 @@
 				FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */,
 				00D9C9C72ABC7EF100F66421 /* MapperError.swift in Sources */,
 				00D9C9D32ABC814700F66421 /* Network.swift in Sources */,
-				FF3FECD62AD41A8D00D3D617 /* HintOverlay.swift in Sources */,
 				00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */,
 				00D9C9CF2ABC806E00F66421 /* NetworkService.swift in Sources */,
+				FFC58FF62AD592F80070F977 /* HintOverlay.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
 				FF3FECDA2AD4468400D3D617 /* CameraViewModel.swift in Sources */,
 				7E32B0792AC6F63B00A62D28 /* LobbyModel.swift in Sources */,
