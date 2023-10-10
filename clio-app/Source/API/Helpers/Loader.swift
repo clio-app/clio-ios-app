@@ -13,6 +13,7 @@ struct NetworkingLoader<T: Decodable> {
             let decodedJson = try JSONDecoder().decode(T.self, from: data)
             return decodedJson
         } catch {
+            print(error)
             throw MapperError.decodingError
         }
     }

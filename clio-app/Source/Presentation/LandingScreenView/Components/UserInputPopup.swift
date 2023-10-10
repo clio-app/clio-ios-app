@@ -12,6 +12,7 @@ import SwiftUI
 struct UserInputPopup: View {
     @State var inputUser: String = ""
     @Binding var isShowing: Bool
+    var enterButtonTapped: ((String) -> ())?
 
     var body: some View {
         GeometryReader { geo in
@@ -47,7 +48,7 @@ struct UserInputPopup: View {
                     
                     ActionButton(title: "Entre", foregroundColor: .customPink.opacity(0.5), hasBorder: false) {
                         UIApplication.shared.endEditing()
-                        print(inputUser)
+                        enterButtonTapped?(inputUser)
                     }
                     .frame(height: geo.size.height * 0.05)
                     .frame(width: geo.size.width * 0.55)
