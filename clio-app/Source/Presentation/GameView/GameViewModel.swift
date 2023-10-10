@@ -12,7 +12,6 @@ final class GameViewModel: ObservableObject {
     enum GameState {
         case registerUser
         case waitingUsers
-        case gameStarting
         case takingArtefacts
         case describingImage
         case waitingAwnsers

@@ -18,8 +18,6 @@ struct GameView: View {
                     AnonymousLoginView(roomCode: roomCode)
                 case .waitingUsers:
                     LobbyView(roomCode: roomCode)
-                case .gameStarting:
-                    EmptyView()
                 case .takingArtefacts:
                     EmptyView()
                 case .describingImage:
