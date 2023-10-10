@@ -23,6 +23,13 @@
 		7E0D425A2AD5BEFD00C566EB /* AnonymousLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42582AD5BEFD00C566EB /* AnonymousLoginView.swift */; };
 		7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */; };
 		7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC62ABB1B6E00ABC962 /* Header.swift */; };
+		7E1705DF2AD608EE005FA9EE /* LobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42242AD5B7CE00C566EB /* LobbyView.swift */; };
+		7E1705E02AD608EE005FA9EE /* LobbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42252AD5B7CE00C566EB /* LobbyViewModel.swift */; };
+		7E1705E12AD608EE005FA9EE /* LobbyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42262AD5B7CE00C566EB /* LobbyModel.swift */; };
+		7E1705E22AD60938005FA9EE /* PlayersContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42282AD5B7CE00C566EB /* PlayersContainer.swift */; };
+		7E1705E32AD60938005FA9EE /* MasterContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42292AD5B7CE00C566EB /* MasterContainer.swift */; };
+		7E1705E42AD60938005FA9EE /* PlayerGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D422A2AD5B7CE00C566EB /* PlayerGridItem.swift */; };
+		7E1705E52AD60938005FA9EE /* LobbyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D422B2AD5B7CE00C566EB /* LobbyHeader.swift */; };
 		7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC32AB7828200AF20C7 /* ActionButton.swift */; };
 		7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */; };
 		7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */; };
@@ -526,6 +533,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E1705E22AD60938005FA9EE /* PlayersContainer.swift in Sources */,
+				7E1705E32AD60938005FA9EE /* MasterContainer.swift in Sources */,
+				7E1705E42AD60938005FA9EE /* PlayerGridItem.swift in Sources */,
+				7E1705E52AD60938005FA9EE /* LobbyHeader.swift in Sources */,
+				7E1705DF2AD608EE005FA9EE /* LobbyView.swift in Sources */,
+				7E1705E02AD608EE005FA9EE /* LobbyViewModel.swift in Sources */,
+				7E1705E12AD608EE005FA9EE /* LobbyModel.swift in Sources */,
 				7E94E93B2AD5C68600031061 /* MasterInputCard.swift in Sources */,
 				00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */,
 				7EBA9CDD2AD1B61800C25970 /* VotingInstructionModel.swift in Sources */,

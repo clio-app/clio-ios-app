@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct LobbyView: View {
-    @EnvironmentObject private var gameViewModel: GameViewModel
     @StateObject private var vm = LobbyViewModel()
-    var roomCode: String
 
     var body: some View {
         GeometryReader { geo in
@@ -19,22 +17,18 @@ struct LobbyView: View {
                             lobbyTheme: .constant(vm.currentRoom?.room.theme.title ?? "THEME_NOT_FOUND"),
                             lobbyPasscode: .constant(vm.currentRoom?.room.id ?? "ID_NOT_FOUND"))
 
-                MasterContainer(master: $gameViewModel.master)
+                MasterContainer(master: .constant(vm.currentRoom?.room.master))
                     .frame(width: geo.size.width * 0.6, height: geo.size.height * 0.2)
 
                 activePlayersText
 
-                PlayersContainer(lobbyID: roomCode, players: $gameViewModel.players)
+                // TODO: This is a mock test with players set in vm. Change to fetch.
+                PlayersContainer(lobbyID: "123", players: .constant(vm.players))
 
                 // TODO: Opacity controlled by players status -> empty or not
                 ActionButton(title: "Iniciar partida", foregroundColor: .blue, hasBorder: false) {
-                    if gameViewModel.players.count > 3 {
-                        Task {
-                            await gameViewModel.startGame()
-                        }
-                    }
+                    // Button action
                 }
-                .opacity(gameViewModel.players.count > 3 ? 1 : 0.2)
                 .frame(height: geo.size.height * 0.08)
 
             }
@@ -44,19 +38,17 @@ struct LobbyView: View {
         }
         .foregroundColor(.black)
         .ignoresSafeArea()
-        .navigationBarBackButtonHidden()
         .onAppear {
             // TODO: This part will be done by the createRoom when a room is created the roomID should be parsed to findRoom(id) to update the lobby view
             Task {
-                await vm.findRoom(id: roomCode)
+                await vm.findRoom(id: "4A3D6D")
             }
         }
     }
 }
 
 #Preview {
-    LobbyView(roomCode: "A12312")
-        .environmentObject(GameViewModel())
+    LobbyView()
 }
 
 extension LobbyView {

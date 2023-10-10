@@ -13,7 +13,7 @@ struct VotingPopupView: View {
     @Binding var isShowingPopup: Bool
     var descriptionTapped: ((String) -> ())?
 
-    @State var desc: [ClioEntities.Description] = [
+    var desc: [ClioEntities.Description] = [
         Description(id: UUID(), userID: UUID(), text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu justo in ligula accumsan fermentum. Nulla facilisi. Curabitur interdum, libero eget consectetur tincidunt, metus augue varius velit, a rhoncus lectus urna eu risus.", voteCount: 0),
            Description(id: UUID(), userID: UUID(), text: "Pellentesque non tortor eu purus cursus posuere. Ut a erat sit amet turpis congue vestibulum. Duis sed lectus vel justo varius euismod in non arcu. Proin rhoncus vel dui at iaculis.", voteCount: 0),
            Description(id: UUID(), userID: UUID(), text: "Suspendisse ac ex non ipsum varius viverra. Fusce efficitur interdum est, nec facilisis velit ullamcorper et. Vestibulum at vestibulum urna. Nunc rhoncus, elit eu efficitur hendrerit, elit erat vehicula odio.", voteCount: 0),
@@ -49,7 +49,8 @@ struct VotingPopupView: View {
 
             ScrollView(.vertical) {
                 AnswerGrid(
-                    descriptonArray: $desc, descriptionTapped: descriptionTapped)
+                    descriptonArray: .constant(self.desc),
+                    descriptionTapped: descriptionTapped)
                     .offset(y: 8.0)
             }
             .scrollIndicators(.hidden)
