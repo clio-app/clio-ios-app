@@ -6,23 +6,23 @@
 //
 
 import SwiftUI
+import ClioEntities
 
 struct MasterContainer: View {
-    @Binding var username: String
-    @Binding var userscore: Int
+    @Binding var master: RoomUser?
 
     var body: some View {
         GeometryReader { geo in
             VStack(alignment: .leading, spacing: 0.5) {
                 HStack {
-                    Image("profile-picture-eye")
+                    Image(master?.user.picture ?? "profile-picture-eye")
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: geo.size.width * 0.4)
 
                     VStack {
-                        Text(username) // Use username directly
-                        Text("\(userscore) pontos") // Convert Int to String
+                        Text(master?.user.name ?? "MASTER_NOT_FOUND") // Use username directly
+                        Text("\(master?.points ?? 0) pontos") // Convert Int to String
                     }
                     .font(.itimRegular(fontType: .body))
                     .padding(.trailing, 20.0)
@@ -47,6 +47,6 @@ struct MasterContainer: View {
 }
 
 
-#Preview {
-    MasterContainer(username: .constant("Prof.Juliano"), userscore: .constant(0))
-}
+//#Preview {
+//    MasterContainer(username: .constant("Prof.Juliano"), userscore: .constant(0))
+//}

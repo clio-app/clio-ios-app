@@ -15,7 +15,7 @@ struct PlayersContainer: View {
     let gridHSpacing: CGFloat = 20.0
 
     // Sample data for players (get from model)
-    @State var players: [RoomUser] = []
+    @Binding var players: [RoomUser]
 
     // TODO: Array of player that are NOT the master
     var body: some View {
@@ -66,5 +66,5 @@ extension PlayersContainer {
 }
 
 #Preview(body: {
-    PlayersContainer(lobbyID: "ABC123")
+    PlayersContainer(lobbyID: "ABC123", players: .constant([]))
 })

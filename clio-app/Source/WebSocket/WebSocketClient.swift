@@ -112,8 +112,7 @@ final class WebSocketClient: NSObject, Client {
         switch state {
             case .masterActing:
                 let dto = MasterActingDTO.decodeFromMessage(message.data)
-                print("\(state): \(dto)")
-                break
+                clientOutput?.didGameStarted(dto.master)
             case .masterSharing:
                 let dto = MasterSharingDTO.decodeFromMessage(message.data)
                 print("\(state): \(dto)")

@@ -11,4 +11,5 @@ import ClioEntities
 protocol ClientOutput: AnyObject {
     func errorWhileReceivingMessage(_ error: Error)
     func didConnectAPlayer(_ master: RoomUser, players: [RoomUser])
+    func didGameStarted(_ master: RoomUser)
 }

@@ -13,6 +13,8 @@ struct LandingScreenView: View {
     @State private var isMovingUp: Bool = false
     @State private var isPopupPresented: Bool = false
     @State private var goToCreateRoomView = false
+    @State private var roomCode: String?
+    @State private var goToGameView = false
 
     var body: some View {
         GeometryReader { geo in
@@ -76,6 +78,11 @@ struct LandingScreenView: View {
                 .navigationDestination(isPresented: $goToCreateRoomView) {
                     CreateRoomView()
                 }
+                .navigationDestination(isPresented: $goToGameView) {
+                    if let roomCode = self.roomCode {
+                        GameView(host: false, roomCode: roomCode)
+                    }
+                }
                 .navigationTitle("")
             }
             .frame(width: geo.size.width, height: geo.size.height)
@@ -85,8 +92,15 @@ struct LandingScreenView: View {
                 isPopupPresented = false
             })
             .popupNavigationView(show: $isPopupPresented) {
-                UserInputPopup(isShowing: $isPopupPresented)
-                    .frame(height: geo.size.height)
+                UserInputPopup(
+                    isShowing: $isPopupPresented,
+                    enterButtonTapped: { roomCode in
+                        self.roomCode = roomCode
+                        isPopupPresented = false
+                        goToGameView = true
+                    }
+                )
+                .frame(height: geo.size.height)
             }
         }
         .ignoresSafeArea(.keyboard)

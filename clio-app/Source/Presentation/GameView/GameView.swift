@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameView: View {
     @StateObject private var vm = GameViewModel()
+    @State var host: Bool
     var roomCode: String
     
     var body: some View {
@@ -18,8 +19,16 @@ struct GameView: View {
                     AnonymousLoginView(roomCode: roomCode)
                 case .waitingUsers:
                     LobbyView(roomCode: roomCode)
-                case .takingArtefacts:
-                    EmptyView()
+                case .takingArtefacts(let master, let users):
+                    if host {
+                        MasterInputView(
+                            userEntryText: "",
+                            userList: users.compactMap { $0.user.picture },
+                            masterUser: master.user.picture
+                        )
+                    } else {
+                        Text("Aguardando mestre")
+                    }
                 case .describingImage:
                     EmptyView()
                 case .waitingAwnsers:

@@ -14,7 +14,7 @@ struct PlayerGridItem: View {
     var body: some View {
         GeometryReader { geo in
             VStack(alignment: .center) {
-                Image("profile-picture-eye")
+                Image(player.user.picture)
                     .resizable()
                     .scaledToFit()
                     .offset(y: geo.size.height * 0.05)

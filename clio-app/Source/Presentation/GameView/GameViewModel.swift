@@ -12,15 +12,15 @@ final class GameViewModel: ObservableObject {
     enum GameState {
         case registerUser
         case waitingUsers
-        case takingArtefacts
+        case takingArtefacts(master: RoomUser, users: [RoomUser])
         case describingImage
         case waitingAwnsers
     }
     
-    let client = WebSocketClient.shared
     @Published var gameState: GameState = .registerUser
     @Published var master: RoomUser?
     @Published var players: [RoomUser] = []
+    let client = WebSocketClient.shared
     
     func connectInRoom(_ roomId: String) {
         client.connectToServer(path: "ws://127.0.0.1:8080/game/\(roomId)")
@@ -34,9 +34,24 @@ final class GameViewModel: ObservableObject {
             )
         )
     }
+    
+    func startGame() async {
+        await client.sendMessage(
+            TransferMessage(
+                state: .client(.gameFlow(.gameStarted)),
+                data: BooleanMessageDTO(value: true).encodeToTransfer()
+            )
+        )
+    }
 }
 
 extension GameViewModel: ClientOutput {
+    func didGameStarted(_ master: RoomUser) {
+        DispatchQueue.main.async {
+            self.gameState = .takingArtefacts(master: master, users: self.players)
+        }
+    }
+    
     func didConnectAPlayer(_ master: RoomUser, players: [RoomUser]) {
         DispatchQueue.main.async {
             self.master = master

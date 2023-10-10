@@ -83,7 +83,10 @@ struct CreateRoomView: View {
         }
         .navigationDestination(isPresented: $goToGameFlowView) {
             if let roomId = createdRoom?.id {
-                GameView(roomCode: roomId)
+                GameView(
+                    host: true,
+                    roomCode: roomId
+                )
             }
         }
         .alert(isPresented: $errorAlert.showAlert) {

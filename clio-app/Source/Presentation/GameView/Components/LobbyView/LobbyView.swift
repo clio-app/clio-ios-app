@@ -19,18 +19,22 @@ struct LobbyView: View {
                             lobbyTheme: .constant(vm.currentRoom?.room.theme.title ?? "THEME_NOT_FOUND"),
                             lobbyPasscode: .constant(vm.currentRoom?.room.id ?? "ID_NOT_FOUND"))
 
-                MasterContainer(username: .constant(vm.currentRoom?.room.createdBy?.name ?? "NO_MASTER_FOUND"), 
-                                userscore: .constant(163)).lineLimit(1)
+                MasterContainer(master: $gameViewModel.master)
                     .frame(width: geo.size.width * 0.6, height: geo.size.height * 0.2)
 
                 activePlayersText
 
-                PlayersContainer(lobbyID: roomCode)
+                PlayersContainer(lobbyID: roomCode, players: $gameViewModel.players)
 
                 // TODO: Opacity controlled by players status -> empty or not
                 ActionButton(title: "Iniciar partida", foregroundColor: .blue, hasBorder: false) {
-                    // Button action
+                    if gameViewModel.players.count > 3 {
+                        Task {
+                            await gameViewModel.startGame()
+                        }
+                    }
                 }
+                .opacity(gameViewModel.players.count > 3 ? 1 : 0.2)
                 .frame(height: geo.size.height * 0.08)
 
             }
@@ -40,6 +44,7 @@ struct LobbyView: View {
         }
         .foregroundColor(.black)
         .ignoresSafeArea()
+        .navigationBarBackButtonHidden()
         .onAppear {
             // TODO: This part will be done by the createRoom when a room is created the roomID should be parsed to findRoom(id) to update the lobby view
             Task {
