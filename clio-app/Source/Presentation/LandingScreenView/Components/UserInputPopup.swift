@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-// TODO: Finish the popup
-
 struct UserInputPopup: View {
     @State var inputUser: String = ""
     @Binding var isShowing: Bool

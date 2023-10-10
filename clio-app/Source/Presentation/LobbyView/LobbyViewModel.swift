@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ClioEntities
 
 class LobbyViewModel: ObservableObject {
     @Published var currentRoom: LobbyModel.Acess.Response?

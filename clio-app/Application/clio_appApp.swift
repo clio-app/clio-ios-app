@@ -12,7 +12,7 @@ struct clio_appApp: App {
     var body: some Scene {
         WindowGroup {
 //            CreateRoomView()
-            LobbyView()
+            VotingInstructionView()
         }
     }
 }
