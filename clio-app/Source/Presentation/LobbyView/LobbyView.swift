@@ -10,8 +10,6 @@ import SwiftUI
 struct LobbyView: View {
     @StateObject private var vm = LobbyViewModel()
 
-
-
     var body: some View {
         GeometryReader { geo in
             VStack {
@@ -19,13 +17,13 @@ struct LobbyView: View {
                             lobbyTheme: .constant(vm.currentRoom?.room.theme.title ?? "THEME_NOT_FOUND"),
                             lobbyPasscode: .constant(vm.currentRoom?.room.id ?? "ID_NOT_FOUND"))
 
-                MasterContainer(username: .constant(vm.currentRoom?.room.createdBy?.name ?? "NO_MASTER_FOUND"), 
-                                userscore: .constant(163)).lineLimit(1)
+                MasterContainer(master: .constant(vm.currentRoom?.room.master))
                     .frame(width: geo.size.width * 0.6, height: geo.size.height * 0.2)
 
                 activePlayersText
 
-                PlayersContainer(lobbyID: .constant(UUID()))
+                // TODO: This is a mock test with players set in vm. Change to fetch.
+                PlayersContainer(lobbyID: "123", players: .constant(vm.players))
 
                 // TODO: Opacity controlled by players status -> empty or not
                 ActionButton(title: "Iniciar partida", foregroundColor: .blue, hasBorder: false) {

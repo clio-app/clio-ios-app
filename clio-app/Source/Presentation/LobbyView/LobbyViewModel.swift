@@ -9,6 +9,11 @@ import Foundation
 import ClioEntities
 
 class LobbyViewModel: ObservableObject {
+    var players: [RoomUser] = [
+        RoomUser(rankingPosition: 3, points: 4, didVote: true, user: User(id: UUID(), name: "", picture: "")),
+        RoomUser(rankingPosition: 1, points: 2, didVote: false, user: User(id: UUID(), name: "", picture: ""))
+    ]
+
     @Published var currentRoom: LobbyModel.Acess.Response?
     let service: NetworkService
 
@@ -29,4 +34,9 @@ class LobbyViewModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
+
+
+
+    
 }
+

@@ -21,10 +21,10 @@ struct LimitedInputTextField: View {
                 .foregroundColor(.black)
                 .lineLimit(5)
                 .multilineTextAlignment(.leading)
-                .overlay(
-                    HStack {
-                        Spacer()
-                    })
+//                .overlay(
+//                    HStack {
+//                        Spacer()
+//                    })
             }
             .scrollIndicators(.hidden)
 

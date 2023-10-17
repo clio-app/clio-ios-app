@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-// TODO: Finish the popup
-
 struct UserInputPopup: View {
     @State var inputUser: String = ""
     @Binding var isShowing: Bool
@@ -21,7 +19,8 @@ struct UserInputPopup: View {
                         Button(action: {
                             // Dismiss self
                             isShowing.toggle()
-                            
+                            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+
                         }, label: {
                             Image(systemName: "x.circle.fill")
                                 .resizable()
@@ -45,7 +44,7 @@ struct UserInputPopup: View {
                     )
                     .padding(.horizontal, geo.size.width * 0.1)
                     
-                    ActionButton(title: "Entre", foregroundColor: .customPink.opacity(0.5), hasBorder: false) {
+                    ActionButton(title: "Entre", foregroundColor: inputUser.isEmpty ? .customPink.opacity(0.5) : .customPink, hasBorder: false) {
                         UIApplication.shared.endEditing()
                         print(inputUser)
                     }
