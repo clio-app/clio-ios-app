@@ -9,6 +9,7 @@ import ClioEntities
 
 struct MasterInputView: View {
     @EnvironmentObject var gameViewModel: GameViewModel
+    @StateObject var vm = MasterInputViewModel()
     @State var userEntryText: String
     @State var userInputImage: UIImage = UIImage()
 
@@ -16,10 +17,11 @@ struct MasterInputView: View {
     @State var userList: [String]
     @State var masterUser: String
     @State var sended = false
+    let roomCode: String
 
     // TODO: MOVE setup variables to an easy access file and setup enum
     private let maxWordCount: Int = 280
-    var sendImageTapped: ((Data, String) -> ())?
+    var sendImageTapped: ((Data, String, String) -> ())?
 
     var body: some View {
         GeometryReader { geo in
@@ -47,9 +49,12 @@ struct MasterInputView: View {
                         hasBorder: false
                     ) {
                         if sended { return }
-                        if let imageData = userInputImage.pngData() {
-                            sendImageTapped?(imageData, userEntryText)
-                            sended = true
+                        Task {
+                            await vm.sendImage(
+                                roomCode: roomCode,
+                                image: userInputImage
+                            )
+//                            sended = true
                         }
                     }
                     .disabled(userEntryText.count > maxWordCount)
@@ -75,5 +80,5 @@ struct MasterInputView: View {
     MasterInputView(userEntryText: "",
                     userList: ["bonfire-picture", "circles-picture", "profile-picture-eye",
                                          "bonfire-picture", "circles-picture", "profile-picture-eye"],
-                    masterUser: "profile-picture-eye")
+                    masterUser: "profile-picture-eye", roomCode: "")
 }

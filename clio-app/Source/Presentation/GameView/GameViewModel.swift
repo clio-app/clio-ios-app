@@ -7,6 +7,7 @@
 
 import Foundation
 import ClioEntities
+import UIKit
 
 final class GameViewModel: ObservableObject {
     enum GameState {
@@ -49,11 +50,15 @@ final class GameViewModel: ObservableObject {
         )
     }
     
-    func sendMasterArtefacts(picture: Data, description: String) async {
+    func sendMasterArtefacts(picture: Data, base64: String, description: String) async {
         await client.sendMessage(
             TransferMessage(
                 state: .client(.gameFlow(.masterActed)),
-                data: MasterActedDTO(picture: picture, description: description).encodeToTransfer()
+                data: MasterActedDTO(
+                    picture: picture,
+                    pictureBase64: "",
+                    description: description
+                ).encodeToTransfer()
             )
         )
         DispatchQueue.main.async {
@@ -72,7 +77,9 @@ final class GameViewModel: ObservableObject {
                 ).encodeToTransfer()
             )
         )
-        self.gameState = .waitingAwnsers
+        DispatchQueue.main.async {
+            self.gameState = .waitingAwnsers
+        }
     }
     
     func sendVoteToDescription(_ description: Description) async {

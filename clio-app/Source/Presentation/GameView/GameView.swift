@@ -25,11 +25,12 @@ struct GameView: View {
                             userEntryText: "",
                             userList: users.compactMap { $0.user.picture },
                             masterUser: master.user.picture,
-                            sendImageTapped: { image, description in
+                            roomCode: roomCode,
+                            sendImageTapped: { image, base64, description in
                                 Task {
-                                    vm.connectInRoom(roomCode)
                                     await vm.sendMasterArtefacts(
                                         picture: image,
+                                        base64: base64,
                                         description: description
                                     )
                                 }
