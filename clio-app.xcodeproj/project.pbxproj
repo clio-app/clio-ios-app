@@ -11,6 +11,10 @@
 		00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */; };
 		00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */; };
 		00BFF9012AB4914D0068A5F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */; };
+		00C11FFF2ADEB62E0042E152 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C11FFE2ADEB62E0042E152 /* StartView.swift */; };
+		00C120022ADEBDC90042E152 /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120012ADEBDC90042E152 /* PlayersView.swift */; };
+		00C120092ADEBF140042E152 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120082ADEBF140042E152 /* GameSession.swift */; };
+		00C120102ADEC2E00042E152 /* RaffleThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C1200F2ADEC2E00042E152 /* RaffleThemeView.swift */; };
 		00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C02ABC7D6900F66421 /* Endpoint.swift */; };
 		00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C22ABC7EAF00F66421 /* Loader.swift */; };
 		00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C42ABC7ECC00F66421 /* HttpError.swift */; };
@@ -81,6 +85,10 @@
 		00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
 		00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		00C11FFE2ADEB62E0042E152 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		00C120012ADEBDC90042E152 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
+		00C120082ADEBF140042E152 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		00C1200F2ADEC2E00042E152 /* RaffleThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaffleThemeView.swift; sourceTree = "<group>"; };
 		00D9C9C02ABC7D6900F66421 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		00D9C9C22ABC7EAF00F66421 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		00D9C9C42ABC7ECC00F66421 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
@@ -214,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				00D9C9BF2ABC7D5A00F66421 /* API */,
+				00C120032ADEBE9E0042E152 /* Domain */,
 				00BFF9262AB491AE0068A5F2 /* Presentation */,
 			);
 			path = Source;
@@ -223,13 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				7E310AC92AB8895200AF20C7 /* GeneralComponents */,
-				7E94E9342AD5C68600031061 /* MasterInput */,
-				7E0D42552AD5BEFD00C566EB /* AnonymousLogin */,
-				7E0D42232AD5B7CE00C566EB /* LobbyView */,
-				7E310AD02AB8955200AF20C7 /* LandingScreenView */,
-				00BFF9272AB491B50068A5F2 /* CreateRoomView */,
-				7EBA9CD72AD1AEF900C25970 /* VotingInstruction */,
-				7EBA9CE02AD225E100C25970 /* VotingPopup */,
+				00C11FFC2ADEB5BA0042E152 /* SingleDevice */,
+				00C11FFB2ADEB5A40042E152 /* MultiDevice */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -242,6 +246,70 @@
 				00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */,
 			);
 			path = CreateRoomView;
+			sourceTree = "<group>";
+		};
+		00C11FFB2ADEB5A40042E152 /* MultiDevice */ = {
+			isa = PBXGroup;
+			children = (
+				7E94E9342AD5C68600031061 /* MasterInput */,
+				7E0D42552AD5BEFD00C566EB /* AnonymousLogin */,
+				7E0D42232AD5B7CE00C566EB /* LobbyView */,
+				7E310AD02AB8955200AF20C7 /* LandingScreenView */,
+				00BFF9272AB491B50068A5F2 /* CreateRoomView */,
+				7EBA9CD72AD1AEF900C25970 /* VotingInstruction */,
+				7EBA9CE02AD225E100C25970 /* VotingPopup */,
+			);
+			path = MultiDevice;
+			sourceTree = "<group>";
+		};
+		00C11FFC2ADEB5BA0042E152 /* SingleDevice */ = {
+			isa = PBXGroup;
+			children = (
+				00C1200C2ADEC2980042E152 /* RaffleTheme */,
+				00C120002ADEBDBC0042E152 /* PlayersView */,
+				00C11FFD2ADEB5CA0042E152 /* StartView */,
+			);
+			path = SingleDevice;
+			sourceTree = "<group>";
+		};
+		00C11FFD2ADEB5CA0042E152 /* StartView */ = {
+			isa = PBXGroup;
+			children = (
+				00C11FFE2ADEB62E0042E152 /* StartView.swift */,
+			);
+			path = StartView;
+			sourceTree = "<group>";
+		};
+		00C120002ADEBDBC0042E152 /* PlayersView */ = {
+			isa = PBXGroup;
+			children = (
+				00C120012ADEBDC90042E152 /* PlayersView.swift */,
+			);
+			path = PlayersView;
+			sourceTree = "<group>";
+		};
+		00C120032ADEBE9E0042E152 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				00C120072ADEBF0D0042E152 /* GameSession */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		00C120072ADEBF0D0042E152 /* GameSession */ = {
+			isa = PBXGroup;
+			children = (
+				00C120082ADEBF140042E152 /* GameSession.swift */,
+			);
+			path = GameSession;
+			sourceTree = "<group>";
+		};
+		00C1200C2ADEC2980042E152 /* RaffleTheme */ = {
+			isa = PBXGroup;
+			children = (
+				00C1200F2ADEC2E00042E152 /* RaffleThemeView.swift */,
+			);
+			path = RaffleTheme;
 			sourceTree = "<group>";
 		};
 		00D9C9BC2ABC701C00F66421 /* Modifiers */ = {
@@ -382,7 +450,7 @@
 				7E94E9352AD5C68600031061 /* Components */,
 			);
 			name = MasterInput;
-			path = "clio-app/Source/Presentation/MasterInput";
+			path = "clio-app/Source/Presentation/MultiDevice/MasterInput";
 			sourceTree = SOURCE_ROOT;
 		};
 		7E94E9352AD5C68600031061 /* Components */ = {
@@ -554,6 +622,7 @@
 				00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */,
 				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
 				FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */,
+				00C120092ADEBF140042E152 /* GameSession.swift in Sources */,
 				FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
 				00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */,
@@ -561,9 +630,11 @@
 				7E81843E2AD4336100938C69 /* VotingPopupModel.swift in Sources */,
 				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
 				7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */,
+				00C120102ADEC2E00042E152 /* RaffleThemeView.swift in Sources */,
 				7E94E93C2AD5C68600031061 /* LimitedInputTextField.swift in Sources */,
 				7EBA9CE42AD23CF800C25970 /* PieProgress.swift in Sources */,
 				7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */,
+				00C11FFF2ADEB62E0042E152 /* StartView.swift in Sources */,
 				7EBA9CDB2AD1B5E600C25970 /* VotingInstructionViewModel.swift in Sources */,
 				7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */,
 				FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */,
@@ -572,6 +643,7 @@
 				7E0D425A2AD5BEFD00C566EB /* AnonymousLoginView.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
 				7E8201DE2AD58E1500DA8F68 /* AnswerSelected.swift in Sources */,
+				00C120022ADEBDC90042E152 /* PlayersView.swift in Sources */,
 				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
 				7E8201E02AD58E5300DA8F68 /* AnswerGrid.swift in Sources */,
 				FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */,
