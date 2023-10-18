@@ -30,18 +30,20 @@ struct ResultsView: View {
                         
             Spacer()
             
-            Text("Clique aqui para ver as respostas")
-            
-            NavigationLink {
-                ResultDetailsView()
-            } label: {
-                Circle()
-                    .frame(width: 46, height: 46)
-                    .foregroundStyle(.gray)
-                    .overlay {
-                        Image(systemName: "checkmark")
-                            .foregroundStyle(.white)
-                    }
+            VStack {
+                Text("Clique aqui para ver as respostas")
+                
+                NavigationLink {
+                    ResultDetailsView()
+                } label: {
+                    Circle()
+                        .frame(width: 46, height: 46)
+                        .foregroundStyle(.gray)
+                        .overlay {
+                            Image(systemName: "checkmark")
+                                .foregroundStyle(.white)
+                        }
+                }
             }
         }
         .frame(height: 520)
