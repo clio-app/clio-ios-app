@@ -18,7 +18,7 @@ struct ResultDetailsView: View {
             Spacer()
             
             VStack {
-                ForEach((0..<gameSession.gameFlowParameters.players.count)) { index in
+                ForEach((0..<gameSession.gameFlowParameters.players.count), id: \.self) { index in
                     HStack {
                         if !index.isMultiple(of: 2) { Spacer() }
                         UserAvatar(
