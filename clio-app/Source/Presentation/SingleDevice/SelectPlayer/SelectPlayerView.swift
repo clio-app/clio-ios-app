@@ -35,8 +35,13 @@ struct SelectPlayerView: View {
                 }
             }
             .navigationDestination(isPresented: $navigateToNextView, destination: {
-                ForEach(session.gameFlowParameters.didPlay, id: \.id) { player in
-                    Text(player.name)
+                // TODO: Change to checking game states using enum
+                if session.gameFlowParameters.didPlay.count == 1 {
+                    Text("Tela de tela aleatório")
+                } else if (session.gameFlowParameters.didPlay.count == session.gameFlowParameters.players.count){
+                    Text("Tela de Resultados")
+                } else {
+                    Text("Tela de Jogo Padrão")
                 }
             })
             .toolbar(.hidden, for: .navigationBar)
