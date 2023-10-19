@@ -11,7 +11,13 @@ import ClioEntities
 final class GameSession: ObservableObject {
     @Published var gameFlowParameters = GameFlowParameters()
     @Published var alertError = AlertError()
-    
+
+    /// Move to another file if necessary
+    let profilePictures: [String] = ["profile-picture-eye", "bonfire-picture", "circles-picture"]
+    var minimumPlayers: Int = 3
+
+
+    // MARK: - PlayersView Functions
     func addPlayerInSession(name: String, image: String) {
         if gameFlowParameters.players.count > 4 {
             alertError = AlertError(
@@ -20,13 +26,35 @@ final class GameSession: ObservableObject {
             )
             return
         }
-        
+        if name.isEmpty {
+            alertError = AlertError(showAlert: true, errorMessage: "Opa! O nome do jogador não pode estar vazio.")
+            return
+        }
+
         let newUser = User(id: UUID(), name: name, picture: image)
         gameFlowParameters.players.append(newUser)
     }
-    
+
+    func removePlayerInSession(_ player: User) {
+        if let index = gameFlowParameters.players.firstIndex(of: player) {
+            gameFlowParameters.players.remove(at: index)
+        }
+    }
+
     func randomizeThemes() {
         gameFlowParameters.sessionTheme = "Historia"
+    }
+
+    func randomizeProfileImage() -> String {
+        return profilePictures.randomElement()!.description
+    }
+
+    func canStartGame() -> Bool {
+        return gameFlowParameters.players.count < minimumPlayers
+    }
+
+    func hasReachedPlayerLimit() -> Bool {
+        return gameFlowParameters.players.count > 4
     }
 }
 
