@@ -56,9 +56,28 @@ final class GameSession: ObservableObject {
     func hasReachedPlayerLimit() -> Bool {
         return gameFlowParameters.players.count > 4
     }
+    
+    // MARK: - Select Player Functions
+    func getRandomPlayer(currentPlayer: User? = nil) -> User? {
+        let filteredList = gameFlowParameters.players.filter({ !gameFlowParameters.didPlay.contains($0) })
+        if let currentUser = currentPlayer {
+            if let newUser = filteredList.filter({ $0 != currentUser}).randomElement() {
+                return newUser
+            }
+        }
+        let newUser = filteredList.randomElement()
+        return newUser
+        
+    }
+    
+    func addPlayerInRound(player: User) {
+        gameFlowParameters.currenPlayer = player
+        gameFlowParameters.didPlay.append(player)
+    }
 }
 
 struct GameFlowParameters {
+    var currenPlayer: User?
     var players: [User] = []
     var didPlay: [User] = []
     var sessionTheme: String = String()
