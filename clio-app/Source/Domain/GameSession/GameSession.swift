@@ -11,7 +11,8 @@ import ClioEntities
 final class GameSession: ObservableObject {
     @Published var gameFlowParameters = GameFlowParameters()
     @Published var alertError = AlertError()
-    
+    @Published var themeManager = ThemeManager()
+
     func addPlayerInSession(name: String, image: String) {
         if gameFlowParameters.players.count > 4 {
             alertError = AlertError(
@@ -26,7 +27,13 @@ final class GameSession: ObservableObject {
     }
     
     func randomizeThemes() {
-        gameFlowParameters.sessionTheme = "Historia"
+        gameFlowParameters.sessionTheme = themeManager.themes.randomElement()!
+    }
+
+    func iterateThroughThemes() {
+        themeManager.themes.forEach { theme in
+            gameFlowParameters.sessionTheme = theme
+        }
     }
 }
 
@@ -39,4 +46,8 @@ struct GameFlowParameters {
 struct AlertError {
     var showAlert = false
     var errorMessage = ""
+}
+
+struct ThemeManager {
+    var themes: [String] = ["Historia","Geografia", "Filosofia","Biologia"]
 }
