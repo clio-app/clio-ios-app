@@ -68,6 +68,11 @@
 		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
 		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
 		FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */; };
+		FFA354D42AE0169D00E23ADC /* PhotoArtifactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354D32AE0169D00E23ADC /* PhotoArtifactView.swift */; };
+		FFA354D62AE0170B00E23ADC /* PhotoArtifactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354D52AE0170B00E23ADC /* PhotoArtifactViewModel.swift */; };
+		FFA354D92AE0193100E23ADC /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354D82AE0193100E23ADC /* CameraButton.swift */; };
+		FFA354DB2AE01AD200E23ADC /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354DA2AE01AD200E23ADC /* CameraPreview.swift */; };
+		FFA354DD2AE02AF400E23ADC /* RetakePhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354DC2AE02AF400E23ADC /* RetakePhotoButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +150,11 @@
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
 		FF6FD1CF2AB4A67600A2D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		FFA354D32AE0169D00E23ADC /* PhotoArtifactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoArtifactView.swift; sourceTree = "<group>"; };
+		FFA354D52AE0170B00E23ADC /* PhotoArtifactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoArtifactViewModel.swift; sourceTree = "<group>"; };
+		FFA354D82AE0193100E23ADC /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
+		FFA354DA2AE01AD200E23ADC /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		FFA354DC2AE02AF400E23ADC /* RetakePhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetakePhotoButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +275,7 @@
 		00C11FFC2ADEB5BA0042E152 /* SingleDevice */ = {
 			isa = PBXGroup;
 			children = (
+				FFA354D22AE0162200E23ADC /* PhotoArtifact */,
 				00C1200C2ADEC2980042E152 /* RaffleTheme */,
 				00C120002ADEBDBC0042E152 /* PlayersView */,
 				00C11FFD2ADEB5CA0042E152 /* StartView */,
@@ -493,6 +504,26 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		FFA354D22AE0162200E23ADC /* PhotoArtifact */ = {
+			isa = PBXGroup;
+			children = (
+				FFA354D32AE0169D00E23ADC /* PhotoArtifactView.swift */,
+				FFA354D52AE0170B00E23ADC /* PhotoArtifactViewModel.swift */,
+				FFA354D72AE0190700E23ADC /* Components */,
+			);
+			path = PhotoArtifact;
+			sourceTree = "<group>";
+		};
+		FFA354D72AE0190700E23ADC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FFA354D82AE0193100E23ADC /* CameraButton.swift */,
+				FFA354DA2AE01AD200E23ADC /* CameraPreview.swift */,
+				FFA354DC2AE02AF400E23ADC /* RetakePhotoButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -605,14 +636,17 @@
 				7E1705E32AD60938005FA9EE /* MasterContainer.swift in Sources */,
 				7E1705E42AD60938005FA9EE /* PlayerGridItem.swift in Sources */,
 				7E1705E52AD60938005FA9EE /* LobbyHeader.swift in Sources */,
+				FFA354DD2AE02AF400E23ADC /* RetakePhotoButton.swift in Sources */,
 				7E1705DF2AD608EE005FA9EE /* LobbyView.swift in Sources */,
 				7E1705E02AD608EE005FA9EE /* LobbyViewModel.swift in Sources */,
 				7E1705E12AD608EE005FA9EE /* LobbyModel.swift in Sources */,
 				7E94E93B2AD5C68600031061 /* MasterInputCard.swift in Sources */,
 				00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */,
 				7EBA9CDD2AD1B61800C25970 /* VotingInstructionModel.swift in Sources */,
+				FFA354D92AE0193100E23ADC /* CameraButton.swift in Sources */,
 				7EBA9CE22AD22A8E00C25970 /* DescriptionItem.swift in Sources */,
 				7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */,
+				FFA354D62AE0170B00E23ADC /* PhotoArtifactViewModel.swift in Sources */,
 				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
 				FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */,
 				7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */,
@@ -633,6 +667,7 @@
 				00C120102ADEC2E00042E152 /* RaffleThemeView.swift in Sources */,
 				7E94E93C2AD5C68600031061 /* LimitedInputTextField.swift in Sources */,
 				7EBA9CE42AD23CF800C25970 /* PieProgress.swift in Sources */,
+				FFA354DB2AE01AD200E23ADC /* CameraPreview.swift in Sources */,
 				7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */,
 				00C11FFF2ADEB62E0042E152 /* StartView.swift in Sources */,
 				7EBA9CDB2AD1B5E600C25970 /* VotingInstructionViewModel.swift in Sources */,
@@ -646,6 +681,7 @@
 				00C120022ADEBDC90042E152 /* PlayersView.swift in Sources */,
 				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
 				7E8201E02AD58E5300DA8F68 /* AnswerGrid.swift in Sources */,
+				FFA354D42AE0169D00E23ADC /* PhotoArtifactView.swift in Sources */,
 				FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */,
 				00D9C9C72ABC7EF100F66421 /* MapperError.swift in Sources */,
 				00D9C9D32ABC814700F66421 /* Network.swift in Sources */,
@@ -800,10 +836,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 44U668YQTW;
+				DEVELOPMENT_TEAM = NTS86MKTBV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -834,10 +871,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 44U668YQTW;
+				DEVELOPMENT_TEAM = NTS86MKTBV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
