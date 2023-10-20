@@ -65,6 +65,9 @@
 		FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */; };
 		FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15ED2ABA03E600E31DCA /* RadialUsers.swift */; };
 		FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */; };
+		FF4DDEA52AE1A15D00759F47 /* DescriptionArtifactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DDEA42AE1A15D00759F47 /* DescriptionArtifactView.swift */; };
+		FF4DDEA72AE200E900759F47 /* ZoomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DDEA62AE200E900759F47 /* ZoomImage.swift */; };
+		FF4DDEAC2AE2BF3800759F47 /* ThemeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */; };
 		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
 		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
 		FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */; };
@@ -143,6 +146,9 @@
 		FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
 		FF3A15ED2ABA03E600E31DCA /* RadialUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialUsers.swift; sourceTree = "<group>"; };
 		FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptative.swift; sourceTree = "<group>"; };
+		FF4DDEA42AE1A15D00759F47 /* DescriptionArtifactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionArtifactView.swift; sourceTree = "<group>"; };
+		FF4DDEA62AE200E900759F47 /* ZoomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomImage.swift; sourceTree = "<group>"; };
+		FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCard.swift; sourceTree = "<group>"; };
 		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
 		FF6FD1CF2AB4A67600A2D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -270,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				FFA354DE2AE1644A00E23ADC /* SelectPlayer */,
+				FF4DDEA32AE1A12400759F47 /* DescriptionArtifact */,
 				00C1200C2ADEC2980042E152 /* RaffleTheme */,
 				00C120002ADEBDBC0042E152 /* PlayersView */,
 				00C11FFD2ADEB5CA0042E152 /* StartView */,
@@ -489,6 +496,24 @@
 			path = VotingPopup;
 			sourceTree = "<group>";
 		};
+		FF4DDEA32AE1A12400759F47 /* DescriptionArtifact */ = {
+			isa = PBXGroup;
+			children = (
+				FF4DDEA42AE1A15D00759F47 /* DescriptionArtifactView.swift */,
+				FF4DDEA82AE200F700759F47 /* Components */,
+			);
+			path = DescriptionArtifact;
+			sourceTree = "<group>";
+		};
+		FF4DDEA82AE200F700759F47 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FF4DDEA62AE200E900759F47 /* ZoomImage.swift */,
+				FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		FF6FD1CB2AB49D8700A2D681 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,12 +647,14 @@
 				7E1705DF2AD608EE005FA9EE /* LobbyView.swift in Sources */,
 				7E1705E02AD608EE005FA9EE /* LobbyViewModel.swift in Sources */,
 				7E1705E12AD608EE005FA9EE /* LobbyModel.swift in Sources */,
+				FF4DDEA72AE200E900759F47 /* ZoomImage.swift in Sources */,
 				7E94E93B2AD5C68600031061 /* MasterInputCard.swift in Sources */,
 				00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */,
 				7EBA9CDD2AD1B61800C25970 /* VotingInstructionModel.swift in Sources */,
 				7EBA9CE22AD22A8E00C25970 /* DescriptionItem.swift in Sources */,
 				7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */,
 				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
+				FF4DDEA52AE1A15D00759F47 /* DescriptionArtifactView.swift in Sources */,
 				FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */,
 				7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */,
 				7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */,
@@ -636,6 +663,7 @@
 				00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */,
 				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
 				FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */,
+				FF4DDEAC2AE2BF3800759F47 /* ThemeCard.swift in Sources */,
 				00C120092ADEBF140042E152 /* GameSession.swift in Sources */,
 				FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,

@@ -74,6 +74,20 @@ final class GameSession: ObservableObject {
         gameFlowParameters.currenPlayer = player
         gameFlowParameters.didPlay.append(player)
     }
+    
+    // MARK: Artifacts Functions
+    func sendDescription(description: String) {
+        if let currenPlayer = gameFlowParameters.currenPlayer {
+            gameFlowParameters.currenPlayer?.artefact = .init(masterId: currenPlayer.id)
+            gameFlowParameters.currenPlayer?.artefact?.description = description
+        }
+    }
+    
+    func getLastImage() -> Data? {
+        guard let lastPlayer = gameFlowParameters.didPlay.last else { return nil }
+        return lastPlayer.artefact?.picture
+        
+    }
 }
 
 struct GameFlowParameters {
