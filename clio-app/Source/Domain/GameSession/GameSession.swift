@@ -17,13 +17,6 @@ final class GameSession: ObservableObject {
     
     @Published var gameState: GameState = .start
     
-    // MARK: Change game state logic
-    func changeGameState(to newState: GameState) {
-        DispatchQueue.main.async {
-            self.gameState = newState
-        }
-    }
-    
     @Published var gameFlowParameters = GameFlowParameters()
     @Published var alertError = AlertError()
     @Published var themeManager = ThemeManager()
@@ -91,6 +84,19 @@ final class GameSession: ObservableObject {
         }
     }
 
+    // MARK: Change game state logic
+    func changeGameState(to newState: GameState) {
+        DispatchQueue.main.async {
+            self.gameState = newState
+        }
+    }
+    
+    func restartGame() {
+        gameFlowParameters.players = []
+        gameFlowParameters.didPlay = []
+        changeGameState(to: .start)
+    }
+    
     // MARK: - Select Player Functions
     func getRandomPlayer(currentPlayer: User? = nil) -> User? {
         let filteredList = gameFlowParameters.players.filter({ player in

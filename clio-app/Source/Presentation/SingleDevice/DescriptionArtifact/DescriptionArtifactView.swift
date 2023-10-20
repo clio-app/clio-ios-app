@@ -93,6 +93,9 @@ struct DescriptionArtifactView: View {
                     NavigationLink {
                         StartView()
                             .toolbar(.hidden, for: .navigationBar)
+                            .onAppear {
+                                session.restartGame()
+                            }
                     } label: {
                         ZStack {
                             Color.white.ignoresSafeArea()
