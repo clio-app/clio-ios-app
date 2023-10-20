@@ -11,6 +11,7 @@ struct RaffleThemeView: View {
     @EnvironmentObject var gameSession: GameSession
     @State private var selectedTheme: String = ""
     @State private var isThemeSet: Bool = false
+    @State private var timer: Timer?
 
     var body: some View {
         VStack {
@@ -21,28 +22,36 @@ struct RaffleThemeView: View {
 
             Spacer()
 
-            if gameSession.gameFlowParameters.sessionTheme == "" {
-                Button("Mudar tema") {
-                    setTheme()
+            Text("O tema é: ")
+                .font(.title3)
+
+            HStack {
+                Spacer()
+                themeSlot(theme: $gameSession.gameFlowParameters.sessionTheme)
+                    .padding()
+                Spacer()
+            }
+            .padding(.horizontal, 24)
+
+            Spacer()
+            if isThemeSet {
+
+                // TODO: Go to another player check View
+
+                NavigationLink(destination: EmptyView()) {
+                    Text("Continuar")
+                }.buttonStyle(.borderedProminent)
+            } else {
+                Button("Parar") {
+                    timer?.invalidate()
+                    isThemeSet = true
                 }
                 .buttonStyle(.bordered)
-            }  else {
-                Text("O tema é: ")
-                    .font(.title3)
+            }
 
-                HStack {
-                    Spacer()
-                    themeSlot(theme: $gameSession.gameFlowParameters.sessionTheme)
-                        .padding()
-                    Spacer()
-                }
-                .padding(.horizontal, 24)
-            }
             Spacer()
-            
-            NavigationLink(destination: EmptyView()) {
-                Text("Continuar")
-            }
+        }.onAppear {
+            setTheme()
         }
     }
 
@@ -54,15 +63,17 @@ struct RaffleThemeView: View {
         var currentIndex = 0
         var elapsedSeconds: TimeInterval = 0
 
-        let timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { timer in
             gameSession.gameFlowParameters.sessionTheme = themes[currentIndex]
             currentIndex = (currentIndex + 1) % themes.count
             elapsedSeconds += interval
 
-            if elapsedSeconds >= duration {
-                timer.invalidate()
-                gameSession.randomizeThemes()
-            }
+            // maximum time for player to tap the button
+
+//            if elapsedSeconds >= duration {
+//                timer.invalidate()
+//                gameSession.randomizeThemes()
+//            }
         }
     }
 }
