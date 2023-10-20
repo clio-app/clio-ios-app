@@ -40,6 +40,7 @@ struct SelectPlayerView: View {
                     Text("Tela de tela aleatório")
                 } else if (session.gameFlowParameters.didPlay.count == session.gameFlowParameters.players.count){
                     Text("Tela de Resultados")
+                        .toolbar(.hidden, for: .navigationBar)
                 } else {
                     Text("Tela de Jogo Padrão")
                 }
