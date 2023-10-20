@@ -47,7 +47,7 @@ struct DescriptionArtifactView: View {
                             }
                             .overlay {
                                 image
-                                    .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.42)
+                                    .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.45)
                                     .clipped()
                                     .clipShape(RoundedRectangle(cornerRadius: 30))
                                     .allowsHitTesting(false)
@@ -94,8 +94,11 @@ struct DescriptionArtifactView: View {
                         StartView()
                             .toolbar(.hidden, for: .navigationBar)
                     } label: {
-                        Text("Começar novamente!")
-                            .toolbar(.hidden, for: .navigationBar)
+                        ZStack {
+                            Color.white.ignoresSafeArea()
+                            Text("Começar novamente!")
+                        }
+                        .toolbar(.hidden, for: .navigationBar)
                     }
 
                 default:

@@ -12,8 +12,11 @@ struct StartView: View {
     
     var body: some View {
         NavigationStack {
-            NavigationLink(destination: PlayersView()) {
-                Text("Play")
+            ZStack {
+                Color.white.ignoresSafeArea()
+                NavigationLink(destination: PlayersView()) {
+                    Text("Play")
+                }
             }
             .navigationTitle("")
         }

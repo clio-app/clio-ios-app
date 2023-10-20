@@ -55,6 +55,10 @@ struct RaffleThemeView: View {
         }.onAppear {
             setTheme()
         }
+        .foregroundColor(.black)
+        .background {
+            Color.white.ignoresSafeArea()
+        }
     }
 
     private func setTheme() {

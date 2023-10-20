@@ -39,6 +39,7 @@ struct PlayersView: View {
                         }
                     )
                     .focused($focus, equals: true)
+                    .padding(.horizontal, 10)
                 }
 
                 Button("Adicionar Jogador") {
@@ -46,12 +47,17 @@ struct PlayersView: View {
                 }
                 .buttonStyle(.bordered)
             }
+            .navigationTitle("")
+            .foregroundColor(.black)
             .frame(maxWidth: .infinity)
             .alert(isPresented: $session.alertError.showAlert) {
                 Alert(title: Text("Error"), message: Text(session.alertError.errorMessage))
             }
 
             .keyboardAdaptive()
+        }
+        .background {
+            Color.white.ignoresSafeArea()
         }
         .onTapGesture {
             hideKeyboard()
@@ -151,13 +157,18 @@ struct AddPlayerField: View {
                     onChangeImage()
                 }
 
-            TextField("Insira o nome do jogador", text: $playerName)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-                .submitLabel(.done)
-                .onSubmit {
-                    onAddPlayer()
-                }
+            TextField(text: $playerName) {
+                Text("Insira o nome do jogador")
+                    .foregroundColor(.black.opacity(0.6))
+            }
+            .textFieldStyle(PlainTextFieldStyle())
+            .padding(6)
+            .background(RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.2)))
+            .foregroundColor(.black)
+            .submitLabel(.done)
+            .onSubmit {
+                onAddPlayer()
+            }
         }
     }
 }
