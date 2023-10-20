@@ -58,7 +58,7 @@ struct PlayersView: View {
             self.newPlayer = !text.isEmpty
         }
         .safeAreaInset(edge: .bottom) {
-            NavigationLink(destination: RaffleThemeView()) {
+            NavigationLink(destination: SelectPlayerView()) {
                 Text("Começar")
             }
             .buttonStyle(.borderedProminent)
