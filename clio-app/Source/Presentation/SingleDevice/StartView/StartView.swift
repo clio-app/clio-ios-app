@@ -15,6 +15,7 @@ struct StartView: View {
             NavigationLink(destination: PlayersView()) {
                 Text("Play")
             }
+            .navigationTitle("")
         }
         .environmentObject(gameSession)
     }

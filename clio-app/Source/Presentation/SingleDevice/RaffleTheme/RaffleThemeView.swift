@@ -38,7 +38,7 @@ struct RaffleThemeView: View {
 
                 // TODO: Go to another player check View
 
-                NavigationLink(destination: EmptyView()) {
+                NavigationLink(destination: SelectPlayerView()) {
                     Text("Continuar")
                 }.buttonStyle(.borderedProminent)
             } else {
