@@ -9,6 +9,21 @@ import Foundation
 import ClioEntities
 
 final class GameSession: ObservableObject {
+    enum GameState: Equatable {
+        case start
+        case midle
+        case final
+    }
+    
+    @Published var gameState: GameState = .start
+    
+    // MARK: Change game state logic
+    func changeGameState(to newState: GameState) {
+        DispatchQueue.main.async {
+            self.gameState = newState
+        }
+    }
+    
     @Published var gameFlowParameters = GameFlowParameters()
     @Published var alertError = AlertError()
     @Published var themeManager = ThemeManager()
@@ -54,15 +69,10 @@ final class GameSession: ObservableObject {
         return gameFlowParameters.players.count > 4
     }
     
-    // TODO: Refator for add photo in User
-    func sendPhoto(data photo: Data) {
-//        if !gameFlowParameters.photos.contains(photo) {
-//            gameFlowParameters.photos.append(photo)
-//            return
-//        }
-    }
-    
     func getCurrentTheme() -> String {
+        if let description = gameFlowParameters.currenPlayer?.artefact?.description {
+            return description
+        }
         return gameFlowParameters.sessionTheme
     }
 
@@ -73,7 +83,9 @@ final class GameSession: ObservableObject {
     
     // MARK: - Select Player Functions
     func getRandomPlayer(currentPlayer: User? = nil) -> User? {
-        let filteredList = gameFlowParameters.players.filter({ !gameFlowParameters.didPlay.contains($0) })
+        let filteredList = gameFlowParameters.players.filter({ player in
+            !gameFlowParameters.didPlay.contains(where: {$0.id == player.id})
+        })
         if let currentUser = currentPlayer {
             if let newUser = filteredList.filter({ $0 != currentUser}).randomElement() {
                 return newUser
@@ -86,21 +98,57 @@ final class GameSession: ObservableObject {
     
     func addPlayerInRound(player: User) {
         gameFlowParameters.currenPlayer = player
+    }
+    
+    private func addPlayerToDidPlay() {
+        guard let player = gameFlowParameters.currenPlayer else { return }
         gameFlowParameters.didPlay.append(player)
+        if gameFlowParameters.didPlay.count == (gameFlowParameters.players.count - 1) {
+            changeGameState(to: .final)
+        }
     }
     
     // MARK: Artifacts Functions
-    func sendDescription(description: String) {
+    func sendArtifact(picture: Data? = nil, description: String? = nil) {
+        if let pictureArtifact = picture {
+            sendPhoto(imageData: pictureArtifact)
+        }
+        if let descriptionArtifact = description {
+            sendDescription(description: descriptionArtifact)
+        }
+    }
+    
+    private func sendPhoto(imageData data: Data) {
+        guard (gameFlowParameters.currenPlayer != nil) else { return }
+        switch gameState {
+        case .start:
+            gameFlowParameters.currenPlayer!.artefact = .init(picture: data , masterId: gameFlowParameters.currenPlayer!.id)
+            changeGameState(to: .midle)
+        case .midle:
+            gameFlowParameters.currenPlayer!.artefact?.picture = data
+        case .final:
+            return
+        }
+        addPlayerToDidPlay()
+    }
+    
+    private func sendDescription(description: String) {
         if let currenPlayer = gameFlowParameters.currenPlayer {
             gameFlowParameters.currenPlayer?.artefact = .init(masterId: currenPlayer.id)
             gameFlowParameters.currenPlayer?.artefact?.description = description
         }
+        if gameState == .final {
+            addPlayerToDidPlay()
+        }
     }
     
     func getLastImage() -> Data? {
-        guard let lastPlayer = gameFlowParameters.didPlay.last else { return nil }
-        return lastPlayer.artefact?.picture
-        
+        if gameFlowParameters.didPlay.count > 0 {
+            let lastIndex = gameFlowParameters.didPlay.count - 1
+            let lastUser = gameFlowParameters.didPlay[lastIndex]
+            return lastUser.artefact?.picture
+        }
+        return nil
     }
 }
 

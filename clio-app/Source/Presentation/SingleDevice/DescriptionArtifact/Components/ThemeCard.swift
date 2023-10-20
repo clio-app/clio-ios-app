@@ -17,7 +17,7 @@ struct ThemeCard: View {
             + Text("\n \(theme)")
                 .foregroundColor(.lapisLazuli)
         }
-        .font(.itimRegular(fontType: .title3))
+        .font(.itimRegular(fontType: .headline))
         .multilineTextAlignment(.center)
         .padding()
         .onTapGesture {
@@ -27,5 +27,5 @@ struct ThemeCard: View {
 }
 
 #Preview {
-    ThemeCard(theme: .constant("Tema"))
+    ThemeCard(theme: .constant("Temaaaaaaa grandaoooooooo giganteeeeeeeee"))
 }

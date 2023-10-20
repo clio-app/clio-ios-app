@@ -16,6 +16,8 @@ struct PhotoArtifactView: View {
     @State var cameraPreview: CameraPreview?
     @State var theme: String = ""
     
+    @State var navigateToNextView = false
+    
     var body: some View {
         GeometryReader { geo in
             VStack {
@@ -47,7 +49,7 @@ struct PhotoArtifactView: View {
                 }
                 .frame(
                     width: geo.size.width * 0.8,
-                    height: geo.size.height * 0.65
+                    height: geo.size.height * 0.6
                 )
                 
                 Spacer()
@@ -57,8 +59,9 @@ struct PhotoArtifactView: View {
                     foregroundColor: .lapisLazuli,
                     backgroundColor: .white, hasBorder: true) {
                         if let data = vm.imageData {
-                            gameSession.sendPhoto(data: data)                            
+                            gameSession.sendArtifact(picture: data)
                         }
+                        navigateToNextView = true
                     }
                     .disabled(vm.imageData == nil)
                     .opacity(vm.imageData == nil ? 0.2 : 1)
@@ -67,6 +70,9 @@ struct PhotoArtifactView: View {
                         height : 60
                     )
                     .padding(.bottom)
+                    .navigationDestination(isPresented: $navigateToNextView) {
+                        SelectPlayerView()
+                    }
             }
             .toolbar(.hidden, for: .navigationBar)
             .frame(width: geo.size.width, height: geo.size.height)

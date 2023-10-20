@@ -10,7 +10,7 @@ import SwiftUI
 struct SelectPlayerView: View {
     @StateObject var vm: SelectPlayerViewModel = SelectPlayerViewModel()
     
-    @EnvironmentObject var session: GameSession
+    @EnvironmentObject var gameSession: GameSession
     
     @State var navigateToNextView = false
     
@@ -35,14 +35,11 @@ struct SelectPlayerView: View {
                 }
             }
             .navigationDestination(isPresented: $navigateToNextView, destination: {
-                // TODO: Change to checking game states using enum
-                if session.gameFlowParameters.didPlay.count == 1 {
-                    Text("Tela de tela aleatório")
-                } else if (session.gameFlowParameters.didPlay.count == session.gameFlowParameters.players.count){
-                    Text("Tela de Resultados")
-                        .toolbar(.hidden, for: .navigationBar)
-                } else {
-                    Text("Tela de Jogo Padrão")
+                switch gameSession.gameState {
+                case .start:
+                    PhotoArtifactView()
+                default:
+                    DescriptionArtifactView()
                 }
             })
             .toolbar(.hidden, for: .navigationBar)
@@ -50,7 +47,7 @@ struct SelectPlayerView: View {
             .background{Color.white.ignoresSafeArea()}
         }
         .onAppear {
-            let player = session.getRandomPlayer()
+            let player = gameSession.getRandomPlayer()
             vm.changePlayer(newPlayer: player)
         }
     }
@@ -77,7 +74,7 @@ extension SelectPlayerView {
                 backgroundColor: .white,
                 hasBorder: true) {
                     if let player = vm.currentPlayer {
-                        session.addPlayerInRound(player: player)
+                        gameSession.addPlayerInRound(player: player)
                         navigateToNextView.toggle()
                     }
                 }
@@ -87,9 +84,11 @@ extension SelectPlayerView {
                 backgroundColor: .white,
                 hasBorder: true) {
                     vm.changeViewState(to: .findingPlayer)
-                    let player = session.getRandomPlayer(currentPlayer: vm.currentPlayer)
+                    let player = gameSession.getRandomPlayer(currentPlayer: vm.currentPlayer)
                     vm.changePlayer(newPlayer: player)
                 }
+                .disabled(gameSession.gameState == .final)
+                .opacity(gameSession.gameState == .final ? 0.2 : 1)
         }
     }
     

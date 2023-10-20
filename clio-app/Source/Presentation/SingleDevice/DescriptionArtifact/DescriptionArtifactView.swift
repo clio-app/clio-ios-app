@@ -17,7 +17,7 @@ struct DescriptionArtifactView: View {
     @State var showZoomImage = false
     @State var navigateToNextView = false
     
-    private let maxWordCount: Int = 100
+    private let maxWordCount: Int = 50
     
     var body: some View {
         GeometryReader { geo in
@@ -88,9 +88,17 @@ struct DescriptionArtifactView: View {
                 }
             }
             .navigationDestination(isPresented: $navigateToNextView) {
-                VStack {
-                    Text("Tela da câmera")
-                    Text((session.gameFlowParameters.currenPlayer?.artefact?.description) ?? "")
+                switch session.gameState {
+                case .final:
+                    NavigationLink {
+                        StartView()
+                            .toolbar(.hidden, for: .navigationBar)
+                    } label: {
+                        Text("Começar novamente!")
+                    }
+
+                default:
+                    PhotoArtifactView()
                 }
             }
             .background {
@@ -128,7 +136,7 @@ extension DescriptionArtifactView {
             backgroundColor: .white,
             hasBorder: true) {
                 UIApplication.shared.endEditing()
-                session.sendDescription(description: input)
+                session.sendArtifact(description: input)
                 navigateToNextView = true
             }
             .disabled(input.count > maxWordCount)
