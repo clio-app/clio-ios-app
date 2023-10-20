@@ -43,8 +43,10 @@ struct RaffleThemeView: View {
                 }.buttonStyle(.borderedProminent)
             } else {
                 Button("Parar") {
-                    timer?.invalidate()
-                    isThemeSet = true
+                    stopTimerAndSetTheme()
+                    gameSession.selectFirstRoundPrompt()
+
+                    print(gameSession.gameFlowParameters.firstRoundPrompt)
                 }
                 .buttonStyle(.bordered)
             }
@@ -75,6 +77,11 @@ struct RaffleThemeView: View {
 //                gameSession.randomizeThemes()
 //            }
         }
+    }
+
+    private func stopTimerAndSetTheme() {
+            timer?.invalidate()
+            isThemeSet = true
     }
 }
 
