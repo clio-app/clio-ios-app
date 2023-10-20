@@ -22,7 +22,7 @@ struct PhotoArtifactView: View {
         GeometryReader { geo in
             VStack {
                 themeCard
-                    .frame(width: geo.size.width * 0.8)
+                    .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.2)
                     .background{
                         BorderedBackground(foregroundColor: .white, hasBorder: false)
                     }
@@ -130,10 +130,11 @@ extension PhotoArtifactView {
         Group {
             Text("Tire uma foto que se relacione com:")
                 .foregroundColor(.black)
+                .font(.itimRegular(size: 18))
             + Text("\n \(theme)")
                 .foregroundColor(.lapisLazuli)
+                .font(.itimRegular(size: 20))
         }
-        .font(.itimRegular(fontType: .title3))
         .multilineTextAlignment(.center)
         .padding()
     }

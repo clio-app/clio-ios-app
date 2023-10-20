@@ -68,13 +68,6 @@ final class GameSession: ObservableObject {
     func hasReachedPlayerLimit() -> Bool {
         return gameFlowParameters.players.count > 4
     }
-    
-    func getCurrentTheme() -> String {
-        if let description = gameFlowParameters.currenPlayer?.artefact?.description {
-            return description
-        }
-        return gameFlowParameters.sessionTheme
-    }
 
     // MARK: - Raffle Theme Functions
     func randomizeThemes() {
@@ -126,6 +119,14 @@ final class GameSession: ObservableObject {
     }
     
     // MARK: Artifacts Functions
+    func getCurrentTheme() -> String {
+        if let description = gameFlowParameters.currenPlayer?.artefact?.description {
+            return description
+        }
+        return gameFlowParameters.firstRoundPrompt
+    }
+    
+    
     func sendArtifact(picture: Data? = nil, description: String? = nil) {
         if let pictureArtifact = picture {
             sendPhoto(imageData: pictureArtifact)

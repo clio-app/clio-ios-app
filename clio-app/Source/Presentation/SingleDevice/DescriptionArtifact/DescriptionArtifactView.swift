@@ -95,6 +95,7 @@ struct DescriptionArtifactView: View {
                             .toolbar(.hidden, for: .navigationBar)
                     } label: {
                         Text("Começar novamente!")
+                            .toolbar(.hidden, for: .navigationBar)
                     }
 
                 default:
