@@ -53,6 +53,18 @@ final class GameSession: ObservableObject {
     func hasReachedPlayerLimit() -> Bool {
         return gameFlowParameters.players.count > 4
     }
+    
+    // TODO: Refator for add photo in User
+    func sendPhoto(data photo: Data) {
+//        if !gameFlowParameters.photos.contains(photo) {
+//            gameFlowParameters.photos.append(photo)
+//            return
+//        }
+    }
+    
+    func getCurrentTheme() -> String {
+        return gameFlowParameters.sessionTheme
+    }
 
     // MARK: - Raffle Theme Functions
     func randomizeThemes() {
