@@ -63,6 +63,8 @@ extension SelectPlayerView {
 
             Text(vm.currentPlayer?.name ?? "")
                 .font(.itimRegular(fontType: .largeTitle))
+            + Text("?")
+                .font(.itimRegular(fontType: .largeTitle))
         }
     }
     
