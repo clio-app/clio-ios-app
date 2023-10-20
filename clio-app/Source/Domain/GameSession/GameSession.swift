@@ -30,17 +30,13 @@ final class GameSession: ObservableObject {
         gameFlowParameters.sessionTheme = themeManager.themes.randomElement()!
     }
 
-    func iterateThroughThemes() {
-        themeManager.themes.forEach { theme in
-            gameFlowParameters.sessionTheme = theme
-        }
-    }
 }
 
 struct GameFlowParameters {
     var players: [User] = []
     var didPlay: [User] = []
     var sessionTheme: String = String()
+    var firstRoundPrompt: String = String()
 }
 
 struct AlertError {

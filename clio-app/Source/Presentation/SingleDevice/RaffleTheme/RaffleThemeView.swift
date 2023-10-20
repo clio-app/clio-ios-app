@@ -10,7 +10,7 @@ import SwiftUI
 struct RaffleThemeView: View {
     @EnvironmentObject var gameSession: GameSession
     @State private var selectedTheme: String = ""
-    @State private var isAnimationRunning: Bool = false
+    @State private var isThemeSet: Bool = false
 
     var body: some View {
         VStack {
@@ -23,53 +23,46 @@ struct RaffleThemeView: View {
 
             if gameSession.gameFlowParameters.sessionTheme == "" {
                 Button("Mudar tema") {
-                    startAnimation()
+                    setTheme()
                 }
                 .buttonStyle(.bordered)
-            } else {
-
-                if !isAnimationRunning {
-                    Text("O tema é: ")
-                        .font(.title3)
-                }
+            }  else {
+                Text("O tema é: ")
+                    .font(.title3)
 
                 HStack {
                     Spacer()
-                    themeSlot(theme: $selectedTheme)
+                    themeSlot(theme: $gameSession.gameFlowParameters.sessionTheme)
                         .padding()
                     Spacer()
                 }
                 .padding(.horizontal, 24)
             }
             Spacer()
-        }
-        .background(.red)
-        .onTapGesture {
-            isAnimationRunning = false
+            
+            NavigationLink(destination: EmptyView()) {
+                Text("Continuar")
+            }
         }
     }
 
-    private func startAnimation() {
-        let animationDuration: TimeInterval = 0.1
-        let animationDurationRuntime: TimeInterval = 5.0
-        isAnimationRunning = true
+    private func setTheme() {
+        startThemeTimer(themes: gameSession.themeManager.themes, interval: 0.1, duration: 3)
+    }
 
-        let timer = Timer.scheduledTimer(withTimeInterval: animationDuration, repeats: true) { timer in
-            if isAnimationRunning {
-//                withAnimation(.smooth(duration: animationDuration)) {
-                    gameSession.randomizeThemes()
-                    selectedTheme = gameSession.gameFlowParameters.sessionTheme
-//                }
-            } else {
+    private func startThemeTimer(themes: [String], interval: TimeInterval, duration: TimeInterval) {
+        var currentIndex = 0
+        var elapsedSeconds: TimeInterval = 0
+
+        let timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { timer in
+            gameSession.gameFlowParameters.sessionTheme = themes[currentIndex]
+            currentIndex = (currentIndex + 1) % themes.count
+            elapsedSeconds += interval
+
+            if elapsedSeconds >= duration {
                 timer.invalidate()
+                gameSession.randomizeThemes()
             }
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + animationDurationRuntime) {
-//            withAnimation(.interpolatingSpring) {
-                isAnimationRunning = false
-                selectedTheme = gameSession.gameFlowParameters.sessionTheme
-//            }
         }
     }
 }
