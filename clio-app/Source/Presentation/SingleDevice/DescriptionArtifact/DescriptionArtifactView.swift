@@ -9,16 +9,16 @@ import SwiftUI
 
 struct DescriptionArtifactView: View {
     @EnvironmentObject var session: GameSession
-    
+    @EnvironmentObject var router: Router
     @State var theme = ""
     @State var uiImage = UIImage(systemName: "photo.on.rectangle.angled")!
     @State var input = ""
-    
+
     @State var showZoomImage = false
     @State var navigateToNextView = false
-    
+
     private let maxWordCount: Int = 50
-    
+
     var body: some View {
         GeometryReader { geo in
             ScrollView {
@@ -87,33 +87,12 @@ struct DescriptionArtifactView: View {
                     uiImage = UIImage(data: data)!
                 }
             }
-            .navigationDestination(isPresented: $navigateToNextView) {
-                switch session.gameState {
-                case .final:
-                    NavigationLink {
-                        StartView()
-                            .toolbar(.hidden, for: .navigationBar)
-                            .onAppear {
-                                session.restartGame()
-                            }
-                    } label: {
-                        ZStack {
-                            Color.white.ignoresSafeArea()
-                            Text("Começar novamente!")
-                        }
-                        .toolbar(.hidden, for: .navigationBar)
-                    }
-
-                default:
-                    PhotoArtifactView()
-                }
-            }
             .background {
                 Color.white.ignoresSafeArea()
             }
         }
         .ignoresSafeArea(.keyboard)
-        .environmentObject(GameSession())
+        .environmentObject(session)
         .navigationTitle("")
     }
 }
@@ -145,7 +124,17 @@ extension DescriptionArtifactView {
                 UIApplication.shared.endEditing()
                 session.sendArtifact(description: input)
                 navigateToNextView = true
+
+                switch session.gameState {
+                case .final:
+                    // clear up and restart gameflow
+                    session.restartGame()
+                    router.clear()
+                default:
+                    router.goToPhotoArtifactView()
+                }
             }
+        
             .disabled(input.count > maxWordCount)
             .disabled(input == "")
             .opacity(input == "" ? 0.2 : 1)

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PlayersView: View {
     @EnvironmentObject var session: GameSession
+    @EnvironmentObject var router: Router
+
     @State var text: String = ""
     @State var profileImage: String = ""
     @State private var newPlayer: Bool = false
@@ -28,9 +30,7 @@ struct PlayersView: View {
                 }
 
                 if newPlayer {
-                    AddPlayerField(
-                        playerImage: $profileImage,
-                        playerName: $text,
+                    AddPlayerField(playerImage: $profileImage, playerName: $text,
                         onAddPlayer: {
                             addPlayerAndReset()
                         },
@@ -61,11 +61,11 @@ struct PlayersView: View {
         }
         .onTapGesture {
             hideKeyboard()
-            self.newPlayer = !text.isEmpty
+            newPlayer = !text.isEmpty
         }
         .safeAreaInset(edge: .bottom) {
-            NavigationLink(destination: RaffleThemeView()) {
-                Text("Começar")
+            Button("Começar") {
+                router.goToRaffleThemeView()
             }
             .buttonStyle(.borderedProminent)
             .disabled(session.canStartGame())
@@ -105,7 +105,7 @@ struct PlayersView: View {
     private func clearFocusAndTextfield() {
         // just to access the alert inside addPlayer
         session.addPlayerInSession(name: text, image: profileImage)
-        self.newPlayer = false
+        newPlayer = false
         focus = newPlayer
     }
 
@@ -149,7 +149,7 @@ struct AddPlayerField: View {
 
     var body: some View {
         HStack {
-            Image(self.playerImage)
+            Image(playerImage)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 45, alignment: .center)

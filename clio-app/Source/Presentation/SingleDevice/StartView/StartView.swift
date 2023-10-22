@@ -8,19 +8,25 @@
 import SwiftUI
 
 struct StartView: View {
-    @StateObject private var gameSession = GameSession()
-    
+    @StateObject private var gameSession = GameSession()    // state for reference
+    @ObservedObject var router = Router()                   // binding for reference
+
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $router.path) {
             ZStack {
                 Color.white.ignoresSafeArea()
-                NavigationLink(destination: PlayersView()) {
-                    Text("Play")
+                Button("play") {
+                    router.goToPlayersView()
                 }
+                .buttonStyle(.borderedProminent)
             }
-            .navigationTitle("")
+            .navigationTitle("start view")
+            .navigationDestination(for: Views.self) { destination in
+                ViewFactory.viewForDestination(destination)
+            }
         }
         .environmentObject(gameSession)
+        .environmentObject(router)
     }
 }
 
