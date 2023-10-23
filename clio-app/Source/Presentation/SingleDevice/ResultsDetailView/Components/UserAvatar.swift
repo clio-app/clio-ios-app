@@ -9,15 +9,25 @@ import SwiftUI
 
 struct UserAvatar: View {
     let userName: String
+    let picture: String
+    
     var body: some View {
         VStack {
             Circle()
                 .frame(width: 60, height: 60)
+                .overlay {
+                    Image(picture)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
             Text(userName)
         }
     }
 }
 
 #Preview {
-    UserAvatar(userName: "Name")
+    UserAvatar(
+        userName: "Name",
+        picture: "profile-picture-eye"
+    )
 }
