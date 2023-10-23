@@ -9,15 +9,14 @@ import SwiftUI
 
 struct PhotoArtifactView: View {
     @EnvironmentObject var gameSession: GameSession
-    
+    @EnvironmentObject var router: Router
+
     @StateObject var vm: PhotoArtifactViewModel = PhotoArtifactViewModel()
     @State private var errorAlert: ErrorAlert = .initialState()
     
     @State var cameraPreview: CameraPreview?
     @State var theme: String = ""
-    
-    @State var navigateToNextView = false
-    
+
     var body: some View {
         GeometryReader { geo in
             VStack {
@@ -61,7 +60,7 @@ struct PhotoArtifactView: View {
                         if let data = vm.imageData {
                             gameSession.sendArtifact(picture: data)
                         }
-                        navigateToNextView = true
+                        router.goToSelectPlayer()
                     }
                     .disabled(vm.imageData == nil)
                     .opacity(vm.imageData == nil ? 0.2 : 1)
@@ -70,9 +69,7 @@ struct PhotoArtifactView: View {
                         height : 60
                     )
                     .padding(.bottom)
-                    .navigationDestination(isPresented: $navigateToNextView) {
-                        SelectPlayerView()
-                    }
+
             }
             .toolbar(.hidden, for: .navigationBar)
             .frame(width: geo.size.width, height: geo.size.height)
@@ -119,8 +116,6 @@ struct PhotoArtifactView: View {
                     dismissButton: .cancel(Text("OK"))
                 )
             }
-            .environmentObject(gameSession)
-            
         }
     }
 }

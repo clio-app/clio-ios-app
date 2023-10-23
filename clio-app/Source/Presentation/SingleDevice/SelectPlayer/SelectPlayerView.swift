@@ -11,8 +11,7 @@ struct SelectPlayerView: View {
     @StateObject var vm: SelectPlayerViewModel = SelectPlayerViewModel()
     
     @EnvironmentObject var gameSession: GameSession
-    
-    @State var navigateToNextView = false
+    @EnvironmentObject var router: Router
     
     var body: some View {
         GeometryReader { geo in
@@ -34,15 +33,6 @@ struct SelectPlayerView: View {
                     .frame(width: geo.size.width, height: geo.size.height)
                 }
             }
-            .navigationDestination(isPresented: $navigateToNextView, destination: {
-                switch gameSession.gameState {
-                case .start:
-                    PhotoArtifactView()
-                default:
-                    DescriptionArtifactView()
-                }
-            })
-            .toolbar(.hidden, for: .navigationBar)
             .frame(width: geo.size.width, height: geo.size.height)
             .background{Color.white.ignoresSafeArea()}
         }
@@ -50,6 +40,7 @@ struct SelectPlayerView: View {
             let player = gameSession.getRandomPlayer()
             vm.changePlayer(newPlayer: player)
         }
+        .navigationBarBackButtonHidden()
     }
 }
 
@@ -75,8 +66,15 @@ extension SelectPlayerView {
                 hasBorder: true) {
                     if let player = vm.currentPlayer {
                         gameSession.addPlayerInRound(player: player)
-                        navigateToNextView.toggle()
+
+                        switch gameSession.gameState {
+                        case .start:
+                            router.goToPhotoArtifactView()
+                        default:
+                            router.goToDescriptionArtifactView()
+                        }
                     }
+                    
                 }
             ActionButton(
                 title: "Não",

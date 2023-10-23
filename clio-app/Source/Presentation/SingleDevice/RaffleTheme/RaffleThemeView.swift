@@ -9,9 +9,8 @@ import SwiftUI
 
 struct RaffleThemeView: View {
     @EnvironmentObject var gameSession: GameSession
-    @State private var selectedTheme: String = ""
-    @State private var isThemeSet: Bool = false
-    @State private var timer: Timer?
+    @EnvironmentObject var router: Router
+    @StateObject private var vm: RaffleThemeViewModel = RaffleThemeViewModel()
 
     var body: some View {
         VStack {
@@ -34,16 +33,14 @@ struct RaffleThemeView: View {
             .padding(.horizontal, 24)
 
             Spacer()
-            if isThemeSet {
-
-                // TODO: Go to another player check View
-
-                NavigationLink(destination: SelectPlayerView()) {
-                    Text("Continuar")
+            if vm.isThemeSet {
+                Button("Continuar") {
+                    router.clear()
+                    router.goToSelectPlayer()
                 }.buttonStyle(.borderedProminent)
             } else {
                 Button("Parar") {
-                    stopTimerAndSetTheme()
+                    vm.stopTimerAndSetTheme()
                     gameSession.selectFirstRoundPrompt()
 
                     print(gameSession.gameFlowParameters.firstRoundPrompt)
@@ -53,39 +50,15 @@ struct RaffleThemeView: View {
 
             Spacer()
         }.onAppear {
-            setTheme()
+            vm.setTheme(from: gameSession)
         }
+        .onDisappear(perform: {
+            vm.stopTimerAndSetTheme()
+        })
         .foregroundColor(.black)
         .background {
             Color.white.ignoresSafeArea()
         }
-    }
-
-    private func setTheme() {
-        startThemeTimer(themes: gameSession.themeManager.themes, interval: 0.1, duration: 3)
-    }
-
-    private func startThemeTimer(themes: [String], interval: TimeInterval, duration: TimeInterval) {
-        var currentIndex = 0
-        var elapsedSeconds: TimeInterval = 0
-
-        timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { timer in
-            gameSession.gameFlowParameters.sessionTheme = themes[currentIndex]
-            currentIndex = (currentIndex + 1) % themes.count
-            elapsedSeconds += interval
-
-            // maximum time for player to tap the button
-
-//            if elapsedSeconds >= duration {
-//                timer.invalidate()
-//                gameSession.randomizeThemes()
-//            }
-        }
-    }
-
-    private func stopTimerAndSetTheme() {
-            timer?.invalidate()
-            isThemeSet = true
     }
 }
 
