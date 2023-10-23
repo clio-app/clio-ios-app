@@ -40,7 +40,7 @@ final class GameSession: ObservableObject {
             return
         }
 
-        let newUser = User(id: UUID(), name: name, picture: image)
+        let newUser = User(id: UUID(), name: name, picture: image, artefacts: nil)
         gameFlowParameters.players.append(newUser)
     }
 

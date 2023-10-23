@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ClioEntities
 
 struct ResultDetailsView: View {
     @EnvironmentObject var gameSession: GameSession
@@ -15,20 +16,43 @@ struct ResultDetailsView: View {
             Text(gameSession.gameFlowParameters.sessionTheme)
                 .font(.largeTitle)
             
+            VStack {
+                Text("A frase era...")
+                    .padding([.top])
+                
+                Text("Atividades vulcânicas")
+                    .padding(16)
+                    .overlay {
+                        RoundedRectangle(
+                            cornerRadius: 16
+                        )
+                        .stroke(.black, lineWidth: 1)
+                    }
+            }
+            
             Spacer()
             
-            VStack {
-                ForEach((0..<gameSession.gameFlowParameters.players.count), id: \.self) { index in
-                    HStack {
-                        if !index.isMultiple(of: 2) { Spacer() }
+            ScrollView {
+                ForEach((0..<gameSession.gameFlowParameters.didPlay.count), id: \.self) { index in
+                    HStack(alignment: .top, spacing: 12) {
+                        
                         UserAvatar(
-                            userName: gameSession.gameFlowParameters.players[index].name
+                            userName: gameSession.gameFlowParameters.didPlay[index].name
                         )
-                        if index.isMultiple(of: 2) { Spacer() }
+                        
+                        ArtefactView(
+                            artefact: gameSession.gameFlowParameters.didPlay[index].artefact!
+                        )
+                        
+                        Spacer()
+                        
                     }
                     .padding([.horizontal], 26)
+                    .padding([.vertical], 32)
                 }
             }
+            .frame(height: 480)
+            .padding([.vertical], 24)
             
         }
         .frame(height: 520)
@@ -42,6 +66,35 @@ struct ResultDetailsView: View {
     gameSession.addPlayerInSession(name: "name02", image: "")
     gameSession.addPlayerInSession(name: "name03", image: "")
     gameSession.randomizeThemes()
+    
+    let user = gameSession.gameFlowParameters.players[0]
+    
+    gameSession.gameFlowParameters.didPlay.append(
+        User(
+            id: user.id,
+            name: user.name,
+            picture: user.picture,
+            artefacts: SessionArtefacts(
+                picture: UIImage(systemName: "star")!.pngData()!,
+                description: "Funny description",
+                masterId: user.id
+            )
+        )
+    )
+    
+    gameSession.gameFlowParameters.didPlay.append(
+        User(
+            id: user.id,
+            name: user.name,
+            picture: user.picture,
+            artefacts: SessionArtefacts(
+                picture: UIImage(systemName: "star")!.pngData()!,
+                description: "Funny description",
+                masterId: user.id
+            )
+        )
+    )
+    
     
     let resultView = ResultDetailsView()
         .environmentObject(gameSession)
