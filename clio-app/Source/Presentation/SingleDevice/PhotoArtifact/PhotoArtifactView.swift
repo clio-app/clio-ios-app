@@ -36,6 +36,9 @@ struct PhotoArtifactView: View {
                                     .stroke(.black, lineWidth: 2)
                             }
                             .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .background {
+                                cameraPlaceholder
+                            }
                         
                     }
                     
@@ -134,17 +137,31 @@ extension PhotoArtifactView {
         .padding()
     }
     
+    var cameraPlaceholder: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(.black)
+            Image(systemName: "camera.viewfinder")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+                .foregroundColor(.white)
+        }
+    }
+    
     var takePhotoOverlay: some View {
         VStack {
             Spacer()
-            CameraButton(color: .white) {
-                withAnimation {
-                    vm.takePhoto()
+            if vm.viewState == .authorized {
+                CameraButton(color: .white) {
+                    withAnimation {
+                        vm.takePhoto()
+                    }
                 }
+                .frame(width: 70, height: 70)
+                .padding(.bottom, 20)
+                .transition(.opacity)
             }
-            .frame(width: 70, height: 70)
-            .padding(.bottom, 20)
-            .transition(.opacity)
         }
     }
     
@@ -165,4 +182,6 @@ extension PhotoArtifactView {
 
 #Preview {
     PhotoArtifactView()
+        .environmentObject(GameSession())
+        .environmentObject(Router())
 }
