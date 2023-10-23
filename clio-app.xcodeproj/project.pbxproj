@@ -474,6 +474,7 @@
 				7EBA9CE32AD23CF700C25970 /* PieProgress.swift */,
 				7EE152CF2AD4181B00CA8F9F /* PieTimer.swift */,
 				7EBA9CE12AD22A8E00C25970 /* DescriptionItem.swift */,
+				7E94E9382AD5C68600031061 /* LimitedInputTextField.swift */,
 				FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */,
 			);
 			path = GeneralComponents;
@@ -532,7 +533,6 @@
 			children = (
 				7E94E9362AD5C68600031061 /* ImageInputCard.swift */,
 				7E94E9372AD5C68600031061 /* MasterInputCard.swift */,
-				7E94E9382AD5C68600031061 /* LimitedInputTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";

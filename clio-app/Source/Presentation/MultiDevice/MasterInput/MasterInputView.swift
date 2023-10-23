@@ -16,6 +16,7 @@ struct MasterInputView: View {
 
     // TODO: MOVE setup variables to an easy access file and setup enum
     private let maxWordCount: Int = 280
+    var placeholder = "Escreva uma descrição sobre a imagem..."
 
     var body: some View {
         GeometryReader { geo in
@@ -29,13 +30,18 @@ struct MasterInputView: View {
                         .frame(height: geo.size.height * 0.12)
 
                     // MARK: - Card Content
-                    MasterInputCard(userInputImage: $userInputImage, userEntryText: $userEntryText)
+                    MasterInputCard(
+                        userInputImage: $userInputImage,
+                        userEntryText: $userEntryText,
+                        placeholder: placeholder
+                    )
                         .padding(.vertical)
 
                     // MARK: - Action Button
                     ActionButton(title: "Enviar", foregroundColor: userEntryText.count <= maxWordCount ? .customPink : .customPink.opacity(0.5), hasBorder: false ){
                         // TODO: Send description to backend
                     }
+                    .disabled(userEntryText == placeholder)
                     .disabled(userEntryText.count > maxWordCount)
                     .frame(height: geo.size.height * 0.07)
 

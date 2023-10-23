@@ -10,6 +10,7 @@ import SwiftUI
 struct MasterInputCard: View {
     @Binding var userInputImage: String
     @Binding var userEntryText: String
+    var placeholder: String
 
     @State private var isFocused: Bool = false
     @FocusState private var focusedField: Int?
@@ -18,11 +19,16 @@ struct MasterInputCard: View {
         GeometryReader { geo in
             VStack(spacing: 16.0) {
                 ImageInputCard(userInputImage: $userInputImage)
-                LimitedInputTextField(maxInputCount: 280, inputUser: $userEntryText).font(.itimRegular(fontType: .body))
-                    .focused($focusedField, equals: 0)
-                    .onTapGesture {
-                        focusedField = 0
-                    }
+                LimitedInputTextField(
+                    maxInputCount: 280,
+                    inputUser: $userEntryText,
+                    placeholder: placeholder
+                )
+                .font(.itimRegular(fontType: .body))
+                .focused($focusedField, equals: 0)
+                .onTapGesture {
+                    focusedField = 0
+                }
             }
             .frame(maxWidth: geo.size.width*0.9, maxHeight: geo.size.height*0.9)
             .frame(width: geo.size.width, height: geo.size.height)
@@ -33,5 +39,9 @@ struct MasterInputCard: View {
 }
 
 #Preview {
-    MasterInputCard(userInputImage: .constant("liquid-bg"), userEntryText: .constant(""))
+    MasterInputCard(
+        userInputImage: .constant("liquid-bg"),
+        userEntryText: .constant(""),
+        placeholder: "Escreva uma descrição sobre a imagem..."
+    )
 }

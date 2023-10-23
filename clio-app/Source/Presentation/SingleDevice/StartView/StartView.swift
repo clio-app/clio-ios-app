@@ -11,6 +11,8 @@ struct StartView: View {
     @StateObject private var gameSession = GameSession()    // state for reference
     @ObservedObject var router = Router()                   // binding for reference
 
+    @State var input: String = ""
+    
     var body: some View {
         NavigationStack(path: $router.path) {
             ZStack {

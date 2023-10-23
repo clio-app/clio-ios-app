@@ -10,13 +10,16 @@ import SwiftUI
 struct DescriptionArtifactView: View {
     @EnvironmentObject var session: GameSession
     @EnvironmentObject var router: Router
+    
     @State var theme = ""
     @State var uiImage = UIImage(systemName: "photo.on.rectangle.angled")!
+    
     @State var input = ""
+    var placeholder = "Escreva uma descrição sobre a imagem..."
 
     @State var showZoomImage = false
 
-    private let maxWordCount: Int = 50
+    private let maxWordCount: Int = 100
 
     var body: some View {
         GeometryReader { geo in
@@ -59,9 +62,15 @@ struct DescriptionArtifactView: View {
                                     }
                             }
                         
-                        LimitedInputTextField(maxInputCount: 100, inputUser: $input)
-                            .foregroundColor(.black)
-                            .frame(width: geo.size.width * 0.7, height: geo.size.height * 0.15)
+                        LimitedInputTextField(
+                            maxInputCount: maxWordCount,
+                            inputUser: $input,
+                            placeholder: placeholder
+                        )
+                        .frame(
+                            width: geo.size.width * 0.7,
+                            height: geo.size.height * 0.15
+                        )
                     }
                     
                     Spacer()
@@ -77,6 +86,9 @@ struct DescriptionArtifactView: View {
             .toolbar(.hidden, for: .navigationBar)
             .onTapGesture {
                 UIApplication.shared.endEditing()
+                if input == "" {
+                    input = placeholder
+                }
             }
             .overlay {
                 if showZoomImage {
@@ -137,13 +149,26 @@ extension DescriptionArtifactView {
                     router.goToPhotoArtifactView()
                 }
             }
-        
-            .disabled(input.count > maxWordCount)
-            .disabled(input == "")
-            .opacity(input == "" ? 0.2 : 1)
+            .disabled(!canSendDescription())
+            .opacity((!canSendDescription()) ? 0.2 : 1)
+    }
+    
+    func canSendDescription() -> Bool {
+        if input == placeholder {
+            return false
+        }
+        if input == "" {
+            return false
+        }
+        if input.count > maxWordCount {
+            return false
+        }
+        return true
     }
 }
 
 #Preview {
     DescriptionArtifactView()
+        .environmentObject(GameSession())
+        .environmentObject(Router())
 }
