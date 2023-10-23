@@ -24,13 +24,6 @@ struct ThemeCard: View {
         .onTapGesture {
             UIApplication.shared.endEditing()
         }
-        .background{
-            BorderedBackground(
-                foregroundColor: .white,
-                hasBorder: false
-            )
-        }
-        .padding(.vertical)
     }
 }
 

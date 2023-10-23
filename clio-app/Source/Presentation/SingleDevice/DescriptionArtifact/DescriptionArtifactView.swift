@@ -27,6 +27,13 @@ struct DescriptionArtifactView: View {
                         theme: $theme
                     )
                     .frame(width: geo.size.width * 0.8)
+                    .background{
+                        BorderedBackground(
+                            foregroundColor: .white,
+                            hasBorder: false
+                        )
+                    }
+                    .padding(.vertical)
                         
                     Spacer()
                     
