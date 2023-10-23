@@ -787,6 +787,7 @@
 				FFA354E02AE1646300E23ADC /* SelectPlayerView.swift in Sources */,
 				00C1201E2AE15F340042E152 /* ArtefactView.swift in Sources */,
 				FFA354E02AE1646300E23ADC /* SelectPlayerView.swift in Sources */,
+				00C1201E2AE15F340042E152 /* ArtefactView.swift in Sources */,
 				00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */,
 				7E94E93D2AD5C68600031061 /* MasterInputView.swift in Sources */,
 				7E94E93A2AD5C68600031061 /* ImageInputCard.swift in Sources */,
