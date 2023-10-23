@@ -92,7 +92,6 @@ final class GameSession: ObservableObject {
     }
     
     func restartGame() {
-        gameFlowParameters.players = []
         gameFlowParameters.didPlay = []
         changeGameState(to: .start)
     }

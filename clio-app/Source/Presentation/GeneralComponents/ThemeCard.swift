@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ThemeCard: View {
+    var title: String
     @Binding var theme: String
     
     var body: some View {
         Group {
-            Text("Relacione a foto com o tema:")
+            Text(title)
                 .foregroundColor(.black)
             + Text("\n \(theme)")
                 .foregroundColor(.lapisLazuli)
@@ -23,9 +24,16 @@ struct ThemeCard: View {
         .onTapGesture {
             UIApplication.shared.endEditing()
         }
+        .background{
+            BorderedBackground(
+                foregroundColor: .white,
+                hasBorder: false
+            )
+        }
+        .padding(.vertical)
     }
 }
 
 #Preview {
-    ThemeCard(theme: .constant("Temaaaaaaa grandaoooooooo giganteeeeeeeee"))
+    ThemeCard(title: "Relacione a foto com o tema:", theme: .constant("Temaaaaaaa grandaoooooooo giganteeeeeeeee"))
 }

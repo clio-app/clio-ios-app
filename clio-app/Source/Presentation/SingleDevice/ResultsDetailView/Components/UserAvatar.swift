@@ -21,6 +21,7 @@ struct UserAvatar: View {
                         .aspectRatio(contentMode: .fit)
                 }
             Text(userName)
+                .foregroundStyle(.black)
         }
     }
 }

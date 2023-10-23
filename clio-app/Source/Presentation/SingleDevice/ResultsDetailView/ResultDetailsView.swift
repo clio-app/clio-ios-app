@@ -10,71 +10,125 @@ import ClioEntities
 
 struct ResultDetailsView: View {
     @EnvironmentObject var gameSession: GameSession
+    @EnvironmentObject var router: Router
+    @State var showedPlayers: [User] = []
+    @State var currentInteraction = 0
+    @State var startInteractions = false
+    @State var endInteractions = false
     
     var body: some View {
-        VStack {
+        GeometryReader { geo in
             VStack {
-                Text("Tema: ")
-                    .font(.itimRegular(fontType: .title3))
-                Text(gameSession.gameFlowParameters.sessionTheme)
-                    .font(.itimRegular(fontType: .largeTitle))
-            }
-            .padding(16)
-            .overlay {
-                RoundedRectangle(
-                    cornerRadius: 16
+                ThemeCard(
+                    title: "O tema é:",
+                    theme: $gameSession.gameFlowParameters.sessionTheme
                 )
-                .stroke(.black, lineWidth: 1)
-            }
-            
-            VStack(spacing: 1){
-                Text("A frase era...")
-                    .font(.itimRegular(fontType: .title3))
-                    .padding([.top])
+                .frame(
+                    width: geo.size.width * 0.8,
+                    height: geo.size.height * 0.2
+                )
                 
-                Text("Atividades vulcânicas")
-                    .font(.itimRegular(fontType: .title3))
-                    .padding(16)
-                    .overlay {
-                        RoundedRectangle(
-                            cornerRadius: 16
-                        )
-                        .stroke(.black, lineWidth: 1)
-                    }
-            }
-            
-            Spacer()
-            
-            ScrollView {
-                ForEach((0..<gameSession.gameFlowParameters.didPlay.count), id: \.self) { index in
-                    HStack(alignment: .bottom, spacing: 12) {
-                        UserAvatar(
-                            userName: gameSession.gameFlowParameters.didPlay[index].name,
-                            picture: gameSession.gameFlowParameters.didPlay[index].picture
-                        )
-                        
-                        ArtefactView(
-                            artefact: gameSession.gameFlowParameters.didPlay[index].artefact!
-                        )
-                        .padding([.bottom], 16)
-                        
-                        Spacer()
-                    }
-                    .padding([.horizontal], 26)
-                    .padding([.vertical], 32)
+                VStack(spacing: 1){
+                    Text("A frase era...")
+                        .font(.itimRegular(fontType: .title3))
+                        .foregroundStyle(.black)
+                        .padding([.top])
+                    
+                    Text(gameSession.gameFlowParameters.firstRoundPrompt)
+                        .font(.itimRegular(fontType: .title3))
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(16)
+                        .foregroundStyle(.black)
+                        .overlay {
+                            RoundedRectangle(
+                                cornerRadius: 16
+                            )
+                            .stroke(.black, lineWidth: 1)
+                        }
                 }
+                .padding([.horizontal, .vertical])
+                
+                if startInteractions {
+                    ScrollView {
+                        ForEach((0..<showedPlayers.count), id: \.self) { index in
+                            HStack(alignment: .bottom, spacing: 12) {
+                                UserAvatar(
+                                    userName: showedPlayers[index].name,
+                                    picture: showedPlayers[index].picture
+                                )
+                                
+                                ArtefactView(
+                                    artefact: showedPlayers[index].artefact!
+                                )
+                                .padding([.bottom], 16)
+                                
+                                Spacer()
+                            }
+                            .padding([.horizontal], 26)
+                            .padding([.vertical], 32)
+                            .animation(.easeIn, value: index)
+                        }
+                    }
+                    .scrollIndicators(.visible)
+                    .padding([.vertical], 6)
+                }
+                
+                if endInteractions {
+                    ActionButton(
+                        title: "Jogar Novamente",
+                        foregroundColor: .blue,
+                        backgroundColor: .white,
+                        hasBorder: true
+                    ) {
+                        gameSession.restartGame()
+                        router.clear()
+                    }
+                    .frame(height: 42)
+                    .padding([.horizontal], 32)
+                } else {
+                    Circle()
+                        .frame(width: 46, height: 46)
+                        .foregroundStyle(.yellow)
+                        .overlay {
+                            Image("check_icon")
+                                .resizable()
+                                .scaledToFill()
+                        }
+                        .onTapGesture {
+                            addPlayerInteraction()
+                        }
+                }
+                
             }
-            .frame(height: 420)
-            .padding([.vertical], 24)
-            
+            .frame(width: geo.size.width, height: geo.size.height)
+            .toolbar(.hidden, for: .navigationBar)
+            .background{Color.white.ignoresSafeArea()}
         }
-        .frame(height: 520)
-
+    }
+    
+    func addPlayerInteraction() {
+        showedPlayers = []
+        let playersCount = gameSession.gameFlowParameters.didPlay.count - 1
+        if currentInteraction == 0 { withAnimation { startInteractions = true } }
+        if currentInteraction > playersCount {
+            endInteractions = true
+            showedPlayers = gameSession.gameFlowParameters.didPlay
+            return
+        }
+        
+        withAnimation(.linear) {
+            showedPlayers.append(
+                gameSession.gameFlowParameters.didPlay[currentInteraction]
+            )
+            
+            currentInteraction += 1
+        }
     }
 }
 
 #Preview {
     @ObservedObject var gameSession = GameSession()
+    @ObservedObject var router = Router()
     gameSession.addPlayerInSession(
         name: "name01",
         image: "profile-picture-eye"
@@ -88,7 +142,7 @@ struct ResultDetailsView: View {
         image: "profile-picture-eye"
     )
     gameSession.randomizeThemes()
-    
+    gameSession.selectFirstRoundPrompt()
     let user1 = gameSession.gameFlowParameters.players[0]
     let user2 = gameSession.gameFlowParameters.players[1]
     
@@ -121,6 +175,8 @@ struct ResultDetailsView: View {
     
     let resultView = ResultDetailsView()
         .environmentObject(gameSession)
+        .environmentObject(router)
     
     return resultView
 }
+

@@ -13,23 +13,26 @@ struct ArtefactView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(artefact.description)
-                .font(.itimRegular(fontType: .title3))
-                .multilineTextAlignment(.leading)
-                .lineLimit(nil)
-                .padding([.trailing], 16)
-            
-            .frame(alignment: .bottom)
-            .padding(18)
-            .background(.clear)
-            .overlay {
-                RoundedRectangle(
-                    cornerRadius: 16
-                )
-                .stroke(.black, lineWidth: 3)
+            if let description = artefact.description {
+                Text(description)
+                    .font(.itimRegular(fontType: .title3))
+                    .foregroundStyle(.black)
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(nil)
+                    .padding([.trailing], 16)
+                
+                    .frame(alignment: .bottom)
+                    .padding(18)
+                    .background(.clear)
+                    .overlay {
+                        RoundedRectangle(
+                            cornerRadius: 16
+                        )
+                        .stroke(.black, lineWidth: 2)
+                    }
             }
             
-            if let image = UIImage(data: artefact.picture) {
+            if let image = UIImage(data: artefact.picture ?? Data()) { 
                 Image(uiImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -43,7 +46,7 @@ struct ArtefactView: View {
                         RoundedRectangle(
                             cornerRadius: 16
                         )
-                        .stroke(.black, lineWidth: 3)
+                        .stroke(.black, lineWidth: 2)
                     }
                     .padding([.bottom], 16)
             }
