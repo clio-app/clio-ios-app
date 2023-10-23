@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "clio-entities",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/clio-app/clio-entities.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "863c3e05d326b2fe5b07cf98a209c5e3bd029977"
+      }
+    }
+  ],
+  "version" : 2
+}
