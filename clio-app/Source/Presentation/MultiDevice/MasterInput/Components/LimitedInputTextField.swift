@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LimitedInputTextField: View {
+    var maxInputCount: Int
     @Binding var inputUser: String
     var placeholder: String = "Escreva uma descrição sobre a imagem..."
 
@@ -18,6 +19,7 @@ struct LimitedInputTextField: View {
                     Text(placeholder)
                         .foregroundColor(.gray)
                 }
+                .font(.itimRegular())
                 .foregroundColor(.black)
                 .lineLimit(5)
                 .multilineTextAlignment(.leading)
@@ -30,7 +32,7 @@ struct LimitedInputTextField: View {
 
             HStack(alignment: .center) {
                 Spacer()
-                Text("\(inputUser.count)/280")
+                Text("\(inputUser.count)/\(maxInputCount)")
                     .padding(.top, 2)
                     .foregroundColor(.black)
             }
@@ -46,5 +48,5 @@ struct LimitedInputTextField: View {
 
 
 #Preview {
-    LimitedInputTextField(inputUser: .constant("Abralskdmksjdksa"))
+    LimitedInputTextField(maxInputCount: 280, inputUser: .constant("Abralskdmksjdksa"))
 }

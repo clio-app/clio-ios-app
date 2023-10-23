@@ -10,9 +10,8 @@ import SwiftUI
 struct SelectPlayerView: View {
     @StateObject var vm: SelectPlayerViewModel = SelectPlayerViewModel()
     
-    @EnvironmentObject var session: GameSession
-    
-    @State var navigateToNextView = false
+    @EnvironmentObject var gameSession: GameSession
+    @EnvironmentObject var router: Router
     
     var body: some View {
         GeometryReader { geo in
@@ -34,25 +33,14 @@ struct SelectPlayerView: View {
                     .frame(width: geo.size.width, height: geo.size.height)
                 }
             }
-            .navigationDestination(isPresented: $navigateToNextView, destination: {
-                // TODO: Change to checking game states using enum
-                if session.gameFlowParameters.didPlay.count == 1 {
-                    Text("Tela de tela aleatório")
-                } else if (session.gameFlowParameters.didPlay.count == session.gameFlowParameters.players.count){
-                    Text("Tela de Resultados")
-                        .toolbar(.hidden, for: .navigationBar)
-                } else {
-                    Text("Tela de Jogo Padrão")
-                }
-            })
-            .toolbar(.hidden, for: .navigationBar)
             .frame(width: geo.size.width, height: geo.size.height)
             .background{Color.white.ignoresSafeArea()}
         }
         .onAppear {
-            let player = session.getRandomPlayer()
+            let player = gameSession.getRandomPlayer()
             vm.changePlayer(newPlayer: player)
         }
+        .navigationBarBackButtonHidden()
     }
 }
 
@@ -77,9 +65,16 @@ extension SelectPlayerView {
                 backgroundColor: .white,
                 hasBorder: true) {
                     if let player = vm.currentPlayer {
-                        session.addPlayerInRound(player: player)
-                        navigateToNextView.toggle()
+                        gameSession.addPlayerInRound(player: player)
+
+                        switch gameSession.gameState {
+                        case .start:
+                            router.goToPhotoArtifactView()
+                        default:
+                            router.goToDescriptionArtifactView()
+                        }
                     }
+                    
                 }
             ActionButton(
                 title: "Não",
@@ -87,9 +82,11 @@ extension SelectPlayerView {
                 backgroundColor: .white,
                 hasBorder: true) {
                     vm.changeViewState(to: .findingPlayer)
-                    let player = session.getRandomPlayer(currentPlayer: vm.currentPlayer)
+                    let player = gameSession.getRandomPlayer(currentPlayer: vm.currentPlayer)
                     vm.changePlayer(newPlayer: player)
                 }
+                .disabled(gameSession.gameState == .final)
+                .opacity(gameSession.gameState == .final ? 0.2 : 1)
         }
     }
     

@@ -18,7 +18,7 @@ struct MasterInputCard: View {
         GeometryReader { geo in
             VStack(spacing: 16.0) {
                 ImageInputCard(userInputImage: $userInputImage)
-                LimitedInputTextField(inputUser: $userEntryText).font(.itimRegular(fontType: .body))
+                LimitedInputTextField(maxInputCount: 280, inputUser: $userEntryText).font(.itimRegular(fontType: .body))
                     .focused($focusedField, equals: 0)
                     .onTapGesture {
                         focusedField = 0

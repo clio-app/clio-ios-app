@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PlayersView: View {
     @EnvironmentObject var session: GameSession
+    @EnvironmentObject var router: Router
+
     @State var text: String = ""
     @State var profileImage: String = ""
     @State private var newPlayer: Bool = false
@@ -28,9 +30,7 @@ struct PlayersView: View {
                 }
 
                 if newPlayer {
-                    AddPlayerField(
-                        playerImage: $profileImage,
-                        playerName: $text,
+                    AddPlayerField(playerImage: $profileImage, playerName: $text,
                         onAddPlayer: {
                             addPlayerAndReset()
                         },
@@ -39,6 +39,7 @@ struct PlayersView: View {
                         }
                     )
                     .focused($focus, equals: true)
+                    .padding(.horizontal, 10)
                 }
 
                 Button("Adicionar Jogador") {
@@ -46,6 +47,9 @@ struct PlayersView: View {
                 }
                 .buttonStyle(.bordered)
             }
+            .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
+            .foregroundColor(.black)
             .frame(maxWidth: .infinity)
             .alert(isPresented: $session.alertError.showAlert) {
                 Alert(title: Text("Error"), message: Text(session.alertError.errorMessage))
@@ -53,13 +57,16 @@ struct PlayersView: View {
 
             .keyboardAdaptive()
         }
+        .background {
+            Color.white.ignoresSafeArea()
+        }
         .onTapGesture {
             hideKeyboard()
-            self.newPlayer = !text.isEmpty
+            newPlayer = !text.isEmpty
         }
         .safeAreaInset(edge: .bottom) {
-            NavigationLink(destination: RaffleThemeView()) {
-                Text("Começar")
+            Button("Começar") {
+                router.goToRaffleThemeView()
             }
             .buttonStyle(.borderedProminent)
             .disabled(session.canStartGame())
@@ -99,7 +106,7 @@ struct PlayersView: View {
     private func clearFocusAndTextfield() {
         // just to access the alert inside addPlayer
         session.addPlayerInSession(name: text, image: profileImage)
-        self.newPlayer = false
+        newPlayer = false
         focus = newPlayer
     }
 
@@ -143,7 +150,7 @@ struct AddPlayerField: View {
 
     var body: some View {
         HStack {
-            Image(self.playerImage)
+            Image(playerImage)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 45, alignment: .center)
@@ -151,13 +158,18 @@ struct AddPlayerField: View {
                     onChangeImage()
                 }
 
-            TextField("Insira o nome do jogador", text: $playerName)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-                .submitLabel(.done)
-                .onSubmit {
-                    onAddPlayer()
-                }
+            TextField(text: $playerName) {
+                Text("Insira o nome do jogador")
+                    .foregroundColor(.black.opacity(0.6))
+            }
+            .textFieldStyle(PlainTextFieldStyle())
+            .padding(6)
+            .background(RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.2)))
+            .foregroundColor(.black)
+            .submitLabel(.done)
+            .onSubmit {
+                onAddPlayer()
+            }
         }
     }
 }
