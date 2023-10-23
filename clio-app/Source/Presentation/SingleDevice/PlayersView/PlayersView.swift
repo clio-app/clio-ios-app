@@ -48,6 +48,7 @@ struct PlayersView: View {
                 .buttonStyle(.bordered)
             }
             .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
             .foregroundColor(.black)
             .frame(maxWidth: .infinity)
             .alert(isPresented: $session.alertError.showAlert) {

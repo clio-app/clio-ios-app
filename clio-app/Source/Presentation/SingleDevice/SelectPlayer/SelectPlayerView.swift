@@ -12,8 +12,6 @@ struct SelectPlayerView: View {
     
     @EnvironmentObject var gameSession: GameSession
     @EnvironmentObject var router: Router
-
-    @State var navigateToNextView = false
     
     var body: some View {
         GeometryReader { geo in
@@ -68,7 +66,6 @@ extension SelectPlayerView {
                 hasBorder: true) {
                     if let player = vm.currentPlayer {
                         gameSession.addPlayerInRound(player: player)
-                        navigateToNextView.toggle()
 
                         switch gameSession.gameState {
                         case .start:

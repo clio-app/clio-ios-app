@@ -15,7 +15,6 @@ struct DescriptionArtifactView: View {
     @State var input = ""
 
     @State var showZoomImage = false
-    @State var navigateToNextView = false
 
     private let maxWordCount: Int = 50
 
@@ -123,11 +122,11 @@ extension DescriptionArtifactView {
             hasBorder: true) {
                 UIApplication.shared.endEditing()
                 session.sendArtifact(description: input)
-                navigateToNextView = true
 
                 switch session.gameState {
                 case .final:
                     // clear up and restart gameflow
+                    // TODO: FICA NA TELA DE RESULTADOS
                     session.restartGame()
                     router.clear()
                 default:

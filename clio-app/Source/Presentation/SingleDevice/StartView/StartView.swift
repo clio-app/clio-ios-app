@@ -20,7 +20,7 @@ struct StartView: View {
                 }
                 .buttonStyle(.borderedProminent)
             }
-            .navigationTitle("start view")
+            .navigationTitle("")
             .navigationDestination(for: Views.self) { destination in
                 ViewFactory.viewForDestination(destination)
             }
