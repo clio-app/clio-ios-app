@@ -303,6 +303,7 @@
 				FFA354D22AE0162200E23ADC /* PhotoArtifact */,
 				00C120142AE060780042E152 /* ResultsDetailView */,
 				00C120112AE05C2B0042E152 /* ResultsView */,
+				FFA354DE2AE1644A00E23ADC /* SelectPlayer */,
 				00C1200C2ADEC2980042E152 /* RaffleTheme */,
 				00C120002ADEBDBC0042E152 /* PlayersView */,
 				00C11FFD2ADEB5CA0042E152 /* StartView */,
@@ -785,6 +786,7 @@
 				7EBA9CD92AD1AF6E00C25970 /* VotingInstructionView.swift in Sources */,
 				FFA354E02AE1646300E23ADC /* SelectPlayerView.swift in Sources */,
 				00C1201E2AE15F340042E152 /* ArtefactView.swift in Sources */,
+				FFA354E02AE1646300E23ADC /* SelectPlayerView.swift in Sources */,
 				00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */,
 				7E94E93D2AD5C68600031061 /* MasterInputView.swift in Sources */,
 				7E94E93A2AD5C68600031061 /* ImageInputCard.swift in Sources */,
@@ -936,7 +938,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 44U668YQTW;
+				DEVELOPMENT_TEAM = NTS86MKTBV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
@@ -971,7 +973,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 44U668YQTW;
+				DEVELOPMENT_TEAM = NTS86MKTBV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
