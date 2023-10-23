@@ -15,6 +15,10 @@
 		00C120022ADEBDC90042E152 /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120012ADEBDC90042E152 /* PlayersView.swift */; };
 		00C120092ADEBF140042E152 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120082ADEBF140042E152 /* GameSession.swift */; };
 		00C120102ADEC2E00042E152 /* RaffleThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C1200F2ADEC2E00042E152 /* RaffleThemeView.swift */; };
+		00C120132AE05C3A0042E152 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120122AE05C3A0042E152 /* ResultsView.swift */; };
+		00C120162AE060890042E152 /* ResultDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120152AE060890042E152 /* ResultDetailsView.swift */; };
+		00C120192AE0685D0042E152 /* UserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120182AE0685D0042E152 /* UserAvatar.swift */; };
+		00C1201E2AE15F340042E152 /* ArtefactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C1201D2AE15F340042E152 /* ArtefactView.swift */; };
 		00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C02ABC7D6900F66421 /* Endpoint.swift */; };
 		00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C22ABC7EAF00F66421 /* Loader.swift */; };
 		00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C42ABC7ECC00F66421 /* HttpError.swift */; };
@@ -101,6 +105,10 @@
 		00C120012ADEBDC90042E152 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		00C120082ADEBF140042E152 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		00C1200F2ADEC2E00042E152 /* RaffleThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaffleThemeView.swift; sourceTree = "<group>"; };
+		00C120122AE05C3A0042E152 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		00C120152AE060890042E152 /* ResultDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailsView.swift; sourceTree = "<group>"; };
+		00C120182AE0685D0042E152 /* UserAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAvatar.swift; sourceTree = "<group>"; };
+		00C1201D2AE15F340042E152 /* ArtefactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtefactView.swift; sourceTree = "<group>"; };
 		00D9C9C02ABC7D6900F66421 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		00D9C9C22ABC7EAF00F66421 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		00D9C9C42ABC7ECC00F66421 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
@@ -290,9 +298,11 @@
 			isa = PBXGroup;
 			children = (
 				7E61A3E02AE574170009425C /* Router */,
-				FFA354DE2AE1644A00E23ADC /* SelectPlayer */,
 				FF4DDEA32AE1A12400759F47 /* DescriptionArtifact */,
 				FFA354D22AE0162200E23ADC /* PhotoArtifact */,
+				00C120142AE060780042E152 /* ResultsDetailView */,
+				00C120112AE05C2B0042E152 /* ResultsView */,
+				FFA354DE2AE1644A00E23ADC /* SelectPlayer */,
 				00C1200C2ADEC2980042E152 /* RaffleTheme */,
 				00C120002ADEBDBC0042E152 /* PlayersView */,
 				00C11FFD2ADEB5CA0042E152 /* StartView */,
@@ -339,6 +349,32 @@
 				7ED105532AE5CD830038B149 /* RaffleThemeViewModel.swift */,
 			);
 			path = RaffleTheme;
+			sourceTree = "<group>";
+		};
+		00C120112AE05C2B0042E152 /* ResultsView */ = {
+			isa = PBXGroup;
+			children = (
+				00C120122AE05C3A0042E152 /* ResultsView.swift */,
+			);
+			path = ResultsView;
+			sourceTree = "<group>";
+		};
+		00C120142AE060780042E152 /* ResultsDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				00C120172AE068510042E152 /* Components */,
+				00C120152AE060890042E152 /* ResultDetailsView.swift */,
+			);
+			path = ResultsDetailView;
+			sourceTree = "<group>";
+		};
+		00C120172AE068510042E152 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				00C120182AE0685D0042E152 /* UserAvatar.swift */,
+				00C1201D2AE15F340042E152 /* ArtefactView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		00D9C9BC2ABC701C00F66421 /* Modifiers */ = {
@@ -438,6 +474,7 @@
 				7EBA9CE32AD23CF700C25970 /* PieProgress.swift */,
 				7EE152CF2AD4181B00CA8F9F /* PieTimer.swift */,
 				7EBA9CE12AD22A8E00C25970 /* DescriptionItem.swift */,
+				FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */,
 			);
 			path = GeneralComponents;
 			sourceTree = "<group>";
@@ -534,7 +571,6 @@
 			isa = PBXGroup;
 			children = (
 				FF4DDEA62AE200E900759F47 /* ZoomImage.swift */,
-				FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -688,6 +724,7 @@
 				7E1705E22AD60938005FA9EE /* PlayersContainer.swift in Sources */,
 				7E1705E32AD60938005FA9EE /* MasterContainer.swift in Sources */,
 				7E1705E42AD60938005FA9EE /* PlayerGridItem.swift in Sources */,
+				00C120162AE060890042E152 /* ResultDetailsView.swift in Sources */,
 				7E1705E52AD60938005FA9EE /* LobbyHeader.swift in Sources */,
 				FFA354DD2AE02AF400E23ADC /* RetakePhotoButton.swift in Sources */,
 				7E1705DF2AD608EE005FA9EE /* LobbyView.swift in Sources */,
@@ -708,6 +745,7 @@
 				7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */,
 				7E0D42592AD5BEFD00C566EB /* SelectImageProfile.swift in Sources */,
 				00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */,
+				00C120192AE0685D0042E152 /* UserAvatar.swift in Sources */,
 				00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */,
 				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
 				FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */,
@@ -717,6 +755,7 @@
 				FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
 				00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */,
+				00C120132AE05C3A0042E152 /* ResultsView.swift in Sources */,
 				7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */,
 				7E81843E2AD4336100938C69 /* VotingPopupModel.swift in Sources */,
 				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
@@ -745,6 +784,9 @@
 				00D9C9D32ABC814700F66421 /* Network.swift in Sources */,
 				7EBA9CD92AD1AF6E00C25970 /* VotingInstructionView.swift in Sources */,
 				FFA354E02AE1646300E23ADC /* SelectPlayerView.swift in Sources */,
+				00C1201E2AE15F340042E152 /* ArtefactView.swift in Sources */,
+				FFA354E02AE1646300E23ADC /* SelectPlayerView.swift in Sources */,
+				00C1201E2AE15F340042E152 /* ArtefactView.swift in Sources */,
 				00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */,
 				7E94E93D2AD5C68600031061 /* MasterInputView.swift in Sources */,
 				7E94E93A2AD5C68600031061 /* ImageInputCard.swift in Sources */,
@@ -896,7 +938,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 44U668YQTW;
+				DEVELOPMENT_TEAM = 685GVH2XJC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
@@ -931,7 +973,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 44U668YQTW;
+				DEVELOPMENT_TEAM = 685GVH2XJC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
