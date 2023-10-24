@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "welcome-to-clio.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "clio-banner-transformed.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

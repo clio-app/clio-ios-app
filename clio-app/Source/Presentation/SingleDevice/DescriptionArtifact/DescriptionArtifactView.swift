@@ -16,7 +16,7 @@ struct DescriptionArtifactView: View {
 
     @State var showZoomImage = false
 
-    private let maxWordCount: Int = 50
+    private let maxWordCount: Int = 100
 
     var body: some View {
         GeometryReader { geo in
@@ -56,7 +56,7 @@ struct DescriptionArtifactView: View {
                                     }
                             }
                         
-                        LimitedInputTextField(maxInputCount: 100, inputUser: $input)
+                        LimitedInputTextField(maxInputCount: maxWordCount, inputUser: $input)
                             .foregroundColor(.black)
                             .frame(width: geo.size.width * 0.7, height: geo.size.height * 0.15)
                     }
@@ -86,9 +86,7 @@ struct DescriptionArtifactView: View {
                     uiImage = UIImage(data: data)!
                 }
             }
-            .background {
-                Color.white.ignoresSafeArea()
-            }
+            .clioBackground()
         }
         .ignoresSafeArea(.keyboard)
         .environmentObject(session)
