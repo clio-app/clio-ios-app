@@ -16,6 +16,7 @@ struct PhotoArtifactView: View {
     
     @State var cameraPreview: CameraPreview?
     @State var theme: String = ""
+    @State var presentCameraButton = false
 
     var body: some View {
         GeometryReader { geo in
@@ -44,7 +45,7 @@ struct PhotoArtifactView: View {
                     
                     if let _ = vm.imageData {
                         retakePhotoOverlay
-                    } else {
+                    } else if presentCameraButton {
                         takePhotoOverlay
                     }
                     
@@ -78,16 +79,14 @@ struct PhotoArtifactView: View {
             .frame(width: geo.size.width, height: geo.size.height)
             .background{Color.white.ignoresSafeArea()}
             .onAppear {
-                vm.checkCameraAuthorization()
-                cameraPreview = CameraPreview(vm: vm)
-                
-                // TODO: Modify theme according to the round
-                theme = gameSession.getCurrentTheme()
+                initialConfig()
             }
             .onChange(of: vm.viewState) { newState in
                 switch newState {
                 case .authorized:
-                    return
+                    withAnimation(.easeInOut.delay(0.5)) {
+                        presentCameraButton = true
+                    }
                 case .denied(title: let title, description: let description):
                     errorAlert = ErrorAlert(
                         showAlert: true,
@@ -100,15 +99,13 @@ struct PhotoArtifactView: View {
                         title: title,
                         description: description
                     )
-                case .notDetermined:
-                    return
                 case .cameraError(title: let title, description: let description):
                     errorAlert = ErrorAlert(
                         showAlert: true,
                         title: title,
                         description: description
                     )
-                case .none:
+                default:
                     return
                 }
             }
@@ -120,6 +117,12 @@ struct PhotoArtifactView: View {
                 )
             }
         }
+    }
+    
+    func initialConfig() {
+        vm.checkCameraAuthorization()
+        cameraPreview = CameraPreview(vm: vm)
+        theme = gameSession.getCurrentTheme()
     }
 }
 
@@ -152,16 +155,14 @@ extension PhotoArtifactView {
     var takePhotoOverlay: some View {
         VStack {
             Spacer()
-            if vm.viewState == .authorized {
-                CameraButton(color: .white) {
-                    withAnimation {
-                        vm.takePhoto()
-                    }
+            CameraButton(color: .white) {
+                withAnimation(.easeInOut.delay(0.3)) {
+                    vm.takePhoto()
                 }
-                .frame(width: 70, height: 70)
-                .padding(.bottom, 20)
-                .transition(.opacity)
             }
+            .frame(width: 70, height: 70)
+            .padding(.bottom, 20)
+            .transition(.opacity)
         }
     }
     

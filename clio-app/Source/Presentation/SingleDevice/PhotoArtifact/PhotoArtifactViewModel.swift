@@ -39,6 +39,7 @@ final class PhotoArtifactViewModel: NSObject, ObservableObject {
                 description: "Não foi possível acessar a câmera! Vá nas configurações e autorize o uso da câmera para continuar!"
             ))
         case .authorized:
+            changeViewState(to: .authorized)
             setup()
         @unknown default:
             return
