@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00BFF8F52AB4914B0068A5F2"
-               BuildableName = "clio-app.app"
+               BuildableName = "Clio.app"
                BlueprintName = "clio-app"
                ReferencedContainer = "container:clio-app.xcodeproj">
             </BuildableReference>
@@ -61,7 +61,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "00BFF8F52AB4914B0068A5F2"
-            BuildableName = "clio-app.app"
+            BuildableName = "Clio.app"
             BlueprintName = "clio-app"
             ReferencedContainer = "container:clio-app.xcodeproj">
          </BuildableReference>
@@ -78,7 +78,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "00BFF8F52AB4914B0068A5F2"
-            BuildableName = "clio-app.app"
+            BuildableName = "Clio.app"
             BlueprintName = "clio-app"
             ReferencedContainer = "container:clio-app.xcodeproj">
          </BuildableReference>
