@@ -490,6 +490,7 @@
 				7EBA9CE32AD23CF700C25970 /* PieProgress.swift */,
 				7EE152CF2AD4181B00CA8F9F /* PieTimer.swift */,
 				7EBA9CE12AD22A8E00C25970 /* DescriptionItem.swift */,
+				7E94E9382AD5C68600031061 /* LimitedInputTextField.swift */,
 				7EA6DC992AE80352003368E8 /* CustomAlert.swift */,
 				FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */,
 			);
@@ -549,7 +550,6 @@
 			children = (
 				7E94E9362AD5C68600031061 /* ImageInputCard.swift */,
 				7E94E9372AD5C68600031061 /* MasterInputCard.swift */,
-				7E94E9382AD5C68600031061 /* LimitedInputTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -986,11 +986,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 44U668YQTW;
+				DEVELOPMENT_TEAM = NTS86MKTBV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
-				INFOPLIST_KEY_NSCameraUsageDescription = "A camera é utilizada para captura das imagens para dar continuidade a dinâmica";
+				INFOPLIST_KEY_NSCameraUsageDescription = "A câmera será usada para a captura de imagens durante o jogo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1021,11 +1021,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 44U668YQTW;
+				DEVELOPMENT_TEAM = NTS86MKTBV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
-				INFOPLIST_KEY_NSCameraUsageDescription = "A camera é utilizada para captura das imagens para dar continuidade a dinâmica";
+				INFOPLIST_KEY_NSCameraUsageDescription = "A câmera será usada para a captura de imagens durante o jogo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

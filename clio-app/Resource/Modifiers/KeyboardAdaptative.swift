@@ -15,7 +15,8 @@ struct KeyboardAdaptive: ViewModifier {
         content
             .padding(.bottom, keyboardHeight )
             .onReceive(Publishers.keyboardHeight) {
-                self.keyboardHeight = $0
+                let bottomInset = UIApplication.shared.windows.first?.safeAreaInsets.bottom
+                self.keyboardHeight = $0 - (bottomInset ?? 0)
             }
             .animation(.easeInOut(duration: 0.2), value: keyboardHeight)
     }
