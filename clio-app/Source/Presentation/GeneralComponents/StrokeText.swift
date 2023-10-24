@@ -27,6 +27,7 @@ struct StrokeText: View {
                 Text(text).offset(y: borderWidth)
                 Text(text).offset(y: -borderWidth)
             }
+            .compositingGroup()
             .foregroundColor(borderColor)
             Text(text)
         }

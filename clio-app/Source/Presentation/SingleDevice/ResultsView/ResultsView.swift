@@ -14,47 +14,52 @@ struct ResultsView: View {
     var body: some View {
         GeometryReader { geo in
             VStack {
-                Text(gameSession.gameFlowParameters.sessionTheme)
-                    .font(.largeTitle)
-                    .foregroundStyle(.black)
-                    .padding([.top], geo.size.height * 0.1)
-                
+
+                // TODO: Virou componente dentro de resultsDetailView
+                ThemeBubble(theme: gameSession.gameFlowParameters.sessionTheme)
+                .padding([.top], geo.size.height * 0.1)
+
                 Spacer()
                 
                 VStack {
-                    Text("Reuna seus amigos")
+                    Text("Junte seus amigos")
                         .foregroundStyle(.black)
-                    
+                        .font(.itimRegular(fontType: .title2))
+
                     HStack(spacing: -10) {
                         ForEach(gameSession.gameFlowParameters.players, id: \.id) { player in
-                                Circle()
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
                                     .frame(width: 50, height: 50)
-                                    .foregroundStyle(.black)
                                     .overlay {
-                                        Image(player.picture)
-                                            .resizable()
-                                            .scaledToFit()
+                                        Circle()
+                                            .stroke(lineWidth: 3.0)
+                                            .foregroundColor(.black)
                                     }
+                                    .applyColor(player.picture)
                         }
                     }
                 }
                 
                 Spacer()
-                
+
                 VStack {
                     Text("Clique aqui para ver as respostas")
                         .foregroundStyle(.black)
-                    
+                        .multilineTextAlignment(.center)
+                        .font(.itimRegular(fontType: .title3))
+
                     NavigationLink {
                         ResultDetailsView()
                     } label: {
-                        Circle()
+                        Image(systemName: "chevron.down.circle.fill")
+                            .resizable()
                             .frame(width: 46, height: 46)
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.black, Color.softGreen)
                             .overlay {
-                                Image("check_icon")
-                                    .resizable()
-                                    .scaledToFill()
+                                Circle()
+                                    .stroke(lineWidth: 3.0)
+                                    .foregroundColor(.black)
                             }
                     }
                 }
@@ -65,7 +70,7 @@ struct ResultsView: View {
                 height: geo.size.height
             )
         }
-        .background{Color.white.ignoresSafeArea()}
+        .clioBackground()
         .toolbar(.hidden, for: .navigationBar)
     }
 }
@@ -73,9 +78,9 @@ struct ResultsView: View {
 #Preview {
     @ObservedObject var gameSession = GameSession()
     @ObservedObject var router = Router()
-    gameSession.addPlayerInSession(name: "name01", image: "")
-    gameSession.addPlayerInSession(name: "name02", image: "")
-    gameSession.addPlayerInSession(name: "name03", image: "")
+    gameSession.addPlayerInSession(name: "name01", image: "Brick")
+    gameSession.addPlayerInSession(name: "name02", image: "Sky")
+    gameSession.addPlayerInSession(name: "name03", image: "LapisLazuli")
     gameSession.randomizeThemes()
     
     let resultView = ResultsView()

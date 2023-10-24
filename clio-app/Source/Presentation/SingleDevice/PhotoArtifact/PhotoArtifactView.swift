@@ -77,7 +77,7 @@ struct PhotoArtifactView: View {
             }
             .toolbar(.hidden, for: .navigationBar)
             .frame(width: geo.size.width, height: geo.size.height)
-            .background{Color.white.ignoresSafeArea()}
+            .clioBackground()
             .onAppear {
                 initialConfig()
             }

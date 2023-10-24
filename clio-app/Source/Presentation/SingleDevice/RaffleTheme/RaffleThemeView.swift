@@ -15,14 +15,24 @@ struct RaffleThemeView: View {
     var body: some View {
         VStack {
             Text("O tema esta sendo sorteado...")
-                .font(.title2)
+                .font(.itimRegular(fontType: .title3))
                 .multilineTextAlignment(.center)
+                .padding(24)
+                .background(Color.offWhite)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 20.0, style: .continuous)
+                    .stroke(lineWidth: 2.0)
+                }
+                .padding(.bottom, 24)
                 .padding(.horizontal, 60)
 
             Spacer()
 
             Text("O tema é: ")
-                .font(.title3)
+                .font(.itimRegular(fontType: .title3))
+                .multilineTextAlignment(.center)
+                .padding(.bottom, 24)
+                .padding(.horizontal, 60)
 
             HStack {
                 Spacer()
@@ -33,41 +43,33 @@ struct RaffleThemeView: View {
             .padding(.horizontal, 24)
 
             Spacer()
+            Spacer()
+            
             if vm.isThemeSet {
-                Button("Continuar") {
+                ActionButton(title: "Continuar", foregroundColor: .lapisLazuli, backgroundColor: .offWhite, hasBorder: true) {
                     router.clear()
                     router.goToSelectPlayer()
-                }.buttonStyle(.borderedProminent)
+                }
+                .padding()
+                .frame(height: 92)
             } else {
-                Button("Parar") {
+                ActionButton(title: "Parar", foregroundColor: .lapisLazuli, backgroundColor: .offWhite, hasBorder: true) {
                     vm.stopTimerAndSetTheme()
                     gameSession.selectFirstRoundPrompt()
-
                     print(gameSession.gameFlowParameters.firstRoundPrompt)
                 }
-                .buttonStyle(.bordered)
+                .padding()
+                .frame(height: 92)
             }
-
-            Spacer()
-        }.onAppear {
+        }
+        .onAppear {
             vm.setTheme(from: gameSession)
         }
         .onDisappear(perform: {
             vm.stopTimerAndSetTheme()
         })
         .foregroundColor(.black)
-        .background {
-            Color.white.ignoresSafeArea()
-        }
-    }
-}
-
-struct themeSlot: View {
-    @Binding var theme: String
-
-    var body: some View {
-        Text(theme)
-            .font(.largeTitle)
+        .clioBackground()
     }
 }
 

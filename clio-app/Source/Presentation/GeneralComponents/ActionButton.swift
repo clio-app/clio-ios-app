@@ -11,7 +11,7 @@ struct ActionButton: View {
     var title: String
     var foregroundColor: Color
     var backgroundColor: Color?
-    var radius: CGFloat = 15
+    var radius: CGFloat = 16
     var hasBorder: Bool
 
     var action: () -> Void
@@ -46,9 +46,6 @@ struct ActionButton: View {
                    borderColor: .black)
                 .foregroundColor(.white)
                 .font(.itimRegular(fontType: .button))
-//                Text(title)
-//                    .foregroundColor(.black)
-//                    .font(.itimRegular(fontType: .button))
             }
         }
     }

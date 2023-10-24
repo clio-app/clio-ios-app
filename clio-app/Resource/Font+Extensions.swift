@@ -48,6 +48,7 @@ extension Font {
     enum FontType {
         case largeTitle
         case title3
+        case title2
         case body
         case button
         case headline
@@ -56,6 +57,8 @@ extension Font {
             switch self {
             case .largeTitle:
                 return 48
+            case .title2:
+                return 36
             case .title3:
                 return 24
             case .body:

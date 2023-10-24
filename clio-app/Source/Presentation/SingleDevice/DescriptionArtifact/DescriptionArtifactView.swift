@@ -101,9 +101,7 @@ struct DescriptionArtifactView: View {
                     uiImage = UIImage(data: data)!
                 }
             }
-            .background {
-                Color.white.ignoresSafeArea()
-            }
+            .clioBackground()
         }
         .ignoresSafeArea(.keyboard)
         .environmentObject(session)
