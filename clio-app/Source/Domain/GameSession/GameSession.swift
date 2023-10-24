@@ -7,6 +7,7 @@
 
 import Foundation
 import ClioEntities
+import Mixpanel
 
 final class GameSession: ObservableObject {
     enum GameState: Equatable {
@@ -16,11 +17,11 @@ final class GameSession: ObservableObject {
     }
     
     @Published var gameState: GameState = .start
-    
     @Published var gameFlowParameters = GameFlowParameters()
     @Published var alertError = AlertError()
     @Published var themeManager = ThemeManager()
     @Published var profileImageManager = ProfileImageManager()
+    private var startPlayerRoundTime: DispatchTime!
 
     /// Move to another file if necessary
     var minimumPlayers: Int = 3
@@ -109,10 +110,22 @@ final class GameSession: ObservableObject {
 
     func addPlayerInRound(player: User) {
         gameFlowParameters.currenPlayer = player
+        startPlayerRoundTime = .now()
     }
     
     private func addPlayerToDidPlay() {
         guard let player = gameFlowParameters.currenPlayer else { return }
+        let endPlayerRoundTime: DispatchTime = .now()
+        let roundElapsedTime = Double(endPlayerRoundTime.uptimeNanoseconds - startPlayerRoundTime.uptimeNanoseconds) / 1_000_000_000
+        
+        Mixpanel.mainInstance().track(
+            event: "Player Round Time",
+            properties: [
+                "Seconds": roundElapsedTime,
+                "isFirstPlayer": gameFlowParameters.didPlay.isEmpty
+            ]
+        )
+        
         gameFlowParameters.didPlay.append(player)
         if gameFlowParameters.didPlay.count == (gameFlowParameters.players.count - 1) {
             changeGameState(to: .final)

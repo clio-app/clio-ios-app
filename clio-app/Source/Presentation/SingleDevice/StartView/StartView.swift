@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Mixpanel
 
 struct StartView: View {
     @StateObject private var gameSession = GameSession()    // state for reference
@@ -25,12 +26,14 @@ struct StartView: View {
                 HStack(alignment:.top) {
                     Spacer()
                     CustomButton(buttonAction: {
+                        Mixpanel.mainInstance().track(event: "Play Local Tapped")
                         router.goToPlayersView()
                     }, icon: "single-device-icon", text: "Jogue nesse dispositivo ")
 
                     Spacer()
 
                     CustomButton(buttonAction: {
+                        Mixpanel.mainInstance().track(event: "Play Online Tapped")
                         isPopupPresented.toggle()
                     }, icon: "multi-device-icon", text: "Jogue online \n")
 

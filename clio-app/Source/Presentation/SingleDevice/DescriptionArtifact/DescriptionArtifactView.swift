@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Mixpanel
 
 struct DescriptionArtifactView: View {
     @EnvironmentObject var session: GameSession
@@ -18,6 +19,7 @@ struct DescriptionArtifactView: View {
     var placeholder = "Escreva uma descrição sobre a imagem..."
 
     @State var showZoomImage = false
+    @State private var startArtifactDescriptionTimer: DispatchTime!
 
     private let maxWordCount: Int = 100
 
@@ -96,6 +98,7 @@ struct DescriptionArtifactView: View {
                 }
             }
             .onAppear {
+                startArtifactDescriptionTimer = .now()
                 theme = session.gameFlowParameters.sessionTheme
                 if let data = session.getLastImage() {
                     uiImage = UIImage(data: data)!
@@ -134,6 +137,19 @@ extension DescriptionArtifactView {
             backgroundColor: .white,
             hasBorder: true) {
                 UIApplication.shared.endEditing()
+                let endArtifactDescriptionTimer: DispatchTime = .now()
+                let artifactDescriptionTimerElapsedTime = Double(
+                    endArtifactDescriptionTimer.uptimeNanoseconds -
+                    startArtifactDescriptionTimer.uptimeNanoseconds
+                ) / 1_000_000_000
+                
+                Mixpanel.mainInstance().track(
+                    event: "Descriptions Artifact",
+                    properties: [
+                        "Elapsed Description Time": artifactDescriptionTimerElapsedTime
+                    ]
+                )
+                
                 session.sendArtifact(description: input)
 
                 switch session.gameState {
