@@ -12,7 +12,7 @@ struct PlayersView: View {
     @EnvironmentObject var router: Router
 
     @State var text: String = ""
-    @State var profileImage: String = ""
+    @State var playerColor: String = ""
     @State private var newPlayer: Bool = false
     @FocusState private var focus: Bool
 
@@ -20,17 +20,26 @@ struct PlayersView: View {
 
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center) {
-                Text("Jogadores")
-                    .font(.largeTitle)
+                Text("Adicione entre 3 a 5 amigos para iniciar o jogo")
+                    .font(.itimRegular(fontType: .title3))
+                    .multilineTextAlignment(.center)
+                    .padding(24)
+                    .background(Color.white)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 20.0, style: .continuous)
+                        .stroke(lineWidth: 2.0)
+                    }
+                    .padding(.bottom, 24)
 
                 ForEach(session.gameFlowParameters.players, id: \.id) { player in
-                    PlayerRow(playerImage: player.picture, playerName: player.name) {
+                    PlayerRow(color: player.picture, playerName: player.name) {
                         session.removePlayerInSession(player)
-                    }
+                    }.padding(.horizontal, 24)
                 }
 
                 if newPlayer {
-                    AddPlayerField(playerImage: $profileImage, playerName: $text,
+
+                    AddPlayerField(color: $playerColor, playerName: $text,
                         onAddPlayer: {
                             addPlayerAndReset()
                         },
@@ -42,11 +51,17 @@ struct PlayersView: View {
                     .padding(.horizontal, 10)
                 }
 
-                Button("Adicionar Jogador") {
+                Button {
                     addPlayerAndReset()
+                } label: {
+                    Image(systemName: "plus.circle")
+                    Text("Adicionar jogador")
+                        .font(.itimRegular(fontType: .body))
                 }
-                .buttonStyle(.bordered)
+                .bold()
+                .foregroundColor(Color.lapisLazuli)
             }
+            .padding(.horizontal, 30)
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
             .foregroundColor(.black)
@@ -54,24 +69,25 @@ struct PlayersView: View {
             .alert(isPresented: $session.alertError.showAlert) {
                 Alert(title: Text("Error"), message: Text(session.alertError.errorMessage))
             }
-
             .keyboardAdaptive()
-        }
-        .background {
-            Color.white.ignoresSafeArea()
         }
         .onTapGesture {
             hideKeyboard()
             newPlayer = !text.isEmpty
         }
         .safeAreaInset(edge: .bottom) {
-            Button("Começar") {
+            ActionButton(title: "Iniciar", foregroundColor: .lapisLazuli , backgroundColor: .offWhite, hasBorder: true) {
                 router.goToRaffleThemeView()
             }
-            .buttonStyle(.borderedProminent)
+            .padding()
+            .frame(height: 92)
+            .opacity(session.canStartGame() ? 0.2 : 1.0)
             .disabled(session.canStartGame())
         }
         .ignoresSafeArea(.keyboard)
+        .clioBackground()
+        .scrollDismissesKeyboard(.interactively)
+        .toolbarBackground(Color.lapisLazuli.opacity(0.2), for: .navigationBar)
     }
 
     // MARK: - Functions
@@ -80,7 +96,7 @@ struct PlayersView: View {
 
 
         if newPlayer {
-            session.addPlayerInSession(name: text, image: profileImage)
+            session.addPlayerInSession(name: text, image: playerColor)
         } else if session.hasReachedPlayerLimit() {
             clearFocusAndTextfield()
         }
@@ -90,12 +106,12 @@ struct PlayersView: View {
 
     private func changeImageAndFeedback() {
         performImpactFeedback()
-        profileImage = session.randomizeProfileImage()
+        playerColor = session.profileImageManager.randomizeProfileImage()
     }
 
     private func resetInputFields() {
         text = ""
-        profileImage = session.randomizeProfileImage()
+        playerColor = session.profileImageManager.randomizeProfileImage()
     }
 
     private func setFocusToTexField() {
@@ -105,80 +121,13 @@ struct PlayersView: View {
 
     private func clearFocusAndTextfield() {
         // just to access the alert inside addPlayer
-        session.addPlayerInSession(name: text, image: profileImage)
+        session.addPlayerInSession(name: text, image: playerColor)
         newPlayer = false
         focus = newPlayer
     }
 
     private func performImpactFeedback() {
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
-    }
-}
-
-// MARK: - Views
-struct PlayerRow: View {
-    var playerImage: String
-    var playerName: String
-    var delete: (() -> Void)
-
-    var body: some View {
-        HStack {
-            Image(playerImage).resizable().scaledToFit()
-                .frame(width: 45, alignment: .center)
-            Text(playerName)
-            Spacer()
-            Button {
-                delete()
-            } label: {
-                Image(systemName: "trash").foregroundColor(.red)
-            }
-        }
-        .padding(12)
-        .background {
-            RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Color.gray.opacity(0.2))
-        }
-        .padding(.horizontal, 24)
-    }
-}
-
-struct AddPlayerField: View {
-    @Binding var playerImage: String
-    @Binding var playerName: String
-
-    var onAddPlayer: (() -> Void)
-    var onChangeImage: (() -> Void)
-
-    var body: some View {
-        HStack {
-            Image(playerImage)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 45, alignment: .center)
-                .onTapGesture {
-                    onChangeImage()
-                }
-
-            TextField(text: $playerName) {
-                Text("Insira o nome do jogador")
-                    .foregroundColor(.black.opacity(0.6))
-            }
-            .textFieldStyle(PlainTextFieldStyle())
-            .padding(6)
-            .background(RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.2)))
-            .foregroundColor(.black)
-            .submitLabel(.done)
-            .onSubmit {
-                onAddPlayer()
-            }
-        }
-    }
-}
-
-// MARK: - Extensions
-extension View {
-    func hideKeyboard() {
-        let resign = #selector(UIResponder.resignFirstResponder)
-        UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
     }
 }
 

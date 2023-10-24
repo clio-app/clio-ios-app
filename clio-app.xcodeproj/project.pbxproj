@@ -58,6 +58,12 @@
 		7E94E93B2AD5C68600031061 /* MasterInputCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94E9372AD5C68600031061 /* MasterInputCard.swift */; };
 		7E94E93C2AD5C68600031061 /* LimitedInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94E9382AD5C68600031061 /* LimitedInputTextField.swift */; };
 		7E94E93D2AD5C68600031061 /* MasterInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94E9392AD5C68600031061 /* MasterInputView.swift */; };
+		7EA6DC932AE7FB82003368E8 /* PlayerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC922AE7FB82003368E8 /* PlayerRow.swift */; };
+		7EA6DC952AE7FBDC003368E8 /* AddPlayerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC942AE7FBDC003368E8 /* AddPlayerField.swift */; };
+		7EA6DC972AE80025003368E8 /* ThemeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC962AE80025003368E8 /* ThemeSlot.swift */; };
+		7EA6DC9A2AE80352003368E8 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC992AE80352003368E8 /* CustomAlert.swift */; };
+		7EA6DC9C2AE804E4003368E8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC9B2AE804E4003368E8 /* CustomButton.swift */; };
+		7EA6DC9F2AE82581003368E8 /* ThemeBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC9E2AE82581003368E8 /* ThemeBubble.swift */; };
 		7EBA9CD92AD1AF6E00C25970 /* VotingInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CD82AD1AF6E00C25970 /* VotingInstructionView.swift */; };
 		7EBA9CDB2AD1B5E600C25970 /* VotingInstructionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CDA2AD1B5E600C25970 /* VotingInstructionViewModel.swift */; };
 		7EBA9CDD2AD1B61800C25970 /* VotingInstructionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CDC2AD1B61800C25970 /* VotingInstructionModel.swift */; };
@@ -150,6 +156,12 @@
 		7E94E9372AD5C68600031061 /* MasterInputCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterInputCard.swift; sourceTree = "<group>"; };
 		7E94E9382AD5C68600031061 /* LimitedInputTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitedInputTextField.swift; sourceTree = "<group>"; };
 		7E94E9392AD5C68600031061 /* MasterInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterInputView.swift; sourceTree = "<group>"; };
+		7EA6DC922AE7FB82003368E8 /* PlayerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRow.swift; sourceTree = "<group>"; };
+		7EA6DC942AE7FBDC003368E8 /* AddPlayerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerField.swift; sourceTree = "<group>"; };
+		7EA6DC962AE80025003368E8 /* ThemeSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSlot.swift; sourceTree = "<group>"; };
+		7EA6DC992AE80352003368E8 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		7EA6DC9B2AE804E4003368E8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		7EA6DC9E2AE82581003368E8 /* ThemeBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeBubble.swift; sourceTree = "<group>"; };
 		7EBA9CD82AD1AF6E00C25970 /* VotingInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionView.swift; sourceTree = "<group>"; };
 		7EBA9CDA2AD1B5E600C25970 /* VotingInstructionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionViewModel.swift; sourceTree = "<group>"; };
 		7EBA9CDC2AD1B61800C25970 /* VotingInstructionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionModel.swift; sourceTree = "<group>"; };
@@ -314,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				00C11FFE2ADEB62E0042E152 /* StartView.swift */,
+				7EA6DC9D2AE8050B003368E8 /* Components */,
 			);
 			path = StartView;
 			sourceTree = "<group>";
@@ -322,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				00C120012ADEBDC90042E152 /* PlayersView.swift */,
+				7EA6DC912AE7FB6D003368E8 /* Components */,
 			);
 			path = PlayersView;
 			sourceTree = "<group>";
@@ -347,6 +361,7 @@
 			children = (
 				00C1200F2ADEC2E00042E152 /* RaffleThemeView.swift */,
 				7ED105532AE5CD830038B149 /* RaffleThemeViewModel.swift */,
+				7EA6DC982AE80035003368E8 /* Components */,
 			);
 			path = RaffleTheme;
 			sourceTree = "<group>";
@@ -373,6 +388,7 @@
 			children = (
 				00C120182AE0685D0042E152 /* UserAvatar.swift */,
 				00C1201D2AE15F340042E152 /* ArtefactView.swift */,
+				7EA6DC9E2AE82581003368E8 /* ThemeBubble.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -474,6 +490,7 @@
 				7EBA9CE32AD23CF700C25970 /* PieProgress.swift */,
 				7EE152CF2AD4181B00CA8F9F /* PieTimer.swift */,
 				7EBA9CE12AD22A8E00C25970 /* DescriptionItem.swift */,
+				7EA6DC992AE80352003368E8 /* CustomAlert.swift */,
 				FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */,
 			);
 			path = GeneralComponents;
@@ -533,6 +550,31 @@
 				7E94E9362AD5C68600031061 /* ImageInputCard.swift */,
 				7E94E9372AD5C68600031061 /* MasterInputCard.swift */,
 				7E94E9382AD5C68600031061 /* LimitedInputTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7EA6DC912AE7FB6D003368E8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7EA6DC922AE7FB82003368E8 /* PlayerRow.swift */,
+				7EA6DC942AE7FBDC003368E8 /* AddPlayerField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7EA6DC982AE80035003368E8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7EA6DC962AE80025003368E8 /* ThemeSlot.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7EA6DC9D2AE8050B003368E8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7EA6DC9B2AE804E4003368E8 /* CustomButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -722,6 +764,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E1705E22AD60938005FA9EE /* PlayersContainer.swift in Sources */,
+				7EA6DC952AE7FBDC003368E8 /* AddPlayerField.swift in Sources */,
+				7EA6DC9A2AE80352003368E8 /* CustomAlert.swift in Sources */,
 				7E1705E32AD60938005FA9EE /* MasterContainer.swift in Sources */,
 				7E1705E42AD60938005FA9EE /* PlayerGridItem.swift in Sources */,
 				00C120162AE060890042E152 /* ResultDetailsView.swift in Sources */,
@@ -733,12 +777,14 @@
 				FF4DDEA72AE200E900759F47 /* ZoomImage.swift in Sources */,
 				7E94E93B2AD5C68600031061 /* MasterInputCard.swift in Sources */,
 				00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */,
+				7EA6DC932AE7FB82003368E8 /* PlayerRow.swift in Sources */,
 				7EBA9CDD2AD1B61800C25970 /* VotingInstructionModel.swift in Sources */,
 				FFA354D92AE0193100E23ADC /* CameraButton.swift in Sources */,
 				7EBA9CE22AD22A8E00C25970 /* DescriptionItem.swift in Sources */,
 				7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */,
 				FFA354D62AE0170B00E23ADC /* PhotoArtifactViewModel.swift in Sources */,
 				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
+				7EA6DC9C2AE804E4003368E8 /* CustomButton.swift in Sources */,
 				FF4DDEA52AE1A15D00759F47 /* DescriptionArtifactView.swift in Sources */,
 				FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */,
 				7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */,
@@ -752,11 +798,13 @@
 				FF4DDEAC2AE2BF3800759F47 /* ThemeCard.swift in Sources */,
 				7E61A3E42AE57E430009425C /* Router.swift in Sources */,
 				00C120092ADEBF140042E152 /* GameSession.swift in Sources */,
+				7EA6DC972AE80025003368E8 /* ThemeSlot.swift in Sources */,
 				FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
 				00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */,
 				00C120132AE05C3A0042E152 /* ResultsView.swift in Sources */,
 				7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */,
+				7EA6DC9F2AE82581003368E8 /* ThemeBubble.swift in Sources */,
 				7E81843E2AD4336100938C69 /* VotingPopupModel.swift in Sources */,
 				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
 				7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */,
@@ -938,7 +986,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 685GVH2XJC;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
@@ -973,7 +1021,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 685GVH2XJC;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";

@@ -11,19 +11,46 @@ struct StartView: View {
     @StateObject private var gameSession = GameSession()    // state for reference
     @ObservedObject var router = Router()                   // binding for reference
 
+    @State private var isPopupPresented: Bool = false
+
     var body: some View {
         NavigationStack(path: $router.path) {
-            ZStack {
-                Color.white.ignoresSafeArea()
-                Button("play") {
-                    router.goToPlayersView()
+            VStack {
+                Spacer()
+                Image("welcome-to-clio")
+                    .resizable()
+                    .scaledToFit()
+                Spacer()
+
+                HStack(alignment:.top) {
+                    Spacer()
+                    CustomButton(buttonAction: {
+                        router.goToPlayersView()
+                    }, icon: "single-device-icon", text: "Jogue nesse dispositivo ")
+
+                    Spacer()
+
+                    CustomButton(buttonAction: {
+                        isPopupPresented.toggle()
+                    }, icon: "multi-device-icon", text: "Jogue online \n")
+
+                    Spacer()
                 }
-                .buttonStyle(.borderedProminent)
+                Spacer()
             }
             .navigationTitle("")
             .navigationDestination(for: Views.self) { destination in
                 ViewFactory.viewForDestination(destination)
             }
+            .onTapGesture {
+                isPopupPresented = false
+            }
+            .popupNavigationView(show: $isPopupPresented) {
+                CustomAlert(isPopupPresented: $isPopupPresented, 
+                            title: "Oops",
+                            text: "Infelizmente esse modo de jogo ainda não está disponível!")
+            }
+            .clioBackground()
         }
         .environmentObject(gameSession)
         .environmentObject(router)

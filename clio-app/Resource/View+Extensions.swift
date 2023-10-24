@@ -8,6 +8,11 @@
 import SwiftUI
 
 extension View {
+    func hideKeyboard() {
+        let resign = #selector(UIResponder.resignFirstResponder)
+        UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
+    }
+    
     func popupNavigationView<Content: View>(horizontalPadding: CGFloat = 40, show: Binding<Bool>, content: @escaping () -> Content) -> some View {
         return self
             .overlay {
@@ -19,7 +24,7 @@ extension View {
                             .ignoresSafeArea()
                             .onTapGesture {
                                 withAnimation {
-                                    show.wrappedValue = false                                    
+                                    show.wrappedValue = false
                                 }
                             }
 
@@ -30,6 +35,33 @@ extension View {
                     }
                 }
             }
+    }
+
+    // MARK: - Clio Background
+    func clioBackground() -> some View {
+        return self
+            .background{
+                ZStack {
+                    Color.offWhite
+                        .opacity(1.0)
+                        .ignoresSafeArea()
+                    Image("clio-background")
+                        .resizable()
+                        .opacity(0.2)
+                        .scaledToFill()
+                        .ignoresSafeArea()
+
+                }
+
+            }
+            .ignoresSafeArea(.keyboard)
+    }
+
+    // MARK: User profile color
+    func applyColor(_ color: String) -> some View {
+        return self
+            .foregroundStyle(.gray, .white)
+            .colorMultiply(Color(color.description))
     }
 }
 

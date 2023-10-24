@@ -34,7 +34,7 @@ struct SelectPlayerView: View {
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)
-            .background{Color.white.ignoresSafeArea()}
+            .clioBackground()
         }
         .onAppear {
             let player = gameSession.getRandomPlayer()

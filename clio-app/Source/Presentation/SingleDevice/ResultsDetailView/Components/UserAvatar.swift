@@ -10,19 +10,24 @@ import SwiftUI
 struct UserAvatar: View {
     let userName: String
     let picture: String
-    
+
     var body: some View {
         VStack {
-            Circle()
-                .frame(width: 60, height: 60)
-                .overlay {
-                    Image(picture)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                }
+            Image(systemName: "person.circle.fill")
+                .resizable()
+                    .frame(width: 50, height: 50)
+                    .overlay {
+                        Circle()
+                            .stroke(lineWidth: 3.0)
+                            .foregroundColor(.black)
+                    }
+                    .applyColor(picture)
+
             Text(userName)
                 .foregroundStyle(.black)
+                .font(.itimRegular(fontType: .body))
         }
+        .foregroundColor(.black)
     }
 }
 

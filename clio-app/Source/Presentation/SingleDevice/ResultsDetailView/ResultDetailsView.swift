@@ -19,10 +19,7 @@ struct ResultDetailsView: View {
     var body: some View {
         GeometryReader { geo in
             VStack {
-                ThemeCard(
-                    title: "O tema é:",
-                    theme: $gameSession.gameFlowParameters.sessionTheme
-                )
+                ThemeBubble(theme: gameSession.gameFlowParameters.sessionTheme)
                 .frame(
                     width: geo.size.width * 0.8,
                     height: geo.size.height * 0.2
@@ -45,6 +42,7 @@ struct ResultDetailsView: View {
                             )
                             .stroke(.black, lineWidth: 1)
                         }
+                        .background(Color.white)
                 }
                 .padding([.horizontal, .vertical])
                 
@@ -86,13 +84,14 @@ struct ResultDetailsView: View {
                     .frame(height: 42)
                     .padding([.horizontal], 32)
                 } else {
-                    Circle()
+                    Image(systemName: "chevron.down.circle.fill")
+                        .resizable()
                         .frame(width: 46, height: 46)
-                        .foregroundStyle(.yellow)
+                        .foregroundStyle(.black, Color.customYellow)
                         .overlay {
-                            Image("check_icon")
-                                .resizable()
-                                .scaledToFill()
+                            Circle()
+                                .stroke(lineWidth: 3.0)
+                                .foregroundColor(.black)
                         }
                         .onTapGesture {
                             addPlayerInteraction()
@@ -102,7 +101,7 @@ struct ResultDetailsView: View {
             }
             .frame(width: geo.size.width, height: geo.size.height)
             .toolbar(.hidden, for: .navigationBar)
-            .background{Color.white.ignoresSafeArea()}
+            .clioBackground()
         }
     }
     

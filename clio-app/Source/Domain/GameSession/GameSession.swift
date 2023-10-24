@@ -20,9 +20,9 @@ final class GameSession: ObservableObject {
     @Published var gameFlowParameters = GameFlowParameters()
     @Published var alertError = AlertError()
     @Published var themeManager = ThemeManager()
+    @Published var profileImageManager = ProfileImageManager()
 
     /// Move to another file if necessary
-    let profilePictures: [String] = ["profile-picture-eye", "bonfire-picture", "circles-picture"]
     var minimumPlayers: Int = 3
 
 
@@ -48,10 +48,6 @@ final class GameSession: ObservableObject {
         if let index = gameFlowParameters.players.firstIndex(of: player) {
             gameFlowParameters.players.remove(at: index)
         }
-    }
-
-    func randomizeProfileImage() -> String {
-        return profilePictures.randomElement()!.description
     }
 
     func canStartGame() -> Bool {
@@ -195,16 +191,15 @@ struct ThemeManager {
       "Historia": [
         "1492: Colombo navegou e a América foi descoberta!",
         "Década de 1960: Amor livre, música animada e uma caminhada na lua.",
-        "Henrique VIII: Mais esposas do que jantares quentes!",
         "Guerra Fria: EUA vs. URSS, mísseis em vez de piscadas.",
         "Revolução Francesa: Adeus à monarquia, olá à liberdade!"
       ],
       "Geografia": [
         "Monte Everest: O desafio supremo da Terra para alpinistas.",
-        "Floresta Amazônica: Os pulmões da Terra, o local de festa favorito da vida selvagem.",
+        "Floresta Amazônica: Os pulmões da Terra, o local favorito da vida selvagem.",
         "Deserto do Saara: A caixa de areia colossal da natureza.",
         "Grande Barreira de Coral: O paraíso submarino de Nemo.",
-        "Cataratas do Niágara: O espetáculo épico de águas da natureza."
+        "Cataratas do Niágara: O espetáculo de águas da natureza."
       ],
       "Filosofia": [
         "DNA: O código cósmico de 'você'.",
@@ -238,5 +233,16 @@ struct ThemeManager {
         } else {
             themes = []
         }
+    }
+}
+
+struct ProfileImageManager {
+    var profileColors: [String] = ["Brick", "Lilac", "Peach", "SoftGreen", "Sky"]
+    var currentIndex: Int = 0
+
+    mutating func randomizeProfileImage() -> String {
+        let color = profileColors[currentIndex]
+        currentIndex = (currentIndex + 1) % profileColors.count // Wrap around to the beginning if needed
+        return color
     }
 }
