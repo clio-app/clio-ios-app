@@ -22,16 +22,12 @@ struct DescriptionArtifactView: View {
         GeometryReader { geo in
             ScrollView {
                 VStack {
-                    ThemeCard(theme: $theme)
-                        .frame(width: geo.size.width * 0.8)
-                        .background{
-                            BorderedBackground(
-                                foregroundColor: .white,
-                                hasBorder: false
-                            )
-                        }
-                        .padding(.vertical)
-                    
+                    ThemeCard(
+                        title: "Relacione a foto com o tema:",
+                        theme: $theme
+                    )
+                    .frame(width: geo.size.width * 0.8)
+                        
                     Spacer()
                     
                     VStack(spacing: 20) {
@@ -125,8 +121,9 @@ extension DescriptionArtifactView {
                 case .final:
                     // clear up and restart gameflow
                     // TODO: FICA NA TELA DE RESULTADOS
-                    session.restartGame()
-                    router.clear()
+                    router.goToResultsVisualization()
+//                    session.restartGame()
+//                    router.clear()
                 default:
                     router.goToPhotoArtifactView()
                 }

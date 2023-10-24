@@ -24,7 +24,7 @@ struct PlayersView: View {
                     .font(.itimRegular(fontType: .title3))
                     .multilineTextAlignment(.center)
                     .padding(24)
-                    .background(Color.offWhite)
+                    .background(Color.white)
                     .overlay {
                         RoundedRectangle(cornerRadius: 20.0, style: .continuous)
                         .stroke(lineWidth: 2.0)

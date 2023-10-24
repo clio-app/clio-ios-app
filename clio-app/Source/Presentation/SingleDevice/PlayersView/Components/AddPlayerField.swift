@@ -39,7 +39,7 @@ struct AddPlayerField: View {
             }
         }
         .padding(12)
-        .background(Color.offWhite)
+        .background(Color.white)
         .overlay {
             RoundedRectangle(cornerRadius: 20.0, style: .continuous)
             .stroke(lineWidth: 2.0)
