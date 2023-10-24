@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Mixpanel
 
 struct PhotoArtifactView: View {
     @EnvironmentObject var gameSession: GameSession
@@ -16,6 +17,7 @@ struct PhotoArtifactView: View {
     
     @State var cameraPreview: CameraPreview?
     @State var theme: String = ""
+    @State private var startArtifactPhotoTimer: DispatchTime!
 
     var body: some View {
         GeometryReader { geo in
@@ -58,6 +60,18 @@ struct PhotoArtifactView: View {
                     foregroundColor: .lapisLazuli,
                     backgroundColor: .white, hasBorder: true) {
                         if let data = vm.imageData {
+                            let endArtifactPhotoTimer: DispatchTime = .now()
+                            let artifactPhotoTimerElapsedTime = Double(
+                                endArtifactPhotoTimer.uptimeNanoseconds -
+                                startArtifactPhotoTimer.uptimeNanoseconds
+                            ) / 1_000_000_000
+                            
+                            Mixpanel.mainInstance().track(
+                                event: "Photo Artifact",
+                                properties: [
+                                    "Elapsed Photo Time": artifactPhotoTimerElapsedTime
+                                ]
+                            )
                             gameSession.sendArtifact(picture: data)
                         }
                         router.goToSelectPlayer()
@@ -80,6 +94,7 @@ struct PhotoArtifactView: View {
                 
                 // TODO: Modify theme according to the round
                 theme = gameSession.getCurrentTheme()
+                startArtifactPhotoTimer = .now()
             }
             .onChange(of: vm.viewState) { newState in
                 switch newState {

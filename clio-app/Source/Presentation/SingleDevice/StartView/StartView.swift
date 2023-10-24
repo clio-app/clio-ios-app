@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Mixpanel
 
 struct StartView: View {
     @StateObject private var gameSession = GameSession()    // state for reference
@@ -17,6 +18,7 @@ struct StartView: View {
                 Color.white.ignoresSafeArea()
                 Button("play") {
                     router.goToPlayersView()
+                    Mixpanel.mainInstance().track(event: "Play Tapped")
                 }
                 .buttonStyle(.borderedProminent)
             }

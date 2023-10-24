@@ -11,6 +11,8 @@
 		00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */; };
 		00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */; };
 		00BFF9012AB4914D0068A5F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */; };
+		00C0CA262AE7F27C009F74BB /* Mixpanel in Frameworks */ = {isa = PBXBuildFile; productRef = 00C0CA252AE7F27C009F74BB /* Mixpanel */; };
+		00C0CA282AE7F3C7009F74BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C0CA272AE7F3C7009F74BB /* AppDelegate.swift */; };
 		00C11FFF2ADEB62E0042E152 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C11FFE2ADEB62E0042E152 /* StartView.swift */; };
 		00C120022ADEBDC90042E152 /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120012ADEBDC90042E152 /* PlayersView.swift */; };
 		00C120092ADEBF140042E152 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120082ADEBF140042E152 /* GameSession.swift */; };
@@ -101,6 +103,8 @@
 		00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
 		00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		00C0CA272AE7F3C7009F74BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00C0CA292AE7F736009F74BB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		00C11FFE2ADEB62E0042E152 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		00C120012ADEBDC90042E152 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		00C120082ADEBF140042E152 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C0CA262AE7F27C009F74BB /* Mixpanel in Frameworks */,
 				7E8612382AD02502008F2FAA /* ClioEntities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +206,7 @@
 		00BFF8ED2AB4914B0068A5F2 = {
 			isa = PBXGroup;
 			children = (
+				00C0CA292AE7F736009F74BB /* Config.xcconfig */,
 				7E32B0722AC5B5D000A62D28 /* clio-app.xctestplan */,
 				00BFF8F82AB4914B0068A5F2 /* clio-app */,
 				7E7667302AC47045009064C8 /* Clio.app */,
@@ -246,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				00BFF8F92AB4914B0068A5F2 /* clio_appApp.swift */,
+				00C0CA272AE7F3C7009F74BB /* AppDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -631,6 +638,7 @@
 			name = "clio-app";
 			packageProductDependencies = (
 				7E8612372AD02502008F2FAA /* ClioEntities */,
+				00C0CA252AE7F27C009F74BB /* Mixpanel */,
 			);
 			productName = "clio-app";
 			productReference = 7E7667302AC47045009064C8 /* Clio.app */;
@@ -684,6 +692,7 @@
 			mainGroup = 00BFF8ED2AB4914B0068A5F2;
 			packageReferences = (
 				7E8612362AD02502008F2FAA /* XCRemoteSwiftPackageReference "clio-entities" */,
+				00C0CA242AE7F27C009F74BB /* XCRemoteSwiftPackageReference "mixpanel-swift" */,
 			);
 			productRefGroup = 00BFF8ED2AB4914B0068A5F2;
 			projectDirPath = "";
@@ -771,6 +780,7 @@
 				FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */,
 				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
 				7EBA9CDF2AD225DA00C25970 /* VotingPopupView.swift in Sources */,
+				00C0CA282AE7F3C7009F74BB /* AppDelegate.swift in Sources */,
 				7E0D425A2AD5BEFD00C566EB /* AnonymousLoginView.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
 				7E8201DE2AD58E1500DA8F68 /* AnswerSelected.swift in Sources */,
@@ -818,6 +828,7 @@
 /* Begin XCBuildConfiguration section */
 		00BFF9182AB4914D0068A5F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00C0CA292AE7F736009F74BB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -878,6 +889,7 @@
 		};
 		00BFF9192AB4914D0068A5F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00C0CA292AE7F736009F74BB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1080,6 +1092,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		00C0CA242AE7F27C009F74BB /* XCRemoteSwiftPackageReference "mixpanel-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mixpanel/mixpanel-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		7E8612362AD02502008F2FAA /* XCRemoteSwiftPackageReference "clio-entities" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/clio-app/clio-entities.git";
@@ -1091,6 +1111,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		00C0CA252AE7F27C009F74BB /* Mixpanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00C0CA242AE7F27C009F74BB /* XCRemoteSwiftPackageReference "mixpanel-swift" */;
+			productName = Mixpanel;
+		};
 		7E8612372AD02502008F2FAA /* ClioEntities */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7E8612362AD02502008F2FAA /* XCRemoteSwiftPackageReference "clio-entities" */;

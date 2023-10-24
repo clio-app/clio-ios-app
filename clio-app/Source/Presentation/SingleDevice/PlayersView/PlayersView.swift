@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Mixpanel
 
 struct PlayersView: View {
     @EnvironmentObject var session: GameSession
@@ -66,6 +67,12 @@ struct PlayersView: View {
         }
         .safeAreaInset(edge: .bottom) {
             Button("Começar") {
+                Mixpanel.mainInstance().track(
+                    event: "Players",
+                    properties: [
+                        "count": "\(session.gameFlowParameters.players.count)"
+                    ]
+                )
                 router.goToRaffleThemeView()
             }
             .buttonStyle(.borderedProminent)
