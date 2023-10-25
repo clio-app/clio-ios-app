@@ -100,9 +100,10 @@ struct ResultDetailsView: View {
                 
             }
             .frame(width: geo.size.width, height: geo.size.height)
-            .toolbar(.hidden, for: .navigationBar)
             .clioBackground()
         }
+        .navigationBarBackButtonHidden()
+        .applyHelpButton(.presentResult)
     }
     
     func addPlayerInteraction() {

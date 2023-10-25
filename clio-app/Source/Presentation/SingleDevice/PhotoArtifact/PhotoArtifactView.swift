@@ -89,13 +89,13 @@ struct PhotoArtifactView: View {
                     .padding(.bottom)
 
             }
-            .toolbar(.hidden, for: .navigationBar)
+            .navigationTitle("")
+            .navigationBarBackButtonHidden()
             .frame(width: geo.size.width, height: geo.size.height)
             .clioBackground()
             .onAppear {
                 initialConfig()                
                 // TODO: Modify theme according to the round
-                theme = gameSession.getCurrentTheme()
                 startArtifactPhotoTimer = .now()
             }
             .onChange(of: vm.viewState) { newState in
@@ -134,6 +134,7 @@ struct PhotoArtifactView: View {
                 )
             }
         }
+        .applyHelpButton(.capturePhoto)
     }
     
     func initialConfig() {

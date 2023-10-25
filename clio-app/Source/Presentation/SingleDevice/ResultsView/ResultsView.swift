@@ -71,7 +71,8 @@ struct ResultsView: View {
             )
         }
         .clioBackground()
-        .toolbar(.hidden, for: .navigationBar)
+        .navigationBarBackButtonHidden()
+        .applyHelpButton(.readyForResults)
     }
 }
 
