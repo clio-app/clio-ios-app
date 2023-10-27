@@ -134,7 +134,7 @@ struct PhotoArtifactView: View {
                 )
             }
         }
-        .applyHelpButton(.capturePhoto)
+        .applyHelpButton(.PhotoArtifact)
     }
     
     func initialConfig() {

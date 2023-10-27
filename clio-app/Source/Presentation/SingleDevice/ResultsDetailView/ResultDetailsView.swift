@@ -103,7 +103,7 @@ struct ResultDetailsView: View {
             .clioBackground()
         }
         .navigationBarBackButtonHidden()
-        .applyHelpButton(.presentResult)
+        .applyHelpButton(.ResultsVisualization)
     }
     
     func addPlayerInteraction() {

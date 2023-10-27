@@ -72,7 +72,7 @@ struct ResultsView: View {
         }
         .clioBackground()
         .navigationBarBackButtonHidden()
-        .applyHelpButton(.readyForResults)
+        .applyHelpButton(.PresentResults)
     }
 }
 

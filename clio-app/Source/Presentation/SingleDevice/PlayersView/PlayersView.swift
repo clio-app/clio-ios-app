@@ -91,7 +91,7 @@ struct PlayersView: View {
             .opacity(session.canStartGame() ? 0.2 : 1.0)
             .disabled(session.canStartGame())
         }
-        .applyHelpButton(.addingPlayer)
+        .applyHelpButton(.AddPlayers)
         .ignoresSafeArea(.keyboard)
         .clioBackground()
         .scrollDismissesKeyboard(.interactively)

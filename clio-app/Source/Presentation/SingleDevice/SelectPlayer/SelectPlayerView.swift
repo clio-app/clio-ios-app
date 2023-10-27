@@ -35,7 +35,7 @@ struct SelectPlayerView: View {
             }
             .frame(width: geo.size.width, height: geo.size.height)
             .clioBackground()
-            .applyHelpButton(.selectPlayer)
+            .applyHelpButton(.SelectPlayer)
             .navigationBarBackButtonHidden()
         }
         .onAppear {

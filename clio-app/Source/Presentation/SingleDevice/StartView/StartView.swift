@@ -41,7 +41,7 @@ struct StartView: View {
                 }
                 Spacer()
             }
-            .applyHelpButton(.start)
+            .applyHelpButton(.Start)
             .navigationTitle("")
             .navigationDestination(for: Views.self) { destination in
                 ViewFactory.viewForDestination(destination)

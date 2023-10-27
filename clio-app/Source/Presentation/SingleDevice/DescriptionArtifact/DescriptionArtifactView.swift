@@ -104,7 +104,7 @@ struct DescriptionArtifactView: View {
                 }
             }
             .clioBackground()
-            .applyHelpButton(.captureDescription)
+            .applyHelpButton(.DescriptionArtifact)
         }
         .ignoresSafeArea(.keyboard)
         .environmentObject(session)
