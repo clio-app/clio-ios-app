@@ -15,6 +15,7 @@ enum Views: Hashable {
     case SelectPlayer
     case PhotoArtifact
     case DescriptionArtifact
+    case PresentResults
     case ResultsVisualization
 }
 
@@ -49,7 +50,11 @@ class Router: ObservableObject {
         path.append(Views.DescriptionArtifact)
     }
     
-    func goToResultsVisualization() {
+    func goToPresentResultsView() {
+        path.append(Views.PresentResults)
+    }
+    
+    func goToResultVisualization() {
         path.append(Views.ResultsVisualization)
     }
 }
@@ -70,8 +75,10 @@ enum ViewFactory {
             SelectPlayerView()
         case .DescriptionArtifact:
             DescriptionArtifactView()
-        case .ResultsVisualization:
+        case .PresentResults:
             ResultsView()
+        case .ResultsVisualization:
+            ResultDetailsView()
         }
     }
 }
