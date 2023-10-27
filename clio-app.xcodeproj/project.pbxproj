@@ -96,6 +96,9 @@
 		FFA354DD2AE02AF400E23ADC /* RetakePhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354DC2AE02AF400E23ADC /* RetakePhotoButton.swift */; };
 		FFA354E02AE1646300E23ADC /* SelectPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354DF2AE1646300E23ADC /* SelectPlayerView.swift */; };
 		FFA354E22AE16BF900E23ADC /* SelectPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */; };
+		FFE132F82AEBEE600069670A /* LoadingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE132F72AEBEE600069670A /* LoadingPlayer.swift */; };
+		FFE132FA2AEBEEFD0069670A /* UserTextConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE132F92AEBEEFD0069670A /* UserTextConfirmation.swift */; };
+		FFE132FD2AEBF3D60069670A /* ButtonsToConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE132FC2AEBF3D60069670A /* ButtonsToConfirmation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +204,9 @@
 		FFA354DC2AE02AF400E23ADC /* RetakePhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetakePhotoButton.swift; sourceTree = "<group>"; };
 		FFA354DF2AE1646300E23ADC /* SelectPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerView.swift; sourceTree = "<group>"; };
 		FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerViewModel.swift; sourceTree = "<group>"; };
+		FFE132F72AEBEE600069670A /* LoadingPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPlayer.swift; sourceTree = "<group>"; };
+		FFE132F92AEBEEFD0069670A /* UserTextConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTextConfirmation.swift; sourceTree = "<group>"; };
+		FFE132FC2AEBF3D60069670A /* ButtonsToConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsToConfirmation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -669,8 +675,19 @@
 			children = (
 				FFA354DF2AE1646300E23ADC /* SelectPlayerView.swift */,
 				FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */,
+				FFE132F62AEBEE370069670A /* Components */,
 			);
 			path = SelectPlayer;
+			sourceTree = "<group>";
+		};
+		FFE132F62AEBEE370069670A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FFE132F72AEBEE600069670A /* LoadingPlayer.swift */,
+				FFE132F92AEBEEFD0069670A /* UserTextConfirmation.swift */,
+				FFE132FC2AEBF3D60069670A /* ButtonsToConfirmation.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -820,8 +837,10 @@
 				00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */,
 				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
 				FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */,
+				FFE132FD2AEBF3D60069670A /* ButtonsToConfirmation.swift in Sources */,
 				FF4DDEAC2AE2BF3800759F47 /* ThemeCard.swift in Sources */,
 				7E61A3E42AE57E430009425C /* Router.swift in Sources */,
+				FFE132F82AEBEE600069670A /* LoadingPlayer.swift in Sources */,
 				00C120092ADEBF140042E152 /* GameSession.swift in Sources */,
 				7EA6DC972AE80025003368E8 /* ThemeSlot.swift in Sources */,
 				FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */,
@@ -865,6 +884,7 @@
 				7E94E93D2AD5C68600031061 /* MasterInputView.swift in Sources */,
 				7E94E93A2AD5C68600031061 /* ImageInputCard.swift in Sources */,
 				00D9C9CF2ABC806E00F66421 /* NetworkService.swift in Sources */,
+				FFE132FA2AEBEEFD0069670A /* UserTextConfirmation.swift in Sources */,
 				7EE152D02AD4181B00CA8F9F /* PieTimer.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
 				FFA354E22AE16BF900E23ADC /* SelectPlayerViewModel.swift in Sources */,
