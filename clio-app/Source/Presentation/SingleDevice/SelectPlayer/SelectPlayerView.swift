@@ -35,12 +35,13 @@ struct SelectPlayerView: View {
             }
             .frame(width: geo.size.width, height: geo.size.height)
             .clioBackground()
+            .applyHelpButton(.SelectPlayer)
+            .navigationBarBackButtonHidden()
         }
         .onAppear {
             let player = gameSession.getRandomPlayer()
             vm.changePlayer(newPlayer: player)
         }
-        .navigationBarBackButtonHidden()
     }
 }
 

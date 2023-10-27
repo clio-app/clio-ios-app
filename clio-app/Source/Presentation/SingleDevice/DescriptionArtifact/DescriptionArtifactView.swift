@@ -85,7 +85,6 @@ struct DescriptionArtifactView: View {
                 .frame(width: geo.size.width, height: geo.size.height)
             }
             .keyboardAdaptive()
-            .toolbar(.hidden, for: .navigationBar)
             .onTapGesture {
                 UIApplication.shared.endEditing()
                 if input == "" {
@@ -105,10 +104,12 @@ struct DescriptionArtifactView: View {
                 }
             }
             .clioBackground()
+            .applyHelpButton(.DescriptionArtifact)
         }
         .ignoresSafeArea(.keyboard)
         .environmentObject(session)
         .navigationTitle("")
+        .navigationBarBackButtonHidden()
     }
 }
 
