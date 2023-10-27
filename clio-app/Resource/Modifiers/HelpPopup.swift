@@ -67,6 +67,7 @@ struct HelpArea: ViewModifier {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button() {
+                        UIApplication.shared.endEditing()
                         UIImpactFeedbackGenerator(style: .soft).impactOccurred()
                         changeVisibility()
                     }label: {
