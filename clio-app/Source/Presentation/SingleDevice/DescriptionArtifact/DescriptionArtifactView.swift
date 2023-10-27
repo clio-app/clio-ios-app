@@ -156,7 +156,7 @@ extension DescriptionArtifactView {
                 case .final:
                     // clear up and restart gameflow
                     // TODO: FICA NA TELA DE RESULTADOS
-                    router.goToResultsVisualization()
+                    router.goToPresentResultsView()
 //                    session.restartGame()
 //                    router.clear()
                 default:
