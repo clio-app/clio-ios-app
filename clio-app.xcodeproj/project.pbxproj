@@ -74,6 +74,8 @@
 		7EBA9CE42AD23CF800C25970 /* PieProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CE32AD23CF700C25970 /* PieProgress.swift */; };
 		7ED105542AE5CD830038B149 /* RaffleThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED105532AE5CD830038B149 /* RaffleThemeViewModel.swift */; };
 		7EE152D02AD4181B00CA8F9F /* PieTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE152CF2AD4181B00CA8F9F /* PieTimer.swift */; };
+		FF01F37A2AEFE5010040FB01 /* ThemeCardOneDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF01F3792AEFE5010040FB01 /* ThemeCardOneDevice.swift */; };
+		FF01F37C2AEFEA380040FB01 /* CameraOneDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF01F37B2AEFEA380040FB01 /* CameraOneDevice.swift */; };
 		FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04AC922AB8BCFF00516135 /* StrokeText.swift */; };
 		FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04AC932AB8BCFF00516135 /* TextFieldView.swift */; };
 		FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */; };
@@ -175,6 +177,8 @@
 		7EBA9CE32AD23CF700C25970 /* PieProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieProgress.swift; sourceTree = "<group>"; };
 		7ED105532AE5CD830038B149 /* RaffleThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaffleThemeViewModel.swift; sourceTree = "<group>"; };
 		7EE152CF2AD4181B00CA8F9F /* PieTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieTimer.swift; sourceTree = "<group>"; };
+		FF01F3792AEFE5010040FB01 /* ThemeCardOneDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCardOneDevice.swift; sourceTree = "<group>"; };
+		FF01F37B2AEFEA380040FB01 /* CameraOneDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOneDevice.swift; sourceTree = "<group>"; };
 		FF04AC922AB8BCFF00516135 /* StrokeText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
 		FF04AC932AB8BCFF00516135 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
@@ -649,9 +653,11 @@
 		FFA354D72AE0190700E23ADC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FF01F37B2AEFEA380040FB01 /* CameraOneDevice.swift */,
 				FFA354D82AE0193100E23ADC /* CameraButton.swift */,
 				FFA354DA2AE01AD200E23ADC /* CameraPreview.swift */,
 				FFA354DC2AE02AF400E23ADC /* RetakePhotoButton.swift */,
+				FF01F3792AEFE5010040FB01 /* ThemeCardOneDevice.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -783,6 +789,7 @@
 				00C120162AE060890042E152 /* ResultDetailsView.swift in Sources */,
 				7E1705E52AD60938005FA9EE /* LobbyHeader.swift in Sources */,
 				FFA354DD2AE02AF400E23ADC /* RetakePhotoButton.swift in Sources */,
+				FF01F37C2AEFEA380040FB01 /* CameraOneDevice.swift in Sources */,
 				7E1705DF2AD608EE005FA9EE /* LobbyView.swift in Sources */,
 				7E1705E02AD608EE005FA9EE /* LobbyViewModel.swift in Sources */,
 				7E1705E12AD608EE005FA9EE /* LobbyModel.swift in Sources */,
@@ -834,6 +841,7 @@
 				7EBA9CDF2AD225DA00C25970 /* VotingPopupView.swift in Sources */,
 				00C0CA282AE7F3C7009F74BB /* AppDelegate.swift in Sources */,
 				7E0D425A2AD5BEFD00C566EB /* AnonymousLoginView.swift in Sources */,
+				FF01F37A2AEFE5010040FB01 /* ThemeCardOneDevice.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
 				7E8201DE2AD58E1500DA8F68 /* AnswerSelected.swift in Sources */,
 				00C120022ADEBDC90042E152 /* PlayersView.swift in Sources */,

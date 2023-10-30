@@ -21,6 +21,8 @@ final class PhotoArtifactViewModel: NSObject, ObservableObject {
     @Published var preview: AVCaptureVideoPreviewLayer!
     @Published var imageData: Data?
     
+    @Published var theme: String = ""
+    
     var captureSession = AVCaptureSession()
     private let output = AVCapturePhotoOutput()
     
