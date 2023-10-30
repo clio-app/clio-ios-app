@@ -21,11 +21,14 @@ struct PlayersView: View {
 
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center) {
-                Text("Adicione entre 3 a 5 amigos para iniciar o jogo")
+                Text(LocalizedStringKey("Adicione entre 3 a 5 amigos para iniciar o jogo"))
                     .font(.itimRegular(fontType: .title3))
                     .multilineTextAlignment(.center)
                     .padding(24)
-                    .background(Color.white)
+                    .background(
+                        Color.white
+                            .clipShape(RoundedRectangle(cornerRadius: 20.0, style: .continuous))
+                    )
                     .overlay {
                         RoundedRectangle(cornerRadius: 20.0, style: .continuous)
                         .stroke(lineWidth: 2.0)

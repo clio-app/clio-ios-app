@@ -24,12 +24,12 @@ struct CustomButton: View {
                     .scaledToFit()
                     .frame(width: 92)
                     .padding(.top, 8)
-                Text(text)
+                Text(LocalizedStringKey(text))
                     .font(.itimRegular(fontType: .button))
                     .foregroundColor(.black)
                     .padding(.vertical, 12)
             }
-            .frame(maxWidth: 170, minHeight: 180)
+            .frame(maxWidth: 170, maxHeight: 180)
             .background(BorderedBackground(foregroundColor: .customYellow,
                                            backgroundColor: .offWhite,
                                            hasBorder: true))

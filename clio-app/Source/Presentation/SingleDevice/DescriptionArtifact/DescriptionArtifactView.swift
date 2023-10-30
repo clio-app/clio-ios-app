@@ -16,7 +16,7 @@ struct DescriptionArtifactView: View {
     @State var uiImage = UIImage(systemName: "photo.on.rectangle.angled")!
     
     @State var input = ""
-    var placeholder = "Escreva uma descrição sobre a imagem..."
+    @State var placeholder = "Escreva uma descrição sobre a imagem..."
 
     @State var showZoomImage = false
     @State private var startArtifactDescriptionTimer: DispatchTime!

@@ -16,20 +16,20 @@ struct StrokeText: View {
         ZStack{
             ZStack{
                 // Corners
-                Text(text).offset(x:  borderWidth, y:  borderWidth)
-                Text(text).offset(x:  borderWidth, y: -borderWidth)
-                Text(text).offset(x:  -borderWidth, y: -borderWidth)
-                Text(text).offset(x:  -borderWidth, y: borderWidth)
-                
+                Text(LocalizedStringKey(text)).offset(x:  borderWidth, y:  borderWidth)
+                Text(LocalizedStringKey(text)).offset(x:  borderWidth, y: -borderWidth)
+                Text(LocalizedStringKey(text)).offset(x:  -borderWidth, y: -borderWidth)
+                Text(LocalizedStringKey(text)).offset(x:  -borderWidth, y: borderWidth)
+
                 // Midldle
-                Text(text).offset(x:  borderWidth)
-                Text(text).offset(x:  -borderWidth)
-                Text(text).offset(y: borderWidth)
-                Text(text).offset(y: -borderWidth)
+                Text(LocalizedStringKey(text)).offset(x:  borderWidth)
+                Text(LocalizedStringKey(text)).offset(x:  -borderWidth)
+                Text(LocalizedStringKey(text)).offset(y: borderWidth)
+                Text(LocalizedStringKey(text)).offset(y: -borderWidth)
             }
             .compositingGroup()
             .foregroundColor(borderColor)
-            Text(text)
+            Text(LocalizedStringKey(text))
         }
     }
 }

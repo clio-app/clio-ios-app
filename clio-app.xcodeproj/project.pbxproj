@@ -66,6 +66,7 @@
 		7EA6DC9A2AE80352003368E8 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC992AE80352003368E8 /* CustomAlert.swift */; };
 		7EA6DC9C2AE804E4003368E8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC9B2AE804E4003368E8 /* CustomButton.swift */; };
 		7EA6DC9F2AE82581003368E8 /* ThemeBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC9E2AE82581003368E8 /* ThemeBubble.swift */; };
+		7EA6DCA22AE8902D003368E8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7EA6DCA12AE8902D003368E8 /* Localizable.xcstrings */; };
 		7EBA9CD92AD1AF6E00C25970 /* VotingInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CD82AD1AF6E00C25970 /* VotingInstructionView.swift */; };
 		7EBA9CDB2AD1B5E600C25970 /* VotingInstructionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CDA2AD1B5E600C25970 /* VotingInstructionViewModel.swift */; };
 		7EBA9CDD2AD1B61800C25970 /* VotingInstructionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CDC2AD1B61800C25970 /* VotingInstructionModel.swift */; };
@@ -110,7 +111,6 @@
 		00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		00C0CA272AE7F3C7009F74BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		00C0CA292AE7F736009F74BB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		00C11FFE2ADEB62E0042E152 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		00C120012ADEBDC90042E152 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		00C120082ADEBF140042E152 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
@@ -166,6 +166,8 @@
 		7EA6DC992AE80352003368E8 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		7EA6DC9B2AE804E4003368E8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		7EA6DC9E2AE82581003368E8 /* ThemeBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeBubble.swift; sourceTree = "<group>"; };
+		7EA6DCA02AE88BCD003368E8 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = "clio-app/Config.xcconfig"; sourceTree = "<group>"; };
+		7EA6DCA12AE8902D003368E8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7EBA9CD82AD1AF6E00C25970 /* VotingInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionView.swift; sourceTree = "<group>"; };
 		7EBA9CDA2AD1B5E600C25970 /* VotingInstructionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionViewModel.swift; sourceTree = "<group>"; };
 		7EBA9CDC2AD1B61800C25970 /* VotingInstructionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionModel.swift; sourceTree = "<group>"; };
@@ -218,7 +220,7 @@
 		00BFF8ED2AB4914B0068A5F2 = {
 			isa = PBXGroup;
 			children = (
-				00C0CA292AE7F736009F74BB /* Config.xcconfig */,
+				7EA6DCA02AE88BCD003368E8 /* Config.xcconfig */,
 				7E32B0722AC5B5D000A62D28 /* clio-app.xctestplan */,
 				00BFF8F82AB4914B0068A5F2 /* clio-app */,
 				7E7667302AC47045009064C8 /* Clio.app */,
@@ -256,6 +258,7 @@
 				FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */,
 				7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */,
 				7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */,
+				7EA6DCA12AE8902D003368E8 /* Localizable.xcstrings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -730,6 +733,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 00BFF8ED2AB4914B0068A5F2;
 			packageReferences = (
@@ -752,6 +756,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00BFF9012AB4914D0068A5F2 /* Preview Assets.xcassets in Resources */,
+				7EA6DCA22AE8902D003368E8 /* Localizable.xcstrings in Resources */,
 				FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */,
 				FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */,
 				00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */,
@@ -876,7 +881,6 @@
 /* Begin XCBuildConfiguration section */
 		00BFF9182AB4914D0068A5F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00C0CA292AE7F736009F74BB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -937,7 +941,6 @@
 		};
 		00BFF9192AB4914D0068A5F2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00C0CA292AE7F736009F74BB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -998,7 +1001,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 685GVH2XJC;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
@@ -1033,7 +1036,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 685GVH2XJC;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";

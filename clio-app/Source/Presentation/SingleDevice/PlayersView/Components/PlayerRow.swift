@@ -23,7 +23,7 @@ struct PlayerRow: View {
                         .stroke(lineWidth: 2.0)
                 }
                 .frame(width: 45, alignment: .center)
-            Text(playerName)
+            Text(LocalizedStringKey(playerName))
             Spacer()
             Button {
                 delete()
@@ -37,13 +37,13 @@ struct PlayerRow: View {
         .padding(.leading, 12)
         .padding(.trailing, 24)
         .padding(.vertical, 6)
-        .background {
+        .background(
+            Color.white
+                .clipShape(RoundedRectangle(cornerRadius: 20.0, style: .continuous))
+        )
+        .overlay {
             RoundedRectangle(cornerRadius: 20.0, style: .continuous)
-                .fill(Color.offWhite)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 20.0, style: .continuous)
-                        .stroke(lineWidth: 2.0)
-                }
+                .stroke(lineWidth: 2.0)
         }
         .padding(.vertical, 4)
     }

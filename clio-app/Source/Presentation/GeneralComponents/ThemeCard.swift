@@ -13,9 +13,10 @@ struct ThemeCard: View {
     
     var body: some View {
         Group {
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .foregroundColor(.black)
-            + Text("\n \(theme)")
+//            + Text("\n")
+            + Text(LocalizedStringKey(theme))
                 .foregroundColor(.lapisLazuli)
         }
         .font(.itimRegular(fontType: .headline))

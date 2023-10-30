@@ -14,11 +14,11 @@ struct CustomAlert: View {
 
     var body: some View {
         VStack(alignment: .center) {
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .font(.nightyDemo(fontType: .largeTitle))
 
 
-            Text(text)
+            Text(LocalizedStringKey(text))
                 .font(.itimRegular(fontType: .body))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
