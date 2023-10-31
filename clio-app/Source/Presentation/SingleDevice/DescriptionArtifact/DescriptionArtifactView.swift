@@ -16,7 +16,7 @@ struct DescriptionArtifactView: View {
     @State var uiImage = UIImage(systemName: "photo.on.rectangle.angled")!
     
     @State var input = ""
-    @State var placeholder = "Escreva uma descrição sobre a imagem..."
+    @State var placeholder = NSLocalizedString("Escreva uma descrição sobre a imagem...", comment: "write a description for the image")
 
     @State var showZoomImage = false
     @State private var startArtifactDescriptionTimer: DispatchTime!
@@ -85,7 +85,6 @@ struct DescriptionArtifactView: View {
                 .frame(width: geo.size.width, height: geo.size.height)
             }
             .keyboardAdaptive()
-            .toolbar(.hidden, for: .navigationBar)
             .onTapGesture {
                 UIApplication.shared.endEditing()
                 if input == "" {
@@ -105,10 +104,12 @@ struct DescriptionArtifactView: View {
                 }
             }
             .clioBackground()
+            .applyHelpButton(.DescriptionArtifact)
         }
         .ignoresSafeArea(.keyboard)
         .environmentObject(session)
         .navigationTitle("")
+        .navigationBarBackButtonHidden()
     }
 }
 
@@ -156,7 +157,7 @@ extension DescriptionArtifactView {
                 case .final:
                     // clear up and restart gameflow
                     // TODO: FICA NA TELA DE RESULTADOS
-                    router.goToResultsVisualization()
+                    router.goToPresentResultsView()
 //                    session.restartGame()
 //                    router.clear()
                 default:

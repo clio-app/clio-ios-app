@@ -64,6 +64,7 @@ struct RaffleThemeView: View {
                 .frame(height: 92)
             }
         }
+        .applyHelpButton(.RaffleTheme)
         .onAppear {
             vm.setTheme(from: gameSession)
         }

@@ -49,8 +49,8 @@ struct ResultsView: View {
                         .multilineTextAlignment(.center)
                         .font(.itimRegular(fontType: .title3))
 
-                    NavigationLink {
-                        ResultDetailsView()
+                    Button {
+                        router.goToResultVisualization()
                     } label: {
                         Image(systemName: "chevron.down.circle.fill")
                             .resizable()
@@ -71,7 +71,8 @@ struct ResultsView: View {
             )
         }
         .clioBackground()
-        .toolbar(.hidden, for: .navigationBar)
+        .navigationBarBackButtonHidden()
+        .applyHelpButton(.PresentResults)
     }
 }
 

@@ -83,6 +83,7 @@
 		FF4DDEA52AE1A15D00759F47 /* DescriptionArtifactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DDEA42AE1A15D00759F47 /* DescriptionArtifactView.swift */; };
 		FF4DDEA72AE200E900759F47 /* ZoomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DDEA62AE200E900759F47 /* ZoomImage.swift */; };
 		FF4DDEAC2AE2BF3800759F47 /* ThemeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */; };
+		FF67AB692AE9444700725C48 /* HelpPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67AB682AE9444700725C48 /* HelpPopup.swift */; };
 		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
 		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
 		FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */; };
@@ -184,6 +185,7 @@
 		FF4DDEA42AE1A15D00759F47 /* DescriptionArtifactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionArtifactView.swift; sourceTree = "<group>"; };
 		FF4DDEA62AE200E900759F47 /* ZoomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomImage.swift; sourceTree = "<group>"; };
 		FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCard.swift; sourceTree = "<group>"; };
+		FF67AB682AE9444700725C48 /* HelpPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPopup.swift; sourceTree = "<group>"; };
 		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
 		FF6FD1CF2AB4A67600A2D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 		00D9C9BC2ABC701C00F66421 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				FF67AB682AE9444700725C48 /* HelpPopup.swift */,
 				FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */,
 			);
 			path = Modifiers;
@@ -800,6 +803,7 @@
 				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
 				7EA6DC9C2AE804E4003368E8 /* CustomButton.swift in Sources */,
 				FF4DDEA52AE1A15D00759F47 /* DescriptionArtifactView.swift in Sources */,
+				FF67AB692AE9444700725C48 /* HelpPopup.swift in Sources */,
 				FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */,
 				7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */,
 				7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */,

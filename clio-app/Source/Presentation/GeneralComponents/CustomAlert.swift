@@ -25,7 +25,9 @@ struct CustomAlert: View {
                 .padding(.vertical, 36)
 
             ActionButton(title: "Okay", foregroundColor: Color.lapisLazuli, hasBorder: false) {
-                isPopupPresented.toggle()
+                withAnimation(.easeInOut(duration: 0.3)) {
+                    isPopupPresented.toggle()
+                }
             }
             .frame(maxHeight: 42)
             .padding(.horizontal, 42)

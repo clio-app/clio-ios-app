@@ -156,6 +156,23 @@
         }
       }
     },
+    "AddPlayers" : {
+      "comment" : "AddPlayers view hint",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add all the players who will participate in the round."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicione todos os jogadores que irão participar da rodada."
+          }
+        }
+      }
+    },
     "Adicionar jogador" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -269,6 +286,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Convide seus alunos pelo código:"
+          }
+        }
+      }
+    },
+    "DescriptionArtifact" : {
+      "comment" : "DescriptionArtifact view hint",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Write a description that explains the connection between the photo and the theme."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faça uma descrição que explique a conexão entre a foto e o tema."
           }
         }
       }
@@ -707,6 +741,40 @@
         }
       }
     },
+    "PhotoArtifact" : {
+      "comment" : "PhotoArtifact view hint",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take a photo of something you think relates to the phrase. And select 'Send' if you like your connection."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tire foto de algo que você acha que faz relação com a frase. E selecione 'Enviar' se gostou da sua conexão."
+          }
+        }
+      }
+    },
+    "PresentResults" : {
+      "comment" : "PresentResults view hint",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gather all the players to see the most unexpected answers and discover who thought outside the box."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Junte todos os jogadores para ver as respostas mais inusitadas e descobrir quem pensou fora da caixinha."
+          }
+        }
+      }
+    },
     "Próximo" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -720,6 +788,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Próximo"
+          }
+        }
+      }
+    },
+    "RaffleTheme" : {
+      "comment" : "RaffleTheme view hint",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The presented phrase will serve as context and a hint for the upcoming game phases."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A frase apresentada servirá de contexto e dica para as próximas fases do jogo."
           }
         }
       }
@@ -754,6 +839,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Relacione a foto com o tema:\n"
+          }
+        }
+      }
+    },
+    "ResultsVisualization" : {
+      "comment" : "ResultsVisualization view hint",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See what interpretations were made by the other players and have fun."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veja quais foram as interpretações feitas pelos outros jogadores e se divirta."
+          }
+        }
+      }
+    },
+    "SelectPlayer" : {
+      "comment" : "SelectPlayer view hint",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pass the device to the player on the screen or select 'no' until your name appears."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passe o dispositivo para o jogador na tela ou selecione 'não' até que apareça o seu nome."
           }
         }
       }
@@ -808,6 +927,23 @@
         }
       }
     },
+    "Start" : {
+      "comment" : "Start view hint",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select the game mode to start the match."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecione o modo de jogo para iniciar a partida."
+          }
+        }
+      }
+    },
     "TEMA" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -854,6 +990,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Turma A"
+          }
+        }
+      }
+    },
+    "Tutorial" : {
+      "comment" : "Tutorial",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutorial"
           }
         }
       }
