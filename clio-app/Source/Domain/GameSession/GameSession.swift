@@ -15,7 +15,7 @@ final class GameSession: ObservableObject {
         case midle
         case final
     }
-    
+
     @Published var gameState: GameState = .start
     @Published var gameFlowParameters = GameFlowParameters()
     @Published var alertError = AlertError()
@@ -36,7 +36,7 @@ final class GameSession: ObservableObject {
             )
             return
         }
-        if name.isEmpty {
+        if name.isEmpty || name.hasPrefix(" ") {
             alertError = AlertError(showAlert: true, errorMessage: "Opa! O nome do jogador não pode estar vazio.")
             return
         }
@@ -67,17 +67,8 @@ final class GameSession: ObservableObject {
 
     func selectFirstRoundPrompt() {
         // Parse the JSON data into a Swift dictionary
-        if let data = themeManager.themePhrases.data(using: .utf8) {
-            do {
-                if let themes = try JSONSerialization.jsonObject(with: data, options: []) as? [String: [String]] {
-                    // Access the phrases using the themes dictionary
-                    if let phrase = themes[gameFlowParameters.sessionTheme]?.randomElement() {
-                        gameFlowParameters.firstRoundPrompt = phrase
-                    }
-                }
-            } catch {
-                print("Error parsing JSON: \(error)")
-            }
+        if let firstPrompt = themeManager.themePhrases[gameFlowParameters.sessionTheme]?.randomElement() {
+            gameFlowParameters.firstRoundPrompt = firstPrompt
         }
     }
 
@@ -198,60 +189,34 @@ struct AlertError {
 }
 
 struct ThemeManager {
-    var themes: [String]
-    let themePhrases = """
-    {
-      "Historia": [
-        "1492: Colombo navegou e a América foi descoberta!",
-        "Década de 1960: Amor livre, música animada e uma caminhada na lua.",
-        "Guerra Fria: EUA vs. URSS, mísseis em vez de piscadas.",
-        "Revolução Francesa: Adeus à monarquia, olá à liberdade!"
-      ],
-      "Geografia": [
-        "Monte Everest: O desafio supremo da Terra para alpinistas.",
-        "Floresta Amazônica: Os pulmões da Terra, o local favorito da vida selvagem.",
-        "Deserto do Saara: A caixa de areia colossal da natureza.",
-        "Grande Barreira de Coral: O paraíso submarino de Nemo.",
-        "Cataratas do Niágara: O espetáculo de águas da natureza."
-      ],
-      "Filosofia": [
-        "DNA: O código cósmico de 'você'.",
-        "Mitocôndrias: A central de energia das células - onde a verdadeira energia acontece!",
-        "Evolução: A jornada da vida de 'sob o mar' para 'fora do mar'.",
-        "Sistema imunológico: O esquadrão de super-heróis do seu corpo na luta contra germes.",
-        "Fotossíntese: Plantas transformando a luz solar em comida."
-      ],
-      "Biologia": [
-          "A seleção natural: Natureza sendo a 'grande diretora de elenco' da vida na Terra.",
-          "A diversidade da vida: Uma enorme coleção de organismos, cada um com seu próprio papel na história da vida.",
-          "Genética e hereditariedade: O livro de receitas da vida, passado de geração em geração.",
-          "Ecossistemas: A dança interconectada da vida, onde todos têm um papel a desempenhar.",
-          "Adaptação: A habilidade dos seres vivos de jogar o jogo da sobrevivência e vencer."
-      ]
-    }
-    """
-    
+    var themes: [String] = []
+    var themePhrases: [String: [String]] = [:]
+
     init() {
-        if let data = themePhrases.data(using: .utf8) {
-            do {
-                if let themesDictionary = try JSONSerialization.jsonObject(with: data, options: []) as? [String: [String]] {
-                    themes = Array(themesDictionary.keys)
-                } else {
-                    themes = []
-                }
-            } catch {
-                themes = []
-                print("Error parsing JSON: \(error)")
+        readJSONFile(withName: "ThemePhrases")
+    }
+
+    mutating func readJSONFile(withName name: String) {
+        do {
+            if let bundlePath = Bundle.main.path(forResource: name, ofType: "json"), let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+                    if let localizedData = try?  JSONSerialization.jsonObject(with: jsonData) as? [String:[String]] {
+                        themes = Array(localizedData.keys)
+                        themePhrases = localizedData
+                    } else {
+                        /// Temporary check up
+                        assertionFailure("Check the JSON file for the localized version for language \(Locale.current.identifier).")
+                    }
             }
-        } else {
-            themes = []
+        } catch {
+            themePhrases = ["Test":["No themes available"]]
+            print(error)
         }
     }
 }
 
 struct ProfileImageManager {
     var profileColors: [String] = ["Brick", "Lilac", "Peach", "SoftGreen", "Sky"]
-    var currentIndex: Int = 0
+    var currentIndex: Int = .random(in: 0..<4)
 
     mutating func randomizeProfileImage() -> String {
         let color = profileColors[currentIndex]

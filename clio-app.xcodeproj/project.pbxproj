@@ -40,6 +40,7 @@
 		7E1705E32AD60938005FA9EE /* MasterContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42292AD5B7CE00C566EB /* MasterContainer.swift */; };
 		7E1705E42AD60938005FA9EE /* PlayerGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D422A2AD5B7CE00C566EB /* PlayerGridItem.swift */; };
 		7E1705E52AD60938005FA9EE /* LobbyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D422B2AD5B7CE00C566EB /* LobbyHeader.swift */; };
+		7E24F3DA2AF53D470066E590 /* ThemePhrases.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E66EC5C2AF2606A00D1ED2F /* ThemePhrases.json */; };
 		7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC32AB7828200AF20C7 /* ActionButton.swift */; };
 		7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */; };
 		7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */; };
@@ -52,6 +53,7 @@
 		7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */; };
 		7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */; };
 		7E61A3E42AE57E430009425C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61A3E32AE57E430009425C /* Router.swift */; };
+		7E66EC5A2AF2606A00D1ED2F /* ThemePhrases.json in Sources */ = {isa = PBXBuildFile; fileRef = 7E66EC5C2AF2606A00D1ED2F /* ThemePhrases.json */; };
 		7E81843E2AD4336100938C69 /* VotingPopupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E81843D2AD4336100938C69 /* VotingPopupModel.swift */; };
 		7E8201DE2AD58E1500DA8F68 /* AnswerSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8201DD2AD58E1500DA8F68 /* AnswerSelected.swift */; };
 		7E8201E02AD58E5300DA8F68 /* AnswerGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8201DF2AD58E5300DA8F68 /* AnswerGrid.swift */; };
@@ -139,6 +141,7 @@
 		7E0D42582AD5BEFD00C566EB /* AnonymousLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnonymousLoginView.swift; sourceTree = "<group>"; };
 		7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		7E124DC62ABB1B6E00ABC962 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		7E24F3D82AF261F30066E590 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/ThemePhrases.json; sourceTree = "<group>"; };
 		7E310AC32AB7828200AF20C7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonContainer.swift; sourceTree = "<group>"; };
 		7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMove.swift; sourceTree = "<group>"; };
@@ -153,6 +156,7 @@
 		7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserHeader.swift; sourceTree = "<group>"; };
 		7E61A3E32AE57E430009425C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		7E66EC5B2AF2606A00D1ED2F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-BR"; path = "pt-BR.lproj/ThemePhrases.json"; sourceTree = "<group>"; };
 		7E7667302AC47045009064C8 /* Clio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E81843D2AD4336100938C69 /* VotingPopupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingPopupModel.swift; sourceTree = "<group>"; };
 		7E8201DD2AD58E1500DA8F68 /* AnswerSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSelected.swift; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 				7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */,
 				7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */,
 				7EA6DCA12AE8902D003368E8 /* Localizable.xcstrings */,
+				7E66EC5C2AF2606A00D1ED2F /* ThemePhrases.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -758,6 +763,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E24F3DA2AF53D470066E590 /* ThemePhrases.json in Resources */,
 				00BFF9012AB4914D0068A5F2 /* Preview Assets.xcassets in Resources */,
 				7EA6DCA22AE8902D003368E8 /* Localizable.xcstrings in Resources */,
 				FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */,
@@ -800,6 +806,7 @@
 				7EBA9CE22AD22A8E00C25970 /* DescriptionItem.swift in Sources */,
 				7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */,
 				FFA354D62AE0170B00E23ADC /* PhotoArtifactViewModel.swift in Sources */,
+				7E66EC5A2AF2606A00D1ED2F /* ThemePhrases.json in Sources */,
 				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
 				7EA6DC9C2AE804E4003368E8 /* CustomButton.swift in Sources */,
 				FF4DDEA52AE1A15D00759F47 /* DescriptionArtifactView.swift in Sources */,
@@ -881,6 +888,18 @@
 			targetProxy = 7E32B06D2AC5B57600A62D28 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E66EC5C2AF2606A00D1ED2F /* ThemePhrases.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E66EC5B2AF2606A00D1ED2F /* pt-BR */,
+				7E24F3D82AF261F30066E590 /* en */,
+			);
+			name = ThemePhrases.json;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		00BFF9182AB4914D0068A5F2 /* Debug */ = {
