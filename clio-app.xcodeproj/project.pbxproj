@@ -40,6 +40,7 @@
 		7E1705E32AD60938005FA9EE /* MasterContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42292AD5B7CE00C566EB /* MasterContainer.swift */; };
 		7E1705E42AD60938005FA9EE /* PlayerGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D422A2AD5B7CE00C566EB /* PlayerGridItem.swift */; };
 		7E1705E52AD60938005FA9EE /* LobbyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D422B2AD5B7CE00C566EB /* LobbyHeader.swift */; };
+		7E24F3DA2AF53D470066E590 /* ThemePhrases.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E66EC5C2AF2606A00D1ED2F /* ThemePhrases.json */; };
 		7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC32AB7828200AF20C7 /* ActionButton.swift */; };
 		7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */; };
 		7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */; };
@@ -52,6 +53,7 @@
 		7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */; };
 		7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */; };
 		7E61A3E42AE57E430009425C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61A3E32AE57E430009425C /* Router.swift */; };
+		7E66EC5A2AF2606A00D1ED2F /* ThemePhrases.json in Sources */ = {isa = PBXBuildFile; fileRef = 7E66EC5C2AF2606A00D1ED2F /* ThemePhrases.json */; };
 		7E81843E2AD4336100938C69 /* VotingPopupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E81843D2AD4336100938C69 /* VotingPopupModel.swift */; };
 		7E8201DE2AD58E1500DA8F68 /* AnswerSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8201DD2AD58E1500DA8F68 /* AnswerSelected.swift */; };
 		7E8201E02AD58E5300DA8F68 /* AnswerGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8201DF2AD58E5300DA8F68 /* AnswerGrid.swift */; };
@@ -66,6 +68,7 @@
 		7EA6DC9A2AE80352003368E8 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC992AE80352003368E8 /* CustomAlert.swift */; };
 		7EA6DC9C2AE804E4003368E8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC9B2AE804E4003368E8 /* CustomButton.swift */; };
 		7EA6DC9F2AE82581003368E8 /* ThemeBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC9E2AE82581003368E8 /* ThemeBubble.swift */; };
+		7EA6DCA22AE8902D003368E8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7EA6DCA12AE8902D003368E8 /* Localizable.xcstrings */; };
 		7EBA9CD92AD1AF6E00C25970 /* VotingInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CD82AD1AF6E00C25970 /* VotingInstructionView.swift */; };
 		7EBA9CDB2AD1B5E600C25970 /* VotingInstructionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CDA2AD1B5E600C25970 /* VotingInstructionViewModel.swift */; };
 		7EBA9CDD2AD1B61800C25970 /* VotingInstructionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CDC2AD1B61800C25970 /* VotingInstructionModel.swift */; };
@@ -111,7 +114,6 @@
 		00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		00C0CA272AE7F3C7009F74BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		00C0CA292AE7F736009F74BB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		00C11FFE2ADEB62E0042E152 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		00C120012ADEBDC90042E152 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		00C120082ADEBF140042E152 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		7E0D42582AD5BEFD00C566EB /* AnonymousLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnonymousLoginView.swift; sourceTree = "<group>"; };
 		7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		7E124DC62ABB1B6E00ABC962 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		7E24F3D82AF261F30066E590 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/ThemePhrases.json; sourceTree = "<group>"; };
 		7E310AC32AB7828200AF20C7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonContainer.swift; sourceTree = "<group>"; };
 		7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMove.swift; sourceTree = "<group>"; };
@@ -153,6 +156,7 @@
 		7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserHeader.swift; sourceTree = "<group>"; };
 		7E61A3E32AE57E430009425C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		7E66EC5B2AF2606A00D1ED2F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-BR"; path = "pt-BR.lproj/ThemePhrases.json"; sourceTree = "<group>"; };
 		7E7667302AC47045009064C8 /* Clio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E81843D2AD4336100938C69 /* VotingPopupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingPopupModel.swift; sourceTree = "<group>"; };
 		7E8201DD2AD58E1500DA8F68 /* AnswerSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSelected.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 		7EA6DC992AE80352003368E8 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		7EA6DC9B2AE804E4003368E8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		7EA6DC9E2AE82581003368E8 /* ThemeBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeBubble.swift; sourceTree = "<group>"; };
+		7EA6DCA02AE88BCD003368E8 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = "clio-app/Config.xcconfig"; sourceTree = "<group>"; };
+		7EA6DCA12AE8902D003368E8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7EBA9CD82AD1AF6E00C25970 /* VotingInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionView.swift; sourceTree = "<group>"; };
 		7EBA9CDA2AD1B5E600C25970 /* VotingInstructionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionViewModel.swift; sourceTree = "<group>"; };
 		7EBA9CDC2AD1B61800C25970 /* VotingInstructionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionModel.swift; sourceTree = "<group>"; };
@@ -220,7 +226,7 @@
 		00BFF8ED2AB4914B0068A5F2 = {
 			isa = PBXGroup;
 			children = (
-				00C0CA292AE7F736009F74BB /* Config.xcconfig */,
+				7EA6DCA02AE88BCD003368E8 /* Config.xcconfig */,
 				7E32B0722AC5B5D000A62D28 /* clio-app.xctestplan */,
 				00BFF8F82AB4914B0068A5F2 /* clio-app */,
 				7E7667302AC47045009064C8 /* Clio.app */,
@@ -258,6 +264,8 @@
 				FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */,
 				7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */,
 				7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */,
+				7EA6DCA12AE8902D003368E8 /* Localizable.xcstrings */,
+				7E66EC5C2AF2606A00D1ED2F /* ThemePhrases.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -733,6 +741,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 00BFF8ED2AB4914B0068A5F2;
 			packageReferences = (
@@ -754,7 +763,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E24F3DA2AF53D470066E590 /* ThemePhrases.json in Resources */,
 				00BFF9012AB4914D0068A5F2 /* Preview Assets.xcassets in Resources */,
+				7EA6DCA22AE8902D003368E8 /* Localizable.xcstrings in Resources */,
 				FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */,
 				FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */,
 				00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */,
@@ -795,6 +806,7 @@
 				7EBA9CE22AD22A8E00C25970 /* DescriptionItem.swift in Sources */,
 				7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */,
 				FFA354D62AE0170B00E23ADC /* PhotoArtifactViewModel.swift in Sources */,
+				7E66EC5A2AF2606A00D1ED2F /* ThemePhrases.json in Sources */,
 				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
 				7EA6DC9C2AE804E4003368E8 /* CustomButton.swift in Sources */,
 				FF4DDEA52AE1A15D00759F47 /* DescriptionArtifactView.swift in Sources */,
@@ -877,10 +889,21 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		7E66EC5C2AF2606A00D1ED2F /* ThemePhrases.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E66EC5B2AF2606A00D1ED2F /* pt-BR */,
+				7E24F3D82AF261F30066E590 /* en */,
+			);
+			name = ThemePhrases.json;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		00BFF9182AB4914D0068A5F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00C0CA292AE7F736009F74BB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -941,7 +964,6 @@
 		};
 		00BFF9192AB4914D0068A5F2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00C0CA292AE7F736009F74BB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1002,7 +1024,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = NTS86MKTBV;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
@@ -1037,7 +1059,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = NTS86MKTBV;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";

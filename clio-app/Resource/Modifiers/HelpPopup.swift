@@ -23,7 +23,7 @@ struct HelpArea: ViewModifier {
     
     init(viewType: Views) {
         self.viewType = viewType
-        self.title = "Tutorial"
+        self.title = NSLocalizedString("Tutorial", comment: "Tutorial")
     }
     
     func body(content: Content) -> some View {
@@ -97,25 +97,46 @@ struct HelpArea: ViewModifier {
             helpAlert.toggle()
         }
     }
-    
+
     private func getHintForView(_ viewType: Views) -> String {
-        switch viewType{
+        switch viewType {
         case .Start:
-            return "Selecione o modo de jogo para iniciar a partida."
+            return NSLocalizedString("Start", comment: "Start view hint");
         case .AddPlayers:
-            return "Adicione todos os jogadores que irão participar da rodada."
+            return NSLocalizedString("AddPlayers", comment: "AddPlayers view hint");
         case .RaffleTheme:
-            return "A frase apresentada servirá de contexto e dica para as próximas fases do jogo."
+            return NSLocalizedString("RaffleTheme", comment: "RaffleTheme view hint");
         case .SelectPlayer:
-            return "Passe o dispositivo para o jogador ilustrado na tela ou selecione 'não' até que apareça o seu nome."
+            return NSLocalizedString("SelectPlayer", comment: "SelectPlayer view hint");
         case .PhotoArtifact:
-            return "Tire foto de algo que você acha que faz relação com a frase. E selecione 'Enviar' se gostou da sua conexão."
+            return NSLocalizedString("PhotoArtifact", comment: "PhotoArtifact view hint");
         case .DescriptionArtifact:
-            return "Faça uma descrição que explique a conexão entre a foto e o tema."
+            return NSLocalizedString("DescriptionArtifact", comment: "DescriptionArtifact view hint");
         case .PresentResults:
-            return "Junte todos os jogadores para ver as respostas mais inusitadas e descobrir quem pensou fora da caixinha."
+            return NSLocalizedString("PresentResults", comment: "PresentResults view hint");
         case .ResultsVisualization:
-            return "Veja quais foram as interpretações feitas pelos outros jogadore e se divirta."
+            return NSLocalizedString("ResultsVisualization", comment: "ResultsVisualization view hint");
         }
     }
+
+//    private func getHintForView(_ viewType: Views) -> String {
+//        switch viewType{
+//        case .Start:
+//            return "Selecione o modo de jogo para iniciar a partida."
+//        case .AddPlayers:
+//            return "Adicione todos os jogadores que irão participar da rodada."
+//        case .RaffleTheme:
+//            return "A frase apresentada servirá de contexto e dica para as próximas fases do jogo."
+//        case .SelectPlayer:
+//            return "Passe o dispositivo para o jogador ilustrado na tela ou selecione 'não' até que apareça o seu nome."
+//        case .PhotoArtifact:
+//            return "Tire foto de algo que você acha que faz relação com a frase. E selecione 'Enviar' se gostou da sua conexão."
+//        case .DescriptionArtifact:
+//            return "Faça uma descrição que explique a conexão entre a foto e o tema."
+//        case .PresentResults:
+//            return "Junte todos os jogadores para ver as respostas mais inusitadas e descobrir quem pensou fora da caixinha."
+//        case .ResultsVisualization:
+//            return "Veja quais foram as interpretações feitas pelos outros jogadore e se divirta."
+//        }
+//    }
 }

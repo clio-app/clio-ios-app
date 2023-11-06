@@ -18,13 +18,15 @@ struct RaffleThemeView: View {
                 .font(.itimRegular(fontType: .title3))
                 .multilineTextAlignment(.center)
                 .padding(24)
-                .background(Color.offWhite)
+                .background(
+                    Color.white
+                        .clipShape(RoundedRectangle(cornerRadius: 20.0, style: .continuous))
+                )
                 .overlay {
                     RoundedRectangle(cornerRadius: 20.0, style: .continuous)
-                    .stroke(lineWidth: 2.0)
+                        .stroke(lineWidth: 2.0)
                 }
                 .padding(.bottom, 24)
-                .padding(.horizontal, 60)
 
             Spacer()
 

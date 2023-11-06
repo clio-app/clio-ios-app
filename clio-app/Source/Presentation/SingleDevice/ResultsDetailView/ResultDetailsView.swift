@@ -15,22 +15,23 @@ struct ResultDetailsView: View {
     @State var currentInteraction = 0
     @State var startInteractions = false
     @State var endInteractions = false
-    
+    @State private var listCout: Int = 0
+
     var body: some View {
         GeometryReader { geo in
             VStack {
                 ThemeBubble(theme: gameSession.gameFlowParameters.sessionTheme)
-                .frame(
-                    width: geo.size.width * 0.8,
-                    height: geo.size.height * 0.2
-                )
-                
+                    .frame(
+                        width: geo.size.width * 0.8,
+                        height: geo.size.height * 0.2
+                    )
+
                 VStack(spacing: 1){
                     Text("A frase era...")
                         .font(.itimRegular(fontType: .title3))
                         .foregroundStyle(.black)
                         .padding([.top])
-                    
+
                     Text(gameSession.gameFlowParameters.firstRoundPrompt)
                         .font(.itimRegular(fontType: .title3))
                         .fixedSize(horizontal: false, vertical: true)
@@ -45,32 +46,33 @@ struct ResultDetailsView: View {
                         .background(Color.white)
                 }
                 .padding([.horizontal, .vertical])
-                
+
                 if startInteractions {
-                    ScrollView {
-                        ForEach((0..<showedPlayers.count), id: \.self) { index in
-                            HStack(alignment: .bottom, spacing: 12) {
-                                UserAvatar(
-                                    userName: showedPlayers[index].name,
-                                    picture: showedPlayers[index].picture
-                                )
-                                
-                                ArtefactView(
-                                    artefact: showedPlayers[index].artefact!
-                                )
-                                .padding([.bottom], 16)
-                                
-                                Spacer()
+
+                        ScrollView {
+                            ForEach((0..<showedPlayers.count), id: \.self) { index in
+                                HStack(alignment: .bottom, spacing: 12) {
+                                    UserAvatar(
+                                        userName: showedPlayers[index].name,
+                                        picture: showedPlayers[index].picture
+                                    )
+
+                                    ArtefactView(
+                                        artefact: showedPlayers[index].artefact!
+                                    )
+                                    .padding([.bottom], 16)
+                                    .id(index)
+                                    Spacer()
+                                }
+                                .padding([.horizontal], 26)
+                                .padding([.vertical], 32)
+                                .animation(.easeIn, value: index)
                             }
-                            .padding([.horizontal], 26)
-                            .padding([.vertical], 32)
-                            .animation(.easeIn, value: index)
                         }
-                    }
-                    .scrollIndicators(.visible)
-                    .padding([.vertical], 6)
+                        .scrollIndicators(.visible)
+                        .padding([.vertical], 6)
                 }
-                
+
                 if endInteractions {
                     ActionButton(
                         title: "Jogar Novamente",
@@ -97,7 +99,7 @@ struct ResultDetailsView: View {
                             addPlayerInteraction()
                         }
                 }
-                
+
             }
             .frame(width: geo.size.width, height: geo.size.height)
             .clioBackground()
@@ -105,7 +107,7 @@ struct ResultDetailsView: View {
         .navigationBarBackButtonHidden()
         .applyHelpButton(.ResultsVisualization)
     }
-    
+
     func addPlayerInteraction() {
         showedPlayers = []
         let playersCount = gameSession.gameFlowParameters.didPlay.count - 1
@@ -115,12 +117,12 @@ struct ResultDetailsView: View {
             showedPlayers = gameSession.gameFlowParameters.didPlay
             return
         }
-        
+
         withAnimation(.linear) {
             showedPlayers.append(
                 gameSession.gameFlowParameters.didPlay[currentInteraction]
             )
-            
+
             currentInteraction += 1
         }
     }
@@ -145,7 +147,7 @@ struct ResultDetailsView: View {
     gameSession.selectFirstRoundPrompt()
     let user1 = gameSession.gameFlowParameters.players[0]
     let user2 = gameSession.gameFlowParameters.players[1]
-    
+
     gameSession.gameFlowParameters.didPlay.append(
         User(
             id: user1.id,
@@ -158,7 +160,7 @@ struct ResultDetailsView: View {
             )
         )
     )
-    
+
     gameSession.gameFlowParameters.didPlay.append(
         User(
             id: user2.id,
@@ -171,12 +173,12 @@ struct ResultDetailsView: View {
             )
         )
     )
-    
-    
+
+
     let resultView = ResultDetailsView()
         .environmentObject(gameSession)
         .environmentObject(router)
-    
+
     return resultView
 }
 

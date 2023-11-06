@@ -30,6 +30,8 @@ struct AddPlayerField: View {
                     .foregroundColor(.black.opacity(0.6))
                     .font(.itimRegular(fontType: .body))
             }
+
+            .font(.itimRegular())
             .textFieldStyle(PlainTextFieldStyle())
             .padding(6)
             .foregroundColor(.black)
@@ -39,7 +41,10 @@ struct AddPlayerField: View {
             }
         }
         .padding(12)
-        .background(Color.white)
+        .background(
+            Color.white
+                .clipShape(RoundedRectangle(cornerRadius: 20.0, style: .continuous))
+        )
         .overlay {
             RoundedRectangle(cornerRadius: 20.0, style: .continuous)
             .stroke(lineWidth: 2.0)

@@ -28,14 +28,14 @@ struct StartView: View {
                     CustomButton(buttonAction: {
                         Mixpanel.mainInstance().track(event: "Play Local Tapped")
                         router.goToPlayersView()
-                    }, icon: "single-device-icon", text: "Jogue nesse dispositivo ")
+                    }, icon: "single-device-icon", text: "Jogar nesse dispositivo")
 
                     Spacer()
 
                     CustomButton(buttonAction: {
                         Mixpanel.mainInstance().track(event: "Play Online Tapped")
                         isPopupPresented.toggle()
-                    }, icon: "multi-device-icon", text: "Jogue online \n")
+                    }, icon: "multi-device-icon", text: "Jogar online")
 
                     Spacer()
                 }
