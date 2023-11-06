@@ -13,66 +13,62 @@ struct ResultsView: View {
     
     var body: some View {
         GeometryReader { geo in
-            VStack {
-
-                // TODO: Virou componente dentro de resultsDetailView
-                ThemeBubble(theme: gameSession.gameFlowParameters.sessionTheme)
-                .padding([.top], geo.size.height * 0.1)
-
+            VStack(spacing: 55) {
+                Spacer()
                 Spacer()
                 
                 VStack {
                     Text("Junte seus amigos")
                         .foregroundStyle(.black)
                         .font(.itimRegular(fontType: .title2))
-
+                    
                     HStack(spacing: -10) {
                         ForEach(gameSession.gameFlowParameters.players, id: \.id) { player in
                             Image(systemName: "person.circle.fill")
                                 .resizable()
-                                    .frame(width: 50, height: 50)
-                                    .overlay {
-                                        Circle()
-                                            .stroke(lineWidth: 3.0)
-                                            .foregroundColor(.black)
-                                    }
-                                    .applyColor(player.picture)
+                                .frame(width: 50, height: 50)
+                                .overlay {
+                                    Circle()
+                                        .stroke(lineWidth: 3.0)
+                                        .foregroundColor(.black)
+                                }
+                                .applyColor(player.picture)
                         }
                     }
                 }
                 
-                Spacer()
-
-                VStack {
-                    Text("Clique aqui para ver as respostas")
-                        .foregroundStyle(.black)
-                        .multilineTextAlignment(.center)
-                        .font(.itimRegular(fontType: .title3))
-
-                    Button {
-                        router.goToResultVisualization()
-                    } label: {
-                        Image(systemName: "chevron.down.circle.fill")
-                            .resizable()
-                            .frame(width: 46, height: 46)
-                            .foregroundStyle(.black, Color.softGreen)
-                            .overlay {
-                                Circle()
-                                    .stroke(lineWidth: 3.0)
-                                    .foregroundColor(.black)
-                            }
+                Text("É hora de reunir seus amigos e compartilhar respostas!")
+                    .foregroundColor(.black)
+                    .font(.itimRegular(fontType: .title3))
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 28)
+                    .padding(.vertical, 8)
+                    .background {
+                        BorderedBackground(foregroundColor: .offWhite, hasBorder: false)
                     }
+                    .padding(.horizontal, 30)
+                
+                Spacer()
+                
+                ActionButton(
+                    title: "Ver respostas",
+                    foregroundColor: .lapisLazuli,
+                    backgroundColor: .offWhite,
+                    hasBorder: true
+                ) {
+                    router.goToResultVisualization()
                 }
-                .padding([.bottom], geo.size.height * 0.2)
+                .frame(height: 60)
+                .padding(30)
             }
             .frame(
                 width: geo.size.width,
-                height: geo.size.height
+                height: geo.size.height,
+                alignment: .center
             )
         }
         .clioBackground()
         .navigationBarBackButtonHidden()
-        .applyHelpButton(.PresentResults)
     }
 }
 
@@ -90,3 +86,4 @@ struct ResultsView: View {
     
     return resultView
 }
+
