@@ -17,22 +17,31 @@ struct ArtefactView: View {
         GeometryReader { geo in
             VStack(alignment: .center, spacing: 20) {
                 if let image = UIImage(data: artefact.picture ?? Data()) {
-                    Image(uiImage: image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
+                    RoundedRectangle(cornerRadius: 30)
+                        .fill(Color.offWhite)
                         .frame(
                             width: geo.size.height <= geo.size.width ? geo.size.height : geo.size.width,
                             height: geo.size.height <= geo.size.width ? geo.size.height : geo.size.width
                         )
-                        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                        .clipped()
                         .onTapGesture {
                             showZoomImage = true
                         }
                         .overlay {
-                            RoundedRectangle(cornerRadius: 20.0, style: .continuous)
-                                .stroke(lineWidth: 2.0)
-                                .padding(.horizontal, 1)
+                            Image(uiImage: image)
+                                .resizable()
+                                .frame(
+                                    width: geo.size.height <= geo.size.width ? geo.size.height : geo.size.width,
+                                    height: geo.size.height <= geo.size.width ? geo.size.height : geo.size.width
+                                )
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                )
+                                .allowsHitTesting(false)
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 20.0, style: .continuous)
+                                        .stroke(lineWidth: 2.0)
+                                        .padding(.horizontal, 1)
+                                }
                         }
                 }
                 

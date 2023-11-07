@@ -71,7 +71,7 @@ struct ResultPerPlayerView: View {
                         foregroundColor: .lapisLazuli,
                         backgroundColor: .offWhite,
                         hasBorder: true) {
-                            print("AIAIAIAIAIAI")
+                            router.goToAllResultsVisualizationView()
                         }
                         .frame(width: geo.size.width * 0.8, height: 60)
                         .transition(.scale.combined(with: .opacity))
@@ -109,7 +109,7 @@ struct ResultPerPlayerView: View {
             .clioBackground()
         }
         .navigationBarBackButtonHidden()
-        .applyHelpButton(.ResultsVisualization)
+        .applyHelpButton(.ResultsPerPlayerVisualization)
     }
     
     func setupAppearance() {
