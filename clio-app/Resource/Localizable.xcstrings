@@ -207,6 +207,23 @@
         }
       }
     },
+    "Arraste para o lado para ver outras respostas" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drag to the side to see other answers"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arraste para o lado para ver\\n outras respostas"
+          }
+        }
+      }
+    },
     "Buscando jogador..." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1032,8 +1049,25 @@
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Ver respostas"
+          }
+        }
+      }
+    },
+    "Ver tudo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See all"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver tudo"
           }
         }
       }

@@ -93,7 +93,7 @@ struct DescriptionArtifactView: View {
             }
             .overlay {
                 if showZoomImage {
-                    ZoomImage(selectedImage: $showZoomImage, uiImage: $uiImage)
+                    ZoomImage(selectedImage: $showZoomImage, uiImage: uiImage)
                 }
             }
             .onAppear {

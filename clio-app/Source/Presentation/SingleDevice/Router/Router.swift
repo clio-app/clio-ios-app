@@ -78,7 +78,7 @@ enum ViewFactory {
         case .PresentResults:
             ResultsView()
         case .ResultsVisualization:
-            ResultDetailsView()
+            ResultPerPlayerView()
         }
     }
 }
