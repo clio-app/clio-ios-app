@@ -16,7 +16,8 @@ enum Views: Hashable {
     case PhotoArtifact
     case DescriptionArtifact
     case PresentResults
-    case ResultsVisualization
+    case ResultsPerPlayerVisualization
+    case AllResultsVisualization
 }
 
 class Router: ObservableObject {
@@ -54,8 +55,17 @@ class Router: ObservableObject {
         path.append(Views.PresentResults)
     }
     
-    func goToResultVisualization() {
-        path.append(Views.ResultsVisualization)
+    func goToResultsPerPlayerVisualization() {
+        path.append(Views.ResultsPerPlayerVisualization)
+    }
+    
+    func goToAllResultsVisualizationView() {
+        path.append(Views.AllResultsVisualization)
+    }
+    
+    func restartGameWithPlayers() {
+        clear()
+        goToPlayersView()
     }
 }
 
@@ -77,8 +87,10 @@ enum ViewFactory {
             DescriptionArtifactView()
         case .PresentResults:
             ResultsView()
-        case .ResultsVisualization:
+        case .ResultsPerPlayerVisualization:
             ResultPerPlayerView()
+        case .AllResultsVisualization:
+            AllResultsView()
         }
     }
 }

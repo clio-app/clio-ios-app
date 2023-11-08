@@ -213,13 +213,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Drag to the side to see other answers"
+            "value" : "Slide to the side to see other answers"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Arraste para o lado para ver\\n outras respostas"
+            "value" : "Arraste para o lado para ver outras respostas"
           }
         }
       }
@@ -452,6 +452,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Escreva uma descrição sobre a imagem..."
+          }
+        }
+      }
+    },
+    "Hello, World!" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello, World!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Olá, mundo!"
           }
         }
       }
@@ -889,6 +906,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Veja quais foram as interpretações feitas pelos outros jogadores e se divirta."
+          }
+        }
+      }
+    },
+    "Sair" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exit"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sair"
           }
         }
       }

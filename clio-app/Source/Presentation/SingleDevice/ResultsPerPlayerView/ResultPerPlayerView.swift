@@ -108,8 +108,8 @@ struct ResultPerPlayerView: View {
             }
             .clioBackground()
         }
-        .navigationBarBackButtonHidden()
         .applyHelpButton(.ResultsPerPlayerVisualization)
+        .navigationBarBackButtonHidden()
     }
     
     func setupAppearance() {

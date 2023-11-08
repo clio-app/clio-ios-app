@@ -56,7 +56,7 @@ struct ResultsView: View {
                     backgroundColor: .offWhite,
                     hasBorder: true
                 ) {
-                    router.goToResultVisualization()
+                    router.goToResultsPerPlayerVisualization()
                 }
                 .frame(height: 60)
                 .padding(30)
@@ -69,6 +69,7 @@ struct ResultsView: View {
         }
         .clioBackground()
         .navigationBarBackButtonHidden()
+        .applyHelpButton(.PresentResults)
     }
 }
 
