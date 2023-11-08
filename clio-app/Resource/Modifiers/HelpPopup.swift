@@ -71,7 +71,7 @@ struct HelpArea: ViewModifier {
                         UIImpactFeedbackGenerator(style: .soft).impactOccurred()
                         changeVisibility()
                     }label: {
-                        Image(systemName: "exclamationmark.circle.fill")
+                        Image(systemName: "questionmark.circle.fill")
                             .resizable()
                             .scaledToFill()
                             .foregroundColor(.lapisLazuli)
@@ -115,29 +115,10 @@ struct HelpArea: ViewModifier {
             return NSLocalizedString("DescriptionArtifact", comment: "DescriptionArtifact view hint");
         case .PresentResults:
             return NSLocalizedString("PresentResults", comment: "PresentResults view hint");
-        case .ResultsVisualization:
+        case .ResultsPerPlayerVisualization:
+            return NSLocalizedString("ResultsVisualization", comment: "ResultsVisualization view hint");
+        case .AllResultsVisualization:
             return NSLocalizedString("ResultsVisualization", comment: "ResultsVisualization view hint");
         }
     }
-
-//    private func getHintForView(_ viewType: Views) -> String {
-//        switch viewType{
-//        case .Start:
-//            return "Selecione o modo de jogo para iniciar a partida."
-//        case .AddPlayers:
-//            return "Adicione todos os jogadores que irão participar da rodada."
-//        case .RaffleTheme:
-//            return "A frase apresentada servirá de contexto e dica para as próximas fases do jogo."
-//        case .SelectPlayer:
-//            return "Passe o dispositivo para o jogador ilustrado na tela ou selecione 'não' até que apareça o seu nome."
-//        case .PhotoArtifact:
-//            return "Tire foto de algo que você acha que faz relação com a frase. E selecione 'Enviar' se gostou da sua conexão."
-//        case .DescriptionArtifact:
-//            return "Faça uma descrição que explique a conexão entre a foto e o tema."
-//        case .PresentResults:
-//            return "Junte todos os jogadores para ver as respostas mais inusitadas e descobrir quem pensou fora da caixinha."
-//        case .ResultsVisualization:
-//            return "Veja quais foram as interpretações feitas pelos outros jogadore e se divirta."
-//        }
-//    }
 }
