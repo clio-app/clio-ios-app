@@ -1068,6 +1068,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Clio for Fun";
 				INFOPLIST_KEY_NSCameraUsageDescription = "A câmera será usada para a captura de imagens durante o jogo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1103,6 +1104,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Clio for Fun";
 				INFOPLIST_KEY_NSCameraUsageDescription = "A câmera será usada para a captura de imagens durante o jogo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
