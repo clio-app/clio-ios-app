@@ -207,6 +207,23 @@
         }
       }
     },
+    "Arraste para o lado para ver outras respostas" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slide to the side to see other answers"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arraste para o lado para ver outras respostas"
+          }
+        }
+      }
+    },
     "Buscando jogador..." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -323,6 +340,22 @@
         }
       }
     },
+    "É hora de reunir seus amigos e compartilhar respostas!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It's time to gather your friends and share answers!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "É hora de reunir os amigos e compartilhar as respostas!"
+          }
+        }
+      }
+    },
     "Entrar" : {
       "localizations" : {
         "en" : {
@@ -419,6 +452,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Escreva uma descrição sobre a imagem..."
+          }
+        }
+      }
+    },
+    "Hello, World!" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello, World!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Olá, mundo!"
           }
         }
       }
@@ -860,6 +910,23 @@
         }
       }
     },
+    "Sair" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exit"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sair"
+          }
+        }
+      }
+    },
     "SelectPlayer" : {
       "comment" : "SelectPlayer view hint",
       "localizations" : {
@@ -1001,6 +1068,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tutorial"
+          }
+        }
+      }
+    },
+    "Ver respostas" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See answers"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver respostas"
+          }
+        }
+      }
+    },
+    "Ver tudo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See all"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver tudo"
           }
         }
       }

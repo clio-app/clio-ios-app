@@ -84,6 +84,13 @@ final class GameSession: ObservableObject {
         changeGameState(to: .start)
     }
     
+    func fullResetGame() {
+        gameFlowParameters.didPlay = []
+        gameFlowParameters.players = []
+        gameFlowParameters.currenPlayer = nil
+        changeGameState(to: .start)
+    }
+    
     // MARK: - Select Player Functions
     func getRandomPlayer(currentPlayer: User? = nil) -> User? {
         let filteredList = gameFlowParameters.players.filter({ player in

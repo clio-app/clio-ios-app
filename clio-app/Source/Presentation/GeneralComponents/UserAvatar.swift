@@ -12,7 +12,7 @@ struct UserAvatar: View {
     let picture: String
 
     var body: some View {
-        VStack {
+        HStack {
             Image(systemName: "person.circle.fill")
                 .resizable()
                     .frame(width: 50, height: 50)
@@ -27,13 +27,18 @@ struct UserAvatar: View {
                 .foregroundStyle(.black)
                 .font(.itimRegular(fontType: .body))
         }
+        .padding(.vertical, 10)
+        .padding(.horizontal, 18)
         .foregroundColor(.black)
+        .background {
+            BorderedBackground(foregroundColor: .offWhite, hasBorder: false)
+        }
     }
 }
 
 #Preview {
     UserAvatar(
         userName: "Name",
-        picture: "profile-picture-eye"
+        picture: "Lilac"
     )
 }

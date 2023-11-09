@@ -28,10 +28,8 @@ struct AddPlayerField: View {
             TextField(text: $playerName) {
                 Text("Nome do jogador...")
                     .foregroundColor(.black.opacity(0.6))
-                    .font(.itimRegular(fontType: .body))
             }
-
-            .font(.itimRegular())
+            .font(.itimRegular(fontType: .body))
             .textFieldStyle(PlainTextFieldStyle())
             .padding(6)
             .foregroundColor(.black)
@@ -39,8 +37,18 @@ struct AddPlayerField: View {
             .onSubmit {
                 onAddPlayer()
             }
+            
+            Image(systemName: "checkmark.circle")
+                .resizable()
+                .scaledToFit()
+                .symbolRenderingMode(.multicolor)
+                .frame(width: 30, alignment: .centerFirstTextBaseline)
+                .onTapGesture{
+                    onAddPlayer()
+                }
         }
-        .padding(12)
+        .padding(.vertical, 12)
+        .padding(.horizontal, 14)
         .background(
             Color.white
                 .clipShape(RoundedRectangle(cornerRadius: 20.0, style: .continuous))
