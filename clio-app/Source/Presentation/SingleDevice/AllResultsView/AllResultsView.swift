@@ -45,21 +45,6 @@ struct AllResultsView: View {
                     }
                 }
                 .frame(width: geo.size.width * 0.8)
-            }
-            .frame(width: geo.size.width)
-            .padding(.bottom,  geo.size.height * 0.025)
-            .scrollIndicators(.hidden)
-            .clipped()
-            .overlay {
-                if showZoomImage {
-                    ZoomImage(
-                        selectedImage: $showZoomImage,
-                        uiImage: .init(data: selectedImage!)!
-                    )
-                    .ignoresSafeArea()
-                }
-            }
-            .safeAreaInset(edge: .bottom) {
                 VStack {
                     ActionButton(
                         title: "Jogar Novamente",
@@ -69,7 +54,8 @@ struct AllResultsView: View {
                             gameSession.restartGame()
                             router.restartGameWithPlayers()
                         }
-                        .frame(width: geo.size.width * 0.8, height: 50)
+                        .padding(.horizontal)
+                        .frame(width: geo.size.width * 0.9, height: 60)
                         .padding(.bottom)
                         .disabled(showZoomImage)
                         .opacity(showZoomImage ? 0.3 : 1)
@@ -81,11 +67,25 @@ struct AllResultsView: View {
                             gameSession.fullResetGame()
                             router.clear()
                         }
-                        .frame(width: geo.size.width * 0.8, height: 50)
+                        .padding(.horizontal)
+                        .frame(width: geo.size.width * 0.9, height: 60)
                         .disabled(showZoomImage)
                         .opacity(showZoomImage ? 0.3 : 1)
                 }
+                .padding(.top, geo.size.height * 0.11)
                 .padding(.bottom)
+            }
+            .frame(width: geo.size.width)
+            .scrollIndicators(.hidden)
+            .clipped()
+        }
+        .overlay {
+            if showZoomImage {
+                ZoomImage(
+                    selectedImage: $showZoomImage,
+                    uiImage: .init(data: selectedImage!)!
+                )
+                .ignoresSafeArea()
             }
         }
         .navigationBarBackButtonHidden()
