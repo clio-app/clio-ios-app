@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct CustomFirstPrompt: View {
+    @EnvironmentObject var session: GameSession
+    @State var prompt: String = ""
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ThemeBubble(theme: session.gameFlowParameters.sessionTheme)
+
+            Text(LocalizedStringKey("Você aceita jogar com essa frase?"))
+                .font(.itimRegular(fontType: .body))
+                .multilineTextAlignment(.center)
+
+            TextFieldView(inputText: $prompt, placeholder: "Escreva a frase", color: .brick)
+                .padding(.horizontal, 24)
+        }
+        .clioBackground()
     }
 }
 
 #Preview {
-    CustomFirstPrompt()
+    @ObservedObject var session = GameSession()
+    session.gameFlowParameters.sessionTheme = "Biology"
+    session.gameFlowParameters.firstRoundPrompt = "First round prompt for this"
+
+    let promptView = CustomFirstPrompt()
+        .environmentObject(session)
+
+    return promptView
 }
