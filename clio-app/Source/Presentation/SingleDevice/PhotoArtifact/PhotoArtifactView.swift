@@ -28,7 +28,8 @@ struct PhotoArtifactView: View {
                     .background{
                         BorderedBackground(foregroundColor: .white, hasBorder: false)
                     }
-                    .padding(.vertical)
+                    .padding(.top, 5)
+                    .padding(.bottom)
                 
                 
                 ZStack {

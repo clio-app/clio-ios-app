@@ -30,13 +30,13 @@ struct ResultPerPlayerView: View {
                     TabView(selection: $vm.currentInteraction, content: {
                         ForEach(0..<gameSession.gameFlowParameters.didPlay.count, id: \.self) { index in
                             VStack (spacing: 20) {
-                                Spacer()
                                 if vm.state == .presentFirstArtifact {
                                     DescriptionCard(description: gameSession.gameFlowParameters.firstRoundPrompt)
                                         .onTapGesture {
                                             vm.showZoomDescription = true
                                         }
                                 }
+                                Spacer()
                                 UserAvatar(
                                     userName: gameSession.gameFlowParameters.didPlay[index].name,
                                     picture: gameSession.gameFlowParameters.didPlay[index].picture

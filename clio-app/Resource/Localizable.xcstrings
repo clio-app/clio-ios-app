@@ -994,6 +994,23 @@
         }
       }
     },
+    "Sortear Novamente" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shuffle Again"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sortear Novamente"
+          }
+        }
+      }
+    },
     "Start" : {
       "comment" : "Start view hint",
       "localizations" : {

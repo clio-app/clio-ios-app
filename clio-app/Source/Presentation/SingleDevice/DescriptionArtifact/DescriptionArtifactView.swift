@@ -38,7 +38,8 @@ struct DescriptionArtifactView: View {
                             hasBorder: false
                         )
                     }
-                    .padding(.vertical)
+                    .padding(.top, 5)
+                    .padding(.bottom)
                         
                     Spacer()
                     
