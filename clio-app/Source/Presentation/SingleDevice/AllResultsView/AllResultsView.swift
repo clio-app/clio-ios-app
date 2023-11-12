@@ -79,18 +79,17 @@ struct AllResultsView: View {
             .scrollIndicators(.hidden)
             .clipped()
         }
+        .navigationBarBackButtonHidden()
+        .clioBackground()
+        .applyHelpButton(.AllResultsVisualization)
         .overlay {
             if showZoomImage {
                 ZoomImage(
                     selectedImage: $showZoomImage,
                     uiImage: .init(data: selectedImage!)!
                 )
-                .ignoresSafeArea()
             }
         }
-        .navigationBarBackButtonHidden()
-        .clioBackground()
-        .applyHelpButton(.AllResultsVisualization)
     }
 }
 
@@ -158,5 +157,5 @@ struct AllResultsView: View {
         .environmentObject(gameSession)
         .environmentObject(router)
     
-    return view
+    return  NavigationView(content: {view}).preferredColorScheme(.light)
 }

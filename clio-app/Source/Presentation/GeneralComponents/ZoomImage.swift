@@ -22,6 +22,7 @@ struct ZoomImage: View {
                 imageSection(uiImage: uiImage)
             }
         }
+        .ignoresSafeArea()
         .onAppear {
             withAnimation(.easeInOut(duration: 0.25)) {
                 scale = 1.0
@@ -30,6 +31,7 @@ struct ZoomImage: View {
         .onTapGesture {
             dismissZoom()
         }
+        .toolbar(.hidden, for: .navigationBar)
     }
 }
 

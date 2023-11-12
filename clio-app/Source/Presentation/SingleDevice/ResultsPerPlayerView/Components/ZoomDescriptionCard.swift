@@ -31,6 +31,7 @@ struct ZoomDescriptionCard: View {
         .onTapGesture {
             dismissZoom()
         }
+        .toolbar(showZoomDescription ? .hidden : .visible, for: .navigationBar)
     }
     
     func dismissZoom() {
