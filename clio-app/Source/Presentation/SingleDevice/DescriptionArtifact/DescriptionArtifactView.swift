@@ -25,65 +25,75 @@ struct DescriptionArtifactView: View {
 
     var body: some View {
         GeometryReader { geo in
-            ScrollView {
-                VStack {
-                    ThemeCard(
-                        title: "Relacione a foto com o tema:",
-                        theme: $theme
-                    )
-                    .frame(width: geo.size.width * 0.8)
-                    .background{
-                        BorderedBackground(
-                            foregroundColor: .white,
-                            hasBorder: false
+            ScrollViewReader { proxy in
+                ScrollView {
+                    VStack {
+                        ThemeCard(
+                            title: "Relacione a foto com o tema:",
+                            theme: $theme
                         )
-                    }
-                    .padding(.top, 5)
-                    .padding(.bottom)
-                        
-                    Spacer()
-                    
-                    VStack(spacing: 20) {
-                        RoundedRectangle(cornerRadius: 30)
-                            .fill(Color.white)
-                            .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.42)
-                            .onTapGesture {
-                                withAnimation {
-                                    UIApplication.shared.endEditing()
-                                    showZoomImage = true
-                                }
-                            }
-                            .overlay {
-                                image
-                                    .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.45)
-                                    .clipped()
-                                    .clipShape(RoundedRectangle(cornerRadius: 30))
-                                    .allowsHitTesting(false)
-                                    .overlay {
-                                        RoundedRectangle(cornerRadius: 30)
-                                            .stroke(.black, lineWidth: 2)
-                                    }
-                            }
-                        
-                        LimitedInputTextField(
-                            maxInputCount: maxWordCount,
-                            inputUser: $input,
-                            placeholder: placeholder
-                        )
-                        .frame(
-                            width: geo.size.width * 0.7,
-                            height: geo.size.height * 0.15
-                        )
-                    }
-                    
-                    Spacer()
-                    Spacer()
-                    
-                    button
-                        .frame(width: geo.size.width * 0.8, height: 60)
+                        .frame(width: geo.size.width * 0.8)
+                        .background{
+                            BorderedBackground(
+                                foregroundColor: .white,
+                                hasBorder: false
+                            )
+                        }
+                        .padding(.top, 5)
                         .padding(.bottom)
+                            
+                        Spacer()
+                        
+                        VStack(spacing: 20) {
+                            RoundedRectangle(cornerRadius: 30)
+                                .fill(Color.white)
+                                .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.42)
+                                .onTapGesture {
+                                    withAnimation {
+                                        UIApplication.shared.endEditing()
+                                        showZoomImage = true
+                                    }
+                                }
+                                .overlay {
+                                    image
+                                        .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.45)
+                                        .clipped()
+                                        .clipShape(RoundedRectangle(cornerRadius: 30))
+                                        .allowsHitTesting(false)
+                                        .overlay {
+                                            RoundedRectangle(cornerRadius: 30)
+                                                .stroke(.black, lineWidth: 2)
+                                        }
+                                }
+                            
+                            LimitedInputTextField(
+                                maxInputCount: maxWordCount,
+                                inputUser: $input,
+                                placeholder: placeholder,
+                                secondaryAction: {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                                        withAnimation {
+                                            proxy.scrollTo("buttons")                                            
+                                        }
+                                    }
+                                }
+                            )
+                            .frame(
+                                width: geo.size.width * 0.7,
+                                height: geo.size.height * 0.15
+                            )
+                        }
+                        
+                        Spacer()
+                        Spacer()
+                        
+                        button
+                            .id("buttons")
+                            .frame(width: geo.size.width * 0.8, height: 60)
+                            .padding(.bottom)
+                    }
+                    .frame(width: geo.size.width, height: geo.size.height)
                 }
-                .frame(width: geo.size.width, height: geo.size.height)
             }
             .keyboardAdaptive()
             .onTapGesture {

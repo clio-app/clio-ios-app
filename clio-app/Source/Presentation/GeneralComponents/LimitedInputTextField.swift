@@ -11,6 +11,8 @@ struct LimitedInputTextField: View {
     var maxInputCount: Int
     @Binding var inputUser: String
     var placeholder: String
+    
+    let secondaryAction: () -> Void
 
     var body: some View {
         GeometryReader { geo in
@@ -20,6 +22,7 @@ struct LimitedInputTextField: View {
                     if inputUser == placeholder {
                         inputUser = ""
                     }
+                    secondaryAction()
                 }
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
@@ -70,6 +73,6 @@ extension LimitedInputTextField {
 
 
 #Preview {
-    LimitedInputTextField(maxInputCount: 280, inputUser: .constant(""), placeholder: "Escreva uma descrição sobre a imagem...")
+    LimitedInputTextField(maxInputCount: 280, inputUser: .constant(""), placeholder: "Escreva uma descrição sobre a imagem...", secondaryAction: {})
         .padding(.horizontal, 50)
 }
