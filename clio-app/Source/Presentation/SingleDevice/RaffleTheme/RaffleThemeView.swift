@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ClioEntities
 
 struct RaffleThemeView: View {
     @EnvironmentObject var gameSession: GameSession
@@ -26,6 +27,7 @@ struct RaffleThemeView: View {
                     RoundedRectangle(cornerRadius: 20.0, style: .continuous)
                         .stroke(lineWidth: 2.0)
                 }
+                .padding(.top, 5)
                 .padding(.bottom, 24)
 
             Spacer()
@@ -48,20 +50,35 @@ struct RaffleThemeView: View {
             Spacer()
             
             if vm.isThemeSet {
+                ActionButton(title: "Sortear Novamente", foregroundColor: .customYellow, backgroundColor: .offWhite, hasBorder: true) {
+                    withAnimation {
+                        vm.isThemeSet = false
+                        vm.setTheme(from: gameSession)
+                    }
+                }
+                .padding(.trailing, 5)
+                .frame(height: 60)
+                .padding(.horizontal)
+                .padding(.bottom)
+                .transition(.scale.combined(with: .move(edge: .bottom)))
                 ActionButton(title: "Continuar", foregroundColor: .lapisLazuli, backgroundColor: .offWhite, hasBorder: true) {
                     router.clear()
                     router.goToSelectPlayer()
                 }
-                .padding()
-                .frame(height: 92)
+                .padding(.trailing, 5)
+                .frame(height: 60)
+                .padding(.horizontal)
+                .padding(.bottom)
             } else {
                 ActionButton(title: "Parar", foregroundColor: .lapisLazuli, backgroundColor: .offWhite, hasBorder: true) {
-                    vm.stopTimerAndSetTheme()
-                    gameSession.selectFirstRoundPrompt()
-                    print(gameSession.gameFlowParameters.firstRoundPrompt)
+                    withAnimation {
+                        vm.stopTimerAndSetTheme()
+                        gameSession.selectFirstRoundPrompt()
+                    }
                 }
+                .padding(.trailing, 5)
                 .padding()
-                .frame(height: 92)
+                .frame(height: 90)
             }
         }
         .applyHelpButton(.RaffleTheme)
@@ -77,5 +94,25 @@ struct RaffleThemeView: View {
 }
 
 #Preview {
-    RaffleThemeView()
+    @ObservedObject var gameSession = GameSession()
+    @ObservedObject var router = Router()
+    gameSession.addPlayerInSession(
+        name: "name01",
+        image: "Lilac"
+    )
+    gameSession.addPlayerInSession(
+        name: "name02",
+        image: "Lilac"
+    )
+    gameSession.addPlayerInSession(
+        name: "name03",
+        image: "Lilac"
+    )
+
+
+    let raffleThemeView = RaffleThemeView()
+        .environmentObject(gameSession)
+        .environmentObject(router)
+
+    return raffleThemeView
 }

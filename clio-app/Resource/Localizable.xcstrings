@@ -225,6 +225,23 @@
         }
       }
     },
+    "Arraste para o lado para ver outras respostas" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slide to the side to see other answers"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arraste para o lado para ver outras respostas"
+          }
+        }
+      }
+    },
     "Buscando jogador..." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -355,6 +372,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Digite o código da sala:"
+          }
+        }
+      }
+    },
+    "É hora de reunir seus amigos e compartilhar respostas!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It's time to gather your friends and share answers!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "É hora de reunir os amigos e compartilhar as respostas!"
           }
         }
       }
@@ -1049,36 +1082,12 @@
         }
       }
     },
-    "TEMA" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Theme"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tema"
-          }
-        }
-      }
-    },
     "Tire uma foto que se relacione com:" : {
-      "extractionState" : "manual",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Take a photo related to:\n"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tire uma foto que se relacione com:\n"
+            "value" : "Take a photo related to:"
           }
         }
       }
@@ -1112,6 +1121,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tutorial"
+          }
+        }
+      }
+    },
+    "Ver respostas" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See answers"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver respostas"
+          }
+        }
+      }
+    },
+    "Ver tudo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See all"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver tudo"
           }
         }
       }

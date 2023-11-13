@@ -10,7 +10,7 @@ import SwiftUI
 struct ZoomImage: View {
 
     @Binding var selectedImage: Bool
-    @Binding var uiImage: UIImage
+    let uiImage: UIImage
     @State var scale = 0.0
 
     var body: some View {
@@ -22,6 +22,7 @@ struct ZoomImage: View {
                 imageSection(uiImage: uiImage)
             }
         }
+        .ignoresSafeArea()
         .onAppear {
             withAnimation(.easeInOut(duration: 0.25)) {
                 scale = 1.0
@@ -30,6 +31,7 @@ struct ZoomImage: View {
         .onTapGesture {
             dismissZoom()
         }
+        .toolbar(.hidden, for: .navigationBar)
     }
 }
 
@@ -48,7 +50,7 @@ extension ZoomImage {
                     .clipShape(RoundedRectangle(cornerRadius: 30))
                     .clipped()
                     .background {
-                        Color.white
+                        Color.offWhite
                             .clipShape(RoundedRectangle(cornerRadius: 30))
                     }
                     .padding(.horizontal)
@@ -69,5 +71,8 @@ extension ZoomImage {
 }
 
 #Preview {
-    ZoomImage(selectedImage: .constant(true), uiImage: .constant(.init(named: "magnifier-rose")!))
+    ZoomImage(
+        selectedImage: .constant(true),
+        uiImage: UIImage(named: "magnifier-rose") ?? UIImage(systemName: "photo.on.rectangle.angle")!
+    )
 }

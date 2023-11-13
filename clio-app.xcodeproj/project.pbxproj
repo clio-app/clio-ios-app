@@ -18,7 +18,7 @@
 		00C120092ADEBF140042E152 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120082ADEBF140042E152 /* GameSession.swift */; };
 		00C120102ADEC2E00042E152 /* RaffleThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C1200F2ADEC2E00042E152 /* RaffleThemeView.swift */; };
 		00C120132AE05C3A0042E152 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120122AE05C3A0042E152 /* ResultsView.swift */; };
-		00C120162AE060890042E152 /* ResultDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120152AE060890042E152 /* ResultDetailsView.swift */; };
+		00C120162AE060890042E152 /* ResultPerPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120152AE060890042E152 /* ResultPerPlayerView.swift */; };
 		00C120192AE0685D0042E152 /* UserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120182AE0685D0042E152 /* UserAvatar.swift */; };
 		00C1201E2AE15F340042E152 /* ArtefactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C1201D2AE15F340042E152 /* ArtefactView.swift */; };
 		00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C02ABC7D6900F66421 /* Endpoint.swift */; };
@@ -87,6 +87,7 @@
 		FF4DDEA52AE1A15D00759F47 /* DescriptionArtifactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DDEA42AE1A15D00759F47 /* DescriptionArtifactView.swift */; };
 		FF4DDEA72AE200E900759F47 /* ZoomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DDEA62AE200E900759F47 /* ZoomImage.swift */; };
 		FF4DDEAC2AE2BF3800759F47 /* ThemeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */; };
+		FF64DC332AFB3BDF002938EE /* ImageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64DC322AFB3BDF002938EE /* ImageCard.swift */; };
 		FF67AB692AE9444700725C48 /* HelpPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67AB682AE9444700725C48 /* HelpPopup.swift */; };
 		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
 		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
@@ -98,6 +99,13 @@
 		FFA354DD2AE02AF400E23ADC /* RetakePhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354DC2AE02AF400E23ADC /* RetakePhotoButton.swift */; };
 		FFA354E02AE1646300E23ADC /* SelectPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354DF2AE1646300E23ADC /* SelectPlayerView.swift */; };
 		FFA354E22AE16BF900E23ADC /* SelectPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */; };
+		FFD59DC62AFA5D1B001C06B0 /* DescriptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD59DC52AFA5D1B001C06B0 /* DescriptionCard.swift */; };
+		FFD59DC82AFA5F2E001C06B0 /* ZoomDescriptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD59DC72AFA5F2E001C06B0 /* ZoomDescriptionCard.swift */; };
+		FFD59DCA2AFA6CC9001C06B0 /* ResultsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD59DC92AFA6CC9001C06B0 /* ResultsDetailViewModel.swift */; };
+		FFD59DCD2AFAA146001C06B0 /* AllResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD59DCC2AFAA146001C06B0 /* AllResultsView.swift */; };
+		FFE132F82AEBEE600069670A /* LoadingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE132F72AEBEE600069670A /* LoadingPlayer.swift */; };
+		FFE132FA2AEBEEFD0069670A /* UserTextConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE132F92AEBEEFD0069670A /* UserTextConfirmation.swift */; };
+		FFE132FD2AEBF3D60069670A /* ButtonsToConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE132FC2AEBF3D60069670A /* ButtonsToConfirmation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,7 +129,7 @@
 		00C120082ADEBF140042E152 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		00C1200F2ADEC2E00042E152 /* RaffleThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaffleThemeView.swift; sourceTree = "<group>"; };
 		00C120122AE05C3A0042E152 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
-		00C120152AE060890042E152 /* ResultDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailsView.swift; sourceTree = "<group>"; };
+		00C120152AE060890042E152 /* ResultPerPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPerPlayerView.swift; sourceTree = "<group>"; };
 		00C120182AE0685D0042E152 /* UserAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAvatar.swift; sourceTree = "<group>"; };
 		00C1201D2AE15F340042E152 /* ArtefactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtefactView.swift; sourceTree = "<group>"; };
 		00D9C9C02ABC7D6900F66421 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -193,6 +201,7 @@
 		FF4DDEA42AE1A15D00759F47 /* DescriptionArtifactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionArtifactView.swift; sourceTree = "<group>"; };
 		FF4DDEA62AE200E900759F47 /* ZoomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomImage.swift; sourceTree = "<group>"; };
 		FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCard.swift; sourceTree = "<group>"; };
+		FF64DC322AFB3BDF002938EE /* ImageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageCard.swift; path = ../SingleDevice/ResultsPerPlayerView/Components/ImageCard.swift; sourceTree = "<group>"; };
 		FF67AB682AE9444700725C48 /* HelpPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPopup.swift; sourceTree = "<group>"; };
 		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
@@ -205,6 +214,13 @@
 		FFA354DC2AE02AF400E23ADC /* RetakePhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetakePhotoButton.swift; sourceTree = "<group>"; };
 		FFA354DF2AE1646300E23ADC /* SelectPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerView.swift; sourceTree = "<group>"; };
 		FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerViewModel.swift; sourceTree = "<group>"; };
+		FFD59DC52AFA5D1B001C06B0 /* DescriptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCard.swift; sourceTree = "<group>"; };
+		FFD59DC72AFA5F2E001C06B0 /* ZoomDescriptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomDescriptionCard.swift; sourceTree = "<group>"; };
+		FFD59DC92AFA6CC9001C06B0 /* ResultsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsDetailViewModel.swift; sourceTree = "<group>"; };
+		FFD59DCC2AFAA146001C06B0 /* AllResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsView.swift; sourceTree = "<group>"; };
+		FFE132F72AEBEE600069670A /* LoadingPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPlayer.swift; sourceTree = "<group>"; };
+		FFE132F92AEBEEFD0069670A /* UserTextConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTextConfirmation.swift; sourceTree = "<group>"; };
+		FFE132FC2AEBF3D60069670A /* ButtonsToConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsToConfirmation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,7 +350,8 @@
 				7E61A3E02AE574170009425C /* Router */,
 				FF4DDEA32AE1A12400759F47 /* DescriptionArtifact */,
 				FFA354D22AE0162200E23ADC /* PhotoArtifact */,
-				00C120142AE060780042E152 /* ResultsDetailView */,
+				00C120142AE060780042E152 /* ResultsPerPlayerView */,
+				FFD59DCB2AFAA11F001C06B0 /* AllResultsView */,
 				00C120112AE05C2B0042E152 /* ResultsView */,
 				FFA354DE2AE1644A00E23ADC /* SelectPlayer */,
 				00C1200C2ADEC2980042E152 /* RaffleTheme */,
@@ -396,21 +413,22 @@
 			path = ResultsView;
 			sourceTree = "<group>";
 		};
-		00C120142AE060780042E152 /* ResultsDetailView */ = {
+		00C120142AE060780042E152 /* ResultsPerPlayerView */ = {
 			isa = PBXGroup;
 			children = (
 				00C120172AE068510042E152 /* Components */,
-				00C120152AE060890042E152 /* ResultDetailsView.swift */,
+				00C120152AE060890042E152 /* ResultPerPlayerView.swift */,
+				FFD59DC92AFA6CC9001C06B0 /* ResultsDetailViewModel.swift */,
 			);
-			path = ResultsDetailView;
+			path = ResultsPerPlayerView;
 			sourceTree = "<group>";
 		};
 		00C120172AE068510042E152 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				00C120182AE0685D0042E152 /* UserAvatar.swift */,
 				00C1201D2AE15F340042E152 /* ArtefactView.swift */,
 				7EA6DC9E2AE82581003368E8 /* ThemeBubble.swift */,
+				FFD59DC72AFA5F2E001C06B0 /* ZoomDescriptionCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -516,6 +534,10 @@
 				7E94E9382AD5C68600031061 /* LimitedInputTextField.swift */,
 				7EA6DC992AE80352003368E8 /* CustomAlert.swift */,
 				FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */,
+				FF4DDEA62AE200E900759F47 /* ZoomImage.swift */,
+				FFD59DC52AFA5D1B001C06B0 /* DescriptionCard.swift */,
+				FF64DC322AFB3BDF002938EE /* ImageCard.swift */,
+				00C120182AE0685D0042E152 /* UserAvatar.swift */,
 			);
 			path = GeneralComponents;
 			sourceTree = "<group>";
@@ -636,17 +658,8 @@
 			isa = PBXGroup;
 			children = (
 				FF4DDEA42AE1A15D00759F47 /* DescriptionArtifactView.swift */,
-				FF4DDEA82AE200F700759F47 /* Components */,
 			);
 			path = DescriptionArtifact;
-			sourceTree = "<group>";
-		};
-		FF4DDEA82AE200F700759F47 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				FF4DDEA62AE200E900759F47 /* ZoomImage.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		FF6FD1CB2AB49D8700A2D681 /* Fonts */ = {
@@ -683,8 +696,27 @@
 			children = (
 				FFA354DF2AE1646300E23ADC /* SelectPlayerView.swift */,
 				FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */,
+				FFE132F62AEBEE370069670A /* Components */,
 			);
 			path = SelectPlayer;
+			sourceTree = "<group>";
+		};
+		FFD59DCB2AFAA11F001C06B0 /* AllResultsView */ = {
+			isa = PBXGroup;
+			children = (
+				FFD59DCC2AFAA146001C06B0 /* AllResultsView.swift */,
+			);
+			path = AllResultsView;
+			sourceTree = "<group>";
+		};
+		FFE132F62AEBEE370069670A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FFE132F72AEBEE600069670A /* LoadingPlayer.swift */,
+				FFE132F92AEBEEFD0069670A /* UserTextConfirmation.swift */,
+				FFE132FC2AEBF3D60069670A /* ButtonsToConfirmation.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -805,7 +837,7 @@
 				7EA6DC9A2AE80352003368E8 /* CustomAlert.swift in Sources */,
 				7E1705E32AD60938005FA9EE /* MasterContainer.swift in Sources */,
 				7E1705E42AD60938005FA9EE /* PlayerGridItem.swift in Sources */,
-				00C120162AE060890042E152 /* ResultDetailsView.swift in Sources */,
+				00C120162AE060890042E152 /* ResultPerPlayerView.swift in Sources */,
 				7E1705E52AD60938005FA9EE /* LobbyHeader.swift in Sources */,
 				FFA354DD2AE02AF400E23ADC /* RetakePhotoButton.swift in Sources */,
 				7E1705DF2AD608EE005FA9EE /* LobbyView.swift in Sources */,
@@ -816,6 +848,7 @@
 				00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */,
 				7EA6DC932AE7FB82003368E8 /* PlayerRow.swift in Sources */,
 				7EBA9CDD2AD1B61800C25970 /* VotingInstructionModel.swift in Sources */,
+				FFD59DCD2AFAA146001C06B0 /* AllResultsView.swift in Sources */,
 				FFA354D92AE0193100E23ADC /* CameraButton.swift in Sources */,
 				7EBA9CE22AD22A8E00C25970 /* DescriptionItem.swift in Sources */,
 				7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */,
@@ -832,24 +865,30 @@
 				00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */,
 				00C120192AE0685D0042E152 /* UserAvatar.swift in Sources */,
 				00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */,
+				FFD59DC82AFA5F2E001C06B0 /* ZoomDescriptionCard.swift in Sources */,
 				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
 				FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */,
+				FFE132FD2AEBF3D60069670A /* ButtonsToConfirmation.swift in Sources */,
 				FF4DDEAC2AE2BF3800759F47 /* ThemeCard.swift in Sources */,
 				7E68A6102AFE3F34006FAA1A /* CustomFirstPrompt.swift in Sources */,
 				7E61A3E42AE57E430009425C /* Router.swift in Sources */,
+				FFE132F82AEBEE600069670A /* LoadingPlayer.swift in Sources */,
 				00C120092ADEBF140042E152 /* GameSession.swift in Sources */,
 				7EA6DC972AE80025003368E8 /* ThemeSlot.swift in Sources */,
+				FFD59DC62AFA5D1B001C06B0 /* DescriptionCard.swift in Sources */,
 				FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
 				00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */,
 				00C120132AE05C3A0042E152 /* ResultsView.swift in Sources */,
 				7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */,
 				7EA6DC9F2AE82581003368E8 /* ThemeBubble.swift in Sources */,
+				FFD59DCA2AFA6CC9001C06B0 /* ResultsDetailViewModel.swift in Sources */,
 				7E81843E2AD4336100938C69 /* VotingPopupModel.swift in Sources */,
 				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
 				7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */,
 				00C120102ADEC2E00042E152 /* RaffleThemeView.swift in Sources */,
 				7E94E93C2AD5C68600031061 /* LimitedInputTextField.swift in Sources */,
+				FF64DC332AFB3BDF002938EE /* ImageCard.swift in Sources */,
 				7EBA9CE42AD23CF800C25970 /* PieProgress.swift in Sources */,
 				FFA354DB2AE01AD200E23ADC /* CameraPreview.swift in Sources */,
 				7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */,
@@ -881,6 +920,7 @@
 				7E94E93D2AD5C68600031061 /* MasterInputView.swift in Sources */,
 				7E94E93A2AD5C68600031061 /* ImageInputCard.swift in Sources */,
 				00D9C9CF2ABC806E00F66421 /* NetworkService.swift in Sources */,
+				FFE132FA2AEBEEFD0069670A /* UserTextConfirmation.swift in Sources */,
 				7EE152D02AD4181B00CA8F9F /* PieTimer.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
 				FFA354E22AE16BF900E23ADC /* SelectPlayerViewModel.swift in Sources */,
@@ -1044,10 +1084,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Clio for Fun";
 				INFOPLIST_KEY_NSCameraUsageDescription = "A câmera será usada para a captura de imagens durante o jogo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1056,7 +1099,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clio-ios-app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clio;
 				PRODUCT_NAME = Clio;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1079,10 +1122,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Clio for Fun";
 				INFOPLIST_KEY_NSCameraUsageDescription = "A câmera será usada para a captura de imagens durante o jogo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1091,7 +1137,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clio-ios-app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clio;
 				PRODUCT_NAME = Clio;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

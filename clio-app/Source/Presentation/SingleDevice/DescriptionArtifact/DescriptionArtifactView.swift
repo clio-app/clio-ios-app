@@ -38,7 +38,8 @@ struct DescriptionArtifactView: View {
                             hasBorder: false
                         )
                     }
-                    .padding(.vertical)
+                    .padding(.top, 5)
+                    .padding(.bottom)
                         
                     Spacer()
                     
@@ -93,7 +94,7 @@ struct DescriptionArtifactView: View {
             }
             .overlay {
                 if showZoomImage {
-                    ZoomImage(selectedImage: $showZoomImage, uiImage: $uiImage)
+                    ZoomImage(selectedImage: $showZoomImage, uiImage: uiImage)
                 }
             }
             .onAppear {

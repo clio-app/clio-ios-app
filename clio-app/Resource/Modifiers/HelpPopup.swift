@@ -65,29 +65,32 @@ struct HelpArea: ViewModifier {
                 }
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button() {
-                        UIImpactFeedbackGenerator(style: .soft).impactOccurred()
-                        changeVisibility()
-                    }label: {
-                        Image(systemName: "exclamationmark.circle.fill")
-                            .resizable()
-                            .scaledToFill()
-                            .foregroundColor(.lapisLazuli)
-                            .frame(width: 38, height: 38)
-                            .background {
-                                Color.white
-                                    .clipShape(Circle())
-                                    .shadow(radius: 2)
-                            }
-                            .padding(.top, 2)
-                            .padding(.bottom,5)
-                            .padding(.leading, 10)
-                        
+                if !helpAlert {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button() {
+                            UIApplication.shared.endEditing()
+                            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+                            changeVisibility()
+                        }label: {
+                            Image(systemName: "questionmark.circle.fill")
+                                .resizable()
+                                .scaledToFill()
+                                .foregroundColor(.lapisLazuli)
+                                .frame(width: 38, height: 38)
+                                .background {
+                                    Color.white
+                                        .clipShape(Circle())
+                                        .shadow(radius: 2)
+                                }
+                                .padding(.top, 2)
+                                .padding(.bottom,5)
+                                .padding(.leading, 10)
+                        }
+                        .transition(.move(edge: .bottom).combined(with: .move(edge: .leading)))
+                        .disabled(helpAlert)
+                        .opacity(helpAlert ? 0 : 1)
+                        .ignoresSafeArea()
                     }
-                    .transition(.move(edge: .bottom).combined(with: .move(edge: .leading)))
-                    .disabled(helpAlert)
-                    .opacity(helpAlert ? 0 : 1)
                 }
             }
     }
@@ -116,9 +119,10 @@ struct HelpArea: ViewModifier {
             return NSLocalizedString("DescriptionArtifact_Hint", comment: "DescriptionArtifact view hint");
         case .PresentResults:
             return NSLocalizedString("PresentResults_Hint", comment: "PresentResults view hint");
-        case .ResultsVisualization:
+        case .ResultsPerPlayerVisualization:
+            return NSLocalizedString("ResultsVisualization_Hint", comment: "ResultsVisualization view hint");
+        case .AllResultsVisualization:
             return NSLocalizedString("ResultsVisualization_Hint", comment: "ResultsVisualization view hint");
         }
     }
-
 }

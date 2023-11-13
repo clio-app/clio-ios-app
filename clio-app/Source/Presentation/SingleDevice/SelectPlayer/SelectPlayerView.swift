@@ -18,18 +18,37 @@ struct SelectPlayerView: View {
             VStack {
                 Spacer()
                 
-                textConfirmation
-                .foregroundColor(.black)
+                UserTextConfirmation(name: vm.currentPlayer?.name ?? "")
+                    .foregroundColor(.black)
                 
                 Spacer()
                 
-                buttons
+                ButtonsToConfirmation(
+                    confirmationAction: {
+                        if let player = vm.currentPlayer {
+                            gameSession.addPlayerInRound(player: player)
+
+                            switch gameSession.gameState {
+                            case .start:
+                                router.goToPhotoArtifactView()
+                            default:
+                                router.goToDescriptionArtifactView()
+                            }
+                        }
+                    },
+                    negationAction: {
+                        vm.changeViewState(to: .findingPlayer)
+                        let player = gameSession.getRandomPlayer(currentPlayer: vm.currentPlayer)
+                        vm.changePlayer(newPlayer: player)
+                    },
+                    isLastUser: gameSession.gameState == .final
+                )
                 .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.18)
                 .padding(.bottom, geo.size.height * 0.05)
             }
             .overlay {
                 if vm.viewState == .findingPlayer {
-                    loading
+                    LoadingPlayer()
                     .frame(width: geo.size.width, height: geo.size.height)
                 }
             }
