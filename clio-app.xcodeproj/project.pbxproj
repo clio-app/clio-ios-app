@@ -36,6 +36,7 @@
 		00D9C9D32ABC814700F66421 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D22ABC814700F66421 /* Network.swift */; };
 		00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D42ABC8D8A00F66421 /* CreateRoomViewModel.swift */; };
 		00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */; };
+		00EB46B72B025A50009A2A63 /* ShimmerEffectLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EB46B62B025A50009A2A63 /* ShimmerEffectLoading.swift */; };
 		7E0D42592AD5BEFD00C566EB /* SelectImageProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42572AD5BEFD00C566EB /* SelectImageProfile.swift */; };
 		7E0D425A2AD5BEFD00C566EB /* AnonymousLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42582AD5BEFD00C566EB /* AnonymousLoginView.swift */; };
 		7E0EB3B92B03B1EE001CDF36 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EB3B82B03B1EE001CDF36 /* AudioManager.swift */; };
@@ -161,6 +162,7 @@
 		00D9C9D22ABC814700F66421 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		00D9C9D42ABC8D8A00F66421 /* CreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewModel.swift; sourceTree = "<group>"; };
 		00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModel.swift; sourceTree = "<group>"; };
+		00EB46B62B025A50009A2A63 /* ShimmerEffectLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffectLoading.swift; sourceTree = "<group>"; };
 		7E0D42242AD5B7CE00C566EB /* LobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyView.swift; sourceTree = "<group>"; };
 		7E0D42252AD5B7CE00C566EB /* LobbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewModel.swift; sourceTree = "<group>"; };
 		7E0D42262AD5B7CE00C566EB /* LobbyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyModel.swift; sourceTree = "<group>"; };
@@ -274,19 +276,11 @@
 		002EF6872AFE58C000E17620 /* PickImage */ = {
 			isa = PBXGroup;
 			children = (
-				002EF6902AFE765D00E17620 /* Components */,
 				002EF68A2AFE58D600E17620 /* PickImageView.swift */,
 				002EF68C2AFE58E000E17620 /* PickImageViewModel.swift */,
 				002EF68E2AFE5F5300E17620 /* PickImageModel.swift */,
 			);
 			path = PickImage;
-			sourceTree = "<group>";
-		};
-		002EF6902AFE765D00E17620 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		00AA0DCC2B00775900F8CE44 /* SearchImage */ = {
@@ -497,6 +491,7 @@
 		00D9C9BC2ABC701C00F66421 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				00EB46B62B025A50009A2A63 /* ShimmerEffectLoading.swift */,
 				FF67AB682AE9444700725C48 /* HelpPopup.swift */,
 				FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */,
 			);
@@ -912,6 +907,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E1705E22AD60938005FA9EE /* PlayersContainer.swift in Sources */,
+				00EB46B72B025A50009A2A63 /* ShimmerEffectLoading.swift in Sources */,
 				7EA6DC952AE7FBDC003368E8 /* AddPlayerField.swift in Sources */,
 				7EA6DC9A2AE80352003368E8 /* CustomAlert.swift in Sources */,
 				7E1705E32AD60938005FA9EE /* MasterContainer.swift in Sources */,

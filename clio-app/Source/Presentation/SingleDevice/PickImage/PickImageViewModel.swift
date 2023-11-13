@@ -9,8 +9,15 @@ import Foundation
 
 final class PickImageViewModel: ObservableObject {
     private var network: NetworkService
-    @Published var generatedImages: [any GeneratedImage] = []
-    
+    @Published var generatedImages: [any GeneratedImage] = [
+        PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
+        PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
+        PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
+        PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
+        PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
+        PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0)
+    ]
+        
     init(network: NetworkService = NetworkService()) {
         self.network = network
     }
@@ -19,10 +26,11 @@ final class PickImageViewModel: ObservableObject {
     func generateImages() async {
         do {
             let endpoint = PickImageModel.RandomCatImages.NetworkEndpoint()
-            let response: PickImageModel.RandomCatImages.Response = try await network.makeRequest(
+            let response: [PickImageModel.RandomCatImages.Response.CatImage] = try await network.makeRequest(
                 for: endpoint
             )
-            print(response)
+            generatedImages.removeAll()
+            self.generatedImages.append(contentsOf: response)
         } catch {
             print(error.localizedDescription)
         }

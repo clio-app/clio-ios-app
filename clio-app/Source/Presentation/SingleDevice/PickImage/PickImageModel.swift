@@ -9,7 +9,7 @@ import Foundation
 
 protocol GeneratedImage: Identifiable {
     var id: UUID { get }
-    var imageUrl: URL { get }
+    var imageUrl: URL? { get }
 }
 
 extension GeneratedImage {
@@ -23,15 +23,13 @@ enum PickImageModel {
         struct Request {}
         
         struct Response: Decodable {
-            let images: [CatImage]
-            
             struct CatImage: Decodable, GeneratedImage {
                 let id: String
                 let url: String
                 let width, height: Int
                 
-                var imageUrl: URL {
-                    return URL(string: url)!
+                var imageUrl: URL? {
+                    return URL(string: url)
                 }
             }
         }
@@ -41,8 +39,8 @@ enum PickImageModel {
             var httpMethod: HTTPMethod? = .get
             var communicationProtocol: CommunicationProtocol = .HTTPS
             var urlBase: String = "api.thecatapi.com"
-            var path: String = "v1/images/search"
-            var queries: [URLQueryItem] = [.init(name: "limit", value: "10")]
+            var path: String = "/v1/images/search"
+            var queries: [URLQueryItem] = [.init(name: "limit", value: "6")]
         }
     }
 }
