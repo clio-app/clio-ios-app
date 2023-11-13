@@ -156,7 +156,25 @@
         }
       }
     },
-    "AddPlayers" : {
+    "Aceitar" : {
+      "comment" : "accept action for a button",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accept"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aceitar"
+          }
+        }
+      }
+    },
+    "AddPlayers_Hint" : {
       "comment" : "AddPlayers view hint",
       "localizations" : {
         "en" : {
@@ -168,7 +186,7 @@
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Adicione todos os jogadores que irão participar da rodada."
+            "value" : "Adicione todos os jogadores que participarão da rodada."
           }
         }
       }
@@ -274,6 +292,24 @@
         }
       }
     },
+    "Continue" : {
+      "comment" : "continue action for a button",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar"
+          }
+        }
+      }
+    },
     "Convide seus alunos pelo código:" : {
       "localizations" : {
         "en" : {
@@ -290,7 +326,7 @@
         }
       }
     },
-    "DescriptionArtifact" : {
+    "DescriptionArtifact_Hint" : {
       "comment" : "DescriptionArtifact view hint",
       "localizations" : {
         "en" : {
@@ -302,7 +338,7 @@
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Faça uma descrição que explique a conexão entre a foto e o tema."
+            "value" : "Escreva uma descrição que explique a conexão entre a foto e o tema."
           }
         }
       }
@@ -423,6 +459,23 @@
         }
       }
     },
+    "FirstPrompt_Hint" : {
+      "comment" : "FirstPrompt view hint",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can customize this first message as you see fit."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Você pode personalizar esta primeira mensagem como achar melhor."
+          }
+        }
+      }
+    },
     "Hora de votar!" : {
       "localizations" : {
         "en" : {
@@ -469,6 +522,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Iniciar"
+          }
+        }
+      }
+    },
+    "Já foi atingido o máximo de jogadores" : {
+      "comment" : "max players reached",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A maximum number of players has already been reached"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Já foi atingido o máximo de jogadores"
           }
         }
       }
@@ -724,7 +794,25 @@
         }
       }
     },
+    "Opa! O nome do jogador não pode estar vazio." : {
+      "comment" : "name is blank",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oops! The player's name cannot be empty."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opa! O nome do jogador não pode estar vazio."
+          }
+        }
+      }
+    },
     "Parar" : {
+      "comment" : "stop action for a button",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -741,36 +829,53 @@
         }
       }
     },
-    "PhotoArtifact" : {
+    "Parar_Hint" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parar"
+          }
+        }
+      }
+    },
+    "PhotoArtifact_Hint" : {
       "comment" : "PhotoArtifact view hint",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Take a photo of something you think relates to the phrase. And select 'Send' if you like your connection."
+            "value" : "Take a photo of something you think relates to the phrase. Select 'Send' to go to the next phase."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tire foto de algo que você acha que faz relação com a frase. E selecione 'Enviar' se gostou da sua conexão."
+            "value" : "Tire uma foto de algo que você acha que se relaciona com a frase. Selecione 'Enviar' para passar para a próxima fase."
           }
         }
       }
     },
-    "PresentResults" : {
+    "PresentResults_Hint" : {
       "comment" : "PresentResults view hint",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gather all the players to see the most unexpected answers and discover who thought outside the box."
+            "value" : "See what interpretations were made by the other players and have fun."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Junte todos os jogadores para ver as respostas mais inusitadas e descobrir quem pensou fora da caixinha."
+            "value" : "Veja quais interpretações foram feitas pelos outros jogadores e divirta-se."
           }
         }
       }
@@ -792,19 +897,19 @@
         }
       }
     },
-    "RaffleTheme" : {
+    "RaffleTheme_Hint" : {
       "comment" : "RaffleTheme view hint",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The presented phrase will serve as context and a hint for the upcoming game phases."
+            "value" : "The presented theme will serve as context and a hint for the upcoming game phases."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "A frase apresentada servirá de contexto e dica para as próximas fases do jogo."
+            "value" : "O tema apresentado servirá como contexto e uma dica para as próximas fases do jogo."
           }
         }
       }
@@ -843,24 +948,24 @@
         }
       }
     },
-    "ResultsVisualization" : {
+    "ResultsVisualization_Hint" : {
       "comment" : "ResultsVisualization view hint",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "See what interpretations were made by the other players and have fun."
+            "value" : "Gather all the players to see the most unexpected answers and discover who thought outside the box."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Veja quais foram as interpretações feitas pelos outros jogadores e se divirta."
+            "value" : "Reúna todos os jogadores para ver as respostas mais inesperadas e descubra quem pensou fora da caixa."
           }
         }
       }
     },
-    "SelectPlayer" : {
+    "SelectPlayer_Hint" : {
       "comment" : "SelectPlayer view hint",
       "localizations" : {
         "en" : {
@@ -872,7 +977,7 @@
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Passe o dispositivo para o jogador na tela ou selecione 'não' até que apareça o seu nome."
+            "value" : "Passe o dispositivo para o jogador na tela ou selecione 'não' até que seu nome apareça."
           }
         }
       }
@@ -927,7 +1032,7 @@
         }
       }
     },
-    "Start" : {
+    "Start_Hint" : {
       "comment" : "Start view hint",
       "localizations" : {
         "en" : {
@@ -997,10 +1102,32 @@
     "Tutorial" : {
       "comment" : "Tutorial",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutorial"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tutorial"
+          }
+        }
+      }
+    },
+    "Você aceita jogar com essa frase?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you accept playing with this phrase?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Você aceita jogar com essa frase?"
           }
         }
       }

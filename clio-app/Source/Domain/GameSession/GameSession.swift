@@ -32,12 +32,12 @@ final class GameSession: ObservableObject {
         if gameFlowParameters.players.count > 4 {
             alertError = AlertError(
                 showAlert: true,
-                errorMessage: "Já foi atingido o máximo de jogadores"
+                errorMessage: NSLocalizedString("Já foi atingido o máximo de jogadores", comment: "max players reached")
             )
             return
         }
         if name.isEmpty || name.hasPrefix(" ") {
-            alertError = AlertError(showAlert: true, errorMessage: "Opa! O nome do jogador não pode estar vazio.")
+            alertError = AlertError(showAlert: true, errorMessage: NSLocalizedString("Opa! O nome do jogador não pode estar vazio.", comment: "name is blank"))
             return
         }
 

@@ -70,7 +70,7 @@ extension SelectPlayerView {
 
                         switch gameSession.gameState {
                         case .start:
-                            router.goToPhotoArtifactView()
+                            router.goToCustomPrompt()
                         default:
                             router.goToDescriptionArtifactView()
                         }
