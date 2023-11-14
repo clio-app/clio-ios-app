@@ -30,9 +30,7 @@ final class SearchImageViewModel: ObservableObject {
     @Published
     var searchKeywords: String = String()
     
-    init(network: NetworkService = NetworkService()) {
-        self.network = network
-    }
+    init(network: NetworkService = NetworkService()) { self.network = network }
     
     @MainActor
     func searchImage() async {

@@ -6,10 +6,23 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SearchImageView: View {
     @StateObject private var vm = SearchImageViewModel()
     let keywords: String
+    let detector: CurrentValueSubject<CGFloat, Never>
+    let publisher: AnyPublisher<CGFloat, Never>
+
+    init(keywords: String) {
+        let detector = CurrentValueSubject<CGFloat, Never>(0)
+        self.detector = detector
+        self.keywords = keywords
+        self.publisher = detector
+            .debounce(for: .seconds(0.2), scheduler: DispatchQueue.main)
+            .dropFirst()
+            .eraseToAnyPublisher()
+     }
     
     var body: some View {
         GeometryReader { geo in
@@ -48,13 +61,21 @@ struct SearchImageView: View {
                                         .frame(width: geo.size.width * 0.4, height: 110)
                                 }
                             }
-                            .onAppear {
-                                if index == (vm.searchedImages.count) {
-                                    Task { await vm.searchImage() }
-                                }
-                            }
                         }
                     }
+                    .background(
+                        GeometryReader {
+                            Color.clear.preference(
+                                key: ViewOffsetKey.self,
+                                value: -$0.frame(in: .named("scroll")).origin.y
+                            )
+                        }
+                    )
+                    .onPreferenceChange(ViewOffsetKey.self) { detector.send($0) }
+                }
+                .coordinateSpace(name: "scroll")
+                .onReceive(publisher) { _ in
+                    Task { await vm.searchImage() }
                 }
                 .padding([.top], 32)
                 
@@ -72,10 +93,19 @@ struct SearchImageView: View {
             }
             .frame(width: geo.size.width, height: geo.size.height)
         }
+        .clioBackground()
         .onAppear {
             vm.searchKeywords = keywords
             Task { await vm.searchImage() }
         }
+    }
+}
+
+struct ViewOffsetKey: PreferenceKey {
+    typealias Value = CGFloat
+    static var defaultValue = CGFloat.zero
+    static func reduce(value: inout Value, nextValue: () -> Value) {
+        value += nextValue()
     }
 }
 

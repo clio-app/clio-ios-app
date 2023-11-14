@@ -83,6 +83,7 @@ struct PickImageView: View {
                 height: geo.size.height
             )
             .keyboardAdaptive()
+            .clioBackground()
             .popupNavigationView(show: $vm.showSearchImagePopUp) {
                 SearchImageTextInput(
                     isShowing: $vm.showSearchImagePopUp,
@@ -97,7 +98,6 @@ struct PickImageView: View {
                     SearchImageView(keywords: vm.searchKeywords)
                 }
             }
-            
         }
         .onAppear {
             Task {

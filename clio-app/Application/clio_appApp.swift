@@ -13,8 +13,9 @@ struct clio_appApp: App {
     
     var body: some Scene {
         WindowGroup {
+            SearchImageView(keywords: "Arvores")
 //            PickImageView()
-            StartView()
+//            StartView()
                 .preferredColorScheme(.light)
         }
     }
