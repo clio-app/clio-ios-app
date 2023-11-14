@@ -31,7 +31,7 @@ struct ZoomImage: View {
         .onTapGesture {
             dismissZoom()
         }
-        .toolbar(.hidden, for: .navigationBar)
+        .toolbar(selectedImage ? .hidden : .visible, for: .navigationBar)
     }
 }
 

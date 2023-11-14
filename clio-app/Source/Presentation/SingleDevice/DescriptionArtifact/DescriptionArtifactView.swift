@@ -102,11 +102,6 @@ struct DescriptionArtifactView: View {
                     input = placeholder
                 }
             }
-            .overlay {
-                if showZoomImage {
-                    ZoomImage(selectedImage: $showZoomImage, uiImage: uiImage)
-                }
-            }
             .onAppear {
                 startArtifactDescriptionTimer = .now()
                 theme = session.gameFlowParameters.sessionTheme
@@ -114,8 +109,13 @@ struct DescriptionArtifactView: View {
                     uiImage = UIImage(data: data)!
                 }
             }
-            .clioBackground()
-            .applyHelpButton(.DescriptionArtifact)
+        }
+        .applyHelpButton(.DescriptionArtifact)
+        .clioBackground()
+        .overlay {
+            if showZoomImage {
+                ZoomImage(selectedImage: $showZoomImage, uiImage: uiImage)
+            }
         }
         .ignoresSafeArea(.keyboard)
         .environmentObject(session)
