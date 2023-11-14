@@ -11,22 +11,103 @@
 		00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */; };
 		00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */; };
 		00BFF9012AB4914D0068A5F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */; };
-		00BFF90B2AB4914D0068A5F2 /* clio_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF90A2AB4914D0068A5F2 /* clio_appTests.swift */; };
-		00BFF9152AB4914D0068A5F2 /* clio_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9142AB4914D0068A5F2 /* clio_appUITests.swift */; };
-		00BFF9172AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */; };
-		00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */; };
-		00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */; };
+		00C0CA262AE7F27C009F74BB /* Mixpanel in Frameworks */ = {isa = PBXBuildFile; productRef = 00C0CA252AE7F27C009F74BB /* Mixpanel */; };
+		00C0CA282AE7F3C7009F74BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C0CA272AE7F3C7009F74BB /* AppDelegate.swift */; };
+		00C11FFF2ADEB62E0042E152 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C11FFE2ADEB62E0042E152 /* StartView.swift */; };
+		00C120022ADEBDC90042E152 /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120012ADEBDC90042E152 /* PlayersView.swift */; };
+		00C120092ADEBF140042E152 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120082ADEBF140042E152 /* GameSession.swift */; };
+		00C120102ADEC2E00042E152 /* RaffleThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C1200F2ADEC2E00042E152 /* RaffleThemeView.swift */; };
+		00C120132AE05C3A0042E152 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120122AE05C3A0042E152 /* ResultsView.swift */; };
+		00C120162AE060890042E152 /* ResultPerPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120152AE060890042E152 /* ResultPerPlayerView.swift */; };
+		00C120192AE0685D0042E152 /* UserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120182AE0685D0042E152 /* UserAvatar.swift */; };
+		00C1201E2AE15F340042E152 /* ArtefactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C1201D2AE15F340042E152 /* ArtefactView.swift */; };
+		00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C02ABC7D6900F66421 /* Endpoint.swift */; };
+		00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C22ABC7EAF00F66421 /* Loader.swift */; };
+		00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C42ABC7ECC00F66421 /* HttpError.swift */; };
+		00D9C9C72ABC7EF100F66421 /* MapperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9C62ABC7EF100F66421 /* MapperError.swift */; };
+		00D9C9CF2ABC806E00F66421 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9CE2ABC806E00F66421 /* NetworkService.swift */; };
+		00D9C9D32ABC814700F66421 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D22ABC814700F66421 /* Network.swift */; };
+		00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D42ABC8D8A00F66421 /* CreateRoomViewModel.swift */; };
+		00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */; };
+		7E0D42592AD5BEFD00C566EB /* SelectImageProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42572AD5BEFD00C566EB /* SelectImageProfile.swift */; };
+		7E0D425A2AD5BEFD00C566EB /* AnonymousLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42582AD5BEFD00C566EB /* AnonymousLoginView.swift */; };
+		7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */; };
+		7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC62ABB1B6E00ABC962 /* Header.swift */; };
+		7E1705DF2AD608EE005FA9EE /* LobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42242AD5B7CE00C566EB /* LobbyView.swift */; };
+		7E1705E02AD608EE005FA9EE /* LobbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42252AD5B7CE00C566EB /* LobbyViewModel.swift */; };
+		7E1705E12AD608EE005FA9EE /* LobbyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42262AD5B7CE00C566EB /* LobbyModel.swift */; };
+		7E1705E22AD60938005FA9EE /* PlayersContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42282AD5B7CE00C566EB /* PlayersContainer.swift */; };
+		7E1705E32AD60938005FA9EE /* MasterContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42292AD5B7CE00C566EB /* MasterContainer.swift */; };
+		7E1705E42AD60938005FA9EE /* PlayerGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D422A2AD5B7CE00C566EB /* PlayerGridItem.swift */; };
+		7E1705E52AD60938005FA9EE /* LobbyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D422B2AD5B7CE00C566EB /* LobbyHeader.swift */; };
+		7E24F3DA2AF53D470066E590 /* ThemePhrases.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E66EC5C2AF2606A00D1ED2F /* ThemePhrases.json */; };
+		7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC32AB7828200AF20C7 /* ActionButton.swift */; };
+		7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */; };
+		7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */; };
+		7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310ACA2AB88E2300AF20C7 /* BorderedBackground.swift */; };
+		7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310ACC2AB88F2700AF20C7 /* UserInputPopup.swift */; };
+		7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310ACE2AB8954C00AF20C7 /* LandingScreenView.swift */; };
+		7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AD12AB8956300AF20C7 /* LandingScreenInteractor.swift */; };
+		7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */; };
+		7E32B06C2AC5B57600A62D28 /* clio_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E32B06B2AC5B57600A62D28 /* clio_appTests.swift */; };
+		7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */; };
+		7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */; };
+		7E61A3E42AE57E430009425C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61A3E32AE57E430009425C /* Router.swift */; };
+		7E66EC5A2AF2606A00D1ED2F /* ThemePhrases.json in Sources */ = {isa = PBXBuildFile; fileRef = 7E66EC5C2AF2606A00D1ED2F /* ThemePhrases.json */; };
+		7E81843E2AD4336100938C69 /* VotingPopupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E81843D2AD4336100938C69 /* VotingPopupModel.swift */; };
+		7E8201DE2AD58E1500DA8F68 /* AnswerSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8201DD2AD58E1500DA8F68 /* AnswerSelected.swift */; };
+		7E8201E02AD58E5300DA8F68 /* AnswerGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8201DF2AD58E5300DA8F68 /* AnswerGrid.swift */; };
+		7E8612382AD02502008F2FAA /* ClioEntities in Frameworks */ = {isa = PBXBuildFile; productRef = 7E8612372AD02502008F2FAA /* ClioEntities */; };
+		7E94E93A2AD5C68600031061 /* ImageInputCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94E9362AD5C68600031061 /* ImageInputCard.swift */; };
+		7E94E93B2AD5C68600031061 /* MasterInputCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94E9372AD5C68600031061 /* MasterInputCard.swift */; };
+		7E94E93C2AD5C68600031061 /* LimitedInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94E9382AD5C68600031061 /* LimitedInputTextField.swift */; };
+		7E94E93D2AD5C68600031061 /* MasterInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94E9392AD5C68600031061 /* MasterInputView.swift */; };
+		7EA6DC932AE7FB82003368E8 /* PlayerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC922AE7FB82003368E8 /* PlayerRow.swift */; };
+		7EA6DC952AE7FBDC003368E8 /* AddPlayerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC942AE7FBDC003368E8 /* AddPlayerField.swift */; };
+		7EA6DC972AE80025003368E8 /* ThemeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC962AE80025003368E8 /* ThemeSlot.swift */; };
+		7EA6DC9A2AE80352003368E8 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC992AE80352003368E8 /* CustomAlert.swift */; };
+		7EA6DC9C2AE804E4003368E8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC9B2AE804E4003368E8 /* CustomButton.swift */; };
+		7EA6DC9F2AE82581003368E8 /* ThemeBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6DC9E2AE82581003368E8 /* ThemeBubble.swift */; };
+		7EA6DCA22AE8902D003368E8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7EA6DCA12AE8902D003368E8 /* Localizable.xcstrings */; };
+		7EBA9CD92AD1AF6E00C25970 /* VotingInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CD82AD1AF6E00C25970 /* VotingInstructionView.swift */; };
+		7EBA9CDB2AD1B5E600C25970 /* VotingInstructionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CDA2AD1B5E600C25970 /* VotingInstructionViewModel.swift */; };
+		7EBA9CDD2AD1B61800C25970 /* VotingInstructionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CDC2AD1B61800C25970 /* VotingInstructionModel.swift */; };
+		7EBA9CDF2AD225DA00C25970 /* VotingPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CDE2AD225DA00C25970 /* VotingPopupView.swift */; };
+		7EBA9CE22AD22A8E00C25970 /* DescriptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CE12AD22A8E00C25970 /* DescriptionItem.swift */; };
+		7EBA9CE42AD23CF800C25970 /* PieProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA9CE32AD23CF700C25970 /* PieProgress.swift */; };
+		7ED105542AE5CD830038B149 /* RaffleThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED105532AE5CD830038B149 /* RaffleThemeViewModel.swift */; };
+		7EE152D02AD4181B00CA8F9F /* PieTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE152CF2AD4181B00CA8F9F /* PieTimer.swift */; };
+		FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04AC922AB8BCFF00516135 /* StrokeText.swift */; };
+		FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04AC932AB8BCFF00516135 /* TextFieldView.swift */; };
+		FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */; };
+		FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15ED2ABA03E600E31DCA /* RadialUsers.swift */; };
+		FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */; };
+		FF4DDEA52AE1A15D00759F47 /* DescriptionArtifactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DDEA42AE1A15D00759F47 /* DescriptionArtifactView.swift */; };
+		FF4DDEA72AE200E900759F47 /* ZoomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DDEA62AE200E900759F47 /* ZoomImage.swift */; };
+		FF4DDEAC2AE2BF3800759F47 /* ThemeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */; };
+		FF64DC332AFB3BDF002938EE /* ImageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64DC322AFB3BDF002938EE /* ImageCard.swift */; };
+		FF67AB692AE9444700725C48 /* HelpPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67AB682AE9444700725C48 /* HelpPopup.swift */; };
+		FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */; };
+		FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */; };
+		FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */; };
+		FFA354D42AE0169D00E23ADC /* PhotoArtifactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354D32AE0169D00E23ADC /* PhotoArtifactView.swift */; };
+		FFA354D62AE0170B00E23ADC /* PhotoArtifactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354D52AE0170B00E23ADC /* PhotoArtifactViewModel.swift */; };
+		FFA354D92AE0193100E23ADC /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354D82AE0193100E23ADC /* CameraButton.swift */; };
+		FFA354DB2AE01AD200E23ADC /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354DA2AE01AD200E23ADC /* CameraPreview.swift */; };
+		FFA354DD2AE02AF400E23ADC /* RetakePhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354DC2AE02AF400E23ADC /* RetakePhotoButton.swift */; };
+		FFA354E02AE1646300E23ADC /* SelectPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354DF2AE1646300E23ADC /* SelectPlayerView.swift */; };
+		FFA354E22AE16BF900E23ADC /* SelectPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */; };
+		FFD59DC62AFA5D1B001C06B0 /* DescriptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD59DC52AFA5D1B001C06B0 /* DescriptionCard.swift */; };
+		FFD59DC82AFA5F2E001C06B0 /* ZoomDescriptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD59DC72AFA5F2E001C06B0 /* ZoomDescriptionCard.swift */; };
+		FFD59DCA2AFA6CC9001C06B0 /* ResultsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD59DC92AFA6CC9001C06B0 /* ResultsDetailViewModel.swift */; };
+		FFD59DCD2AFAA146001C06B0 /* AllResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD59DCC2AFAA146001C06B0 /* AllResultsView.swift */; };
+		FFE132F82AEBEE600069670A /* LoadingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE132F72AEBEE600069670A /* LoadingPlayer.swift */; };
+		FFE132FA2AEBEEFD0069670A /* UserTextConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE132F92AEBEEFD0069670A /* UserTextConfirmation.swift */; };
+		FFE132FD2AEBF3D60069670A /* ButtonsToConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE132FC2AEBF3D60069670A /* ButtonsToConfirmation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		00BFF9072AB4914D0068A5F2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00BFF8EE2AB4914B0068A5F2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 00BFF8F52AB4914B0068A5F2;
-			remoteInfo = "clio-app";
-		};
-		00BFF9112AB4914D0068A5F2 /* PBXContainerItemProxy */ = {
+		7E32B06D2AC5B57600A62D28 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00BFF8EE2AB4914B0068A5F2 /* Project object */;
 			proxyType = 1;
@@ -36,18 +117,106 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00BFF8F62AB4914B0068A5F2 /* clio-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clio-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BFF8F92AB4914B0068A5F2 /* clio_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appApp.swift; sourceTree = "<group>"; };
 		00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
 		00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BFF9002AB4914D0068A5F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		00BFF9062AB4914D0068A5F2 /* clio-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clio-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		00BFF90A2AB4914D0068A5F2 /* clio_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appTests.swift; sourceTree = "<group>"; };
-		00BFF9102AB4914D0068A5F2 /* clio-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clio-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		00BFF9142AB4914D0068A5F2 /* clio_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITests.swift; sourceTree = "<group>"; };
-		00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractor.swift; sourceTree = "<group>"; };
-		00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomPresenter.swift; sourceTree = "<group>"; };
+		00C0CA272AE7F3C7009F74BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00C11FFE2ADEB62E0042E152 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		00C120012ADEBDC90042E152 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
+		00C120082ADEBF140042E152 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		00C1200F2ADEC2E00042E152 /* RaffleThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaffleThemeView.swift; sourceTree = "<group>"; };
+		00C120122AE05C3A0042E152 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		00C120152AE060890042E152 /* ResultPerPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPerPlayerView.swift; sourceTree = "<group>"; };
+		00C120182AE0685D0042E152 /* UserAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAvatar.swift; sourceTree = "<group>"; };
+		00C1201D2AE15F340042E152 /* ArtefactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtefactView.swift; sourceTree = "<group>"; };
+		00D9C9C02ABC7D6900F66421 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		00D9C9C22ABC7EAF00F66421 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		00D9C9C42ABC7ECC00F66421 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
+		00D9C9C62ABC7EF100F66421 /* MapperError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperError.swift; sourceTree = "<group>"; };
+		00D9C9CE2ABC806E00F66421 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		00D9C9D22ABC814700F66421 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		00D9C9D42ABC8D8A00F66421 /* CreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewModel.swift; sourceTree = "<group>"; };
+		00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModel.swift; sourceTree = "<group>"; };
+		7E0D42242AD5B7CE00C566EB /* LobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyView.swift; sourceTree = "<group>"; };
+		7E0D42252AD5B7CE00C566EB /* LobbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewModel.swift; sourceTree = "<group>"; };
+		7E0D42262AD5B7CE00C566EB /* LobbyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyModel.swift; sourceTree = "<group>"; };
+		7E0D42282AD5B7CE00C566EB /* PlayersContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersContainer.swift; sourceTree = "<group>"; };
+		7E0D42292AD5B7CE00C566EB /* MasterContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterContainer.swift; sourceTree = "<group>"; };
+		7E0D422A2AD5B7CE00C566EB /* PlayerGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerGridItem.swift; sourceTree = "<group>"; };
+		7E0D422B2AD5B7CE00C566EB /* LobbyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyHeader.swift; sourceTree = "<group>"; };
+		7E0D42572AD5BEFD00C566EB /* SelectImageProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectImageProfile.swift; sourceTree = "<group>"; };
+		7E0D42582AD5BEFD00C566EB /* AnonymousLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnonymousLoginView.swift; sourceTree = "<group>"; };
+		7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		7E124DC62ABB1B6E00ABC962 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		7E24F3D82AF261F30066E590 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/ThemePhrases.json; sourceTree = "<group>"; };
+		7E310AC32AB7828200AF20C7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonContainer.swift; sourceTree = "<group>"; };
+		7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMove.swift; sourceTree = "<group>"; };
+		7E310ACA2AB88E2300AF20C7 /* BorderedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedBackground.swift; sourceTree = "<group>"; };
+		7E310ACC2AB88F2700AF20C7 /* UserInputPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputPopup.swift; sourceTree = "<group>"; };
+		7E310ACE2AB8954C00AF20C7 /* LandingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenView.swift; sourceTree = "<group>"; };
+		7E310AD12AB8956300AF20C7 /* LandingScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenInteractor.swift; sourceTree = "<group>"; };
+		7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenPresenter.swift; sourceTree = "<group>"; };
+		7E32B0692AC5B57600A62D28 /* clio-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clio-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E32B06B2AC5B57600A62D28 /* clio_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appTests.swift; sourceTree = "<group>"; };
+		7E32B0722AC5B5D000A62D28 /* clio-app.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "clio-app.xctestplan"; sourceTree = "<group>"; };
+		7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserHeader.swift; sourceTree = "<group>"; };
+		7E61A3E32AE57E430009425C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		7E66EC5B2AF2606A00D1ED2F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-BR"; path = "pt-BR.lproj/ThemePhrases.json"; sourceTree = "<group>"; };
+		7E7667302AC47045009064C8 /* Clio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E81843D2AD4336100938C69 /* VotingPopupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingPopupModel.swift; sourceTree = "<group>"; };
+		7E8201DD2AD58E1500DA8F68 /* AnswerSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSelected.swift; sourceTree = "<group>"; };
+		7E8201DF2AD58E5300DA8F68 /* AnswerGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerGrid.swift; sourceTree = "<group>"; };
+		7E94E9362AD5C68600031061 /* ImageInputCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInputCard.swift; sourceTree = "<group>"; };
+		7E94E9372AD5C68600031061 /* MasterInputCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterInputCard.swift; sourceTree = "<group>"; };
+		7E94E9382AD5C68600031061 /* LimitedInputTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitedInputTextField.swift; sourceTree = "<group>"; };
+		7E94E9392AD5C68600031061 /* MasterInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterInputView.swift; sourceTree = "<group>"; };
+		7EA6DC922AE7FB82003368E8 /* PlayerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRow.swift; sourceTree = "<group>"; };
+		7EA6DC942AE7FBDC003368E8 /* AddPlayerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerField.swift; sourceTree = "<group>"; };
+		7EA6DC962AE80025003368E8 /* ThemeSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSlot.swift; sourceTree = "<group>"; };
+		7EA6DC992AE80352003368E8 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		7EA6DC9B2AE804E4003368E8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		7EA6DC9E2AE82581003368E8 /* ThemeBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeBubble.swift; sourceTree = "<group>"; };
+		7EA6DCA02AE88BCD003368E8 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = "clio-app/Config.xcconfig"; sourceTree = "<group>"; };
+		7EA6DCA12AE8902D003368E8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		7EBA9CD82AD1AF6E00C25970 /* VotingInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionView.swift; sourceTree = "<group>"; };
+		7EBA9CDA2AD1B5E600C25970 /* VotingInstructionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionViewModel.swift; sourceTree = "<group>"; };
+		7EBA9CDC2AD1B61800C25970 /* VotingInstructionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionModel.swift; sourceTree = "<group>"; };
+		7EBA9CDE2AD225DA00C25970 /* VotingPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingPopupView.swift; sourceTree = "<group>"; };
+		7EBA9CE12AD22A8E00C25970 /* DescriptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionItem.swift; sourceTree = "<group>"; };
+		7EBA9CE32AD23CF700C25970 /* PieProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieProgress.swift; sourceTree = "<group>"; };
+		7ED105532AE5CD830038B149 /* RaffleThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaffleThemeViewModel.swift; sourceTree = "<group>"; };
+		7EE152CF2AD4181B00CA8F9F /* PieTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieTimer.swift; sourceTree = "<group>"; };
+		FF04AC922AB8BCFF00516135 /* StrokeText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
+		FF04AC932AB8BCFF00516135 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
+		FF3A15ED2ABA03E600E31DCA /* RadialUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialUsers.swift; sourceTree = "<group>"; };
+		FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptative.swift; sourceTree = "<group>"; };
+		FF4DDEA42AE1A15D00759F47 /* DescriptionArtifactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionArtifactView.swift; sourceTree = "<group>"; };
+		FF4DDEA62AE200E900759F47 /* ZoomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomImage.swift; sourceTree = "<group>"; };
+		FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCard.swift; sourceTree = "<group>"; };
+		FF64DC322AFB3BDF002938EE /* ImageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageCard.swift; path = ../SingleDevice/ResultsPerPlayerView/Components/ImageCard.swift; sourceTree = "<group>"; };
+		FF67AB682AE9444700725C48 /* HelpPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPopup.swift; sourceTree = "<group>"; };
+		FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
+		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
+		FF6FD1CF2AB4A67600A2D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		FFA354D32AE0169D00E23ADC /* PhotoArtifactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoArtifactView.swift; sourceTree = "<group>"; };
+		FFA354D52AE0170B00E23ADC /* PhotoArtifactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoArtifactViewModel.swift; sourceTree = "<group>"; };
+		FFA354D82AE0193100E23ADC /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
+		FFA354DA2AE01AD200E23ADC /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		FFA354DC2AE02AF400E23ADC /* RetakePhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetakePhotoButton.swift; sourceTree = "<group>"; };
+		FFA354DF2AE1646300E23ADC /* SelectPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerView.swift; sourceTree = "<group>"; };
+		FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerViewModel.swift; sourceTree = "<group>"; };
+		FFD59DC52AFA5D1B001C06B0 /* DescriptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCard.swift; sourceTree = "<group>"; };
+		FFD59DC72AFA5F2E001C06B0 /* ZoomDescriptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomDescriptionCard.swift; sourceTree = "<group>"; };
+		FFD59DC92AFA6CC9001C06B0 /* ResultsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsDetailViewModel.swift; sourceTree = "<group>"; };
+		FFD59DCC2AFAA146001C06B0 /* AllResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsView.swift; sourceTree = "<group>"; };
+		FFE132F72AEBEE600069670A /* LoadingPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPlayer.swift; sourceTree = "<group>"; };
+		FFE132F92AEBEEFD0069670A /* UserTextConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTextConfirmation.swift; sourceTree = "<group>"; };
+		FFE132FC2AEBF3D60069670A /* ButtonsToConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsToConfirmation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +224,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C0CA262AE7F27C009F74BB /* Mixpanel in Frameworks */,
+				7E8612382AD02502008F2FAA /* ClioEntities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		00BFF9032AB4914D0068A5F2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00BFF90D2AB4914D0068A5F2 /* Frameworks */ = {
+		7E32B0662AC5B57600A62D28 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,26 +242,19 @@
 		00BFF8ED2AB4914B0068A5F2 = {
 			isa = PBXGroup;
 			children = (
+				7EA6DCA02AE88BCD003368E8 /* Config.xcconfig */,
+				7E32B0722AC5B5D000A62D28 /* clio-app.xctestplan */,
 				00BFF8F82AB4914B0068A5F2 /* clio-app */,
-				00BFF9092AB4914D0068A5F2 /* clio-appTests */,
-				00BFF9132AB4914D0068A5F2 /* clio-appUITests */,
-				00BFF8F72AB4914B0068A5F2 /* Products */,
+				7E7667302AC47045009064C8 /* Clio.app */,
+				7E32B0692AC5B57600A62D28 /* clio-appTests.xctest */,
+				7E32B06A2AC5B57600A62D28 /* clio-appTests */,
 			);
-			sourceTree = "<group>";
-		};
-		00BFF8F72AB4914B0068A5F2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				00BFF8F62AB4914B0068A5F2 /* clio-app.app */,
-				00BFF9062AB4914D0068A5F2 /* clio-appTests.xctest */,
-				00BFF9102AB4914D0068A5F2 /* clio-appUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		00BFF8F82AB4914B0068A5F2 /* clio-app */ = {
 			isa = PBXGroup;
 			children = (
+				FF6FD1CF2AB4A67600A2D681 /* Info.plist */,
 				00BFF9252AB491A80068A5F2 /* Source */,
 				00BFF9242AB4919D0068A5F2 /* Application */,
 				00BFF9232AB491910068A5F2 /* Resource */,
@@ -114,27 +271,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		00BFF9092AB4914D0068A5F2 /* clio-appTests */ = {
-			isa = PBXGroup;
-			children = (
-				00BFF90A2AB4914D0068A5F2 /* clio_appTests.swift */,
-			);
-			path = "clio-appTests";
-			sourceTree = "<group>";
-		};
-		00BFF9132AB4914D0068A5F2 /* clio-appUITests */ = {
-			isa = PBXGroup;
-			children = (
-				00BFF9142AB4914D0068A5F2 /* clio_appUITests.swift */,
-				00BFF9162AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift */,
-			);
-			path = "clio-appUITests";
-			sourceTree = "<group>";
-		};
 		00BFF9232AB491910068A5F2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				00D9C9BC2ABC701C00F66421 /* Modifiers */,
+				FF6FD1CB2AB49D8700A2D681 /* Fonts */,
 				00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */,
+				FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */,
+				7E5211572AB4A02D0080F92C /* UIColor+Extensions.swift */,
+				7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */,
+				7EA6DCA12AE8902D003368E8 /* Localizable.xcstrings */,
+				7E66EC5C2AF2606A00D1ED2F /* ThemePhrases.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -143,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				00BFF8F92AB4914B0068A5F2 /* clio_appApp.swift */,
+				00C0CA272AE7F3C7009F74BB /* AppDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -150,6 +298,8 @@
 		00BFF9252AB491A80068A5F2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				00D9C9BF2ABC7D5A00F66421 /* API */,
+				00C120032ADEBE9E0042E152 /* Domain */,
 				00BFF9262AB491AE0068A5F2 /* Presentation */,
 			);
 			path = Source;
@@ -158,7 +308,9 @@
 		00BFF9262AB491AE0068A5F2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				00BFF9272AB491B50068A5F2 /* CreateRoomView */,
+				7E310AC92AB8895200AF20C7 /* GeneralComponents */,
+				00C11FFC2ADEB5BA0042E152 /* SingleDevice */,
+				00C11FFB2ADEB5A40042E152 /* MultiDevice */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -167,10 +319,390 @@
 			isa = PBXGroup;
 			children = (
 				00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */,
-				00BFF9282AB491DD0068A5F2 /* CreateRoomInteractor.swift */,
-				00BFF92B2AB491E80068A5F2 /* CreateRoomPresenter.swift */,
+				00D9C9D42ABC8D8A00F66421 /* CreateRoomViewModel.swift */,
+				00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */,
 			);
 			path = CreateRoomView;
+			sourceTree = "<group>";
+		};
+		00C11FFB2ADEB5A40042E152 /* MultiDevice */ = {
+			isa = PBXGroup;
+			children = (
+				7E94E9342AD5C68600031061 /* MasterInput */,
+				7E0D42552AD5BEFD00C566EB /* AnonymousLogin */,
+				7E0D42232AD5B7CE00C566EB /* LobbyView */,
+				7E310AD02AB8955200AF20C7 /* LandingScreenView */,
+				00BFF9272AB491B50068A5F2 /* CreateRoomView */,
+				7EBA9CD72AD1AEF900C25970 /* VotingInstruction */,
+				7EBA9CE02AD225E100C25970 /* VotingPopup */,
+			);
+			path = MultiDevice;
+			sourceTree = "<group>";
+		};
+		00C11FFC2ADEB5BA0042E152 /* SingleDevice */ = {
+			isa = PBXGroup;
+			children = (
+				7E61A3E02AE574170009425C /* Router */,
+				FF4DDEA32AE1A12400759F47 /* DescriptionArtifact */,
+				FFA354D22AE0162200E23ADC /* PhotoArtifact */,
+				00C120142AE060780042E152 /* ResultsPerPlayerView */,
+				FFD59DCB2AFAA11F001C06B0 /* AllResultsView */,
+				00C120112AE05C2B0042E152 /* ResultsView */,
+				FFA354DE2AE1644A00E23ADC /* SelectPlayer */,
+				00C1200C2ADEC2980042E152 /* RaffleTheme */,
+				00C120002ADEBDBC0042E152 /* PlayersView */,
+				00C11FFD2ADEB5CA0042E152 /* StartView */,
+			);
+			path = SingleDevice;
+			sourceTree = "<group>";
+		};
+		00C11FFD2ADEB5CA0042E152 /* StartView */ = {
+			isa = PBXGroup;
+			children = (
+				00C11FFE2ADEB62E0042E152 /* StartView.swift */,
+				7EA6DC9D2AE8050B003368E8 /* Components */,
+			);
+			path = StartView;
+			sourceTree = "<group>";
+		};
+		00C120002ADEBDBC0042E152 /* PlayersView */ = {
+			isa = PBXGroup;
+			children = (
+				00C120012ADEBDC90042E152 /* PlayersView.swift */,
+				7EA6DC912AE7FB6D003368E8 /* Components */,
+			);
+			path = PlayersView;
+			sourceTree = "<group>";
+		};
+		00C120032ADEBE9E0042E152 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				00C120072ADEBF0D0042E152 /* GameSession */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		00C120072ADEBF0D0042E152 /* GameSession */ = {
+			isa = PBXGroup;
+			children = (
+				00C120082ADEBF140042E152 /* GameSession.swift */,
+			);
+			path = GameSession;
+			sourceTree = "<group>";
+		};
+		00C1200C2ADEC2980042E152 /* RaffleTheme */ = {
+			isa = PBXGroup;
+			children = (
+				00C1200F2ADEC2E00042E152 /* RaffleThemeView.swift */,
+				7ED105532AE5CD830038B149 /* RaffleThemeViewModel.swift */,
+				7EA6DC982AE80035003368E8 /* Components */,
+			);
+			path = RaffleTheme;
+			sourceTree = "<group>";
+		};
+		00C120112AE05C2B0042E152 /* ResultsView */ = {
+			isa = PBXGroup;
+			children = (
+				00C120122AE05C3A0042E152 /* ResultsView.swift */,
+			);
+			path = ResultsView;
+			sourceTree = "<group>";
+		};
+		00C120142AE060780042E152 /* ResultsPerPlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				00C120172AE068510042E152 /* Components */,
+				00C120152AE060890042E152 /* ResultPerPlayerView.swift */,
+				FFD59DC92AFA6CC9001C06B0 /* ResultsDetailViewModel.swift */,
+			);
+			path = ResultsPerPlayerView;
+			sourceTree = "<group>";
+		};
+		00C120172AE068510042E152 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				00C1201D2AE15F340042E152 /* ArtefactView.swift */,
+				7EA6DC9E2AE82581003368E8 /* ThemeBubble.swift */,
+				FFD59DC72AFA5F2E001C06B0 /* ZoomDescriptionCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		00D9C9BC2ABC701C00F66421 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				FF67AB682AE9444700725C48 /* HelpPopup.swift */,
+				FF3A15F82ABB482F00E31DCA /* KeyboardAdaptative.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		00D9C9BF2ABC7D5A00F66421 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				00D9C9D12ABC813100F66421 /* Helpers */,
+				00D9C9D02ABC809A00F66421 /* Protocol */,
+				00D9C9C82ABC7EFA00F66421 /* Error */,
+				00D9C9CE2ABC806E00F66421 /* NetworkService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		00D9C9C82ABC7EFA00F66421 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				00D9C9C42ABC7ECC00F66421 /* HttpError.swift */,
+				00D9C9C62ABC7EF100F66421 /* MapperError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		00D9C9D02ABC809A00F66421 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				00D9C9C02ABC7D6900F66421 /* Endpoint.swift */,
+				00D9C9D22ABC814700F66421 /* Network.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		00D9C9D12ABC813100F66421 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				00D9C9C22ABC7EAF00F66421 /* Loader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7E0D42232AD5B7CE00C566EB /* LobbyView */ = {
+			isa = PBXGroup;
+			children = (
+				7E0D42272AD5B7CE00C566EB /* Components */,
+				7E0D42242AD5B7CE00C566EB /* LobbyView.swift */,
+				7E0D42252AD5B7CE00C566EB /* LobbyViewModel.swift */,
+				7E0D42262AD5B7CE00C566EB /* LobbyModel.swift */,
+			);
+			path = LobbyView;
+			sourceTree = "<group>";
+		};
+		7E0D42272AD5B7CE00C566EB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E0D42282AD5B7CE00C566EB /* PlayersContainer.swift */,
+				7E0D42292AD5B7CE00C566EB /* MasterContainer.swift */,
+				7E0D422A2AD5B7CE00C566EB /* PlayerGridItem.swift */,
+				7E0D422B2AD5B7CE00C566EB /* LobbyHeader.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7E0D42552AD5BEFD00C566EB /* AnonymousLogin */ = {
+			isa = PBXGroup;
+			children = (
+				7E0D42562AD5BEFD00C566EB /* Components */,
+				7E0D42582AD5BEFD00C566EB /* AnonymousLoginView.swift */,
+			);
+			path = AnonymousLogin;
+			sourceTree = "<group>";
+		};
+		7E0D42562AD5BEFD00C566EB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E0D42572AD5BEFD00C566EB /* SelectImageProfile.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7E310AC92AB8895200AF20C7 /* GeneralComponents */ = {
+			isa = PBXGroup;
+			children = (
+				7E310AC32AB7828200AF20C7 /* ActionButton.swift */,
+				7E310ACA2AB88E2300AF20C7 /* BorderedBackground.swift */,
+				FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */,
+				FF3A15ED2ABA03E600E31DCA /* RadialUsers.swift */,
+				FF04AC922AB8BCFF00516135 /* StrokeText.swift */,
+				FF04AC932AB8BCFF00516135 /* TextFieldView.swift */,
+				7E124DC62ABB1B6E00ABC962 /* Header.swift */,
+				7EBA9CE32AD23CF700C25970 /* PieProgress.swift */,
+				7EE152CF2AD4181B00CA8F9F /* PieTimer.swift */,
+				7EBA9CE12AD22A8E00C25970 /* DescriptionItem.swift */,
+				7E94E9382AD5C68600031061 /* LimitedInputTextField.swift */,
+				7EA6DC992AE80352003368E8 /* CustomAlert.swift */,
+				FF4DDEAB2AE2BF3800759F47 /* ThemeCard.swift */,
+				FF4DDEA62AE200E900759F47 /* ZoomImage.swift */,
+				FFD59DC52AFA5D1B001C06B0 /* DescriptionCard.swift */,
+				FF64DC322AFB3BDF002938EE /* ImageCard.swift */,
+				00C120182AE0685D0042E152 /* UserAvatar.swift */,
+			);
+			path = GeneralComponents;
+			sourceTree = "<group>";
+		};
+		7E310AD02AB8955200AF20C7 /* LandingScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				7E310ACE2AB8954C00AF20C7 /* LandingScreenView.swift */,
+				7E310AD12AB8956300AF20C7 /* LandingScreenInteractor.swift */,
+				7E310AD32AB8956D00AF20C7 /* LandingScreenPresenter.swift */,
+				7E52115B2AB730600080F92C /* Components */,
+			);
+			path = LandingScreenView;
+			sourceTree = "<group>";
+		};
+		7E32B06A2AC5B57600A62D28 /* clio-appTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E32B06B2AC5B57600A62D28 /* clio_appTests.swift */,
+			);
+			path = "clio-appTests";
+			sourceTree = "<group>";
+		};
+		7E52115B2AB730600080F92C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */,
+				7E310AC72AB7959600AF20C7 /* BackgroundMove.swift */,
+				7E310AC52AB786E400AF20C7 /* TextButtonContainer.swift */,
+				7E310ACC2AB88F2700AF20C7 /* UserInputPopup.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7E61A3E02AE574170009425C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7E61A3E32AE57E430009425C /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7E94E9342AD5C68600031061 /* MasterInput */ = {
+			isa = PBXGroup;
+			children = (
+				7E94E9392AD5C68600031061 /* MasterInputView.swift */,
+				7E94E9352AD5C68600031061 /* Components */,
+			);
+			name = MasterInput;
+			path = "clio-app/Source/Presentation/MultiDevice/MasterInput";
+			sourceTree = SOURCE_ROOT;
+		};
+		7E94E9352AD5C68600031061 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E94E9362AD5C68600031061 /* ImageInputCard.swift */,
+				7E94E9372AD5C68600031061 /* MasterInputCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7EA6DC912AE7FB6D003368E8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7EA6DC922AE7FB82003368E8 /* PlayerRow.swift */,
+				7EA6DC942AE7FBDC003368E8 /* AddPlayerField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7EA6DC982AE80035003368E8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7EA6DC962AE80025003368E8 /* ThemeSlot.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7EA6DC9D2AE8050B003368E8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7EA6DC9B2AE804E4003368E8 /* CustomButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7EBA9CD72AD1AEF900C25970 /* VotingInstruction */ = {
+			isa = PBXGroup;
+			children = (
+				7EBA9CD82AD1AF6E00C25970 /* VotingInstructionView.swift */,
+				7EBA9CDA2AD1B5E600C25970 /* VotingInstructionViewModel.swift */,
+				7EBA9CDC2AD1B61800C25970 /* VotingInstructionModel.swift */,
+				7E8201DD2AD58E1500DA8F68 /* AnswerSelected.swift */,
+			);
+			path = VotingInstruction;
+			sourceTree = "<group>";
+		};
+		7EBA9CE02AD225E100C25970 /* VotingPopup */ = {
+			isa = PBXGroup;
+			children = (
+				7EBA9CDE2AD225DA00C25970 /* VotingPopupView.swift */,
+				7E81843D2AD4336100938C69 /* VotingPopupModel.swift */,
+				7E8201DF2AD58E5300DA8F68 /* AnswerGrid.swift */,
+			);
+			path = VotingPopup;
+			sourceTree = "<group>";
+		};
+		FF4DDEA32AE1A12400759F47 /* DescriptionArtifact */ = {
+			isa = PBXGroup;
+			children = (
+				FF4DDEA42AE1A15D00759F47 /* DescriptionArtifactView.swift */,
+			);
+			path = DescriptionArtifact;
+			sourceTree = "<group>";
+		};
+		FF6FD1CB2AB49D8700A2D681 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FF6FD1CC2AB4A0D800A2D681 /* Itim-Regular.ttf */,
+				FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FFA354D22AE0162200E23ADC /* PhotoArtifact */ = {
+			isa = PBXGroup;
+			children = (
+				FFA354D32AE0169D00E23ADC /* PhotoArtifactView.swift */,
+				FFA354D52AE0170B00E23ADC /* PhotoArtifactViewModel.swift */,
+				FFA354D72AE0190700E23ADC /* Components */,
+			);
+			path = PhotoArtifact;
+			sourceTree = "<group>";
+		};
+		FFA354D72AE0190700E23ADC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FFA354D82AE0193100E23ADC /* CameraButton.swift */,
+				FFA354DA2AE01AD200E23ADC /* CameraPreview.swift */,
+				FFA354DC2AE02AF400E23ADC /* RetakePhotoButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FFA354DE2AE1644A00E23ADC /* SelectPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				FFA354DF2AE1646300E23ADC /* SelectPlayerView.swift */,
+				FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */,
+				FFE132F62AEBEE370069670A /* Components */,
+			);
+			path = SelectPlayer;
+			sourceTree = "<group>";
+		};
+		FFD59DCB2AFAA11F001C06B0 /* AllResultsView */ = {
+			isa = PBXGroup;
+			children = (
+				FFD59DCC2AFAA146001C06B0 /* AllResultsView.swift */,
+			);
+			path = AllResultsView;
+			sourceTree = "<group>";
+		};
+		FFE132F62AEBEE370069670A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FFE132F72AEBEE600069670A /* LoadingPlayer.swift */,
+				FFE132F92AEBEEFD0069670A /* UserTextConfirmation.swift */,
+				FFE132FC2AEBF3D60069670A /* ButtonsToConfirmation.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,45 +721,31 @@
 			dependencies = (
 			);
 			name = "clio-app";
+			packageProductDependencies = (
+				7E8612372AD02502008F2FAA /* ClioEntities */,
+				00C0CA252AE7F27C009F74BB /* Mixpanel */,
+			);
 			productName = "clio-app";
-			productReference = 00BFF8F62AB4914B0068A5F2 /* clio-app.app */;
+			productReference = 7E7667302AC47045009064C8 /* Clio.app */;
 			productType = "com.apple.product-type.application";
 		};
-		00BFF9052AB4914D0068A5F2 /* clio-appTests */ = {
+		7E32B0682AC5B57600A62D28 /* clio-appTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00BFF91D2AB4914D0068A5F2 /* Build configuration list for PBXNativeTarget "clio-appTests" */;
+			buildConfigurationList = 7E32B06F2AC5B57600A62D28 /* Build configuration list for PBXNativeTarget "clio-appTests" */;
 			buildPhases = (
-				00BFF9022AB4914D0068A5F2 /* Sources */,
-				00BFF9032AB4914D0068A5F2 /* Frameworks */,
-				00BFF9042AB4914D0068A5F2 /* Resources */,
+				7E32B0652AC5B57600A62D28 /* Sources */,
+				7E32B0662AC5B57600A62D28 /* Frameworks */,
+				7E32B0672AC5B57600A62D28 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				00BFF9082AB4914D0068A5F2 /* PBXTargetDependency */,
+				7E32B06E2AC5B57600A62D28 /* PBXTargetDependency */,
 			);
 			name = "clio-appTests";
 			productName = "clio-appTests";
-			productReference = 00BFF9062AB4914D0068A5F2 /* clio-appTests.xctest */;
+			productReference = 7E32B0692AC5B57600A62D28 /* clio-appTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		00BFF90F2AB4914D0068A5F2 /* clio-appUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00BFF9202AB4914D0068A5F2 /* Build configuration list for PBXNativeTarget "clio-appUITests" */;
-			buildPhases = (
-				00BFF90C2AB4914D0068A5F2 /* Sources */,
-				00BFF90D2AB4914D0068A5F2 /* Frameworks */,
-				00BFF90E2AB4914D0068A5F2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00BFF9122AB4914D0068A5F2 /* PBXTargetDependency */,
-			);
-			name = "clio-appUITests";
-			productName = "clio-appUITests";
-			productReference = 00BFF9102AB4914D0068A5F2 /* clio-appUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -236,18 +754,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					00BFF8F52AB4914B0068A5F2 = {
 						CreatedOnToolsVersion = 14.3;
 					};
-					00BFF9052AB4914D0068A5F2 = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = 00BFF8F52AB4914B0068A5F2;
-					};
-					00BFF90F2AB4914D0068A5F2 = {
-						CreatedOnToolsVersion = 14.3;
+					7E32B0682AC5B57600A62D28 = {
+						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 00BFF8F52AB4914B0068A5F2;
 					};
 				};
@@ -259,15 +773,19 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 00BFF8ED2AB4914B0068A5F2;
-			productRefGroup = 00BFF8F72AB4914B0068A5F2 /* Products */;
+			packageReferences = (
+				7E8612362AD02502008F2FAA /* XCRemoteSwiftPackageReference "clio-entities" */,
+				00C0CA242AE7F27C009F74BB /* XCRemoteSwiftPackageReference "mixpanel-swift" */,
+			);
+			productRefGroup = 00BFF8ED2AB4914B0068A5F2;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				00BFF8F52AB4914B0068A5F2 /* clio-app */,
-				00BFF9052AB4914D0068A5F2 /* clio-appTests */,
-				00BFF90F2AB4914D0068A5F2 /* clio-appUITests */,
+				7E32B0682AC5B57600A62D28 /* clio-appTests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,19 +795,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E24F3DA2AF53D470066E590 /* ThemePhrases.json in Resources */,
 				00BFF9012AB4914D0068A5F2 /* Preview Assets.xcassets in Resources */,
+				7EA6DCA22AE8902D003368E8 /* Localizable.xcstrings in Resources */,
+				FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */,
+				FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */,
 				00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		00BFF9042AB4914D0068A5F2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00BFF90E2AB4914D0068A5F2 /* Resources */ = {
+		7E32B0672AC5B57600A62D28 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -303,44 +818,128 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00BFF9292AB491DD0068A5F2 /* CreateRoomInteractor.swift in Sources */,
-				00BFF92C2AB491E80068A5F2 /* CreateRoomPresenter.swift in Sources */,
+				7E1705E22AD60938005FA9EE /* PlayersContainer.swift in Sources */,
+				7EA6DC952AE7FBDC003368E8 /* AddPlayerField.swift in Sources */,
+				7EA6DC9A2AE80352003368E8 /* CustomAlert.swift in Sources */,
+				7E1705E32AD60938005FA9EE /* MasterContainer.swift in Sources */,
+				7E1705E42AD60938005FA9EE /* PlayerGridItem.swift in Sources */,
+				00C120162AE060890042E152 /* ResultPerPlayerView.swift in Sources */,
+				7E1705E52AD60938005FA9EE /* LobbyHeader.swift in Sources */,
+				FFA354DD2AE02AF400E23ADC /* RetakePhotoButton.swift in Sources */,
+				7E1705DF2AD608EE005FA9EE /* LobbyView.swift in Sources */,
+				7E1705E02AD608EE005FA9EE /* LobbyViewModel.swift in Sources */,
+				7E1705E12AD608EE005FA9EE /* LobbyModel.swift in Sources */,
+				FF4DDEA72AE200E900759F47 /* ZoomImage.swift in Sources */,
+				7E94E93B2AD5C68600031061 /* MasterInputCard.swift in Sources */,
+				00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */,
+				7EA6DC932AE7FB82003368E8 /* PlayerRow.swift in Sources */,
+				7EBA9CDD2AD1B61800C25970 /* VotingInstructionModel.swift in Sources */,
+				FFD59DCD2AFAA146001C06B0 /* AllResultsView.swift in Sources */,
+				FFA354D92AE0193100E23ADC /* CameraButton.swift in Sources */,
+				7EBA9CE22AD22A8E00C25970 /* DescriptionItem.swift in Sources */,
+				7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */,
+				FFA354D62AE0170B00E23ADC /* PhotoArtifactViewModel.swift in Sources */,
+				7E66EC5A2AF2606A00D1ED2F /* ThemePhrases.json in Sources */,
+				7E310AC62AB786E400AF20C7 /* TextButtonContainer.swift in Sources */,
+				7EA6DC9C2AE804E4003368E8 /* CustomButton.swift in Sources */,
+				FF4DDEA52AE1A15D00759F47 /* DescriptionArtifactView.swift in Sources */,
+				FF67AB692AE9444700725C48 /* HelpPopup.swift in Sources */,
+				FF3A15EA2AB9C97A00E31DCA /* RoomHeader.swift in Sources */,
+				7E310ACF2AB8954C00AF20C7 /* LandingScreenView.swift in Sources */,
+				7E310AC82AB7959600AF20C7 /* BackgroundMove.swift in Sources */,
+				7E0D42592AD5BEFD00C566EB /* SelectImageProfile.swift in Sources */,
+				00D9C9C32ABC7EAF00F66421 /* Loader.swift in Sources */,
+				00C120192AE0685D0042E152 /* UserAvatar.swift in Sources */,
+				00D9C9C52ABC7ECC00F66421 /* HttpError.swift in Sources */,
+				FFD59DC82AFA5F2E001C06B0 /* ZoomDescriptionCard.swift in Sources */,
+				7E310AD42AB8956D00AF20C7 /* LandingScreenPresenter.swift in Sources */,
+				FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */,
+				FFE132FD2AEBF3D60069670A /* ButtonsToConfirmation.swift in Sources */,
+				FF4DDEAC2AE2BF3800759F47 /* ThemeCard.swift in Sources */,
+				7E61A3E42AE57E430009425C /* Router.swift in Sources */,
+				FFE132F82AEBEE600069670A /* LoadingPlayer.swift in Sources */,
+				00C120092ADEBF140042E152 /* GameSession.swift in Sources */,
+				7EA6DC972AE80025003368E8 /* ThemeSlot.swift in Sources */,
+				FFD59DC62AFA5D1B001C06B0 /* DescriptionCard.swift in Sources */,
+				FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */,
+				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
+				00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */,
+				00C120132AE05C3A0042E152 /* ResultsView.swift in Sources */,
+				7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */,
+				7EA6DC9F2AE82581003368E8 /* ThemeBubble.swift in Sources */,
+				FFD59DCA2AFA6CC9001C06B0 /* ResultsDetailViewModel.swift in Sources */,
+				7E81843E2AD4336100938C69 /* VotingPopupModel.swift in Sources */,
+				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
+				7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */,
+				00C120102ADEC2E00042E152 /* RaffleThemeView.swift in Sources */,
+				7E94E93C2AD5C68600031061 /* LimitedInputTextField.swift in Sources */,
+				FF64DC332AFB3BDF002938EE /* ImageCard.swift in Sources */,
+				7EBA9CE42AD23CF800C25970 /* PieProgress.swift in Sources */,
+				FFA354DB2AE01AD200E23ADC /* CameraPreview.swift in Sources */,
+				7E310AC42AB7828200AF20C7 /* ActionButton.swift in Sources */,
+				00C11FFF2ADEB62E0042E152 /* StartView.swift in Sources */,
+				7EBA9CDB2AD1B5E600C25970 /* VotingInstructionViewModel.swift in Sources */,
+				7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */,
+				FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */,
+				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
+				7EBA9CDF2AD225DA00C25970 /* VotingPopupView.swift in Sources */,
+				00C0CA282AE7F3C7009F74BB /* AppDelegate.swift in Sources */,
+				7E0D425A2AD5BEFD00C566EB /* AnonymousLoginView.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
+				7E8201DE2AD58E1500DA8F68 /* AnswerSelected.swift in Sources */,
+				00C120022ADEBDC90042E152 /* PlayersView.swift in Sources */,
+				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
+				7E8201E02AD58E5300DA8F68 /* AnswerGrid.swift in Sources */,
+				7ED105542AE5CD830038B149 /* RaffleThemeViewModel.swift in Sources */,
+				FFA354D42AE0169D00E23ADC /* PhotoArtifactView.swift in Sources */,
+				FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */,
+				00D9C9C72ABC7EF100F66421 /* MapperError.swift in Sources */,
+				00D9C9D32ABC814700F66421 /* Network.swift in Sources */,
+				7EBA9CD92AD1AF6E00C25970 /* VotingInstructionView.swift in Sources */,
+				FFA354E02AE1646300E23ADC /* SelectPlayerView.swift in Sources */,
+				00C1201E2AE15F340042E152 /* ArtefactView.swift in Sources */,
+				FFA354E02AE1646300E23ADC /* SelectPlayerView.swift in Sources */,
+				00C1201E2AE15F340042E152 /* ArtefactView.swift in Sources */,
+				00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */,
+				7E94E93D2AD5C68600031061 /* MasterInputView.swift in Sources */,
+				7E94E93A2AD5C68600031061 /* ImageInputCard.swift in Sources */,
+				00D9C9CF2ABC806E00F66421 /* NetworkService.swift in Sources */,
+				FFE132FA2AEBEEFD0069670A /* UserTextConfirmation.swift in Sources */,
+				7EE152D02AD4181B00CA8F9F /* PieTimer.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
+				FFA354E22AE16BF900E23ADC /* SelectPlayerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		00BFF9022AB4914D0068A5F2 /* Sources */ = {
+		7E32B0652AC5B57600A62D28 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00BFF90B2AB4914D0068A5F2 /* clio_appTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00BFF90C2AB4914D0068A5F2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00BFF9172AB4914D0068A5F2 /* clio_appUITestsLaunchTests.swift in Sources */,
-				00BFF9152AB4914D0068A5F2 /* clio_appUITests.swift in Sources */,
+				7E32B06C2AC5B57600A62D28 /* clio_appTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		00BFF9082AB4914D0068A5F2 /* PBXTargetDependency */ = {
+		7E32B06E2AC5B57600A62D28 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 00BFF8F52AB4914B0068A5F2 /* clio-app */;
-			targetProxy = 00BFF9072AB4914D0068A5F2 /* PBXContainerItemProxy */;
-		};
-		00BFF9122AB4914D0068A5F2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 00BFF8F52AB4914B0068A5F2 /* clio-app */;
-			targetProxy = 00BFF9112AB4914D0068A5F2 /* PBXContainerItemProxy */;
+			targetProxy = 7E32B06D2AC5B57600A62D28 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E66EC5C2AF2606A00D1ED2F /* ThemePhrases.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E66EC5B2AF2606A00D1ED2F /* pt-BR */,
+				7E24F3D82AF261F30066E590 /* en */,
+			);
+			name = ThemePhrases.json;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		00BFF9182AB4914D0068A5F2 /* Debug */ = {
@@ -393,7 +992,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -447,7 +1046,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -465,24 +1064,33 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 685GVH2XJC;
+				DEVELOPMENT_TEAM = NTS86MKTBV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "clio-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Clio for Fun";
+				INFOPLIST_KEY_NSCameraUsageDescription = "A câmera será usada para a captura de imagens durante o jogo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "thiagohba.com.clio-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clio;
+				PRODUCT_NAME = Clio;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -494,40 +1102,53 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 685GVH2XJC;
+				DEVELOPMENT_TEAM = NTS86MKTBV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "clio-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Clio for Fun";
+				INFOPLIST_KEY_NSCameraUsageDescription = "A câmera será usada para a captura de imagens durante o jogo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "thiagohba.com.clio-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clio;
+				PRODUCT_NAME = Clio;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		00BFF91E2AB4914D0068A5F2 /* Debug */ = {
+		7E32B0702AC5B57600A62D28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 685GVH2XJC;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "thiagohba.com.clio-appTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clio-ios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -535,59 +1156,26 @@
 			};
 			name = Debug;
 		};
-		00BFF91F2AB4914D0068A5F2 /* Release */ = {
+		7E32B0712AC5B57600A62D28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 685GVH2XJC;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "thiagohba.com.clio-appTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clio-ios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/clio-app.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/clio-app";
-			};
-			name = Release;
-		};
-		00BFF9212AB4914D0068A5F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 685GVH2XJC;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "thiagohba.com.clio-appUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "clio-app";
-			};
-			name = Debug;
-		};
-		00BFF9222AB4914D0068A5F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 685GVH2XJC;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "thiagohba.com.clio-appUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "clio-app";
 			};
 			name = Release;
 		};
@@ -612,25 +1200,48 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		00BFF91D2AB4914D0068A5F2 /* Build configuration list for PBXNativeTarget "clio-appTests" */ = {
+		7E32B06F2AC5B57600A62D28 /* Build configuration list for PBXNativeTarget "clio-appTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00BFF91E2AB4914D0068A5F2 /* Debug */,
-				00BFF91F2AB4914D0068A5F2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		00BFF9202AB4914D0068A5F2 /* Build configuration list for PBXNativeTarget "clio-appUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00BFF9212AB4914D0068A5F2 /* Debug */,
-				00BFF9222AB4914D0068A5F2 /* Release */,
+				7E32B0702AC5B57600A62D28 /* Debug */,
+				7E32B0712AC5B57600A62D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00C0CA242AE7F27C009F74BB /* XCRemoteSwiftPackageReference "mixpanel-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mixpanel/mixpanel-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		7E8612362AD02502008F2FAA /* XCRemoteSwiftPackageReference "clio-entities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/clio-app/clio-entities.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00C0CA252AE7F27C009F74BB /* Mixpanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00C0CA242AE7F27C009F74BB /* XCRemoteSwiftPackageReference "mixpanel-swift" */;
+			productName = Mixpanel;
+		};
+		7E8612372AD02502008F2FAA /* ClioEntities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E8612362AD02502008F2FAA /* XCRemoteSwiftPackageReference "clio-entities" */;
+			productName = ClioEntities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00BFF8EE2AB4914B0068A5F2 /* Project object */;
 }
