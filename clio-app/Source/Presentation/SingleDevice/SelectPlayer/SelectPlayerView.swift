@@ -64,6 +64,7 @@ struct SelectPlayerView: View {
     }
 }
 
+
 #Preview {
     SelectPlayerView()
 }

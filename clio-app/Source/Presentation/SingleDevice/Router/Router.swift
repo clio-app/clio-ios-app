@@ -13,6 +13,7 @@ enum Views: Hashable {
     case AddPlayers
     case RaffleTheme
     case SelectPlayer
+    case firstPrompt
     case PhotoArtifact
     case DescriptionArtifact
     case PresentResults
@@ -41,6 +42,10 @@ class Router: ObservableObject {
 
     func goToSelectPlayer() {
         path.append(Views.SelectPlayer)
+    }
+
+    func goToCustomPrompt() {
+        path.append(Views.firstPrompt)
     }
 
     func goToPhotoArtifactView() {
@@ -87,6 +92,8 @@ enum ViewFactory {
             DescriptionArtifactView()
         case .PresentResults:
             ResultsView()
+        case .firstPrompt:
+            CustomFirstPrompt()
         case .ResultsPerPlayerVisualization:
             ResultPerPlayerView()
         case .AllResultsVisualization:

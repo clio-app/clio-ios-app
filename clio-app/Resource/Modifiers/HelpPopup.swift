@@ -100,27 +100,29 @@ struct HelpArea: ViewModifier {
             helpAlert.toggle()
         }
     }
-
+ 
     private func getHintForView(_ viewType: Views) -> String {
         switch viewType {
         case .Start:
-            return NSLocalizedString("Start", comment: "Start view hint");
+            return NSLocalizedString("Start_Hint", comment: "Start view hint");
         case .AddPlayers:
-            return NSLocalizedString("AddPlayers", comment: "AddPlayers view hint");
+            return NSLocalizedString("AddPlayers_Hint", comment: "AddPlayers view hint");
         case .RaffleTheme:
-            return NSLocalizedString("RaffleTheme", comment: "RaffleTheme view hint");
+            return NSLocalizedString("RaffleTheme_Hint", comment: "RaffleTheme view hint");
         case .SelectPlayer:
-            return NSLocalizedString("SelectPlayer", comment: "SelectPlayer view hint");
+            return NSLocalizedString("SelectPlayer_Hint", comment: "SelectPlayer view hint");
+        case .firstPrompt:
+            return NSLocalizedString("FirstPrompt_Hint", comment: "FirstPrompt view hint");
         case .PhotoArtifact:
-            return NSLocalizedString("PhotoArtifact", comment: "PhotoArtifact view hint");
+            return NSLocalizedString("PhotoArtifact_Hint", comment: "PhotoArtifact view hint");
         case .DescriptionArtifact:
-            return NSLocalizedString("DescriptionArtifact", comment: "DescriptionArtifact view hint");
+            return NSLocalizedString("DescriptionArtifact_Hint", comment: "DescriptionArtifact view hint");
         case .PresentResults:
-            return NSLocalizedString("PresentResults", comment: "PresentResults view hint");
+            return NSLocalizedString("PresentResults_Hint", comment: "PresentResults view hint");
         case .ResultsPerPlayerVisualization:
-            return NSLocalizedString("ResultsVisualization", comment: "ResultsVisualization view hint");
+            return NSLocalizedString("ResultsVisualization_Hint", comment: "ResultsVisualization view hint");
         case .AllResultsVisualization:
-            return NSLocalizedString("ResultsVisualization", comment: "ResultsVisualization view hint");
+            return NSLocalizedString("ResultsVisualization_Hint", comment: "ResultsVisualization view hint");
         }
     }
 }

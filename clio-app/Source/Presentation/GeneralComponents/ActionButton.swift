@@ -41,7 +41,7 @@ struct ActionButton: View {
                     }
                 
                 StrokeText(
-                   text: title,
+                   text: NSLocalizedString(title, comment: "Button Title"),
                    borderWidth: 2,
                    borderColor: .black)
                 .foregroundColor(.white)

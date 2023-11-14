@@ -54,6 +54,8 @@
 		7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */; };
 		7E61A3E42AE57E430009425C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61A3E32AE57E430009425C /* Router.swift */; };
 		7E66EC5A2AF2606A00D1ED2F /* ThemePhrases.json in Sources */ = {isa = PBXBuildFile; fileRef = 7E66EC5C2AF2606A00D1ED2F /* ThemePhrases.json */; };
+		7E68A6102AFE3F34006FAA1A /* CustomFirstPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A60F2AFE3F34006FAA1A /* CustomFirstPrompt.swift */; };
+		7E68A6122AFE6286006FAA1A /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A6112AFE6286006FAA1A /* CustomTextfield.swift */; };
 		7E81843E2AD4336100938C69 /* VotingPopupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E81843D2AD4336100938C69 /* VotingPopupModel.swift */; };
 		7E8201DE2AD58E1500DA8F68 /* AnswerSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8201DD2AD58E1500DA8F68 /* AnswerSelected.swift */; };
 		7E8201E02AD58E5300DA8F68 /* AnswerGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8201DF2AD58E5300DA8F68 /* AnswerGrid.swift */; };
@@ -165,6 +167,8 @@
 		7E5211592AB7305C0080F92C /* WelcomeUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserHeader.swift; sourceTree = "<group>"; };
 		7E61A3E32AE57E430009425C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		7E66EC5B2AF2606A00D1ED2F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-BR"; path = "pt-BR.lproj/ThemePhrases.json"; sourceTree = "<group>"; };
+		7E68A60F2AFE3F34006FAA1A /* CustomFirstPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFirstPrompt.swift; sourceTree = "<group>"; };
+		7E68A6112AFE6286006FAA1A /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		7E7667302AC47045009064C8 /* Clio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E81843D2AD4336100938C69 /* VotingPopupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingPopupModel.swift; sourceTree = "<group>"; };
 		7E8201DD2AD58E1500DA8F68 /* AnswerSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSelected.swift; sourceTree = "<group>"; };
@@ -342,6 +346,7 @@
 		00C11FFC2ADEB5BA0042E152 /* SingleDevice */ = {
 			isa = PBXGroup;
 			children = (
+				7E68A60E2AFE3F1B006FAA1A /* CustomFirstPromptView */,
 				7E61A3E02AE574170009425C /* Router */,
 				FF4DDEA32AE1A12400759F47 /* DescriptionArtifact */,
 				FFA354D22AE0162200E23ADC /* PhotoArtifact */,
@@ -573,6 +578,15 @@
 				7E61A3E32AE57E430009425C /* Router.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		7E68A60E2AFE3F1B006FAA1A /* CustomFirstPromptView */ = {
+			isa = PBXGroup;
+			children = (
+				7E68A60F2AFE3F34006FAA1A /* CustomFirstPrompt.swift */,
+				7E68A6112AFE6286006FAA1A /* CustomTextfield.swift */,
+			);
+			path = CustomFirstPromptView;
 			sourceTree = "<group>";
 		};
 		7E94E9342AD5C68600031061 /* MasterInput */ = {
@@ -856,6 +870,7 @@
 				FF04AC942AB8BCFF00516135 /* StrokeText.swift in Sources */,
 				FFE132FD2AEBF3D60069670A /* ButtonsToConfirmation.swift in Sources */,
 				FF4DDEAC2AE2BF3800759F47 /* ThemeCard.swift in Sources */,
+				7E68A6102AFE3F34006FAA1A /* CustomFirstPrompt.swift in Sources */,
 				7E61A3E42AE57E430009425C /* Router.swift in Sources */,
 				FFE132F82AEBEE600069670A /* LoadingPlayer.swift in Sources */,
 				00C120092ADEBF140042E152 /* GameSession.swift in Sources */,
@@ -880,6 +895,7 @@
 				00C11FFF2ADEB62E0042E152 /* StartView.swift in Sources */,
 				7EBA9CDB2AD1B5E600C25970 /* VotingInstructionViewModel.swift in Sources */,
 				7E310ACD2AB88F2700AF20C7 /* UserInputPopup.swift in Sources */,
+				7E68A6122AFE6286006FAA1A /* CustomTextfield.swift in Sources */,
 				FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */,
 				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
 				7EBA9CDF2AD225DA00C25970 /* VotingPopupView.swift in Sources */,
@@ -1064,7 +1080,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = NTS86MKTBV;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
@@ -1102,7 +1118,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = NTS86MKTBV;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
