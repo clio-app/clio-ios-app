@@ -343,9 +343,6 @@
         }
       }
     },
-    "De que forma você quer associar a frase a seguir?" : {
-
-    },
     "DescriptionArtifact" : {
       "comment" : "DescriptionArtifact view hint",
       "localizations" : {
@@ -495,8 +492,22 @@
         }
       }
     },
-    "Escreva uma palavra para gerar imagens relacionadas" : {
-
+    "Example Random Theme" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ex.: Tree"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ex.: Árvore"
+          }
+        }
+      }
     },
     "Generate Image Action Description" : {
       "extractionState" : "manual",
@@ -511,6 +522,40 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Gere imagens através de um tema"
+          }
+        }
+      }
+    },
+    "Generate Image Through Key Sentence" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type a word to generate related images"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Escreva uma palavra para gerar imagens relacionadas"
+          }
+        }
+      }
+    },
+    "Generate Images Button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generate Images"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gerar Imagens"
           }
         }
       }
@@ -581,9 +626,6 @@
           }
         }
       }
-    },
-    "Imagens geradas" : {
-
     },
     "Infelizmente esse modo de jogo ainda não está disponível!" : {
       "extractionState" : "manual",

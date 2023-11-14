@@ -16,7 +16,7 @@ struct SearchImageTextInput: View {
         GeometryReader { geo in
             VStack(alignment: .center, spacing: 18) {
                 Text(
-                    "Escreva uma palavra para gerar imagens relacionadas"
+                    "Generate Image Through Key Sentence"
                 )
                 .lineLimit(nil)
                 .font(.itimRegular(fontType: .body))
@@ -26,13 +26,13 @@ struct SearchImageTextInput: View {
                 
                 TextFieldView(
                     inputText: $inputText,
-                    placeholder: "Ex.: Árvores",
+                    placeholder: "Example Random Theme",
                     color: .blue
                 )
                 .padding(.horizontal, geo.size.width * 0.1)
                 
                 ActionButton(
-                    title: "Gerar Imagens",
+                    title: "Generate Images Button",
                     foregroundColor: inputText.isEmpty ?
                         .blue.opacity(0.1) :
                         .blue,
