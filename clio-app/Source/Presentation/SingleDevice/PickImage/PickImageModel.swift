@@ -10,9 +10,14 @@ import Foundation
 protocol GeneratedImage: Identifiable {
     var id: UUID { get }
     var imageUrl: URL? { get }
+    var placeholder: Bool { get }
 }
 
 extension GeneratedImage {
+    var placeholder: Bool {
+        return false
+    }
+    
     var id: UUID {
         return UUID()
     }
@@ -40,7 +45,7 @@ enum PickImageModel {
             var communicationProtocol: CommunicationProtocol = .HTTPS
             var urlBase: String = "api.thecatapi.com"
             var path: String = "/v1/images/search"
-            var queries: [URLQueryItem] = [.init(name: "limit", value: "6")]
+            var queries: [URLQueryItem] = [.init(name: "limit", value: "16")]
         }
     }
 }

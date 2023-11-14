@@ -57,7 +57,7 @@ struct PickImageView: View {
                                             )
                                         )
                                 } else {
-                                    imagePlaceHolder
+                                    ImagePlaceholder()
                                         .frame(width: geo.size.width * 0.4, height: 110)
                                 }
                             }
@@ -104,23 +104,6 @@ struct PickImageView: View {
                 await vm.generateImages()
             }
         }
-    }
-    
-    var imagePlaceHolder: some View {
-        return Rectangle()
-            .foregroundStyle(.clear)
-            .overlay {
-                RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
-                .stroke(Color.gray, style: .init(lineWidth: 2))
-                .foregroundStyle(.clear)
-                .overlay {
-                    Image(systemName: "photo.fill.on.rectangle.fill")
-                    .resizable()
-                    .foregroundStyle(.gray)
-                    .aspectRatio(contentMode: .fill)
-                    .padding(42)
-                }
-            }
     }
 }
 

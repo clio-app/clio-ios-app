@@ -530,6 +530,7 @@
       }
     },
     "Hello, World!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -560,6 +561,9 @@
           }
         }
       }
+    },
+    "Imagens geradas" : {
+
     },
     "Infelizmente esse modo de jogo ainda não está disponível!" : {
       "extractionState" : "manual",

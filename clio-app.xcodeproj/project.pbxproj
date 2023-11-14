@@ -38,6 +38,7 @@
 		00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */; };
 		00EB46B72B025A50009A2A63 /* ShimmerEffectLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EB46B62B025A50009A2A63 /* ShimmerEffectLoading.swift */; };
 		00EB46C02B0267D6009A2A63 /* SearchImageTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EB46BF2B0267D6009A2A63 /* SearchImageTextInput.swift */; };
+		00FA85CE2B0394DF00BD9246 /* ImagePlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FA85CD2B0394DF00BD9246 /* ImagePlaceholder.swift */; };
 		7E0D42592AD5BEFD00C566EB /* SelectImageProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42572AD5BEFD00C566EB /* SelectImageProfile.swift */; };
 		7E0D425A2AD5BEFD00C566EB /* AnonymousLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42582AD5BEFD00C566EB /* AnonymousLoginView.swift */; };
 		7E0EB3B92B03B1EE001CDF36 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EB3B82B03B1EE001CDF36 /* AudioManager.swift */; };
@@ -165,6 +166,7 @@
 		00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModel.swift; sourceTree = "<group>"; };
 		00EB46B62B025A50009A2A63 /* ShimmerEffectLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffectLoading.swift; sourceTree = "<group>"; };
 		00EB46BF2B0267D6009A2A63 /* SearchImageTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageTextInput.swift; sourceTree = "<group>"; };
+		00FA85CD2B0394DF00BD9246 /* ImagePlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePlaceholder.swift; sourceTree = "<group>"; };
 		7E0D42242AD5B7CE00C566EB /* LobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyView.swift; sourceTree = "<group>"; };
 		7E0D42252AD5B7CE00C566EB /* LobbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewModel.swift; sourceTree = "<group>"; };
 		7E0D42262AD5B7CE00C566EB /* LobbyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyModel.swift; sourceTree = "<group>"; };
@@ -617,6 +619,7 @@
 				FFD59DC52AFA5D1B001C06B0 /* DescriptionCard.swift */,
 				FF64DC322AFB3BDF002938EE /* ImageCard.swift */,
 				00C120182AE0685D0042E152 /* UserAvatar.swift */,
+				00FA85CD2B0394DF00BD9246 /* ImagePlaceholder.swift */,
 			);
 			path = GeneralComponents;
 			sourceTree = "<group>";
@@ -965,6 +968,7 @@
 				7EA6DC972AE80025003368E8 /* ThemeSlot.swift in Sources */,
 				FFD59DC62AFA5D1B001C06B0 /* DescriptionCard.swift in Sources */,
 				FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */,
+				00FA85CE2B0394DF00BD9246 /* ImagePlaceholder.swift in Sources */,
 				00EB46C02B0267D6009A2A63 /* SearchImageTextInput.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
 				00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */,

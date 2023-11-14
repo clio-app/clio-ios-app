@@ -11,6 +11,8 @@ enum SearchImageModel {
     enum Search {
         struct Request: Codable {
             let keywords: String
+            let page: Int
+            let perPage: Int
         }
         
         struct Response: Decodable, Identifiable {
@@ -23,7 +25,7 @@ enum SearchImageModel {
                 case total, totalHits, hits
             }
             
-            struct PixabayModel: Decodable {
+            struct PixabayModel: Decodable, GeneratedImage {
                 let id: Int
                 let pageURL: String
                 let type, tags: String
@@ -37,6 +39,9 @@ enum SearchImageModel {
                 let userID: Int
                 let user: String
                 let userImageURL: String
+                var imageUrl: URL? {
+                    return URL(string: webformatURL)
+                }
 
                 enum CodingKeys: String, CodingKey {
                     case id, pageURL, type, tags, previewURL, previewWidth, previewHeight, webformatURL, webformatWidth, webformatHeight, largeImageURL, imageWidth, imageHeight, imageSize, views, downloads, collections, likes, comments
@@ -62,7 +67,9 @@ enum SearchImageModel {
                         value: Bundle.main.infoDictionary?["PIXABAY_API_KEY"] as? String
                     ),
                     .init(name: "q", value: requestData.keywords),
-                    .init(name: "image_type", value: "photo")
+                    .init(name: "image_type", value: "photo"),
+                    .init(name: "page", value: "\(requestData.page)"),
+                    .init(name: "per_page", value: "\(requestData.perPage)")
                 ]
             }
             
