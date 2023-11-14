@@ -48,6 +48,13 @@ struct SearchImageView: View {
                                         .frame(width: geo.size.width * 0.4, height: 110)
                                 }
                             }
+                            .onAppear {
+                                if index == (vm.searchedImages.count - 1) {
+                                    Task {
+                                        await vm.searchImage()
+                                    }
+                                }
+                            }
                         }
                     }
                 }
