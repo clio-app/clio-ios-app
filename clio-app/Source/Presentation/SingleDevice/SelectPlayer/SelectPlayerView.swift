@@ -64,65 +64,6 @@ struct SelectPlayerView: View {
     }
 }
 
-extension SelectPlayerView {
-    var textConfirmation: some View {
-        VStack {
-            Text("Você é...")
-                .font(.itimRegular(fontType: .title3))
-
-            Text(vm.currentPlayer?.name ?? "")
-                .font(.itimRegular(fontType: .largeTitle))
-            + Text("?")
-                .font(.itimRegular(fontType: .largeTitle))
-        }
-    }
-    
-    var buttons: some View {
-        VStack {
-            ActionButton(
-                title: "Sim",
-                foregroundColor: .softGreen,
-                backgroundColor: .white,
-                hasBorder: true) {
-                    if let player = vm.currentPlayer {
-                        gameSession.addPlayerInRound(player: player)
-
-                        switch gameSession.gameState {
-                        case .start:
-                            router.goToCustomPrompt()
-                        default:
-                            router.goToDescriptionArtifactView()
-                        }
-                    }
-                    
-                }
-            ActionButton(
-                title: "Não",
-                foregroundColor: .sky,
-                backgroundColor: .white,
-                hasBorder: true) {
-                    vm.changeViewState(to: .findingPlayer)
-                    let player = gameSession.getRandomPlayer(currentPlayer: vm.currentPlayer)
-                    vm.changePlayer(newPlayer: player)
-                }
-                .disabled(gameSession.gameState == .final)
-                .opacity(gameSession.gameState == .final ? 0.2 : 1)
-        }
-    }
-    
-    var loading: some View {
-        ZStack {
-            Color.white.ignoresSafeArea()
-            VStack {
-                ProgressView()
-                    .tint(Color.lapisLazuli)
-                Text("Buscando jogador...")
-                    .foregroundColor(.lapisLazuli)
-                    .font(.itimRegular(fontType: .headline))
-            }
-        }
-    }
-}
 
 #Preview {
     SelectPlayerView()
