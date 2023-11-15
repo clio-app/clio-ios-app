@@ -1084,10 +1084,16 @@
     },
     "Tire uma foto que se relacione com:" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take a photo related to: \n"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Take a photo related to:"
+            "value" : "Tire uma foto que se relacione com:\n"
           }
         }
       }

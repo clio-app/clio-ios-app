@@ -19,6 +19,7 @@ struct ActionButton: View {
     var body: some View {
         Button(action: {
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+            AudioManager.shared.playSound(named: .actionButton)
             action()
         }) {
             ZStack {
