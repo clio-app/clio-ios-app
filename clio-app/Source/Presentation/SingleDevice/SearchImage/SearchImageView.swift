@@ -9,7 +9,11 @@ import SwiftUI
 import Combine
 
 struct SearchImageView: View {
+    @EnvironmentObject var session: GameSession
+    @EnvironmentObject var router: Router
     @StateObject private var vm = SearchImageViewModel()
+    
+    private let layout = SearchImageViewLayout()
     let keywords: String
     let detector: CurrentValueSubject<CGFloat, Never>
     let publisher: AnyPublisher<CGFloat, Never>
@@ -33,52 +37,69 @@ struct SearchImageView: View {
                     .multilineTextAlignment(.center)
                     .frame(width: geo.size.width, height: 70)
                 
-                ScrollView {
-                    LazyVGrid(
-                        columns: [
-                            GridItem(.fixed(geo.size.height * 0.22)),
-                            GridItem(.fixed(geo.size.height * 0.22))
-                        ],
-                        spacing: 42
-                    ) {
-                        ForEach((0..<vm.searchedImages.count), id: \.self) { index in
-                            AsyncImage(url: vm.searchedImages[index].imageUrl) { phase in
-                                if let image = phase.image {
-                                    image
-                                        .resizable()
-                                        .frame(width: geo.size.width * 0.4, height: 110)
-                                        .aspectRatio(contentMode: .fill)
-                                        .clipShape(
-                                            .rect(
-                                                cornerSize: CGSize(
-                                                    width: 30,
-                                                    height: 30
-                                                )
+                if vm.searchedImages.count > 0 {
+                    ScrollView {
+                        LazyVGrid(
+                            columns: [
+                                GridItem(.fixed(geo.size.height * 0.22)),
+                                GridItem(.fixed(geo.size.height * 0.22))
+                            ],
+                            spacing: 42
+                        ) {
+                            ForEach((0..<vm.searchedImages.count), id: \.self) { index in
+                                AsyncImage(url: vm.searchedImages[index].imageUrl) { phase in
+                                    if let image = phase.image {
+                                        image
+                                            .resizable()
+                                            .frame(width: geo.size.width * 0.4, height: 110)
+                                            .aspectRatio(contentMode: .fill)
+                                            .clipShape(
+                                                .rect(cornerSize: layout.pictureBorderSize)
                                             )
-                                        )
-                                } else {
-                                    ImagePlaceholder()
-                                        .frame(width: geo.size.width * 0.4, height: 110)
+                                            .overlay {
+                                                if vm.selectedImage?.imageUrl == vm.searchedImages[index].imageUrl {
+                                                    selectedCircle
+                                                }
+                                            }
+                                            .onTapGesture {
+                                                vm.selectedImage = vm.searchedImages[index]
+                                            }
+                                            .onLongPressGesture {
+                                                layout.longPressImpact.impactOccurred()
+                                                vm.highlightedImage = vm.searchedImages[index]
+                                                vm.showHighlightedImagePopup = true
+                                            }
+                                    } else {
+                                        ImagePlaceholder()
+                                            .frame(width: geo.size.width * 0.4, height: 110)
+                                    }
                                 }
                             }
                         }
+                        .background(
+                            GeometryReader {
+                                Color.clear.preference(
+                                    key: ViewOffsetKey.self,
+                                    value: -$0.frame(in: .named("scroll")).origin.y
+                                )
+                            }
+                        )
+                        .onPreferenceChange(ViewOffsetKey.self) { detector.send($0) }
                     }
-                    .background(
-                        GeometryReader {
-                            Color.clear.preference(
-                                key: ViewOffsetKey.self,
-                                value: -$0.frame(in: .named("scroll")).origin.y
-                            )
-                        }
-                    )
-                    .onPreferenceChange(ViewOffsetKey.self) { detector.send($0) }
+                    .coordinateSpace(name: "scroll")
+                    .onReceive(publisher) { _ in
+                        Task { await vm.searchImage() }
+                    }
+                    .padding([.top], 32)
+                } else {
+                    Spacer()
+                    
+                    Text("Nenhuma imagem encontrada")
+                        .lineLimit(nil)
+                        .font(.itimRegular(fontType: .headline))
+                        .multilineTextAlignment(.center)
                 }
-                .coordinateSpace(name: "scroll")
-                .onReceive(publisher) { _ in
-                    Task { await vm.searchImage() }
-                }
-                .padding([.top], 32)
-                
+    
                 Spacer()
                 
                 ActionButton(
@@ -86,17 +107,54 @@ struct SearchImageView: View {
                     foregroundColor: .blue,
                     backgroundColor: .white,
                     hasBorder: true,
-                    action: {}
+                    action: { 
+                        if let selectedImageUrl = vm.selectedImage?.imageUrl {
+                            session.sendArtifact(picture: try! Data(contentsOf: selectedImageUrl))
+                            router.goToSelectPlayer()
+                        }
+                    }
                 )
                 .frame(maxHeight: 42)
                 .padding(.horizontal, 36)
             }
             .frame(width: geo.size.width, height: geo.size.height)
+            .popupNavigationView(show: $vm.showHighlightedImagePopup) {
+                Rectangle()
+                    .foregroundStyle(.clear)
+                    .overlay {
+                        AsyncImage(url: vm.highlightedImage?.imageUrl) { phase in
+                            if let image = phase.image {
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            }
+                        }
+                        .clipShape(.rect(cornerSize: layout.pictureBorderSize))
+                    }
+                    .frame(maxWidth: geo.size.width * 0.8, maxHeight: geo.size.height * 0.8)
+                    .padding([.horizontal], 12)
+            }
         }
         .clioBackground()
+        .applyHelpButton(.SearchImage(vm.searchKeywords))
         .onAppear {
             vm.searchKeywords = keywords
             Task { await vm.searchImage() }
+        }
+    }
+    
+    var selectedCircle: some View {
+        return HStack {
+            Spacer()
+            VStack {
+                SelectedCircle()
+                    .frame(
+                        width: 24,
+                        height: 18
+                    )
+                
+                Spacer()
+            }
         }
     }
 }

@@ -796,6 +796,9 @@
         }
       }
     },
+    "Nenhuma imagem encontrada" : {
+
+    },
     "Nome do jogador..." : {
       "extractionState" : "manual",
       "localizations" : {

@@ -9,22 +9,13 @@ import Foundation
 
 final class PickImageViewModel: ObservableObject {
     private var network: NetworkService
+    private var valuesPerPage = 6
     
     @Published
-    var generatedImages: [PickImageModel.RandomCatImages.Response.CatImage] = [
-        PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
-        PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
-        PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
-        PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
-        PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
-        PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0)
-    ]
+    var generatedImages: [any GeneratedImage] = []
     
     @Published
     var showSearchImagePopUp = false
-    
-    @Published
-    var goToSearchResultView = false
     
     @Published
     var showHighlightedImagePopup = false
@@ -33,24 +24,44 @@ final class PickImageViewModel: ObservableObject {
     var searchKeywords: String = String()
     
     @Published
-    var selectedImage: PickImageModel.RandomCatImages.Response.CatImage?
+    var selectedImage: (any GeneratedImage)?
     
     @Published
-    var highlightedImage: PickImageModel.RandomCatImages.Response.CatImage?
+    var highlightedImage: (any GeneratedImage)?
         
     init(network: NetworkService = NetworkService()) { self.network = network }
     
     @MainActor
     func generateImages() async {
+        createPlaceholders()
+        
         do {
             let endpoint = PickImageModel.RandomCatImages.NetworkEndpoint()
             let response: [PickImageModel.RandomCatImages.Response.CatImage] = try await network.makeRequest(
                 for: endpoint
             )
-            generatedImages.removeAll()
-            self.generatedImages.append(contentsOf: response)
+            replacePlaceholders(response)
         } catch {
             print(error.localizedDescription)
+        }
+    }
+    
+    func replacePlaceholders(_ images: [any GeneratedImage]) {
+        for image in images {
+            for (searchedImagesIndex, searchedImage) in generatedImages.enumerated() {
+                if searchedImage.placeholder {
+                    generatedImages[searchedImagesIndex] = image
+                    break
+                }
+            }
+        }
+        
+        generatedImages.removeAll(where: { $0.placeholder })
+    }
+    
+    func createPlaceholders() {
+        for _ in 0..<valuesPerPage {
+            generatedImages.append(PlaceholderGeneratedImage())
         }
     }
     

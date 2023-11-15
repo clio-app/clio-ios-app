@@ -30,6 +30,15 @@ final class SearchImageViewModel: ObservableObject {
     @Published
     var searchKeywords: String = String()
     
+    @Published
+    var selectedImage: (any GeneratedImage)?
+    
+    @Published
+    var highlightedImage: (any GeneratedImage)?
+    
+    @Published
+    var showHighlightedImagePopup = false
+    
     init(network: NetworkService = NetworkService()) { self.network = network }
     
     @MainActor

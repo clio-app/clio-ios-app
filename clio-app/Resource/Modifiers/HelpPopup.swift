@@ -126,6 +126,8 @@ struct HelpArea: ViewModifier {
             return NSLocalizedString("ResultsVisualization", comment: "ResultsVisualization view hint");
         case .PickImage:
             return "Escolha a imagem para a descrição"
+        case .SearchImage(let keywords):
+            return "Resultados da pesquisa para as palavras chaves: \(keywords)"
         }
     }
 }

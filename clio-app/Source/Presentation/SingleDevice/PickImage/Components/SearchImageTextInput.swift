@@ -61,7 +61,6 @@ struct SearchImageTextInput: View {
             .onTapGesture {
                 UIApplication.shared.endEditing()
             }
-            .keyboardAdaptive()
             .padding(.horizontal, 10)
             .frame(width: geo.size.width, height: geo.size.height)
         }

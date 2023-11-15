@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PickImageView: View {
+    @EnvironmentObject var router: Router
+    @EnvironmentObject var session: GameSession
     @StateObject private var vm = PickImageViewModel()
     private let layout = PickImageViewLayout()
     
@@ -17,6 +19,7 @@ struct PickImageView: View {
                 Text("Generate Image Action Description")
                     .font(.itimRegular(fontType: .body))
                     .multilineTextAlignment(.center)
+                    .padding([.top], 16)
                 
                 ActionButton(
                     title: "Search Image By Theme Button",
@@ -34,51 +37,63 @@ struct PickImageView: View {
                     .multilineTextAlignment(.center)
                     .frame(width: geo.size.width * 0.85, height: 70)
                 
-                LazyVGrid(
-                    columns: [
-                        GridItem(.fixed(geo.size.height * 0.22)),
-                        GridItem(.fixed(geo.size.height * 0.22))
-                    ],
-                    spacing: 42
-                ) {
-                    ForEach((0..<vm.generatedImages.count), id: \.self) { imageIndex in
-                        AsyncImage(url: vm.generatedImages[imageIndex].imageUrl) { phase in
-                            if let image = phase.image {
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: geo.size.width * 0.4, height: 110)
-                                    .clipShape(.rect(cornerSize: layout.pictureBorderSize))
-                                    .overlay { RoundedBorder(size: layout.pictureBorderSize) }
-                                    .overlay {
-                                        if vm.selectedImage?.imageUrl == vm.generatedImages[imageIndex].imageUrl {
-                                            selectedCircle
+                ScrollView(showsIndicators: false){
+                    LazyVGrid(
+                        columns: [
+                            GridItem(.fixed(geo.size.height * 0.22)),
+                            GridItem(.fixed(geo.size.height * 0.22))
+                        ],
+                        spacing: 42
+                    ) {
+                        ForEach((0..<vm.generatedImages.count), id: \.self) { imageIndex in
+                            AsyncImage(url: vm.generatedImages[imageIndex].imageUrl) { phase in
+                                if let image = phase.image {
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: geo.size.width * 0.4, height: 110)
+                                        .clipShape(.rect(cornerSize: layout.pictureBorderSize))
+                                        .overlay { RoundedBorder(size: layout.pictureBorderSize) }
+                                        .overlay {
+                                            if vm.selectedImage?.imageUrl == vm.generatedImages[imageIndex].imageUrl {
+                                                selectedCircle
+                                            }
                                         }
-                                    }
-                                    .onTapGesture {
-                                        vm.selectedImage = vm.generatedImages[imageIndex]
-                                    }
-                                    .onLongPressGesture {
-                                        layout.longPressImpact.impactOccurred()
-                                        vm.highlightedImage = vm.generatedImages[imageIndex]
-                                        vm.showHighlightedImagePopup = true
-                                    }
-                            } else {
-                                ImagePlaceholder()
-                                    .frame(width: geo.size.width * 0.4, height: 110)
+                                        .onTapGesture {
+                                            vm.selectedImage = vm.generatedImages[imageIndex]
+                                        }
+                                        .onLongPressGesture {
+                                            layout.longPressImpact.impactOccurred()
+                                            vm.highlightedImage = vm.generatedImages[imageIndex]
+                                            vm.showHighlightedImagePopup = true
+                                        }
+                                } else {
+                                    ImagePlaceholder()
+                                        .frame(width: geo.size.width * 0.4, height: 110)
+                                }
                             }
                         }
                     }
+                    .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.7)
                 }
-                .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.6)
-                .clipped()
                 
                 ActionButton(
                     title: "Enviar",
                     foregroundColor: .blue,
                     backgroundColor: .white,
                     hasBorder: true,
-                    action: {}
+                    action: {
+                        if let selectedImageUrl = vm.selectedImage?.imageUrl {
+                            let queue = DispatchQueue(label: "Image Data Loading")
+                            queue.async(qos: .background) {
+                                let imageData = try! Data(contentsOf: selectedImageUrl)
+                                DispatchQueue.main.sync {
+                                    session.sendArtifact(picture: imageData)
+                                    router.goToSelectPlayer()
+                                }
+                            }
+                        }
+                    }
                 )
                 .frame(maxHeight: 42)
                 .padding(.horizontal, 36)
@@ -92,7 +107,7 @@ struct PickImageView: View {
                     isShowing: $vm.showSearchImagePopUp,
                     generateImagesTapped: { keywords in
                         vm.searchKeywords = keywords
-                        vm.goToSearchResultView = true
+                        router.goToSearchImageView(keywords: keywords)
                     }
                 )
             }
@@ -113,12 +128,7 @@ struct PickImageView: View {
                     .padding([.horizontal], 12)
             }
             .clioBackground()
-            .keyboardAdaptive()
-            .navigationDestination(isPresented: $vm.goToSearchResultView) {
-                if vm.searchKeywords != "" {
-                    SearchImageView(keywords: vm.searchKeywords)
-                }
-            }
+            .applyHelpButton(.PickImage)
         }
         .onAppear {
             Task {

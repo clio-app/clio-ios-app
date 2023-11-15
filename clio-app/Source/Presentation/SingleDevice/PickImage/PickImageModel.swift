@@ -45,7 +45,7 @@ enum PickImageModel {
             var communicationProtocol: CommunicationProtocol = .HTTPS
             var urlBase: String = "api.thecatapi.com"
             var path: String = "/v1/images/search"
-            var queries: [URLQueryItem] = [.init(name: "limit", value: "16")]
+            var queries: [URLQueryItem] = [.init(name: "limit", value: "6")]
         }
     }
 }

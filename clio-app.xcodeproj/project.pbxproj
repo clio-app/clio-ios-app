@@ -10,6 +10,7 @@
 		002977C02B04601E005C59AC /* RoundedBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002977BF2B04601E005C59AC /* RoundedBorder.swift */; };
 		002977C22B04608B005C59AC /* PickImageViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002977C12B04608B005C59AC /* PickImageViewLayout.swift */; };
 		002977C42B0461E4005C59AC /* SelectedCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002977C32B0461E4005C59AC /* SelectedCircle.swift */; };
+		002977C62B0477E8005C59AC /* SearchImageViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002977C52B0477E8005C59AC /* SearchImageViewLayout.swift */; };
 		002EF6862AFE552400E17620 /* PhotoArtifactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002EF6852AFE552400E17620 /* PhotoArtifactModel.swift */; };
 		002EF68B2AFE58D600E17620 /* PickImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002EF68A2AFE58D600E17620 /* PickImageView.swift */; };
 		002EF68D2AFE58E000E17620 /* PickImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002EF68C2AFE58E000E17620 /* PickImageViewModel.swift */; };
@@ -143,6 +144,7 @@
 		002977BF2B04601E005C59AC /* RoundedBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorder.swift; sourceTree = "<group>"; };
 		002977C12B04608B005C59AC /* PickImageViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageViewLayout.swift; sourceTree = "<group>"; };
 		002977C32B0461E4005C59AC /* SelectedCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCircle.swift; sourceTree = "<group>"; };
+		002977C52B0477E8005C59AC /* SearchImageViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageViewLayout.swift; sourceTree = "<group>"; };
 		002EF6852AFE552400E17620 /* PhotoArtifactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoArtifactModel.swift; sourceTree = "<group>"; };
 		002EF68A2AFE58D600E17620 /* PickImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageView.swift; sourceTree = "<group>"; };
 		002EF68C2AFE58E000E17620 /* PickImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageViewModel.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				00AA0DCD2B00778400F8CE44 /* SearchImageView.swift */,
 				00AA0DCF2B00778E00F8CE44 /* SearchImageViewModel.swift */,
 				00AA0DD12B0077BA00F8CE44 /* SearchImageModel.swift */,
+				002977C52B0477E8005C59AC /* SearchImageViewLayout.swift */,
 			);
 			path = SearchImage;
 			sourceTree = "<group>";
@@ -553,7 +556,6 @@
 			isa = PBXGroup;
 			children = (
 				00EB46BF2B0267D6009A2A63 /* SearchImageTextInput.swift */,
-				002977C32B0461E4005C59AC /* SelectedCircle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -632,6 +634,7 @@
 				00FA85CD2B0394DF00BD9246 /* ImagePlaceholder.swift */,
 				00B03FA72B03B52900165650 /* TakePictureModePopup.swift */,
 				002977BF2B04601E005C59AC /* RoundedBorder.swift */,
+				002977C32B0461E4005C59AC /* SelectedCircle.swift */,
 			);
 			path = GeneralComponents;
 			sourceTree = "<group>";
@@ -947,6 +950,7 @@
 				7E1705E02AD608EE005FA9EE /* LobbyViewModel.swift in Sources */,
 				7E1705E12AD608EE005FA9EE /* LobbyModel.swift in Sources */,
 				FF4DDEA72AE200E900759F47 /* ZoomImage.swift in Sources */,
+				002977C62B0477E8005C59AC /* SearchImageViewLayout.swift in Sources */,
 				7E94E93B2AD5C68600031061 /* MasterInputCard.swift in Sources */,
 				00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */,
 				7EA6DC932AE7FB82003368E8 /* PlayerRow.swift in Sources */,

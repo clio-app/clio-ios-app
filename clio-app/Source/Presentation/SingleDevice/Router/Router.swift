@@ -15,6 +15,7 @@ enum Views: Hashable {
     case SelectPlayer
     case firstPrompt
     case PickImage
+    case SearchImage(String)
     case PhotoArtifact
     case DescriptionArtifact
     case PresentResults
@@ -73,6 +74,10 @@ class Router: ObservableObject {
         path.append(Views.AllResultsVisualization)
     }
     
+    func goToSearchImageView(keywords: String) {
+        path.append(Views.SearchImage(keywords))
+    }
+    
     func restartGameWithPlayers() {
         clear()
         goToPlayersView()
@@ -105,6 +110,8 @@ enum ViewFactory {
             AllResultsView()
         case .PickImage:
             PickImageView()
+        case .SearchImage(let keywords):
+            SearchImageView(keywords: keywords)
         }
     }
 }
