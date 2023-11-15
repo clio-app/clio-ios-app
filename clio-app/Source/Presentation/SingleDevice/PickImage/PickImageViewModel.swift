@@ -11,7 +11,7 @@ final class PickImageViewModel: ObservableObject {
     private var network: NetworkService
     
     @Published
-    var generatedImages: [any GeneratedImage] = [
+    var generatedImages: [PickImageModel.RandomCatImages.Response.CatImage] = [
         PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
         PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
         PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
@@ -27,7 +27,16 @@ final class PickImageViewModel: ObservableObject {
     var goToSearchResultView = false
     
     @Published
+    var showHighlightedImagePopup = false
+    
+    @Published
     var searchKeywords: String = String()
+    
+    @Published
+    var selectedImage: PickImageModel.RandomCatImages.Response.CatImage?
+    
+    @Published
+    var highlightedImage: PickImageModel.RandomCatImages.Response.CatImage?
         
     init(network: NetworkService = NetworkService()) { self.network = network }
     

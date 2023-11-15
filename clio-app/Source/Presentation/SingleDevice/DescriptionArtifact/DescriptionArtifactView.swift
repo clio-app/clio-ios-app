@@ -94,6 +94,7 @@ struct DescriptionArtifactView: View {
                     pickImageButtonTapped: { router.goToPickImageView() },
                     isShowing: $showPopup
                 )
+                .frame(width: geo.size.width, height: geo.size.height)
             }
             .onTapGesture {
                 UIApplication.shared.endEditing()

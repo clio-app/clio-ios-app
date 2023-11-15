@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PickImageView: View {
     @StateObject private var vm = PickImageViewModel()
+    private let layout = PickImageViewLayout()
     
     var body: some View {
         GeometryReader { geo in
@@ -45,16 +46,23 @@ struct PickImageView: View {
                             if let image = phase.image {
                                 image
                                     .resizable()
-                                    .frame(width: geo.size.width * 0.4, height: 110)
                                     .aspectRatio(contentMode: .fill)
-                                    .clipShape(
-                                        .rect(
-                                            cornerSize: CGSize(
-                                                width: 30,
-                                                height: 30
-                                            )
-                                        )
-                                    )
+                                    .frame(width: geo.size.width * 0.4, height: 110)
+                                    .clipShape(.rect(cornerSize: layout.pictureBorderSize))
+                                    .overlay { RoundedBorder(size: layout.pictureBorderSize) }
+                                    .overlay {
+                                        if vm.selectedImage?.imageUrl == vm.generatedImages[imageIndex].imageUrl {
+                                            selectedCircle
+                                        }
+                                    }
+                                    .onTapGesture {
+                                        vm.selectedImage = vm.generatedImages[imageIndex]
+                                    }
+                                    .onLongPressGesture {
+                                        layout.longPressImpact.impactOccurred()
+                                        vm.highlightedImage = vm.generatedImages[imageIndex]
+                                        vm.showHighlightedImagePopup = true
+                                    }
                             } else {
                                 ImagePlaceholder()
                                     .frame(width: geo.size.width * 0.4, height: 110)
@@ -62,10 +70,7 @@ struct PickImageView: View {
                         }
                     }
                 }
-                .frame(
-                    width: geo.size.width * 0.9,
-                    height: geo.size.height * 0.6
-                )
+                .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.6)
                 .clipped()
                 
                 ActionButton(
@@ -82,8 +87,6 @@ struct PickImageView: View {
                 width: geo.size.width,
                 height: geo.size.height
             )
-            .keyboardAdaptive()
-            .clioBackground()
             .popupNavigationView(show: $vm.showSearchImagePopUp) {
                 SearchImageTextInput(
                     isShowing: $vm.showSearchImagePopUp,
@@ -93,6 +96,24 @@ struct PickImageView: View {
                     }
                 )
             }
+            .popupNavigationView(show: $vm.showHighlightedImagePopup) {
+                Rectangle()
+                    .foregroundStyle(.clear)
+                    .overlay {
+                        AsyncImage(url: vm.highlightedImage?.imageUrl) { phase in
+                            if let image = phase.image {
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            }
+                        }
+                        .clipShape(.rect(cornerSize: layout.pictureBorderSize))
+                    }
+                    .frame(maxWidth: geo.size.width * 0.8, maxHeight: geo.size.height * 0.8)
+                    .padding([.horizontal], 12)
+            }
+            .clioBackground()
+            .keyboardAdaptive()
             .navigationDestination(isPresented: $vm.goToSearchResultView) {
                 if vm.searchKeywords != "" {
                     SearchImageView(keywords: vm.searchKeywords)
@@ -102,6 +123,21 @@ struct PickImageView: View {
         .onAppear {
             Task {
                 await vm.generateImages()
+            }
+        }
+    }
+    
+    var selectedCircle: some View {
+        return HStack {
+            Spacer()
+            VStack {
+                SelectedCircle()
+                    .frame(
+                        width: 24,
+                        height: 18
+                    )
+                
+                Spacer()
             }
         }
     }
