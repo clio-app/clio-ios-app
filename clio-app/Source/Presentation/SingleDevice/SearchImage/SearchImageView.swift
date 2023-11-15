@@ -109,8 +109,14 @@ struct SearchImageView: View {
                     hasBorder: true,
                     action: { 
                         if let selectedImageUrl = vm.selectedImage?.imageUrl {
-                            session.sendArtifact(picture: try! Data(contentsOf: selectedImageUrl))
-                            router.goToSelectPlayer()
+                            let queue = DispatchQueue(label: "Image Data Loading")
+                            queue.async(qos: .background) {
+                                let imageData = try! Data(contentsOf: selectedImageUrl)
+                                DispatchQueue.main.sync {
+                                    session.sendArtifact(picture: imageData)
+                                    router.goToSelectPlayer()
+                                }
+                            }
                         }
                     }
                 )
