@@ -86,11 +86,11 @@ struct SearchImageView: View {
                         )
                         .onPreferenceChange(ViewOffsetKey.self) { detector.send($0) }
                     }
+                    .padding([.top], 4)
                     .coordinateSpace(name: "scroll")
                     .onReceive(publisher) { _ in
                         Task { await vm.searchImage() }
                     }
-//                    .padding([.top], 32)
                 } else {
                     Spacer()
                     
