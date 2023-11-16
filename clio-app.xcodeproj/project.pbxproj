@@ -37,6 +37,7 @@
 		00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D42ABC8D8A00F66421 /* CreateRoomViewModel.swift */; };
 		00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */; };
 		00EB46B72B025A50009A2A63 /* ShimmerEffectLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EB46B62B025A50009A2A63 /* ShimmerEffectLoading.swift */; };
+		00EB46C02B0267D6009A2A63 /* SearchImageTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EB46BF2B0267D6009A2A63 /* SearchImageTextInput.swift */; };
 		7E0D42592AD5BEFD00C566EB /* SelectImageProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42572AD5BEFD00C566EB /* SelectImageProfile.swift */; };
 		7E0D425A2AD5BEFD00C566EB /* AnonymousLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42582AD5BEFD00C566EB /* AnonymousLoginView.swift */; };
 		7E0EB3B92B03B1EE001CDF36 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EB3B82B03B1EE001CDF36 /* AudioManager.swift */; };
@@ -163,6 +164,7 @@
 		00D9C9D42ABC8D8A00F66421 /* CreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewModel.swift; sourceTree = "<group>"; };
 		00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModel.swift; sourceTree = "<group>"; };
 		00EB46B62B025A50009A2A63 /* ShimmerEffectLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffectLoading.swift; sourceTree = "<group>"; };
+		00EB46BF2B0267D6009A2A63 /* SearchImageTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageTextInput.swift; sourceTree = "<group>"; };
 		7E0D42242AD5B7CE00C566EB /* LobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyView.swift; sourceTree = "<group>"; };
 		7E0D42252AD5B7CE00C566EB /* LobbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewModel.swift; sourceTree = "<group>"; };
 		7E0D42262AD5B7CE00C566EB /* LobbyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyModel.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 		002EF6872AFE58C000E17620 /* PickImage */ = {
 			isa = PBXGroup;
 			children = (
+				00EB46BE2B0267C9009A2A63 /* Components */,
 				002EF68A2AFE58D600E17620 /* PickImageView.swift */,
 				002EF68C2AFE58E000E17620 /* PickImageViewModel.swift */,
 				002EF68E2AFE5F5300E17620 /* PickImageModel.swift */,
@@ -533,6 +536,14 @@
 				00D9C9C22ABC7EAF00F66421 /* Loader.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		00EB46BE2B0267C9009A2A63 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				00EB46BF2B0267D6009A2A63 /* SearchImageTextInput.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		7E0D42232AD5B7CE00C566EB /* LobbyView */ = {
@@ -954,6 +965,7 @@
 				7EA6DC972AE80025003368E8 /* ThemeSlot.swift in Sources */,
 				FFD59DC62AFA5D1B001C06B0 /* DescriptionCard.swift in Sources */,
 				FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */,
+				00EB46C02B0267D6009A2A63 /* SearchImageTextInput.swift in Sources */,
 				7E5211582AB4A02D0080F92C /* UIColor+Extensions.swift in Sources */,
 				00D9C9D52ABC8D8A00F66421 /* CreateRoomViewModel.swift in Sources */,
 				00C120132AE05C3A0042E152 /* ResultsView.swift in Sources */,

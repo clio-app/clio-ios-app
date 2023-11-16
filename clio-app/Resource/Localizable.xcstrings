@@ -492,8 +492,9 @@
         }
       }
     },
-    "FirstPrompt_Hint" : {
-      "comment" : "FirstPrompt view hint",
+    "Escreva uma palavra para gerar imagens relacionadas" : {
+
+    },
     "Generate Image Action Description" : {
       "extractionState" : "manual",
       "localizations" : {

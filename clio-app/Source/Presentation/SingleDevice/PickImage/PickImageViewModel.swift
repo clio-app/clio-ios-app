@@ -17,6 +17,9 @@ final class PickImageViewModel: ObservableObject {
         PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0),
         PickImageModel.RandomCatImages.Response.CatImage(id: "0", url: "", width: 0, height: 0)
     ]
+    @Published var showSearchImagePopUp = false
+    @Published var goToSearchResultView = false
+    @Published var searchKeywords: String = String()
         
     init(network: NetworkService = NetworkService()) {
         self.network = network
