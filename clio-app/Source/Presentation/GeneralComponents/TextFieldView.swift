@@ -18,7 +18,7 @@ struct TextFieldView: View {
             TextField(
                 "",
                 text: $inputText,
-                prompt: Text(.init(placeholder))
+                prompt: Text(placeholder)
                     .font(.itimRegular())
                     .foregroundColor(.gray)
             )
