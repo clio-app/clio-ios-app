@@ -11,17 +11,9 @@ import Mixpanel
 struct DescriptionArtifactView: View {
     @EnvironmentObject var session: GameSession
     @EnvironmentObject var router: Router
-    
-    @State var theme = ""
-    @State var uiImage = UIImage(systemName: "photo.on.rectangle.angled")!
-    
-    @State var input = ""
-    @State var placeholder = NSLocalizedString("Escreva uma descrição sobre a imagem...", comment: "write a description for the image")
+    @ObservedObject var vm = DescriptionArtifactViewModel(imagePlaceHolder: UIImage(systemName: "photo.on.rectangle.angled")!.pngData()!)
 
-    @State var showZoomImage = false
     @State private var startArtifactDescriptionTimer: DispatchTime!
-
-    private let maxWordCount: Int = 100
 
     var body: some View {
         GeometryReader { geo in
@@ -29,7 +21,7 @@ struct DescriptionArtifactView: View {
                 VStack {
                     ThemeCard(
                         title: "Relacione a foto com o tema:",
-                        theme: $theme
+                        theme: $vm.theme
                     )
                     .frame(width: geo.size.width * 0.8)
                     .background{
@@ -50,7 +42,7 @@ struct DescriptionArtifactView: View {
                             .onTapGesture {
                                 withAnimation {
                                     UIApplication.shared.endEditing()
-                                    showZoomImage = true
+                                    vm.showZoomImage = true
                                 }
                             }
                             .overlay {
@@ -64,16 +56,29 @@ struct DescriptionArtifactView: View {
                                             .stroke(.black, lineWidth: 2)
                                     }
                             }
+                            .overlay {
+                                VStack {
+                                    Spacer()
+                                    ReactionButton(
+                                        showSelectEmoji: $vm.showSelectEmoji,
+                                        selectedIndex: $vm.selectedIndex
+                                    )
+                                        .frame(width: geo.size.width * 0.7, height: geo.size.height * 0.09)
+                                        .offset(x: -5, y: geo.size.height * 0.1/3.5)
+                                }
+                                .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.45, alignment: .trailing)
+                            }
                         
                         LimitedInputTextField(
-                            maxInputCount: maxWordCount,
-                            inputUser: $input,
-                            placeholder: placeholder
+                            maxInputCount: vm.maxWordCount,
+                            inputUser: $vm.input,
+                            placeholder: vm.placeholder
                         )
                         .frame(
-                            width: geo.size.width * 0.7,
+                            width: geo.size.width * 0.8,
                             height: geo.size.height * 0.15
                         )
+                        .padding(.top, geo.size.height * 0.1 / 3)
                     }
                     
                     Spacer()
@@ -88,21 +93,23 @@ struct DescriptionArtifactView: View {
             .keyboardAdaptive()
             .onTapGesture {
                 UIApplication.shared.endEditing()
-                if input == "" {
-                    input = placeholder
-                }
+                hideEmojis()
+                vm.verifyInput()
             }
             .overlay {
-                if showZoomImage {
-                    ZoomImage(selectedImage: $showZoomImage, uiImage: uiImage)
+                if vm.showZoomImage {
+                    ZoomImage(
+                        selectedImage: $vm.showZoomImage,
+                        uiImage: UIImage(data: vm.uiImageData ?? vm.imagePlaceHolder)!
+                    )
                 }
             }
             .onAppear {
                 startArtifactDescriptionTimer = .now()
-                theme = session.gameFlowParameters.sessionTheme
-                if let data = session.getLastImage() {
-                    uiImage = UIImage(data: data)!
-                }
+                vm.initialSetUp(
+                    theme: session.gameFlowParameters.sessionTheme,
+                    imageData: session.getLastImage()
+                )
             }
             .clioBackground()
             .applyHelpButton(.DescriptionArtifact)
@@ -112,23 +119,28 @@ struct DescriptionArtifactView: View {
         .navigationTitle("")
         .navigationBarBackButtonHidden()
     }
+    
+    func hideEmojis() {
+        withAnimation {
+            vm.showSelectEmoji = false
+        }
+    }
 }
 
 extension DescriptionArtifactView {
     
     var image: some View {
         ZStack {
-            if uiImage == UIImage(systemName: "photo.on.rectangle.angled") {
-                Image(uiImage: uiImage)
+            if let imageData = vm.uiImageData {
+                Image(uiImage: UIImage(data: imageData)!)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+            } else {
+                Image(uiImage: UIImage(data: vm.imagePlaceHolder)!)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100, height: 80)
-            } else {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
             }
-            
         }
     }
     
@@ -152,7 +164,7 @@ extension DescriptionArtifactView {
                     ]
                 )
                 
-                session.sendArtifact(description: input)
+                session.sendArtifact(description: vm.input)
 
                 switch session.gameState {
                 case .final:
@@ -165,21 +177,8 @@ extension DescriptionArtifactView {
                     router.goToPhotoArtifactView()
                 }
             }
-            .disabled(!canSendDescription())
-            .opacity((!canSendDescription()) ? 0.2 : 1)
-    }
-    
-    func canSendDescription() -> Bool {
-        if input == placeholder {
-            return false
-        }
-        if input == "" {
-            return false
-        }
-        if input.count > maxWordCount {
-            return false
-        }
-        return true
+            .disabled(!vm.canSendDescription())
+            .opacity((!vm.canSendDescription()) ? 0.2 : 1)
     }
 }
 
