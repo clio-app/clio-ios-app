@@ -65,7 +65,6 @@ struct PlayersView: View {
                 .bold()
                 .foregroundColor(Color.lapisLazuli)
             }
-            .padding(.top, 2)
             .padding(.horizontal, 30)
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)

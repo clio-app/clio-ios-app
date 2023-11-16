@@ -37,7 +37,7 @@ extension UIApplication {
 extension Publishers {
     static var keyboardHeight: AnyPublisher<CGFloat, Never> {
         let willShow = NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)
-            .map { $0.keyboardHeight }
+            .map { $0.keyboardHeight * 0.9 }
 
         let willHide = NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)
             .map { _ in CGFloat(0) }
