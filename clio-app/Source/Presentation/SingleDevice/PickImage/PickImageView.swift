@@ -132,7 +132,9 @@ struct PickImageView: View {
         }
         .onAppear {
             Task {
-                await vm.generateImages()
+                if vm.generatedImages.isEmpty {
+                    await vm.generateImages()
+                }
             }
         }
     }

@@ -416,8 +416,8 @@
 		00C11FFC2ADEB5BA0042E152 /* SingleDevice */ = {
 			isa = PBXGroup;
 			children = (
-				7E68A60E2AFE3F1B006FAA1A /* CustomFirstPromptView */,
 				7E61A3E02AE574170009425C /* Router */,
+				7E68A60E2AFE3F1B006FAA1A /* CustomFirstPromptView */,
 				00AA0DCC2B00775900F8CE44 /* SearchImage */,
 				002EF6872AFE58C000E17620 /* PickImage */,
 				FF4DDEA32AE1A12400759F47 /* DescriptionArtifact */,
