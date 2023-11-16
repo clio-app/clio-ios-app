@@ -225,7 +225,6 @@
 		7EA6DC962AE80025003368E8 /* ThemeSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSlot.swift; sourceTree = "<group>"; };
 		7EA6DC992AE80352003368E8 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		7EA6DC9B2AE804E4003368E8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		7EA6DC9E2AE82581003368E8 /* ThemeBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeBubble.swift; sourceTree = "<group>"; };
 		7EA6DCA02AE88BCD003368E8 /* HomologConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = HomologConfig.xcconfig; path = "clio-app/HomologConfig.xcconfig"; sourceTree = "<group>"; };
 		7EA6DCA12AE8902D003368E8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7EBA9CD82AD1AF6E00C25970 /* VotingInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionView.swift; sourceTree = "<group>"; };
@@ -258,7 +257,6 @@
 		FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerViewModel.swift; sourceTree = "<group>"; };
 		FFC49E4B2B063B67004C94D5 /* DescriptionArtifactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionArtifactViewModel.swift; sourceTree = "<group>"; };
 		FFD249012B065ECE0092173F /* EmojiReaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiReaction.swift; sourceTree = "<group>"; };
-		FFD249032B06660B0092173F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		FFD404F82B03A08400808D32 /* ReactionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionButton.swift; sourceTree = "<group>"; };
 		FFD59DC52AFA5D1B001C06B0 /* DescriptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCard.swift; sourceTree = "<group>"; };
 		FFD59DCC2AFAA146001C06B0 /* AllResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsView.swift; sourceTree = "<group>"; };
@@ -1203,7 +1201,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
 				DEVELOPMENT_TEAM = 685GVH2XJC;
 				ENABLE_PREVIEWS = YES;
@@ -1223,7 +1221,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.clio;
 				PRODUCT_NAME = Clio;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1241,7 +1239,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
 				DEVELOPMENT_TEAM = 685GVH2XJC;
 				ENABLE_PREVIEWS = YES;
@@ -1261,7 +1259,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.clio;
 				PRODUCT_NAME = Clio;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
