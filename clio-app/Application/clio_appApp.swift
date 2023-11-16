@@ -13,7 +13,8 @@ struct clio_appApp: App {
     
     var body: some Scene {
         WindowGroup {
-            StartView()
+            PickImageView()
+//            StartView()
                 .preferredColorScheme(.light)
         }
     }

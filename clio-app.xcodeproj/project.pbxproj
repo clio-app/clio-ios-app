@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002EF6862AFE552400E17620 /* PhotoArtifactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002EF6852AFE552400E17620 /* PhotoArtifactModel.swift */; };
+		002EF68B2AFE58D600E17620 /* PickImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002EF68A2AFE58D600E17620 /* PickImageView.swift */; };
+		002EF68D2AFE58E000E17620 /* PickImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002EF68C2AFE58E000E17620 /* PickImageViewModel.swift */; };
+		002EF68F2AFE5F5300E17620 /* PickImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002EF68E2AFE5F5300E17620 /* PickImageModel.swift */; };
 		00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF8F92AB4914B0068A5F2 /* clio_appApp.swift */; };
 		00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */; };
 		00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */; };
@@ -126,6 +130,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		002EF6852AFE552400E17620 /* PhotoArtifactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoArtifactModel.swift; sourceTree = "<group>"; };
+		002EF68A2AFE58D600E17620 /* PickImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageView.swift; sourceTree = "<group>"; };
+		002EF68C2AFE58E000E17620 /* PickImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageViewModel.swift; sourceTree = "<group>"; };
+		002EF68E2AFE5F5300E17620 /* PickImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageModel.swift; sourceTree = "<group>"; };
 		00BFF8F92AB4914B0068A5F2 /* clio_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appApp.swift; sourceTree = "<group>"; };
 		00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
 		00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -257,6 +265,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		002EF6872AFE58C000E17620 /* PickImage */ = {
+			isa = PBXGroup;
+			children = (
+				002EF68A2AFE58D600E17620 /* PickImageView.swift */,
+				002EF68C2AFE58E000E17620 /* PickImageViewModel.swift */,
+				002EF68E2AFE5F5300E17620 /* PickImageModel.swift */,
+			);
+			path = PickImage;
+			sourceTree = "<group>";
+		};
 		00BFF8ED2AB4914B0068A5F2 = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				7E68A60E2AFE3F1B006FAA1A /* CustomFirstPromptView */,
+				002EF6872AFE58C000E17620 /* PickImage */,
 				7E61A3E02AE574170009425C /* Router */,
 				FF4DDEA32AE1A12400759F47 /* DescriptionArtifact */,
 				FFA354D22AE0162200E23ADC /* PhotoArtifact */,
@@ -703,9 +722,10 @@
 		FFA354D22AE0162200E23ADC /* PhotoArtifact */ = {
 			isa = PBXGroup;
 			children = (
+				FFA354D72AE0190700E23ADC /* Components */,
 				FFA354D32AE0169D00E23ADC /* PhotoArtifactView.swift */,
 				FFA354D52AE0170B00E23ADC /* PhotoArtifactViewModel.swift */,
-				FFA354D72AE0190700E23ADC /* Components */,
+				002EF6852AFE552400E17620 /* PhotoArtifactModel.swift */,
 			);
 			path = PhotoArtifact;
 			sourceTree = "<group>";
@@ -884,6 +904,7 @@
 				7EBA9CDD2AD1B61800C25970 /* VotingInstructionModel.swift in Sources */,
 				FFD59DCD2AFAA146001C06B0 /* AllResultsView.swift in Sources */,
 				FFA354D92AE0193100E23ADC /* CameraButton.swift in Sources */,
+				002EF68F2AFE5F5300E17620 /* PickImageModel.swift in Sources */,
 				7EBA9CE22AD22A8E00C25970 /* DescriptionItem.swift in Sources */,
 				7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */,
 				FFA354D62AE0170B00E23ADC /* PhotoArtifactViewModel.swift in Sources */,
@@ -918,9 +939,11 @@
 				7EA6DC9F2AE82581003368E8 /* ThemeBubble.swift in Sources */,
 				FFD59DCA2AFA6CC9001C06B0 /* ResultsDetailViewModel.swift in Sources */,
 				7E81843E2AD4336100938C69 /* VotingPopupModel.swift in Sources */,
+				002EF68B2AFE58D600E17620 /* PickImageView.swift in Sources */,
 				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
 				7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */,
 				00C120102ADEC2E00042E152 /* RaffleThemeView.swift in Sources */,
+				002EF68D2AFE58E000E17620 /* PickImageViewModel.swift in Sources */,
 				7E94E93C2AD5C68600031061 /* LimitedInputTextField.swift in Sources */,
 				FF64DC332AFB3BDF002938EE /* ImageCard.swift in Sources */,
 				7EBA9CE42AD23CF800C25970 /* PieProgress.swift in Sources */,
@@ -941,6 +964,7 @@
 				00C120022ADEBDC90042E152 /* PlayersView.swift in Sources */,
 				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
 				7E8201E02AD58E5300DA8F68 /* AnswerGrid.swift in Sources */,
+				002EF6862AFE552400E17620 /* PhotoArtifactModel.swift in Sources */,
 				7ED105542AE5CD830038B149 /* RaffleThemeViewModel.swift in Sources */,
 				FFA354D42AE0169D00E23ADC /* PhotoArtifactView.swift in Sources */,
 				FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */,
@@ -996,6 +1020,7 @@
 /* Begin XCBuildConfiguration section */
 		00BFF9182AB4914D0068A5F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EA6DCA02AE88BCD003368E8 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1056,6 +1081,7 @@
 		};
 		00BFF9192AB4914D0068A5F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EA6DCA02AE88BCD003368E8 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
