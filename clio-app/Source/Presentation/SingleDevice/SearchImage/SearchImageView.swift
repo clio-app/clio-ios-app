@@ -27,7 +27,7 @@ struct SearchImageView: View {
     var body: some View {
         GeometryReader { geo in
             VStack {
-                Text("Imagens geradas")
+                Text("Generated Images Sentence")
                     .lineLimit(nil)
                     .font(.itimRegular(fontType: .headline))
                     .multilineTextAlignment(.center)

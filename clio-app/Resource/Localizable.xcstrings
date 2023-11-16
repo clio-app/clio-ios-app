@@ -532,6 +532,23 @@
         }
       }
     },
+    "Generated Images Sentence" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generated Images"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imagens geradas"
+          }
+        }
+      }
+    },
     "Hello, World!" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -939,7 +956,24 @@
         }
       }
     },
-    "PresentResults_Hint" : {
+    "Pick Image Button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick Image"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolher imagem"
+          }
+        }
+      }
+    },
+    "PresentResults" : {
       "comment" : "PresentResults view hint",
       "localizations" : {
         "en" : {
@@ -1155,6 +1189,57 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Selecione o modo de jogo para iniciar a partida."
+          }
+        }
+      }
+    },
+    "Take Picture Button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take Picture"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Tirar foto"
+          }
+        }
+      }
+    },
+    "Take Picture Mode Sentence" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you want to associate the following sentence?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "De que forma você quer associar a frase a seguir?"
+          }
+        }
+      }
+    },
+    "TEMA" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Theme"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tema"
           }
         }
       }

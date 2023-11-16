@@ -17,15 +17,13 @@ struct TakePictureModePopup: View {
         GeometryReader { geo in
             VStack(alignment: .center, spacing: 18) {
                 VStack {
-                    Text(
-                        "De que forma você quer associar a frase a seguir?"
-                    )
-                    .lineLimit(nil)
-                    .font(.itimRegular(fontType: .headline))
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding([.top], 36)
-                    .padding([.horizontal])
+                    Text("Take Picture Mode Sentence")
+                        .lineLimit(nil)
+                        .font(.itimRegular(fontType: .headline))
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding([.top], 36)
+                        .padding([.horizontal])
                     
                     Text(inputPhrase)
                         .lineLimit(nil)
@@ -38,7 +36,7 @@ struct TakePictureModePopup: View {
                 
                 
                 ActionButton(
-                    title: "Tirar foto",
+                    title: "Take Picture Button",
                     foregroundColor: .blue,
                     hasBorder: false
                 ) {
@@ -49,7 +47,7 @@ struct TakePictureModePopup: View {
                 .padding(.top, 25)
                 
                 ActionButton(
-                    title: "Escolher imagem",
+                    title: "Pick Image Button",
                     foregroundColor: .blue,
                     hasBorder: false
                 ) {
