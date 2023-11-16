@@ -137,6 +137,12 @@ struct PickImageView: View {
                 }
             }
         }
+        .refreshable {
+            Task {
+                vm.generatedImages.removeAll()
+                await vm.generateImages()
+            }
+        }
     }
     
     var selectedCircle: some View {
@@ -157,4 +163,6 @@ struct PickImageView: View {
 
 #Preview {
     PickImageView()
+        .environmentObject(GameSession())
+        .environmentObject(Router())
 }
