@@ -23,6 +23,8 @@ struct SelectPlayerView: View {
                 
                 Spacer()
                 
+            }
+            .safeAreaInset(edge: .bottom) {
                 ButtonsToConfirmation(
                     confirmationAction: {
                         if let player = vm.currentPlayer {
@@ -53,10 +55,10 @@ struct SelectPlayerView: View {
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)
-            .clioBackground()
-            .applyHelpButton(.SelectPlayer)
             .navigationBarBackButtonHidden()
         }
+        .applyHelpButton(.SelectPlayer)
+        .clioBackground()
         .onAppear {
             let player = gameSession.getRandomPlayer()
             vm.changePlayer(newPlayer: player)

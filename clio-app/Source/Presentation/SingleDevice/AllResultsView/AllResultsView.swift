@@ -11,83 +11,104 @@ import ClioEntities
 struct AllResultsView: View {
     @EnvironmentObject var gameSession: GameSession
     @EnvironmentObject var router: Router
-    
-    @State var showZoomImage: Bool = false
-    @State var selectedImage: Data?
+    @ObservedObject var vm = AllResultsViewModel()
 
     var body: some View {
         GeometryReader { geo in
-            ScrollView {
-                VStack (spacing: geo.size.height * 0.11) {
-                    DescriptionCard(description: gameSession.gameFlowParameters.firstRoundPrompt)
-                    ForEach(0..<gameSession.gameFlowParameters.didPlay.count, id: \.self) { index in
-                        VStack(spacing: 24) {
-                            UserAvatar(
-                                userName: gameSession.gameFlowParameters.didPlay[index].name,
-                                picture: gameSession.gameFlowParameters.didPlay[index].picture
-                            )
-                            if let imageData = gameSession.gameFlowParameters.didPlay[index].artefact?.picture {
-                                ImageCard(imageData: imageData) 
-                                    .onTapGesture {
-                                        showZoomImage = true
-                                        selectedImage = imageData
-                                    }
-                                    .frame(
-                                        width: geo.size.width * 0.8,
-                                        height: geo.size.width * 0.8
-                                    )
-                            }
-                            if let description = gameSession.gameFlowParameters.didPlay[index].artefact?.description {
-                                DescriptionCard(description: description)
-                                    .padding(.horizontal, 2)
+            switch vm.state {
+            case .presentTheme:
+                VStack {
+                    Spacer()
+                    ThemeBubble(theme: gameSession.gameFlowParameters.sessionTheme)
+                        .frame(
+                            height: geo.size.height * 0.2
+                        )
+                    Spacer()
+                }
+                .frame(width: geo.size.width)
+                .transition(.move(edge: .leading))
+            case .presentArtifacts:
+                ScrollView {
+                    VStack (spacing: geo.size.height * 0.11) {
+                        DescriptionCard(description: gameSession.gameFlowParameters.firstRoundPrompt)
+                        ForEach(0..<gameSession.gameFlowParameters.didPlay.count, id: \.self) { index in
+                            VStack(spacing: 24) {
+                                UserAvatar(
+                                    userName: gameSession.gameFlowParameters.didPlay[index].name,
+                                    picture: gameSession.gameFlowParameters.didPlay[index].picture
+                                )
+                                if let imageData = gameSession.gameFlowParameters.didPlay[index].artefact?.picture {
+                                    ImageCard(imageData: imageData)
+                                        .onTapGesture {
+                                            vm.showZoomImage = true
+                                            vm.selectedImage = imageData
+                                        }
+                                        .frame(
+                                            width: geo.size.width * 0.8,
+                                            height: geo.size.width * 0.8
+                                        )
+                                }
+                                if let description = gameSession.gameFlowParameters.didPlay[index].artefact?.description {
+                                    DescriptionCard(description: description)
+                                        .padding(.horizontal, 2)
+                                }
                             }
                         }
                     }
+                    .frame(width: geo.size.width * 0.8)
+                    VStack {
+                        ActionButton(
+                            title: "Jogar Novamente",
+                            foregroundColor: .lapisLazuli,
+                            backgroundColor: .offWhite,
+                            hasBorder: true) {
+                                gameSession.restartGame()
+                                router.restartGameWithPlayers()
+                            }
+                            .padding(.horizontal)
+                            .frame(width: geo.size.width * 0.9, height: 60)
+                            .padding(.bottom)
+                            .disabled(vm.showZoomImage)
+                            .opacity(vm.showZoomImage ? 0.3 : 1)
+                        ActionButton(
+                            title: "Sair",
+                            foregroundColor: .sky,
+                            backgroundColor: .offWhite,
+                            hasBorder: true) {
+                                gameSession.fullResetGame()
+                                router.clear()
+                            }
+                            .padding(.horizontal)
+                            .frame(width: geo.size.width * 0.9, height: 60)
+                            .disabled(vm.showZoomImage)
+                            .opacity(vm.showZoomImage ? 0.3 : 1)
+                    }
+                    .padding(.top, geo.size.height * 0.11)
+                    .padding(.bottom)
                 }
-                .frame(width: geo.size.width * 0.8)
-                VStack {
-                    ActionButton(
-                        title: "Jogar Novamente",
-                        foregroundColor: .lapisLazuli,
-                        backgroundColor: .offWhite,
-                        hasBorder: true) {
-                            gameSession.restartGame()
-                            router.restartGameWithPlayers()
-                        }
-                        .padding(.horizontal)
-                        .frame(width: geo.size.width * 0.9, height: 60)
-                        .padding(.bottom)
-                        .disabled(showZoomImage)
-                        .opacity(showZoomImage ? 0.3 : 1)
-                    ActionButton(
-                        title: "Sair",
-                        foregroundColor: .sky,
-                        backgroundColor: .offWhite,
-                        hasBorder: true) {
-                            gameSession.fullResetGame()
-                            router.clear()
-                        }
-                        .padding(.horizontal)
-                        .frame(width: geo.size.width * 0.9, height: 60)
-                        .disabled(showZoomImage)
-                        .opacity(showZoomImage ? 0.3 : 1)
-                }
-                .padding(.top, geo.size.height * 0.11)
-                .padding(.bottom)
+                .frame(width: geo.size.width)
+                .scrollIndicators(.hidden)
+                .clipped()
+                .transition(.move(edge: .trailing))
             }
-            .frame(width: geo.size.width)
-            .scrollIndicators(.hidden)
-            .clipped()
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                withAnimation {
+                    vm.changeState()
+                }
+            }
         }
         .navigationBarBackButtonHidden()
         .clioBackground()
         .applyHelpButton(.AllResultsVisualization)
         .overlay {
-            if showZoomImage {
+            if vm.showZoomImage {
                 ZoomImage(
-                    selectedImage: $showZoomImage,
-                    uiImage: .init(data: selectedImage!)!
+                    selectedImage: $vm.showZoomImage,
+                    uiImage: .init(data: vm.selectedImage!)!
                 )
+                .edgesIgnoringSafeArea(.top)
             }
         }
     }

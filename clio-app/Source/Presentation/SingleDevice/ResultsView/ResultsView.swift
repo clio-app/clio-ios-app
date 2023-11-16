@@ -56,7 +56,7 @@ struct ResultsView: View {
                     backgroundColor: .offWhite,
                     hasBorder: true
                 ) {
-                    router.goToResultsPerPlayerVisualization()
+                    router.goToAllResultsVisualizationView()
                 }
                 .frame(height: 60)
                 .padding(30)

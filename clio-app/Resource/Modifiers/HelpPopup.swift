@@ -16,6 +16,7 @@ extension View {
 }
 
 struct HelpArea: ViewModifier {
+    @State var willShowHelpAlert = false
     @State var helpAlert: Bool = false
     @State var text: String = ""
     let title: String
@@ -27,78 +28,86 @@ struct HelpArea: ViewModifier {
     }
     
     func body(content: Content) -> some View {
-        content
-            .onAppear {
-                text = getHintForView(viewType)
+        VStack(spacing: 0) {
+            if willShowHelpAlert {
+                VStack{}
+                    .frame(width: 38, height: 44)
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .overlay {
-                GeometryReader { geo in
-                    ZStack {
-                        if helpAlert {
-                            Color.black.opacity(0.3)
-                                .ignoresSafeArea()
-                                .transition(.opacity)
-                                .onTapGesture {
-                                    changeVisibility()
-                                }
-                            
-                             CustomAlert(
-                                isPopupPresented: $helpAlert,
-                                title: title,
-                                text: text
-                            )
-                            .ignoresSafeArea()
-                            .padding()
-                            .transition(.scale.combined(with: .offset(
-                                x: geo.size.width,
-                                y: -geo.size.height
-                            )))
-                            .clipped()
-                            .scaleEffect(1)
-                            .offset(
-                                x: helpAlert ? 0 : -2000,
-                                y: helpAlert ? 0 : -2000
-                            )
-                        }
-                    }
-                }
-            }
-            .toolbar {
+            content
+                .toolbar(willShowHelpAlert ? .hidden : .visible, for: .navigationBar)
+        }
+        .onAppear {
+            text = getHintForView(viewType)
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
                 if !helpAlert {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button() {
-                            UIApplication.shared.endEditing()
-                            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
-                            changeVisibility()
-                        }label: {
-                            Image(systemName: "questionmark.circle.fill")
-                                .resizable()
-                                .scaledToFill()
-                                .foregroundColor(.lapisLazuli)
-                                .frame(width: 38, height: 38)
-                                .background {
-                                    Color.white
-                                        .clipShape(Circle())
-                                        .shadow(radius: 2)
-                                }
-                                .padding(.top, 2)
-                                .padding(.bottom,5)
-                                .padding(.leading, 10)
-                        }
-                        .transition(.move(edge: .bottom).combined(with: .move(edge: .leading)))
-                        .disabled(helpAlert)
-                        .opacity(helpAlert ? 0 : 1)
+                    Button() {
+                        UIApplication.shared.endEditing()
+                        UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+                        changeVisibility()
+                    }label: {
+                        Image(systemName: "questionmark.circle.fill")
+                            .resizable()
+                            .scaledToFill()
+                            .foregroundColor(.lapisLazuli)
+                            .frame(width: 38, height: 38)
+                            .background {
+                                Color.white
+                                    .clipShape(Circle())
+                                    .shadow(radius: 2)
+                            }
+                            .padding(.top, 2)
+                            .padding(.bottom,5)
+                            .padding(.leading, 10)
+                    }
+                    .transition(.move(edge: .bottom).combined(with: .move(edge: .leading)))
+                    .disabled(helpAlert)
+                    .opacity(helpAlert ? 0 : 1)
+                    .ignoresSafeArea()
+                }
+            }
+        }
+        .overlay {
+            GeometryReader { geo in
+                ZStack {
+                    if helpAlert {
+                        Color.black.opacity(0.3)
+                            .transition(.opacity)
+                            .onTapGesture {
+                                changeVisibility()
+                            }
+                            .ignoresSafeArea(.all)
+                        
+                         CustomAlert(
+                            isPopupPresented: $helpAlert,
+                            title: title,
+                            text: text
+                        )
                         .ignoresSafeArea()
+                        .padding()
+                        .transition(.scale.combined(with: .offset(
+                            x: geo.size.width,
+                            y: -geo.size.height
+                        )))
+                        .clipped()
+                        .scaleEffect(1)
+                        .offset(
+                            x: helpAlert ? 0 : -2000,
+                            y: helpAlert ? 0 : -2000
+                        )
                     }
                 }
             }
+        }
     }
     
     private func changeVisibility() {
         withAnimation(.easeInOut(duration: 0.3)) {
             helpAlert.toggle()
         }
+        willShowHelpAlert.toggle()
     }
  
     private func getHintForView(_ viewType: Views) -> String {
@@ -118,9 +127,7 @@ struct HelpArea: ViewModifier {
         case .DescriptionArtifact:
             return NSLocalizedString("DescriptionArtifact_Hint", comment: "DescriptionArtifact view hint");
         case .PresentResults:
-            return NSLocalizedString("PresentResults_Hint", comment: "PresentResults view hint");
-        case .ResultsPerPlayerVisualization:
-            return NSLocalizedString("ResultsVisualization_Hint", comment: "ResultsVisualization view hint");
+            return NSLocalizedString("PresentResults", comment: "PresentResults view hint");
         case .AllResultsVisualization:
             return NSLocalizedString("ResultsVisualization_Hint", comment: "ResultsVisualization view hint");
         }
