@@ -345,6 +345,7 @@
     },
     "DescriptionArtifact" : {
       "comment" : "DescriptionArtifact view hint",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -359,6 +360,9 @@
           }
         }
       }
+    },
+    "DescriptionArtifact_Hint" : {
+      "comment" : "DescriptionArtifact view hint"
     },
     "Digite o código da sala:" : {
       "localizations" : {
@@ -509,6 +513,9 @@
         }
       }
     },
+    "FirstPrompt_Hint" : {
+      "comment" : "FirstPrompt view hint"
+    },
     "Generate Image Action Description" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -590,23 +597,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Imagens geradas"
-          }
-        }
-      }
-    },
-    "Hello, World!" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "You can customize this first message as you see fit."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Você pode personalizar esta primeira mensagem como achar melhor."
           }
         }
       }
@@ -1034,6 +1024,7 @@
     },
     "PresentResults" : {
       "comment" : "PresentResults view hint",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1048,6 +1039,9 @@
           }
         }
       }
+    },
+    "PresentResults_Hint" : {
+      "comment" : "PresentResults view hint"
     },
     "Próximo" : {
       "extractionState" : "manual",
@@ -1116,6 +1110,9 @@
           }
         }
       }
+    },
+    "ResultsVisualization" : {
+      "comment" : "ResultsVisualization view hint"
     },
     "ResultsVisualization_Hint" : {
       "comment" : "ResultsVisualization view hint",
@@ -1204,6 +1201,7 @@
     },
     "SelectPlayer" : {
       "comment" : "SelectPlayer view hint",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1218,6 +1216,9 @@
           }
         }
       }
+    },
+    "SelectPlayer_Hint" : {
+      "comment" : "SelectPlayer view hint"
     },
     "Sem acesso à câmera!" : {
       "extractionState" : "manual",
@@ -1265,6 +1266,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sim"
+          }
+        }
+      }
+    },
+    "Sortear Novamente" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raffle Again"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sortear Novamente"
           }
         }
       }

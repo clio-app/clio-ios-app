@@ -13,8 +13,6 @@ struct SelectPlayerView: View {
     @EnvironmentObject var gameSession: GameSession
     @EnvironmentObject var router: Router
     
-    @State private var showPopup = false
-    
     var body: some View {
         GeometryReader { geo in
             VStack {
@@ -31,7 +29,8 @@ struct SelectPlayerView: View {
                             gameSession.addPlayerInRound(player: player)
                             switch gameSession.gameState {
                                 case .start:
-                                    showPopup = true
+                                    router.goToCustomPrompt()
+//                                    showPopup = true
                                 default:
                                     router.goToDescriptionArtifactView()
                             }
@@ -54,15 +53,6 @@ struct SelectPlayerView: View {
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)
-            .popupNavigationView(show: $showPopup) {
-                TakePictureModePopup(
-                    inputPhrase: gameSession.gameFlowParameters.firstRoundPrompt,
-                    takePictureButtonTapped: { router.goToPhotoArtifactView() },
-                    pickImageButtonTapped: { router.goToPickImageView() },
-                    isShowing: $showPopup
-                )
-                .frame(width: geo.size.width, height: geo.size.height)
-            }
             .clioBackground()
             .applyHelpButton(.SelectPlayer)
             .navigationBarBackButtonHidden()
