@@ -11,7 +11,7 @@ import ClioEntities
 struct AllResultsView: View {
     @EnvironmentObject var gameSession: GameSession
     @EnvironmentObject var router: Router
-    @ObservedObject var vm = AllResultsViewModel()
+    @StateObject var vm = AllResultsViewModel()
 
     var body: some View {
         GeometryReader { geo in

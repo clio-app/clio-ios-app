@@ -11,7 +11,7 @@ import Mixpanel
 struct DescriptionArtifactView: View {
     @EnvironmentObject var session: GameSession
     @EnvironmentObject var router: Router
-    @ObservedObject var vm = DescriptionArtifactViewModel(imagePlaceHolder: UIImage(systemName: "photo.on.rectangle.angled")!.pngData()!)
+    @StateObject var vm = DescriptionArtifactViewModel(imagePlaceHolder: UIImage(systemName: "photo.on.rectangle.angled")!.pngData()!)
 
     @State private var startArtifactDescriptionTimer: DispatchTime!
     @State private var showPopup = false
