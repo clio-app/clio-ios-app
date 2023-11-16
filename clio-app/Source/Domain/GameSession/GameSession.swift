@@ -81,12 +81,14 @@ final class GameSession: ObservableObject {
     
     func restartGame() {
         gameFlowParameters.didPlay = []
+        gameFlowParameters.emojisIndexReaction = []
         changeGameState(to: .start)
     }
     
     func fullResetGame() {
         gameFlowParameters.didPlay = []
         gameFlowParameters.players = []
+        gameFlowParameters.emojisIndexReaction = []
         gameFlowParameters.currenPlayer = nil
         changeGameState(to: .start)
     }
@@ -138,13 +140,15 @@ final class GameSession: ObservableObject {
         return gameFlowParameters.firstRoundPrompt
     }
     
-    
-    func sendArtifact(picture: Data? = nil, description: String? = nil) {
+    func sendArtifact(picture: Data? = nil, description: String? = nil, reactionEmojiIndex: Int? = nil) {
         if let pictureArtifact = picture {
             sendPhoto(imageData: pictureArtifact)
         }
         if let descriptionArtifact = description {
             sendDescription(description: descriptionArtifact)
+        }
+        if let emojiIndex = reactionEmojiIndex {
+            sendEmojiIndex(emojiIndex: emojiIndex)
         }
     }
     
@@ -172,6 +176,18 @@ final class GameSession: ObservableObject {
         }
     }
     
+    private func sendEmojiIndex(emojiIndex: Int) {
+        gameFlowParameters.emojisIndexReaction.append(emojiIndex)
+    }
+    
+    func getEmojiName(index: Int) -> String? {
+        let emojiIndex = gameFlowParameters.emojisIndexReaction[index]
+        if emojiIndex != 0 {
+            return "Emoji\(emojiIndex)"
+        }
+        return nil
+    }
+    
     func getLastImage() -> Data? {
         if gameFlowParameters.didPlay.count > 0 {
             let lastIndex = gameFlowParameters.didPlay.count - 1
@@ -188,6 +204,7 @@ struct GameFlowParameters {
     var didPlay: [User] = []
     var sessionTheme: String = String()
     var firstRoundPrompt: String = String()
+    var emojisIndexReaction: [Int] = []
 }
 
 struct AlertError {

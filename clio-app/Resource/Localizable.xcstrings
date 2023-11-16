@@ -1117,9 +1117,6 @@
         }
       }
     },
-    "ResultsVisualization" : {
-      "comment" : "ResultsVisualization view hint"
-    },
     "ResultsVisualization_Hint" : {
       "comment" : "ResultsVisualization view hint",
       "localizations" : {
