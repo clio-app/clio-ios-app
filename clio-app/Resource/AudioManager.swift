@@ -14,10 +14,6 @@ final class AudioManager {
 
     private var player: AVAudioPlayer?
 
-    private init() {
-        setupAudioSession()
-    }
-
     func playSound(named audioName: AudioFilename) {
         if let audioURL = Bundle.main.url(forResource: audioName.rawValue, withExtension: "") {
             do {
