@@ -268,11 +268,19 @@
 		002EF6872AFE58C000E17620 /* PickImage */ = {
 			isa = PBXGroup;
 			children = (
+				002EF6902AFE765D00E17620 /* Components */,
 				002EF68A2AFE58D600E17620 /* PickImageView.swift */,
 				002EF68C2AFE58E000E17620 /* PickImageViewModel.swift */,
 				002EF68E2AFE5F5300E17620 /* PickImageModel.swift */,
 			);
 			path = PickImage;
+			sourceTree = "<group>";
+		};
+		002EF6902AFE765D00E17620 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		00BFF8ED2AB4914B0068A5F2 = {

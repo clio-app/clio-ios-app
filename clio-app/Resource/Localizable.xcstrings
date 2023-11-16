@@ -494,6 +494,59 @@
     },
     "FirstPrompt_Hint" : {
       "comment" : "FirstPrompt view hint",
+    "Generate Image Action Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type a word to generate related images"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Escreva uma palavra para gerar imagens relacionadas"
+          }
+        }
+      }
+    },
+    "Generate Image Button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generate Images"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gerar Imagens"
+          }
+        }
+      }
+    },
+    "Generated Images Label" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generated images"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Imagens geradas"
+          }
+        }
+      }
+    },
+    "Hello, World!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -643,9 +696,6 @@
           }
         }
       }
-    },
-    "Make Request" : {
-
     },
     "Mestre" : {
       "localizations" : {
