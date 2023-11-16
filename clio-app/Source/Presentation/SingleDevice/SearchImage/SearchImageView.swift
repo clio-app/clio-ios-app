@@ -94,7 +94,7 @@ struct SearchImageView: View {
                 } else {
                     Spacer()
                     
-                    Text("Nenhuma imagem encontrada")
+                    Text("Search Images Empty State Sentence")
                         .lineLimit(nil)
                         .font(.itimRegular(fontType: .headline))
                         .multilineTextAlignment(.center)

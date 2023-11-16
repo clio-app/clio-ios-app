@@ -796,9 +796,6 @@
         }
       }
     },
-    "Nenhuma imagem encontrada" : {
-
-    },
     "Nome do jogador..." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1018,6 +1015,23 @@
         }
       }
     },
+    "Pick Image Helper" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose one of the images below or search for words to relate to the description"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha uma das imagens abaixo ou pesquise por palavras chaves que se relacionam com a descrição"
+          }
+        }
+      }
+    },
     "PresentResults" : {
       "comment" : "PresentResults view hint",
       "localizations" : {
@@ -1154,7 +1168,41 @@
         }
       }
     },
-    "SelectPlayer_Hint" : {
+    "Search Image Helper" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "These are the search results for the keywords, choose the image that best relates to the description."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Esses são os resultados da pesquisa pelas palavras chaves, escolha a imagem que melhor se relacione com a descrição."
+          }
+        }
+      }
+    },
+    "Search Images Empty State Sentence" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No images found"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Nenhuma imagem encontrada"
+          }
+        }
+      }
+    },
+    "SelectPlayer" : {
       "comment" : "SelectPlayer view hint",
       "localizations" : {
         "en" : {
