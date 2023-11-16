@@ -11,35 +11,52 @@ struct CustomFirstPrompt: View {
     @EnvironmentObject var session: GameSession
     @EnvironmentObject var router: Router
     @State var prompt: String = ""
+    @State private var showPopup = false
 
     var body: some View {
-        VStack {
-            ThemeBubble(theme: session.gameFlowParameters.sessionTheme)
-
-            Spacer()
-
-            Text(LocalizedStringKey("Você aceita jogar com essa frase?"))
-                .font(.itimRegular(fontType: .body))
-                .multilineTextAlignment(.center)
-                .foregroundColor(.black)
-
-            HStack {
-                CustomTextfield(inputUser: $session.gameFlowParameters.firstRoundPrompt, backgroundColor: .lapisLazuli, placeholder: "Escreva a frase para a rodada") {
+        GeometryReader { geo in
+            VStack {
+                ThemeBubble(theme: session.gameFlowParameters.sessionTheme)
+                
+                Spacer()
+                
+                Text(LocalizedStringKey("Você aceita jogar com essa frase?"))
+                    .font(.itimRegular(fontType: .body))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.black)
+                
+                HStack {
+                    CustomTextfield(inputUser: $session.gameFlowParameters.firstRoundPrompt, backgroundColor: .lapisLazuli, placeholder: "Escreva a frase para a rodada") {
+                    }
                 }
+                .frame(height: 62)
+                
+                Spacer()
+                
+                ActionButton(
+                    title: "Aceitar",
+                    foregroundColor: .customYellow,
+                    backgroundColor: .white,
+                    hasBorder: true
+                ) {
+                    print("GoTo Popup method(take picture/ choose image) View")
+                    showPopup = true
+                }
+                .frame(height: 62)
             }
-            .frame(height: 62)
-
-            Spacer()
-
-            ActionButton(title: "Aceitar", foregroundColor: .customYellow, backgroundColor: .white, hasBorder: true) {
-                print("GoTo Popup method(take picture/ choose image) View")
-                router.goToPhotoArtifactView()
+            .padding(.horizontal, 24)
+            .adaptativeView()
+            .clioBackground()
+            .popupNavigationView(show: $showPopup) {
+                TakePictureModePopup(
+                    inputPhrase: session.gameFlowParameters.firstRoundPrompt,
+                    takePictureButtonTapped: { router.goToPhotoArtifactView() },
+                    pickImageButtonTapped: { router.goToPickImageView() },
+                    isShowing: $showPopup
+                )
+                .frame(width: geo.size.width, height: geo.size.height)
             }
-            .frame(height: 62)
         }
-        .padding(.horizontal, 24)
-        .adaptativeView()
-        .clioBackground()
         .onAppear {
             prompt = session.gameFlowParameters.firstRoundPrompt
         }
@@ -61,20 +78,6 @@ struct CustomFirstPrompt: View {
 
     return promptView
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // TODO: move to View+Modifiers after merge

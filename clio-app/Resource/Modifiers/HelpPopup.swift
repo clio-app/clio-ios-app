@@ -47,6 +47,7 @@ struct HelpArea: ViewModifier {
                         UIApplication.shared.endEditing()
                         UIImpactFeedbackGenerator(style: .soft).impactOccurred()
                         changeVisibility()
+                        AudioManager.shared.playSound(named: .popupButton)
                     }label: {
                         Image(systemName: "questionmark.circle.fill")
                             .resizable()
@@ -129,7 +130,11 @@ struct HelpArea: ViewModifier {
         case .PresentResults:
             return NSLocalizedString("PresentResults", comment: "PresentResults view hint");
         case .AllResultsVisualization:
-            return NSLocalizedString("ResultsVisualization_Hint", comment: "ResultsVisualization view hint");
+            return NSLocalizedString("ResultsVisualization", comment: "ResultsVisualization view hint");
+        case .PickImage:
+            return "Pick Image Helper"
+        case .SearchImage(_):
+            return "Search Image Helper"
         }
     }
 }

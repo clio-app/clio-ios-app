@@ -29,12 +29,12 @@ struct SelectPlayerView: View {
                     confirmationAction: {
                         if let player = vm.currentPlayer {
                             gameSession.addPlayerInRound(player: player)
-
                             switch gameSession.gameState {
-                            case .start:
-                                router.goToPhotoArtifactView()
-                            default:
-                                router.goToDescriptionArtifactView()
+                                case .start:
+                                    router.goToCustomPrompt()
+//                                    showPopup = true
+                                default:
+                                    router.goToDescriptionArtifactView()
                             }
                         }
                     },
@@ -51,7 +51,7 @@ struct SelectPlayerView: View {
             .overlay {
                 if vm.viewState == .findingPlayer {
                     LoadingPlayer()
-                    .frame(width: geo.size.width, height: geo.size.height)
+                        .frame(width: geo.size.width, height: geo.size.height)
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)
@@ -68,5 +68,16 @@ struct SelectPlayerView: View {
 
 
 #Preview {
-    SelectPlayerView()
+    let gameSession = GameSession()
+    
+    gameSession.addPlayerInSession(name: "Thiago", image: "")
+    gameSession.addPlayerInSession(name: "Araujo", image: "")
+    gameSession.addPlayerInSession(name: "Batista", image: "")
+    
+    gameSession.randomizeThemes()
+    gameSession.gameFlowParameters.firstRoundPrompt = "Floresta Amazônica: Os Pulmões da Terra."
+    
+    return SelectPlayerView()
+        .environmentObject(gameSession)
+        .environmentObject(Router())
 }

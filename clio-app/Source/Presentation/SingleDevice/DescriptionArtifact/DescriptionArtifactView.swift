@@ -14,6 +14,7 @@ struct DescriptionArtifactView: View {
     @ObservedObject var vm = DescriptionArtifactViewModel(imagePlaceHolder: UIImage(systemName: "photo.on.rectangle.angled")!.pngData()!)
 
     @State private var startArtifactDescriptionTimer: DispatchTime!
+    @State private var showPopup = false
 
     var body: some View {
         GeometryReader { geo in
@@ -102,6 +103,15 @@ struct DescriptionArtifactView: View {
                 }
             }
             .keyboardAdaptive()
+            .popupNavigationView(show: $showPopup) {
+                TakePictureModePopup(
+                    inputPhrase: vm.input,
+                    takePictureButtonTapped: { router.goToPhotoArtifactView() },
+                    pickImageButtonTapped: { router.goToPickImageView() },
+                    isShowing: $showPopup
+                )
+                .frame(width: geo.size.width, height: geo.size.height)
+            }
             .onTapGesture {
                 UIApplication.shared.endEditing()
                 hideEmojis()
@@ -163,7 +173,8 @@ extension DescriptionArtifactView {
             title: "Próximo",
             foregroundColor: .customYellow,
             backgroundColor: .white,
-            hasBorder: true) {
+            hasBorder: true
+        ) {
                 UIApplication.shared.endEditing()
                 let endArtifactDescriptionTimer: DispatchTime = .now()
                 let artifactDescriptionTimerElapsedTime = Double(
