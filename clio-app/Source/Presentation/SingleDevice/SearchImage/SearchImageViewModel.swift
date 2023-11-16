@@ -57,7 +57,7 @@ final class SearchImageViewModel: ObservableObject {
             let response: SearchImageModel.Search.Response = try await network.makeRequest(
                 for: endPoint
             )
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.replacePlaceholders(response.hits)
                 self.apiResult = response
                 self.currentPage += 1
