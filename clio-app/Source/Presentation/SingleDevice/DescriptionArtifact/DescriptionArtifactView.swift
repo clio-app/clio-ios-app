@@ -20,7 +20,6 @@ struct DescriptionArtifactView: View {
 
     @State var showZoomImage = false
     @State private var startArtifactDescriptionTimer: DispatchTime!
-    @State private var showPopup = false
 
     private let maxWordCount: Int = 100
 
@@ -41,7 +40,7 @@ struct DescriptionArtifactView: View {
                     }
                     .padding(.top, 5)
                     .padding(.bottom)
-                    
+                        
                     Spacer()
                     
                     VStack(spacing: 20) {
@@ -87,15 +86,6 @@ struct DescriptionArtifactView: View {
                 .frame(width: geo.size.width, height: geo.size.height)
             }
             .keyboardAdaptive()
-            .popupNavigationView(show: $showPopup) {
-                TakePictureModePopup(
-                    inputPhrase: input,
-                    takePictureButtonTapped: { router.goToPhotoArtifactView() },
-                    pickImageButtonTapped: { router.goToPickImageView() },
-                    isShowing: $showPopup
-                )
-                .frame(width: geo.size.width, height: geo.size.height)
-            }
             .onTapGesture {
                 UIApplication.shared.endEditing()
                 if input == "" {
@@ -147,8 +137,7 @@ extension DescriptionArtifactView {
             title: "Próximo",
             foregroundColor: .customYellow,
             backgroundColor: .white,
-            hasBorder: true
-        ) {
+            hasBorder: true) {
                 UIApplication.shared.endEditing()
                 let endArtifactDescriptionTimer: DispatchTime = .now()
                 let artifactDescriptionTimerElapsedTime = Double(
@@ -164,16 +153,16 @@ extension DescriptionArtifactView {
                 )
                 
                 session.sendArtifact(description: input)
+
                 switch session.gameState {
-                    case .final:
-                        // clear up and restart gameflow
-                        // TODO: FICA NA TELA DE RESULTADOS
-                        router.goToPresentResultsView()
-    //                    session.restartGame()
-    //                    router.clear()
-                    default:
-                        showPopup = true
-//                        router.goToPhotoArtifactView()
+                case .final:
+                    // clear up and restart gameflow
+                    // TODO: FICA NA TELA DE RESULTADOS
+                    router.goToPresentResultsView()
+//                    session.restartGame()
+//                    router.clear()
+                default:
+                    router.goToPhotoArtifactView()
                 }
             }
             .disabled(!canSendDescription())

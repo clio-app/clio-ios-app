@@ -492,23 +492,6 @@
         }
       }
     },
-    "Example Random Theme" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ex.: Tree"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Ex.: Árvore"
-          }
-        }
-      }
-    },
     "FirstPrompt_Hint" : {
       "comment" : "FirstPrompt view hint",
       "localizations" : {
@@ -522,91 +505,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Você pode personalizar esta primeira mensagem como achar melhor."
-          }
-        }
-      }
-    },
-    "Generate Image Action Description" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Generate images through a theme"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Gere imagens através de um tema"
-          }
-        }
-      }
-    },
-    "Generate Image Through Key Sentence" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Type a word to generate related images"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Escreva uma palavra para gerar imagens relacionadas"
-          }
-        }
-      }
-    },
-    "Generate Images Button" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Generate Images"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gerar Imagens"
-          }
-        }
-      }
-    },
-    "Generated Images Label" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Or select any of the generated images"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Ou selecione alguma das imagens geradas"
-          }
-        }
-      }
-    },
-    "Generated Images Sentence" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Generated Images"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imagens geradas"
           }
         }
       }
@@ -998,40 +896,6 @@
         }
       }
     },
-    "Pick Image Button" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pick Image"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escolher imagem"
-          }
-        }
-      }
-    },
-    "Pick Image Helper" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose one of the images below or search for words to relate to the description"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escolha uma das imagens abaixo ou pesquise por palavras chaves que se relacionam com a descrição"
-          }
-        }
-      }
-    },
     "PresentResults_Hint" : {
       "comment" : "PresentResults view hint",
       "localizations" : {
@@ -1043,7 +907,7 @@
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Veja quais interpretações foram feitas pelos outros jogadores e divirta-se."
           }
         }
@@ -1117,9 +981,6 @@
         }
       }
     },
-    "ResultsVisualization" : {
-      "comment" : "ResultsVisualization view hint"
-    },
     "ResultsVisualization_Hint" : {
       "comment" : "ResultsVisualization view hint",
       "localizations" : {
@@ -1137,74 +998,6 @@
         }
       }
     },
-    "Sair" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Exit"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sair"
-          }
-        }
-      }
-    },
-    "Search Image By Theme Button" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search themes"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Pesquisar temas"
-          }
-        }
-      }
-    },
-    "Search Image Helper" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "These are the search results for the keywords, choose the image that best relates to the description."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Esses são os resultados da pesquisa pelas palavras chaves, escolha a imagem que melhor se relacione com a descrição."
-          }
-        }
-      }
-    },
-    "Search Images Empty State Sentence" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No images found"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Nenhuma imagem encontrada"
-          }
-        }
-      }
-    },
     "SelectPlayer_Hint" : {
       "comment" : "SelectPlayer view hint",
       "localizations" : {
@@ -1217,7 +1010,7 @@
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Passe o aparelho para o player na tela ou selecione ‘não’ até que seu nome apareça."
+            "value" : "Passe o dispositivo para o jogador na tela ou selecione 'não' até que seu nome apareça."
           }
         }
       }
@@ -1272,23 +1065,6 @@
         }
       }
     },
-    "Sortear Novamente" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Raffle Again"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sortear Novamente"
-          }
-        }
-      }
-    },
     "Start_Hint" : {
       "comment" : "Start view hint",
       "localizations" : {
@@ -1302,57 +1078,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Selecione o modo de jogo para iniciar a partida."
-          }
-        }
-      }
-    },
-    "Take Picture Button" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Take Picture"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Tirar foto"
-          }
-        }
-      }
-    },
-    "Take Picture Mode Sentence" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "How do you want to associate the following sentence?"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "De que forma você quer associar a frase a seguir?"
-          }
-        }
-      }
-    },
-    "TEMA" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Theme"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tema"
           }
         }
       }
