@@ -2,7 +2,7 @@
 //  ThemeBubble.swift
 //  clio-app
 //
-//  Created by Beatriz Leonel da Silva on 13/11/23.
+//  Created by Luciana Adrião on 24/10/23.
 //
 
 import SwiftUI

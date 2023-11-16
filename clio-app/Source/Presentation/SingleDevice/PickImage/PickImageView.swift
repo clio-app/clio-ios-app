@@ -127,8 +127,8 @@ struct PickImageView: View {
                     .frame(maxWidth: geo.size.width * 0.8, maxHeight: geo.size.height * 0.8)
                     .padding([.horizontal], 12)
             }
-            .applyHelpButton(.PickImage)
             .clioBackground()
+            .applyHelpButton(.PickImage)
         }
         .onAppear {
             Task {
@@ -162,9 +162,7 @@ struct PickImageView: View {
 }
 
 #Preview {
-    NavigationView {
-        PickImageView()
-            .environmentObject(GameSession())
-            .environmentObject(Router())
-    }
+    PickImageView()
+        .environmentObject(GameSession())
+        .environmentObject(Router())
 }
