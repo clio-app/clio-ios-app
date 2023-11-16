@@ -128,7 +128,7 @@ struct HelpArea: ViewModifier {
         case .DescriptionArtifact:
             return NSLocalizedString("DescriptionArtifact_Hint", comment: "DescriptionArtifact view hint");
         case .PresentResults:
-            return NSLocalizedString("PresentResults", comment: "PresentResults view hint");
+            return NSLocalizedString("PresentResults_Hint", comment: "PresentResults view hint");
         case .AllResultsVisualization:
             return NSLocalizedString("ResultsVisualization", comment: "ResultsVisualization view hint");
         case .PickImage:
