@@ -91,7 +91,6 @@ struct PhotoArtifactView: View {
 
             }
             .navigationTitle("")
-            .navigationBarBackButtonHidden()
             .frame(width: geo.size.width, height: geo.size.height)
             .clioBackground()
             .onAppear {
@@ -148,7 +147,7 @@ struct PhotoArtifactView: View {
 extension PhotoArtifactView {
     var themeCard: some View {
         Group {
-            Text("Tire uma foto que se relacione com:")
+            Text(LocalizedStringKey("Tire uma foto que se relacione com:"))
                 .foregroundColor(.black)
                 .font(.itimRegular(size: 18))
             + Text("\n \(theme)")

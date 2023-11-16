@@ -13,10 +13,12 @@ enum Views: Hashable {
     case AddPlayers
     case RaffleTheme
     case SelectPlayer
+    case firstPrompt
+    case PickImage
+    case SearchImage(String)
     case PhotoArtifact
     case DescriptionArtifact
     case PresentResults
-    case ResultsPerPlayerVisualization
     case AllResultsVisualization
 }
 
@@ -43,8 +45,16 @@ class Router: ObservableObject {
         path.append(Views.SelectPlayer)
     }
 
+    func goToCustomPrompt() {
+        path.append(Views.firstPrompt)
+    }
+
     func goToPhotoArtifactView() {
         path.append(Views.PhotoArtifact)
+    }
+    
+    func goToPickImageView() {
+        path.append(Views.PickImage)
     }
 
     func goToDescriptionArtifactView() {
@@ -55,12 +65,13 @@ class Router: ObservableObject {
         path.append(Views.PresentResults)
     }
     
-    func goToResultsPerPlayerVisualization() {
-        path.append(Views.ResultsPerPlayerVisualization)
-    }
     
     func goToAllResultsVisualizationView() {
         path.append(Views.AllResultsVisualization)
+    }
+    
+    func goToSearchImageView(keywords: String) {
+        path.append(Views.SearchImage(keywords))
     }
     
     func restartGameWithPlayers() {
@@ -87,10 +98,14 @@ enum ViewFactory {
             DescriptionArtifactView()
         case .PresentResults:
             ResultsView()
-        case .ResultsPerPlayerVisualization:
-            ResultPerPlayerView()
+        case .firstPrompt:
+            CustomFirstPrompt()
         case .AllResultsVisualization:
             AllResultsView()
+        case .PickImage:
+            PickImageView()
+        case .SearchImage(let keywords):
+            SearchImageView(keywords: keywords)
         }
     }
 }
