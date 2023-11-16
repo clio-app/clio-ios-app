@@ -1032,12 +1032,8 @@
         }
       }
     },
-    "PresentResults" : {
-      "comment" : "PresentResults view hint"
-    },
     "PresentResults_Hint" : {
       "comment" : "PresentResults view hint",
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1126,7 +1122,6 @@
     },
     "ResultsVisualization_Hint" : {
       "comment" : "ResultsVisualization view hint",
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
