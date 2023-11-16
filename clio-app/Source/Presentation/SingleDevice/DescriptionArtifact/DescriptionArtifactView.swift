@@ -21,116 +21,105 @@ struct DescriptionArtifactView: View {
     @State var showZoomImage = false
     @State private var startArtifactDescriptionTimer: DispatchTime!
     @State private var showPopup = false
-    
-    @State private var goToTakePictureView = false
-    @State private var goToPickImageView = false
 
     private let maxWordCount: Int = 100
 
     var body: some View {
-        NavigationStack {
-            GeometryReader { geo in
-                ScrollView {
-                    VStack {
-                        ThemeCard(
-                            title: "Relacione a foto com o tema:",
-                            theme: $theme
-                        )
-                        .frame(width: geo.size.width * 0.8)
-                        .background{
-                            BorderedBackground(
-                                foregroundColor: .white,
-                                hasBorder: false
-                            )
-                        }
-                        .padding(.top, 5)
-                        .padding(.bottom)
-                            
-                        Spacer()
-                        
-                        VStack(spacing: 20) {
-                            RoundedRectangle(cornerRadius: 30)
-                                .fill(Color.white)
-                                .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.42)
-                                .onTapGesture {
-                                    withAnimation {
-                                        UIApplication.shared.endEditing()
-                                        showZoomImage = true
-                                    }
-                                }
-                                .overlay {
-                                    image
-                                        .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.45)
-                                        .clipped()
-                                        .clipShape(RoundedRectangle(cornerRadius: 30))
-                                        .allowsHitTesting(false)
-                                        .overlay {
-                                            RoundedRectangle(cornerRadius: 30)
-                                                .stroke(.black, lineWidth: 2)
-                                        }
-                                }
-                            
-                            LimitedInputTextField(
-                                maxInputCount: maxWordCount,
-                                inputUser: $input,
-                                placeholder: placeholder
-                            )
-                            .frame(
-                                width: geo.size.width * 0.7,
-                                height: geo.size.height * 0.15
-                            )
-                        }
-                        
-                        Spacer()
-                        Spacer()
-                        
-                        button
-                            .frame(width: geo.size.width * 0.8, height: 60)
-                            .padding(.bottom)
-                    }
-                    .frame(width: geo.size.width, height: geo.size.height)
-                }
-                .keyboardAdaptive()
-                .popupNavigationView(show: $showPopup) {
-                    TakePictureModePopup(
-                        inputPhrase: input,
-                        takePictureButtonTapped: { goToTakePictureView = true },
-                        pickImageButtonTapped: { goToTakePictureView = true },
-                        isShowing: $showPopup
+        GeometryReader { geo in
+            ScrollView {
+                VStack {
+                    ThemeCard(
+                        title: "Relacione a foto com o tema:",
+                        theme: $theme
                     )
-                }
-                .navigationDestination(isPresented: $goToTakePictureView) {
-                    PhotoArtifactView()
-                }
-                .navigationDestination(isPresented: $goToPickImageView) {
-                    PickImageView()
-                }
-                .onTapGesture {
-                    UIApplication.shared.endEditing()
-                    if input == "" {
-                        input = placeholder
+                    .frame(width: geo.size.width * 0.8)
+                    .background{
+                        BorderedBackground(
+                            foregroundColor: .white,
+                            hasBorder: false
+                        )
                     }
-                }
-                .overlay {
-                    if showZoomImage {
-                        ZoomImage(selectedImage: $showZoomImage, uiImage: uiImage)
+                    .padding(.top, 5)
+                    .padding(.bottom)
+                    
+                    Spacer()
+                    
+                    VStack(spacing: 20) {
+                        RoundedRectangle(cornerRadius: 30)
+                            .fill(Color.white)
+                            .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.42)
+                            .onTapGesture {
+                                withAnimation {
+                                    UIApplication.shared.endEditing()
+                                    showZoomImage = true
+                                }
+                            }
+                            .overlay {
+                                image
+                                    .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.45)
+                                    .clipped()
+                                    .clipShape(RoundedRectangle(cornerRadius: 30))
+                                    .allowsHitTesting(false)
+                                    .overlay {
+                                        RoundedRectangle(cornerRadius: 30)
+                                            .stroke(.black, lineWidth: 2)
+                                    }
+                            }
+                        
+                        LimitedInputTextField(
+                            maxInputCount: maxWordCount,
+                            inputUser: $input,
+                            placeholder: placeholder
+                        )
+                        .frame(
+                            width: geo.size.width * 0.7,
+                            height: geo.size.height * 0.15
+                        )
                     }
+                    
+                    Spacer()
+                    Spacer()
+                    
+                    button
+                        .frame(width: geo.size.width * 0.8, height: 60)
+                        .padding(.bottom)
                 }
-                .onAppear {
-                    startArtifactDescriptionTimer = .now()
-                    theme = session.gameFlowParameters.sessionTheme
-                    if let data = session.getLastImage() {
-                        uiImage = UIImage(data: data)!
-                    }
-                }
-                .clioBackground()
-                .applyHelpButton(.DescriptionArtifact)
+                .frame(width: geo.size.width, height: geo.size.height)
             }
-            .ignoresSafeArea(.keyboard)
-            .environmentObject(session)
-            .navigationTitle("")
-            .navigationBarBackButtonHidden()
+            .keyboardAdaptive()
+            .popupNavigationView(show: $showPopup) {
+                TakePictureModePopup(
+                    inputPhrase: input,
+                    takePictureButtonTapped: { router.goToPhotoArtifactView() },
+                    pickImageButtonTapped: { router.goToPickImageView() },
+                    isShowing: $showPopup
+                )
+            }
+            .onTapGesture {
+                UIApplication.shared.endEditing()
+                if input == "" {
+                    input = placeholder
+                }
+            }
+            .overlay {
+                if showZoomImage {
+                    ZoomImage(selectedImage: $showZoomImage, uiImage: uiImage)
+                }
+            }
+            .onAppear {
+                startArtifactDescriptionTimer = .now()
+                theme = session.gameFlowParameters.sessionTheme
+                if let data = session.getLastImage() {
+                    uiImage = UIImage(data: data)!
+                }
+            }
+            .clioBackground()
+            .applyHelpButton(.DescriptionArtifact)
         }
+        .ignoresSafeArea(.keyboard)
+        .environmentObject(session)
+        .navigationTitle("")
+        .navigationBarBackButtonHidden()
     }
 }
 

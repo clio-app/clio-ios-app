@@ -123,7 +123,9 @@ struct HelpArea: ViewModifier {
         case .ResultsPerPlayerVisualization:
             return NSLocalizedString("ResultsVisualization_Hint", comment: "ResultsVisualization view hint");
         case .AllResultsVisualization:
-            return NSLocalizedString("ResultsVisualization_Hint", comment: "ResultsVisualization view hint");
+            return NSLocalizedString("ResultsVisualization", comment: "ResultsVisualization view hint");
+        case .PickImage:
+            return "Escolha a imagem para a descrição"
         }
     }
 }

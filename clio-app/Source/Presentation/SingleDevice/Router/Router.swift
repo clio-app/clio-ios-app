@@ -14,6 +14,7 @@ enum Views: Hashable {
     case RaffleTheme
     case SelectPlayer
     case firstPrompt
+    case PickImage
     case PhotoArtifact
     case DescriptionArtifact
     case PresentResults
@@ -50,6 +51,10 @@ class Router: ObservableObject {
 
     func goToPhotoArtifactView() {
         path.append(Views.PhotoArtifact)
+    }
+    
+    func goToPickImageView() {
+        path.append(Views.PickImage)
     }
 
     func goToDescriptionArtifactView() {
@@ -98,6 +103,8 @@ enum ViewFactory {
             ResultPerPlayerView()
         case .AllResultsVisualization:
             AllResultsView()
+        case .PickImage:
+            PickImageView()
         }
     }
 }

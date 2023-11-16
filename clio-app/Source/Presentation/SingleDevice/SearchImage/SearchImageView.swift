@@ -49,10 +49,8 @@ struct SearchImageView: View {
                                 }
                             }
                             .onAppear {
-                                if index == (vm.searchedImages.count - 1) {
-                                    Task {
-                                        await vm.searchImage()
-                                    }
+                                if index == (vm.searchedImages.count) {
+                                    Task { await vm.searchImage() }
                                 }
                             }
                         }

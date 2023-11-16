@@ -82,6 +82,7 @@ struct PickImageView: View {
                 width: geo.size.width,
                 height: geo.size.height
             )
+            .keyboardAdaptive()
             .popupNavigationView(show: $vm.showSearchImagePopUp) {
                 SearchImageTextInput(
                     isShowing: $vm.showSearchImagePopUp,

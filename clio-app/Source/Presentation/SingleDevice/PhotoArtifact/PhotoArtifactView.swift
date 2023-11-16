@@ -91,7 +91,6 @@ struct PhotoArtifactView: View {
 
             }
             .navigationTitle("")
-            .navigationBarBackButtonHidden()
             .frame(width: geo.size.width, height: geo.size.height)
             .clioBackground()
             .onAppear {
