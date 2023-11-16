@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ReactionButton: View {
     @Binding var showSelectEmoji: Bool
-    @Binding var selectedIndex: Int?
+    @Binding var selectedIndex: Int
     
     var body: some View {
         
@@ -45,12 +45,12 @@ struct ReactionButton: View {
                                 ))
                             }
                             else {
-                                Image(selectedIndex != nil ? "Emoji\(selectedIndex!)" : "EmojiButton")
+                                Image(selectedIndex != 0 ? "Emoji\(selectedIndex)" : "EmojiButton")
                                     .resizable()
                                     .scaledToFit()
                                     .padding(.top, 2)
                                     .padding(.leading, 4)
-                                    .padding(selectedIndex != nil ? 3 : 0)
+                                    .padding(selectedIndex != 0 ? 3 : 0)
                             }
                         }
                         .padding(.horizontal, showSelectEmoji ? 5 : 0)
@@ -78,7 +78,7 @@ struct ReactionButton: View {
 
 #Preview {
     @State var showSelectEmoji = false
-    @State var selectedIndex: Int?
+    @State var selectedIndex: Int = 0
     
     
     return( GeometryReader { geo in

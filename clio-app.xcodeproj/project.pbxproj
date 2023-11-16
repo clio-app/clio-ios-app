@@ -96,6 +96,7 @@
 		FFA354E02AE1646300E23ADC /* SelectPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354DF2AE1646300E23ADC /* SelectPlayerView.swift */; };
 		FFA354E22AE16BF900E23ADC /* SelectPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */; };
 		FFC49E4C2B063B67004C94D5 /* DescriptionArtifactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC49E4B2B063B67004C94D5 /* DescriptionArtifactViewModel.swift */; };
+		FFD249022B065ECE0092173F /* EmojiReaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD249012B065ECE0092173F /* EmojiReaction.swift */; };
 		FFD404F92B03A08400808D32 /* ReactionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD404F82B03A08400808D32 /* ReactionButton.swift */; };
 		FFD59DC62AFA5D1B001C06B0 /* DescriptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD59DC52AFA5D1B001C06B0 /* DescriptionCard.swift */; };
 		FFD59DCD2AFAA146001C06B0 /* AllResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD59DCC2AFAA146001C06B0 /* AllResultsView.swift */; };
@@ -210,6 +211,7 @@
 		FFA354DF2AE1646300E23ADC /* SelectPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerView.swift; sourceTree = "<group>"; };
 		FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerViewModel.swift; sourceTree = "<group>"; };
 		FFC49E4B2B063B67004C94D5 /* DescriptionArtifactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionArtifactViewModel.swift; sourceTree = "<group>"; };
+		FFD249012B065ECE0092173F /* EmojiReaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiReaction.swift; sourceTree = "<group>"; };
 		FFD404F82B03A08400808D32 /* ReactionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionButton.swift; sourceTree = "<group>"; };
 		FFD59DC52AFA5D1B001C06B0 /* DescriptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCard.swift; sourceTree = "<group>"; };
 		FFD59DCC2AFAA146001C06B0 /* AllResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsView.swift; sourceTree = "<group>"; };
@@ -702,6 +704,7 @@
 			isa = PBXGroup;
 			children = (
 				FFDA15532B0262B30003D12B /* ThemeBubble.swift */,
+				FFD249012B065ECE0092173F /* EmojiReaction.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -834,6 +837,7 @@
 				7EA6DC9A2AE80352003368E8 /* CustomAlert.swift in Sources */,
 				7E1705E32AD60938005FA9EE /* MasterContainer.swift in Sources */,
 				7E1705E42AD60938005FA9EE /* PlayerGridItem.swift in Sources */,
+				FFD249022B065ECE0092173F /* EmojiReaction.swift in Sources */,
 				7E1705E52AD60938005FA9EE /* LobbyHeader.swift in Sources */,
 				FFA354DD2AE02AF400E23ADC /* RetakePhotoButton.swift in Sources */,
 				7E1705DF2AD608EE005FA9EE /* LobbyView.swift in Sources */,

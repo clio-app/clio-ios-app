@@ -13,7 +13,7 @@ class DescriptionArtifactViewModel: ObservableObject {
     let maxWordCount: Int = 100
     
     @Published var showSelectEmoji = false
-    @Published var selectedIndex: Int?
+    @Published var selectedIndex: Int = 0
     
     let imagePlaceHolder: Data
     @Published var uiImageData: Data?

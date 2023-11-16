@@ -47,6 +47,16 @@ struct AllResultsView: View {
                                             width: geo.size.width * 0.8,
                                             height: geo.size.width * 0.8
                                         )
+                                        .overlay {
+                                            if let emojiName = gameSession.getEmojiName(index: index) {
+                                                EmojiReaction(emojiName: emojiName)
+                                                    .frame(
+                                                        width: geo.size.width * 0.8,
+                                                        height: geo.size.width * 0.8,
+                                                        alignment: .bottomTrailing
+                                                    )
+                                            }
+                                        }
                                 }
                                 if let description = gameSession.gameFlowParameters.didPlay[index].artefact?.description {
                                     DescriptionCard(description: description)
@@ -173,6 +183,8 @@ struct AllResultsView: View {
             )
         )
     )
+    
+    gameSession.gameFlowParameters.emojisIndexReaction = [0, 2]
     
     let view = AllResultsView()
         .environmentObject(gameSession)

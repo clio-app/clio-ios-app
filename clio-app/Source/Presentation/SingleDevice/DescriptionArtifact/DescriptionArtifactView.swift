@@ -178,7 +178,7 @@ extension DescriptionArtifactView {
                     ]
                 )
                 
-                session.sendArtifact(description: vm.input)
+                session.sendArtifact(description: vm.input, reactionEmojiIndex: vm.selectedIndex)
 
                 switch session.gameState {
                 case .final:
