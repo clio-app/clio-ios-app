@@ -195,7 +195,8 @@ extension DescriptionArtifactView {
                 case .final:
                     router.goToPresentResultsView()
                 default:
-                    router.goToPhotoArtifactView()
+                    showPopup = true
+//                    router.goToPhotoArtifactView()
                 }
             }
             .disabled(!vm.canSendDescription())

@@ -1117,12 +1117,8 @@
         }
       }
     },
-    "ResultsVisualization" : {
-      "comment" : "ResultsVisualization view hint"
-    },
     "ResultsVisualization_Hint" : {
       "comment" : "ResultsVisualization view hint",
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

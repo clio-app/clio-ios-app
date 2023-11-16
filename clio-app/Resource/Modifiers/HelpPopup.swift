@@ -130,7 +130,7 @@ struct HelpArea: ViewModifier {
         case .PresentResults:
             return NSLocalizedString("PresentResults_Hint", comment: "PresentResults view hint");
         case .AllResultsVisualization:
-            return NSLocalizedString("ResultsVisualization", comment: "ResultsVisualization view hint");
+            return NSLocalizedString("ResultsVisualization_Hint", comment: "ResultsVisualization view hint");
         case .PickImage:
             return "Pick Image Helper"
         case .SearchImage(_):
