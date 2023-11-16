@@ -31,6 +31,13 @@
 		00D9C9D72ABC8DAE00F66421 /* CreateRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9C9D62ABC8DAE00F66421 /* CreateRoomModel.swift */; };
 		7E0D42592AD5BEFD00C566EB /* SelectImageProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42572AD5BEFD00C566EB /* SelectImageProfile.swift */; };
 		7E0D425A2AD5BEFD00C566EB /* AnonymousLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42582AD5BEFD00C566EB /* AnonymousLoginView.swift */; };
+		7E0EB3B92B03B1EE001CDF36 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EB3B82B03B1EE001CDF36 /* AudioManager.swift */; };
+		7E0EB3BD2B03BAA3001CDF36 /* bensound-lofinerdbassbuzzer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EB3BC2B03BAA3001CDF36 /* bensound-lofinerdbassbuzzer.mp3 */; };
+		7E0EB3BF2B044516001CDF36 /* tap-button.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EB3BE2B044516001CDF36 /* tap-button.mp3 */; };
+		7E0EB3C12B0445D7001CDF36 /* popup-button.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EB3C02B0445D7001CDF36 /* popup-button.wav */; };
+		7E0EB3C32B044650001CDF36 /* sorted-theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EB3C22B044650001CDF36 /* sorted-theme.wav */; };
+		7E0EB3C52B045547001CDF36 /* AudioFilename.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EB3C42B045547001CDF36 /* AudioFilename.swift */; };
+		7E0EB3C72B045726001CDF36 /* see-answers.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EB3C62B045726001CDF36 /* see-answers.wav */; };
 		7E124DBE2AB9D49400ABC962 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */; };
 		7E124DC72ABB1B6E00ABC962 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E124DC62ABB1B6E00ABC962 /* Header.swift */; };
 		7E1705DF2AD608EE005FA9EE /* LobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42242AD5B7CE00C566EB /* LobbyView.swift */; };
@@ -149,6 +156,13 @@
 		7E0D422B2AD5B7CE00C566EB /* LobbyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyHeader.swift; sourceTree = "<group>"; };
 		7E0D42572AD5BEFD00C566EB /* SelectImageProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectImageProfile.swift; sourceTree = "<group>"; };
 		7E0D42582AD5BEFD00C566EB /* AnonymousLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnonymousLoginView.swift; sourceTree = "<group>"; };
+		7E0EB3B82B03B1EE001CDF36 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		7E0EB3BC2B03BAA3001CDF36 /* bensound-lofinerdbassbuzzer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-lofinerdbassbuzzer.mp3"; sourceTree = "<group>"; };
+		7E0EB3BE2B044516001CDF36 /* tap-button.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "tap-button.mp3"; sourceTree = "<group>"; };
+		7E0EB3C02B0445D7001CDF36 /* popup-button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "popup-button.wav"; sourceTree = "<group>"; };
+		7E0EB3C22B044650001CDF36 /* sorted-theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sorted-theme.wav"; sourceTree = "<group>"; };
+		7E0EB3C42B045547001CDF36 /* AudioFilename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFilename.swift; sourceTree = "<group>"; };
+		7E0EB3C62B045726001CDF36 /* see-answers.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "see-answers.wav"; sourceTree = "<group>"; };
 		7E124DBD2AB9D49400ABC962 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		7E124DC62ABB1B6E00ABC962 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		7E24F3D82AF261F30066E590 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/ThemePhrases.json; sourceTree = "<group>"; };
@@ -278,6 +292,9 @@
 		00BFF9232AB491910068A5F2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7E0EB3B82B03B1EE001CDF36 /* AudioManager.swift */,
+				7E0EB3C42B045547001CDF36 /* AudioFilename.swift */,
+				7E0EB3B62B03AFAD001CDF36 /* Audios */,
 				00D9C9BC2ABC701C00F66421 /* Modifiers */,
 				FF6FD1CB2AB49D8700A2D681 /* Fonts */,
 				00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */,
@@ -516,6 +533,18 @@
 				7E0D42572AD5BEFD00C566EB /* SelectImageProfile.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		7E0EB3B62B03AFAD001CDF36 /* Audios */ = {
+			isa = PBXGroup;
+			children = (
+				7E0EB3C22B044650001CDF36 /* sorted-theme.wav */,
+				7E0EB3C62B045726001CDF36 /* see-answers.wav */,
+				7E0EB3C02B0445D7001CDF36 /* popup-button.wav */,
+				7E0EB3BE2B044516001CDF36 /* tap-button.mp3 */,
+				7E0EB3BC2B03BAA3001CDF36 /* bensound-lofinerdbassbuzzer.mp3 */,
+			);
+			path = Audios;
 			sourceTree = "<group>";
 		};
 		7E310AC92AB8895200AF20C7 /* GeneralComponents */ = {
@@ -810,10 +839,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E24F3DA2AF53D470066E590 /* ThemePhrases.json in Resources */,
+				7E0EB3BD2B03BAA3001CDF36 /* bensound-lofinerdbassbuzzer.mp3 in Resources */,
+				7E0EB3C12B0445D7001CDF36 /* popup-button.wav in Resources */,
 				00BFF9012AB4914D0068A5F2 /* Preview Assets.xcassets in Resources */,
 				7EA6DCA22AE8902D003368E8 /* Localizable.xcstrings in Resources */,
 				FF6FD1CE2AB4A2BD00A2D681 /* Nighty DEMO.otf in Resources */,
 				FF6FD1D22AB4B24500A2D681 /* Itim-Regular.ttf in Resources */,
+				7E0EB3C32B044650001CDF36 /* sorted-theme.wav in Resources */,
+				7E0EB3BF2B044516001CDF36 /* tap-button.mp3 in Resources */,
+				7E0EB3C72B045726001CDF36 /* see-answers.wav in Resources */,
 				00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -899,6 +933,7 @@
 				FF3A15F92ABB482F00E31DCA /* KeyboardAdaptative.swift in Sources */,
 				FF6FD1D12AB4A85000A2D681 /* Font+Extensions.swift in Sources */,
 				7EBA9CDF2AD225DA00C25970 /* VotingPopupView.swift in Sources */,
+				7E0EB3C52B045547001CDF36 /* AudioFilename.swift in Sources */,
 				00C0CA282AE7F3C7009F74BB /* AppDelegate.swift in Sources */,
 				7E0D425A2AD5BEFD00C566EB /* AnonymousLoginView.swift in Sources */,
 				00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */,
@@ -919,6 +954,7 @@
 				00D9C9C12ABC7D6900F66421 /* Endpoint.swift in Sources */,
 				7E94E93D2AD5C68600031061 /* MasterInputView.swift in Sources */,
 				7E94E93A2AD5C68600031061 /* ImageInputCard.swift in Sources */,
+				7E0EB3B92B03B1EE001CDF36 /* AudioManager.swift in Sources */,
 				00D9C9CF2ABC806E00F66421 /* NetworkService.swift in Sources */,
 				FFE132FA2AEBEEFD0069670A /* UserTextConfirmation.swift in Sources */,
 				7EE152D02AD4181B00CA8F9F /* PieTimer.swift in Sources */,

@@ -74,6 +74,7 @@ struct RaffleThemeView: View {
                     withAnimation {
                         vm.stopTimerAndSetTheme()
                         gameSession.selectFirstRoundPrompt()
+                        AudioManager.shared.playSound(named: .sortedTheme)
                     }
                 }
                 .padding(.trailing, 5)
