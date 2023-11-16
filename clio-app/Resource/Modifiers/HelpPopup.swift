@@ -29,12 +29,12 @@ struct HelpArea: ViewModifier {
     
     func body(content: Content) -> some View {
         VStack(spacing: 0) {
-            if willShowHelpAlert {
-                VStack{}
-                    .frame(width: 38, height: 44)
-            }
+//            if willShowHelpAlert {
+//                VStack{}
+//                    .frame(width: 38, height: 44)
+//            }
             content
-                .toolbar(willShowHelpAlert ? .hidden : .visible, for: .navigationBar)
+//                .toolbar(willShowHelpAlert ? .hidden : .visible, for: .navigationBar)
         }
         .onAppear {
             text = getHintForView(viewType)
@@ -65,7 +65,7 @@ struct HelpArea: ViewModifier {
                     }
                     .transition(.move(edge: .bottom).combined(with: .move(edge: .leading)))
                     .disabled(helpAlert)
-                    .opacity(helpAlert ? 0 : 1)
+//                    .opacity(helpAlert ? 0 : 1)
                     .ignoresSafeArea()
                 }
             }
