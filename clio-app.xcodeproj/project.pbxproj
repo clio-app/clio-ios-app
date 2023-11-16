@@ -99,6 +99,7 @@
 		FFA354DD2AE02AF400E23ADC /* RetakePhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354DC2AE02AF400E23ADC /* RetakePhotoButton.swift */; };
 		FFA354E02AE1646300E23ADC /* SelectPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354DF2AE1646300E23ADC /* SelectPlayerView.swift */; };
 		FFA354E22AE16BF900E23ADC /* SelectPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */; };
+		FFD404F92B03A08400808D32 /* ReactionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD404F82B03A08400808D32 /* ReactionButton.swift */; };
 		FFD59DC62AFA5D1B001C06B0 /* DescriptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD59DC52AFA5D1B001C06B0 /* DescriptionCard.swift */; };
 		FFD59DC82AFA5F2E001C06B0 /* ZoomDescriptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD59DC72AFA5F2E001C06B0 /* ZoomDescriptionCard.swift */; };
 		FFD59DCA2AFA6CC9001C06B0 /* ResultsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD59DC92AFA6CC9001C06B0 /* ResultsDetailViewModel.swift */; };
@@ -214,6 +215,7 @@
 		FFA354DC2AE02AF400E23ADC /* RetakePhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetakePhotoButton.swift; sourceTree = "<group>"; };
 		FFA354DF2AE1646300E23ADC /* SelectPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerView.swift; sourceTree = "<group>"; };
 		FFA354E12AE16BF900E23ADC /* SelectPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerViewModel.swift; sourceTree = "<group>"; };
+		FFD404F82B03A08400808D32 /* ReactionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionButton.swift; sourceTree = "<group>"; };
 		FFD59DC52AFA5D1B001C06B0 /* DescriptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCard.swift; sourceTree = "<group>"; };
 		FFD59DC72AFA5F2E001C06B0 /* ZoomDescriptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomDescriptionCard.swift; sourceTree = "<group>"; };
 		FFD59DC92AFA6CC9001C06B0 /* ResultsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsDetailViewModel.swift; sourceTree = "<group>"; };
@@ -657,6 +659,7 @@
 		FF4DDEA32AE1A12400759F47 /* DescriptionArtifact */ = {
 			isa = PBXGroup;
 			children = (
+				FFD404F72B03A05D00808D32 /* Components */,
 				FF4DDEA42AE1A15D00759F47 /* DescriptionArtifactView.swift */,
 			);
 			path = DescriptionArtifact;
@@ -699,6 +702,14 @@
 				FFE132F62AEBEE370069670A /* Components */,
 			);
 			path = SelectPlayer;
+			sourceTree = "<group>";
+		};
+		FFD404F72B03A05D00808D32 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FFD404F82B03A08400808D32 /* ReactionButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FFD59DCB2AFAA11F001C06B0 /* AllResultsView */ = {
@@ -920,6 +931,7 @@
 				7E94E93D2AD5C68600031061 /* MasterInputView.swift in Sources */,
 				7E94E93A2AD5C68600031061 /* ImageInputCard.swift in Sources */,
 				00D9C9CF2ABC806E00F66421 /* NetworkService.swift in Sources */,
+				FFD404F92B03A08400808D32 /* ReactionButton.swift in Sources */,
 				FFE132FA2AEBEEFD0069670A /* UserTextConfirmation.swift in Sources */,
 				7EE152D02AD4181B00CA8F9F /* PieTimer.swift in Sources */,
 				00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */,
