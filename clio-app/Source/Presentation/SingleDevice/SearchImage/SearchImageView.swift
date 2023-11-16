@@ -31,18 +31,18 @@ struct SearchImageView: View {
     var body: some View {
         GeometryReader { geo in
             VStack {
-                Text("Generated Images Sentence")
-                    .lineLimit(nil)
-                    .font(.itimRegular(fontType: .headline))
-                    .multilineTextAlignment(.center)
-                    .frame(width: geo.size.width, height: 70)
-                
                 if vm.searchedImages.count > 0 {
                     ScrollView {
+                        Text("Generated Images Sentence")
+                            .lineLimit(nil)
+                            .font(.itimRegular(fontType: .headline))
+                            .multilineTextAlignment(.center)
+                            .frame(width: geo.size.width, height: 70)
+                        
                         LazyVGrid(
                             columns: [
-                                GridItem(.fixed(geo.size.height * 0.22)),
-                                GridItem(.fixed(geo.size.height * 0.22))
+                                GridItem(.fixed(geo.size.height * 0.25)),
+                                GridItem(.fixed(geo.size.height * 0.25))
                             ],
                             spacing: 42
                         ) {
@@ -90,7 +90,7 @@ struct SearchImageView: View {
                     .onReceive(publisher) { _ in
                         Task { await vm.searchImage() }
                     }
-                    .padding([.top], 32)
+//                    .padding([.top], 32)
                 } else {
                     Spacer()
                     
@@ -174,5 +174,7 @@ struct ViewOffsetKey: PreferenceKey {
 }
 
 #Preview {
-    SearchImageView(keywords: "Arvore")
+    NavigationStack {
+        SearchImageView(keywords: "Arvore")
+    }
 }
