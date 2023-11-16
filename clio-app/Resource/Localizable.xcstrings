@@ -343,7 +343,10 @@
         }
       }
     },
-    "DescriptionArtifact_Hint" : {
+    "De que forma você quer associar a frase a seguir?" : {
+
+    },
+    "DescriptionArtifact" : {
       "comment" : "DescriptionArtifact view hint",
       "localizations" : {
         "en" : {

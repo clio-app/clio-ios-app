@@ -14,6 +14,7 @@
 		00AA0DCE2B00778400F8CE44 /* SearchImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA0DCD2B00778400F8CE44 /* SearchImageView.swift */; };
 		00AA0DD02B00778E00F8CE44 /* SearchImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA0DCF2B00778E00F8CE44 /* SearchImageViewModel.swift */; };
 		00AA0DD22B0077BA00F8CE44 /* SearchImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA0DD12B0077BA00F8CE44 /* SearchImageModel.swift */; };
+		00B03FA82B03B52900165650 /* TakePictureModePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B03FA72B03B52900165650 /* TakePictureModePopup.swift */; };
 		00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF8F92AB4914B0068A5F2 /* clio_appApp.swift */; };
 		00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */; };
 		00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */; };
@@ -143,6 +144,7 @@
 		00AA0DCD2B00778400F8CE44 /* SearchImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageView.swift; sourceTree = "<group>"; };
 		00AA0DCF2B00778E00F8CE44 /* SearchImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageViewModel.swift; sourceTree = "<group>"; };
 		00AA0DD12B0077BA00F8CE44 /* SearchImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageModel.swift; sourceTree = "<group>"; };
+		00B03FA72B03B52900165650 /* TakePictureModePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureModePopup.swift; sourceTree = "<group>"; };
 		00BFF8F92AB4914B0068A5F2 /* clio_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appApp.swift; sourceTree = "<group>"; };
 		00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
 		00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -620,6 +622,7 @@
 				FF64DC322AFB3BDF002938EE /* ImageCard.swift */,
 				00C120182AE0685D0042E152 /* UserAvatar.swift */,
 				00FA85CD2B0394DF00BD9246 /* ImagePlaceholder.swift */,
+				00B03FA72B03B52900165650 /* TakePictureModePopup.swift */,
 			);
 			path = GeneralComponents;
 			sourceTree = "<group>";
@@ -1004,6 +1007,7 @@
 				7E310ACB2AB88E2300AF20C7 /* BorderedBackground.swift in Sources */,
 				7E8201E02AD58E5300DA8F68 /* AnswerGrid.swift in Sources */,
 				002EF6862AFE552400E17620 /* PhotoArtifactModel.swift in Sources */,
+				00B03FA82B03B52900165650 /* TakePictureModePopup.swift in Sources */,
 				7ED105542AE5CD830038B149 /* RaffleThemeViewModel.swift in Sources */,
 				FFA354D42AE0169D00E23ADC /* PhotoArtifactView.swift in Sources */,
 				FF3A15EE2ABA03E600E31DCA /* RadialUsers.swift in Sources */,
