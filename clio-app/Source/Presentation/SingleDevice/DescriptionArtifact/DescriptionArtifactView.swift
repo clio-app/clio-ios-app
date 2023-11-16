@@ -13,141 +13,99 @@ struct DescriptionArtifactView: View {
     @EnvironmentObject var router: Router
     @StateObject var vm = DescriptionArtifactViewModel(imagePlaceHolder: UIImage(systemName: "photo.on.rectangle.angled")!.pngData()!)
 
+    @State var showZoomImage = false
     @State private var startArtifactDescriptionTimer: DispatchTime!
-    @State private var showPopup = false
+
+    private let maxWordCount: Int = 100
 
     var body: some View {
         GeometryReader { geo in
-            ScrollViewReader { proxy in
-                ScrollView {
-                    VStack {
-                        ThemeCard(
-                            title: "Relacione a foto com o tema:",
-                            theme: $vm.theme
+            ScrollView {
+                VStack {
+                    ThemeCard(
+                        title: "Relacione a foto com o tema:",
+                        theme: $theme
+                    )
+                    .frame(width: geo.size.width * 0.8)
+                    .background{
+                        BorderedBackground(
+                            foregroundColor: .white,
+                            hasBorder: false
                         )
-                        .frame(width: geo.size.width * 0.8)
-                        .background{
-                            BorderedBackground(
-                                foregroundColor: .white,
-                                hasBorder: false
-                            )
-                        }
-                        .padding(.top, 5)
-                        .padding(.bottom)
-                            
-                        Spacer()
-                        
-                        VStack(spacing: 20) {
-                            RoundedRectangle(cornerRadius: 30)
-                                .fill(Color.white)
-                                .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.42)
-                                .onTapGesture {
-                                    withAnimation {
-                                        UIApplication.shared.endEditing()
-                                        vm.showZoomImage = true
-                                    }
-                                }
-                                .overlay {
-                                    image
-                                        .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.45)
-                                        .clipped()
-                                        .clipShape(RoundedRectangle(cornerRadius: 30))
-                                        .allowsHitTesting(false)
-                                        .overlay {
-                                            RoundedRectangle(cornerRadius: 30)
-                                                .stroke(.black, lineWidth: 2)
-                                        }
-                                }
-                                .overlay {
-                                    VStack {
-                                        Spacer()
-                                        ReactionButton(
-                                            showSelectEmoji: $vm.showSelectEmoji,
-                                            selectedIndex: $vm.selectedIndex
-                                        )
-                                            .frame(width: geo.size.width * 0.7, height: geo.size.height * 0.09)
-                                            .offset(x: -5, y: geo.size.height * 0.1/3.5)
-                                    }
-                                    .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.45, alignment: .trailing)
-                                }
-                            
-                            LimitedInputTextField(
-                                maxInputCount: vm.maxWordCount,
-                                inputUser: $vm.input,
-                                placeholder: vm.placeholder,
-                                secondaryAction: {
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                                        withAnimation {
-                                            proxy.scrollTo("buttons")
-                                            hideEmojis()
-                                        }
-                                    }
-                                }
-                            )
-                            .frame(
-                                width: geo.size.width * 0.8,
-                                height: geo.size.height * 0.15
-                            )
-                            .padding(.top, geo.size.height * 0.1 / 3)
-                        }
-                        
-                        Spacer()
-                        Spacer()
-                        
-                        button
-                            .id("buttons")
-                            .frame(width: geo.size.width * 0.8, height: 60)
-                            .padding(.bottom)
                     }
-                    .frame(width: geo.size.width, height: geo.size.height)
+                    .padding(.top, 5)
+                    .padding(.bottom)
+                        
+                    Spacer()
+                    
+                    VStack(spacing: 20) {
+                        RoundedRectangle(cornerRadius: 30)
+                            .fill(Color.white)
+                            .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.42)
+                            .onTapGesture {
+                                withAnimation {
+                                    UIApplication.shared.endEditing()
+                                    showZoomImage = true
+                                }
+                            }
+                            .overlay {
+                                image
+                                    .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.45)
+                                    .clipped()
+                                    .clipShape(RoundedRectangle(cornerRadius: 30))
+                                    .allowsHitTesting(false)
+                                    .overlay {
+                                        RoundedRectangle(cornerRadius: 30)
+                                            .stroke(.black, lineWidth: 2)
+                                    }
+                            }
+                        
+                        LimitedInputTextField(
+                            maxInputCount: maxWordCount,
+                            inputUser: $input,
+                            placeholder: placeholder
+                        )
+                        .frame(
+                            width: geo.size.width * 0.7,
+                            height: geo.size.height * 0.15
+                        )
+                    }
+                    
+                    Spacer()
+                    Spacer()
+                    
+                    button
+                        .frame(width: geo.size.width * 0.8, height: 60)
+                        .padding(.bottom)
                 }
-            }
-            .keyboardAdaptive()
-            .popupNavigationView(show: $showPopup) {
-                TakePictureModePopup(
-                    inputPhrase: vm.input,
-                    takePictureButtonTapped: { router.goToPhotoArtifactView() },
-                    pickImageButtonTapped: { router.goToPickImageView() },
-                    isShowing: $showPopup
-                )
                 .frame(width: geo.size.width, height: geo.size.height)
             }
+            .keyboardAdaptive()
             .onTapGesture {
                 UIApplication.shared.endEditing()
-                hideEmojis()
-                vm.verifyInput()
+                if input == "" {
+                    input = placeholder
+                }
+            }
+            .overlay {
+                if showZoomImage {
+                    ZoomImage(selectedImage: $showZoomImage, uiImage: uiImage)
+                }
             }
             .onAppear {
                 startArtifactDescriptionTimer = .now()
-                vm.initialSetUp(
-                    theme: session.gameFlowParameters.sessionTheme,
-                    imageData: session.getLastImage()
-                )
-            }
-        }
-        .applyHelpButton(.DescriptionArtifact)
-        .clioBackground()
-        .overlay {
-            if vm.showZoomImage {
-                ZoomImage(
-                    selectedImage: $vm.showZoomImage,
-                    uiImage: UIImage(data: vm.uiImageData ?? vm.imagePlaceHolder)!
-                )
-                .onAppear {
-                    hideEmojis()
+                theme = session.gameFlowParameters.sessionTheme
+                if let data = session.getLastImage() {
+                    uiImage = UIImage(data: data)!
                 }
             }
+            .clioBackground()
+            .applyHelpButton(.DescriptionArtifact)
         }
         .ignoresSafeArea(.keyboard)
         .environmentObject(session)
         .navigationTitle("")
         .navigationBarBackButtonHidden()
-    }
-    
-    func hideEmojis() {
-        withAnimation {
-            vm.showSelectEmoji = false
-        }
     }
 }
 
@@ -155,16 +113,17 @@ extension DescriptionArtifactView {
     
     var image: some View {
         ZStack {
-            if let imageData = vm.uiImageData {
-                Image(uiImage: UIImage(data: imageData)!)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            } else {
-                Image(uiImage: UIImage(data: vm.imagePlaceHolder)!)
+            if uiImage == UIImage(systemName: "photo.on.rectangle.angled") {
+                Image(uiImage: uiImage)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100, height: 80)
+            } else {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
             }
+            
         }
     }
     
@@ -173,8 +132,7 @@ extension DescriptionArtifactView {
             title: "Próximo",
             foregroundColor: .customYellow,
             backgroundColor: .white,
-            hasBorder: true
-        ) {
+            hasBorder: true) {
                 UIApplication.shared.endEditing()
                 let endArtifactDescriptionTimer: DispatchTime = .now()
                 let artifactDescriptionTimerElapsedTime = Double(
@@ -189,18 +147,34 @@ extension DescriptionArtifactView {
                     ]
                 )
                 
-                session.sendArtifact(description: vm.input, reactionEmojiIndex: vm.selectedIndex)
+                session.sendArtifact(description: input)
 
                 switch session.gameState {
                 case .final:
+                    // clear up and restart gameflow
+                    // TODO: FICA NA TELA DE RESULTADOS
                     router.goToPresentResultsView()
+//                    session.restartGame()
+//                    router.clear()
                 default:
-                    showPopup = true
-//                    router.goToPhotoArtifactView()
+                    router.goToPhotoArtifactView()
                 }
             }
-            .disabled(!vm.canSendDescription())
-            .opacity((!vm.canSendDescription()) ? 0.2 : 1)
+            .disabled(!canSendDescription())
+            .opacity((!canSendDescription()) ? 0.2 : 1)
+    }
+    
+    func canSendDescription() -> Bool {
+        if input == placeholder {
+            return false
+        }
+        if input == "" {
+            return false
+        }
+        if input.count > maxWordCount {
+            return false
+        }
+        return true
     }
 }
 

@@ -57,7 +57,7 @@ struct ResultsView: View {
                     hasBorder: true
                 ) {
                     AudioManager.shared.playSound(named: .seeAnswersButton)
-                    router.goToAllResultsVisualizationView()
+                    router.goToResultsPerPlayerVisualization()
                 }
                 .frame(height: 60)
                 .padding(30)

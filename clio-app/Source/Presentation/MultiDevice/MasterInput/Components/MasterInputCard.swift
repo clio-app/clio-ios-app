@@ -22,8 +22,7 @@ struct MasterInputCard: View {
                 LimitedInputTextField(
                     maxInputCount: 280,
                     inputUser: $userEntryText,
-                    placeholder: placeholder,
-                    secondaryAction: {}
+                    placeholder: placeholder
                 )
                 .font(.itimRegular(fontType: .body))
                 .focused($focusedField, equals: 0)
