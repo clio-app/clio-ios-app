@@ -18,34 +18,35 @@ struct PickImageView: View {
                         .font(.itimRegular(fontType: .body))
                         .multilineTextAlignment(.center)
                     
-                    TextFieldView(
-                        inputText: $vm.searchKeywords,
-                        placeholder: "Ex.: Árvores...",
-                        color: .yellow
-                    )
-                    .padding([.horizontal], 32)
-                    
                     ActionButton(
-                        title: "Generate Image Button",
+                        title: "Search Image By Theme Button",
                         foregroundColor: .yellow,
                         hasBorder: false,
                         action: {}
                     )
-                    .frame(height: 42)
-                    .padding(.horizontal, 42)
+                    .frame(
+                        width: geo.size.width * 0.55,
+                        height: 42
+                    )
+                    .padding(.horizontal, 56)
                     .padding(.top, 16)
                 }
                 .frame(height: geo.size.height * 0.3)
                 
                 VStack {
                     Text("Generated Images Label")
+                        .lineLimit(nil)
                         .font(.itimRegular(fontType: .headline))
                         .multilineTextAlignment(.center)
+                        .frame(
+                            width: geo.size.width * 0.85,
+                            height: 70
+                        )
                         
                     Rectangle()
                         .foregroundStyle(.clear)
                         .overlay {
-                            ForEach(vm.searchedImages.hits, id: \.id) { image in
+                            ForEach(vm.generatedImages, id: \.id) { image in
                                 
                             }
                         }

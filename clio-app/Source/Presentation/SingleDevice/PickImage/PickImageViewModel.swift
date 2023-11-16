@@ -9,34 +9,23 @@ import Foundation
 
 final class PickImageViewModel: ObservableObject {
     private var network: NetworkService
-    
-    @Published 
-    var searchedImages: PickImageModel.Search.Response = .init(
-        total: 0,
-        totalHits: 0,
-        hits: []
-    )
-    @Published 
-    var searchKeywords: String = String()
+    @Published var generatedImages: [any GeneratedImage] = []
     
     init(network: NetworkService = NetworkService()) {
         self.network = network
     }
     
     @MainActor
-    func searchImage() async {
-        if searchKeywords == String() { return }
-        
+    func generateImages() async {
         do {
-            let endPoint = PickImageModel.Search.NetworkEndpoint(
-                requestData: .init(keywords: searchKeywords)
+            let endpoint = PickImageModel.RandomCatImages.NetworkEndpoint()
+            let response: PickImageModel.RandomCatImages.Response = try await network.makeRequest(
+                for: endpoint
             )
-            let response: PickImageModel.Search.Response = try await network.makeRequest(
-                for: endPoint
-            )
-            searchedImages = response
+            print(response)
         } catch {
             print(error.localizedDescription)
         }
     }
+    
 }

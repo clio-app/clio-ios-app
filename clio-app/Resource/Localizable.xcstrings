@@ -500,30 +500,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Type a word to generate related images"
+            "value" : "Generate images through a theme"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Escreva uma palavra para gerar imagens relacionadas"
-          }
-        }
-      }
-    },
-    "Generate Image Button" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Generate Images"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Gerar Imagens"
+            "value" : "Gere imagens através de um tema"
           }
         }
       }
@@ -534,19 +517,18 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Generated images"
+            "value" : "Or select any of the generated images"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Imagens geradas"
+            "value" : "Ou selecione alguma das imagens geradas"
           }
         }
       }
     },
     "Hello, World!" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1047,6 +1029,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reúna todos os jogadores para ver as respostas mais inesperadas e descubra quem pensou fora da caixa."
+          }
+        }
+      }
+    },
+    "Sair" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exit"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sair"
+          }
+        }
+      }
+    },
+    "Search Image By Theme Button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search themes"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Pesquisar temas"
           }
         }
       }

@@ -11,6 +11,9 @@
 		002EF68B2AFE58D600E17620 /* PickImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002EF68A2AFE58D600E17620 /* PickImageView.swift */; };
 		002EF68D2AFE58E000E17620 /* PickImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002EF68C2AFE58E000E17620 /* PickImageViewModel.swift */; };
 		002EF68F2AFE5F5300E17620 /* PickImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002EF68E2AFE5F5300E17620 /* PickImageModel.swift */; };
+		00AA0DCE2B00778400F8CE44 /* SearchImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA0DCD2B00778400F8CE44 /* SearchImageView.swift */; };
+		00AA0DD02B00778E00F8CE44 /* SearchImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA0DCF2B00778E00F8CE44 /* SearchImageViewModel.swift */; };
+		00AA0DD22B0077BA00F8CE44 /* SearchImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA0DD12B0077BA00F8CE44 /* SearchImageModel.swift */; };
 		00BFF8FA2AB4914B0068A5F2 /* clio_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF8F92AB4914B0068A5F2 /* clio_appApp.swift */; };
 		00BFF8FC2AB4914B0068A5F2 /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */; };
 		00BFF8FE2AB4914D0068A5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */; };
@@ -134,6 +137,9 @@
 		002EF68A2AFE58D600E17620 /* PickImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageView.swift; sourceTree = "<group>"; };
 		002EF68C2AFE58E000E17620 /* PickImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageViewModel.swift; sourceTree = "<group>"; };
 		002EF68E2AFE5F5300E17620 /* PickImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageModel.swift; sourceTree = "<group>"; };
+		00AA0DCD2B00778400F8CE44 /* SearchImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageView.swift; sourceTree = "<group>"; };
+		00AA0DCF2B00778E00F8CE44 /* SearchImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageViewModel.swift; sourceTree = "<group>"; };
+		00AA0DD12B0077BA00F8CE44 /* SearchImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageModel.swift; sourceTree = "<group>"; };
 		00BFF8F92AB4914B0068A5F2 /* clio_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clio_appApp.swift; sourceTree = "<group>"; };
 		00BFF8FB2AB4914B0068A5F2 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
 		00BFF8FD2AB4914D0068A5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -283,6 +289,16 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		00AA0DCC2B00775900F8CE44 /* SearchImage */ = {
+			isa = PBXGroup;
+			children = (
+				00AA0DCD2B00778400F8CE44 /* SearchImageView.swift */,
+				00AA0DCF2B00778E00F8CE44 /* SearchImageViewModel.swift */,
+				00AA0DD12B0077BA00F8CE44 /* SearchImageModel.swift */,
+			);
+			path = SearchImage;
+			sourceTree = "<group>";
+		};
 		00BFF8ED2AB4914B0068A5F2 = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				7E68A60E2AFE3F1B006FAA1A /* CustomFirstPromptView */,
+				00AA0DCC2B00775900F8CE44 /* SearchImage */,
 				002EF6872AFE58C000E17620 /* PickImage */,
 				7E61A3E02AE574170009425C /* Router */,
 				FF4DDEA32AE1A12400759F47 /* DescriptionArtifact */,
@@ -898,6 +915,7 @@
 				7EA6DC952AE7FBDC003368E8 /* AddPlayerField.swift in Sources */,
 				7EA6DC9A2AE80352003368E8 /* CustomAlert.swift in Sources */,
 				7E1705E32AD60938005FA9EE /* MasterContainer.swift in Sources */,
+				00AA0DD22B0077BA00F8CE44 /* SearchImageModel.swift in Sources */,
 				7E1705E42AD60938005FA9EE /* PlayerGridItem.swift in Sources */,
 				00C120162AE060890042E152 /* ResultPerPlayerView.swift in Sources */,
 				7E1705E52AD60938005FA9EE /* LobbyHeader.swift in Sources */,
@@ -950,6 +968,7 @@
 				002EF68B2AFE58D600E17620 /* PickImageView.swift in Sources */,
 				7E52115A2AB7305C0080F92C /* WelcomeUserHeader.swift in Sources */,
 				7E310AD22AB8956300AF20C7 /* LandingScreenInteractor.swift in Sources */,
+				00AA0DCE2B00778400F8CE44 /* SearchImageView.swift in Sources */,
 				00C120102ADEC2E00042E152 /* RaffleThemeView.swift in Sources */,
 				002EF68D2AFE58E000E17620 /* PickImageViewModel.swift in Sources */,
 				7E94E93C2AD5C68600031061 /* LimitedInputTextField.swift in Sources */,
@@ -987,6 +1006,7 @@
 				7E94E93D2AD5C68600031061 /* MasterInputView.swift in Sources */,
 				7E94E93A2AD5C68600031061 /* ImageInputCard.swift in Sources */,
 				7E0EB3B92B03B1EE001CDF36 /* AudioManager.swift in Sources */,
+				00AA0DD02B00778E00F8CE44 /* SearchImageViewModel.swift in Sources */,
 				00D9C9CF2ABC806E00F66421 /* NetworkService.swift in Sources */,
 				FFE132FA2AEBEEFD0069670A /* UserTextConfirmation.swift in Sources */,
 				7EE152D02AD4181B00CA8F9F /* PieTimer.swift in Sources */,
