@@ -112,7 +112,6 @@ struct AllResultsView: View {
         }
         .navigationBarBackButtonHidden()
         .clioBackground()
-        .applyHelpButton(.AllResultsVisualization)
         .overlay {
             if vm.showZoomImage {
                 ZoomImage(
@@ -122,6 +121,7 @@ struct AllResultsView: View {
                 .edgesIgnoringSafeArea(.top)
             }
         }
+        .applyHelpButton(.AllResultsVisualization)
     }
 }
 
