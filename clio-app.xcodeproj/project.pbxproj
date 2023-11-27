@@ -45,7 +45,6 @@
 		7E0D42592AD5BEFD00C566EB /* SelectImageProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42572AD5BEFD00C566EB /* SelectImageProfile.swift */; };
 		7E0D425A2AD5BEFD00C566EB /* AnonymousLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D42582AD5BEFD00C566EB /* AnonymousLoginView.swift */; };
 		7E0EB3B92B03B1EE001CDF36 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EB3B82B03B1EE001CDF36 /* AudioManager.swift */; };
-		7E0EB3BD2B03BAA3001CDF36 /* bensound-lofinerdbassbuzzer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EB3BC2B03BAA3001CDF36 /* bensound-lofinerdbassbuzzer.mp3 */; };
 		7E0EB3BF2B044516001CDF36 /* tap-button.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EB3BE2B044516001CDF36 /* tap-button.mp3 */; };
 		7E0EB3C12B0445D7001CDF36 /* popup-button.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EB3C02B0445D7001CDF36 /* popup-button.wav */; };
 		7E0EB3C32B044650001CDF36 /* sorted-theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EB3C22B044650001CDF36 /* sorted-theme.wav */; };
@@ -149,7 +148,6 @@
 		002EF68A2AFE58D600E17620 /* PickImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageView.swift; sourceTree = "<group>"; };
 		002EF68C2AFE58E000E17620 /* PickImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageViewModel.swift; sourceTree = "<group>"; };
 		002EF68E2AFE5F5300E17620 /* PickImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageModel.swift; sourceTree = "<group>"; };
-		00319EFE2B0663020007BA5E /* ProductionConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ProductionConfig.xcconfig; sourceTree = "<group>"; };
 		00AA0DCD2B00778400F8CE44 /* SearchImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageView.swift; sourceTree = "<group>"; };
 		00AA0DCF2B00778E00F8CE44 /* SearchImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageViewModel.swift; sourceTree = "<group>"; };
 		00AA0DD12B0077BA00F8CE44 /* SearchImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageModel.swift; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 		7E0D42572AD5BEFD00C566EB /* SelectImageProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectImageProfile.swift; sourceTree = "<group>"; };
 		7E0D42582AD5BEFD00C566EB /* AnonymousLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnonymousLoginView.swift; sourceTree = "<group>"; };
 		7E0EB3B82B03B1EE001CDF36 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		7E0EB3BC2B03BAA3001CDF36 /* bensound-lofinerdbassbuzzer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-lofinerdbassbuzzer.mp3"; sourceTree = "<group>"; };
 		7E0EB3BE2B044516001CDF36 /* tap-button.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "tap-button.mp3"; sourceTree = "<group>"; };
 		7E0EB3C02B0445D7001CDF36 /* popup-button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "popup-button.wav"; sourceTree = "<group>"; };
 		7E0EB3C22B044650001CDF36 /* sorted-theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sorted-theme.wav"; sourceTree = "<group>"; };
@@ -225,7 +222,6 @@
 		7EA6DC962AE80025003368E8 /* ThemeSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSlot.swift; sourceTree = "<group>"; };
 		7EA6DC992AE80352003368E8 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		7EA6DC9B2AE804E4003368E8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		7EA6DCA02AE88BCD003368E8 /* HomologConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = HomologConfig.xcconfig; path = "clio-app/HomologConfig.xcconfig"; sourceTree = "<group>"; };
 		7EA6DCA12AE8902D003368E8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7EBA9CD82AD1AF6E00C25970 /* VotingInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionView.swift; sourceTree = "<group>"; };
 		7EBA9CDA2AD1B5E600C25970 /* VotingInstructionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingInstructionViewModel.swift; sourceTree = "<group>"; };
@@ -235,6 +231,7 @@
 		7EBA9CE32AD23CF700C25970 /* PieProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieProgress.swift; sourceTree = "<group>"; };
 		7ED105532AE5CD830038B149 /* RaffleThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaffleThemeViewModel.swift; sourceTree = "<group>"; };
 		7EE152CF2AD4181B00CA8F9F /* PieTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieTimer.swift; sourceTree = "<group>"; };
+		7EF4FA192B14D009007AF025 /* HomologConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = HomologConfig.xcconfig; sourceTree = "<group>"; };
 		FF04AC922AB8BCFF00516135 /* StrokeText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
 		FF04AC932AB8BCFF00516135 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
@@ -314,8 +311,7 @@
 		00BFF8ED2AB4914B0068A5F2 = {
 			isa = PBXGroup;
 			children = (
-				00319EFE2B0663020007BA5E /* ProductionConfig.xcconfig */,
-				7EA6DCA02AE88BCD003368E8 /* HomologConfig.xcconfig */,
+				7EF4FA192B14D009007AF025 /* HomologConfig.xcconfig */,
 				7E32B0722AC5B5D000A62D28 /* clio-app.xctestplan */,
 				00BFF8F82AB4914B0068A5F2 /* clio-app */,
 				7E7667302AC47045009064C8 /* Clio.app */,
@@ -587,7 +583,6 @@
 				7E0EB3C62B045726001CDF36 /* see-answers.wav */,
 				7E0EB3C02B0445D7001CDF36 /* popup-button.wav */,
 				7E0EB3BE2B044516001CDF36 /* tap-button.mp3 */,
-				7E0EB3BC2B03BAA3001CDF36 /* bensound-lofinerdbassbuzzer.mp3 */,
 			);
 			path = Audios;
 			sourceTree = "<group>";
@@ -910,7 +905,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E24F3DA2AF53D470066E590 /* ThemePhrases.json in Resources */,
-				7E0EB3BD2B03BAA3001CDF36 /* bensound-lofinerdbassbuzzer.mp3 in Resources */,
 				7E0EB3C12B0445D7001CDF36 /* popup-button.wav in Resources */,
 				00BFF9012AB4914D0068A5F2 /* Preview Assets.xcassets in Resources */,
 				7EA6DCA22AE8902D003368E8 /* Localizable.xcstrings in Resources */,
@@ -1081,7 +1075,7 @@
 /* Begin XCBuildConfiguration section */
 		00BFF9182AB4914D0068A5F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EA6DCA02AE88BCD003368E8 /* HomologConfig.xcconfig */;
+			baseConfigurationReference = 7EF4FA192B14D009007AF025 /* HomologConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1142,7 +1136,6 @@
 		};
 		00BFF9192AB4914D0068A5F2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00319EFE2B0663020007BA5E /* ProductionConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1203,7 +1196,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 685GVH2XJC;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
@@ -1241,7 +1234,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 685GVH2XJC;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
