@@ -20,7 +20,7 @@ struct StartView: View {
                 Spacer()
                 Image("welcome-to-clio")
                     .resizable()
-                    .scaledToFit()
+                    .aspectRatio(contentMode: .fit)
                 Spacer()
 
                 HStack(alignment:.top) {
