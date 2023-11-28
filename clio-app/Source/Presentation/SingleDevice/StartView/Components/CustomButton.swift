@@ -27,7 +27,7 @@ struct CustomButton: View {
 
                     Spacer()
 
-                Text(LocalizedStringKey(text))
+                Text(NSLocalizedString(text, comment: ""))
                     .font(.itimRegular(fontType: .body))
                     .lineLimit(2)
                     .foregroundColor(.black)

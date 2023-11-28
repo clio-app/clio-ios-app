@@ -15,16 +15,16 @@ struct StartView: View {
 
     var buttons: [ButtonMode] {
         [
-            .init(name: "Modo \n singleplayer", image: .singleplayer, isDisabled: false, action: {
+            .init(name: NSLocalizedString("Modo \n singleplayer", comment: ""), image: .singleplayer, isDisabled: false, action: {
                 router.clear()
             }),
-            .init(name: "Jogue nesse dispositivo", image: .singledevice, isDisabled: false, action: {
+            .init(name: NSLocalizedString("Jogue nesse dispositivo", comment: ""), image: .singledevice, isDisabled: false, action: {
                 router.goToPlayersView()
             }),
-            .init(name: "Jogue online", image: .multidevice, isDisabled: false, action: {
+            .init(name: NSLocalizedString("Jogue online", comment: ""), image: .multidevice, isDisabled: false, action: {
                 isPopupPresented.toggle()
             }),
-            .init(name: "Em breve", image: .unavailable, isDisabled: true, action: {})
+            .init(name: NSLocalizedString("Em breve", comment: ""), image: .unavailable, isDisabled: true, action: {})
         ]
     }
 

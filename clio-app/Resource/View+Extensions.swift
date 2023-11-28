@@ -12,7 +12,7 @@ extension View {
         let resign = #selector(UIResponder.resignFirstResponder)
         UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
     }
-    
+
     func popupNavigationView<Content: View>(horizontalPadding: CGFloat = 40, show: Binding<Bool>, content: @escaping () -> Content) -> some View {
         return self
             .overlay {
@@ -62,6 +62,16 @@ extension View {
         return self
             .foregroundStyle(.gray, .white)
             .colorMultiply(Color(color.description))
+    }
+
+    // MARK: Effects
+    func applyButtonAnimation(isAnimated: Bool) -> some View {
+        self.scaleEffect(isAnimated ? 0.5 : 1.0)
+    }
+
+    func buttonState(_ isDisabled: Bool) -> some View {
+        self.opacity(isDisabled ? 0.4 : 1.0)
+            .disabled(isDisabled)
     }
 }
 

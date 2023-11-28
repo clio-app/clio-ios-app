@@ -9,7 +9,8 @@ import SwiftUI
 import Mixpanel
 
 struct ButtonGrid: View {
-    @State private var animatedButtonCount: Int = 0
+
+    @State var animatedButtonCount: Int = 0
     var buttons: [ButtonMode]
 
     let columns = [
@@ -24,9 +25,8 @@ struct ButtonGrid: View {
                     Mixpanel.mainInstance().track(event: "\(button.image) Tapped")
                     button.action()
                 }, icon: button.image.rawValue, text: button.name)
-                .opacity(button.isDisabled ? 0.4 : 1.0)
-                .scaleEffect(index == animatedButtonCount ? 0.5 : 1.0)
-                .disabled(button.isDisabled)
+                .buttonState(button.isDisabled)
+                .applyButtonAnimation(isAnimated: index == animatedButtonCount)
                 .padding(.horizontal, 8)
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.2) {
@@ -34,6 +34,9 @@ struct ButtonGrid: View {
                             animatedButtonCount += 1
                         }
                     }
+                }
+                .onDisappear {
+                    animatedButtonCount = 0
                 }
             }
         }
@@ -55,7 +58,3 @@ enum ImageMode: String {
     case unavailable = "ghost-icon"
     case multidevice = "multi-device-icon"
 }
-
-//#Preview {
-//    ButtonGrid()
-//}
