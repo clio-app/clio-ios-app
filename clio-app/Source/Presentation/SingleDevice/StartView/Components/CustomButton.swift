@@ -8,31 +8,40 @@
 import SwiftUI
 
 struct CustomButton: View {
-
-    var buttonAction: (()-> Void)
-    var icon: String
-    var text: String
+    let buttonAction: (()-> Void)
+    let icon: String
+    let text: String
 
     var body: some View {
         Button {
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
             buttonAction()
         } label: {
-            VStack(alignment:.center) {
+            VStack(alignment: .center) {
                 Image(icon)
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: 92)
-                    .padding(.top, 8)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: 92)
+                    .frame(alignment: .top)
+                    .padding(.vertical, 6)
+
+                    Spacer()
+
                 Text(LocalizedStringKey(text))
-                    .font(.itimRegular(fontType: .button))
+                    .font(.itimRegular(fontType: .body))
+                    .lineLimit(2)
                     .foregroundColor(.black)
-                    .padding(.vertical, 12)
+                    .padding(.vertical, 6)
+
+                Spacer()
+                
             }
-            .frame(maxWidth: 170, maxHeight: 180)
+            .padding(.horizontal, 6)
+            .frame(maxWidth: 180, maxHeight: 170)
             .background(BorderedBackground(foregroundColor: .customYellow,
                                            backgroundColor: .offWhite,
                                            hasBorder: true))
+            .compositingGroup()
         }
     }
 }

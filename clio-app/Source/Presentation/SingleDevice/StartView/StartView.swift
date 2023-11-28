@@ -11,8 +11,22 @@ import Mixpanel
 struct StartView: View {
     @StateObject private var gameSession = GameSession()    // state for reference
     @ObservedObject var router = Router()                   // binding for reference
-
     @State private var isPopupPresented: Bool = false
+
+    var buttons: [ButtonMode] {
+        [
+            .init(name: "Modo \n singleplayer", image: .singleplayer, isDisabled: false, action: {
+                router.clear()
+            }),
+            .init(name: "Jogue nesse dispositivo", image: .singledevice, isDisabled: false, action: {
+                router.goToPlayersView()
+            }),
+            .init(name: "Jogue online", image: .multidevice, isDisabled: false, action: {
+                isPopupPresented.toggle()
+            }),
+            .init(name: "Em breve", image: .unavailable, isDisabled: true, action: {})
+        ]
+    }
 
     var body: some View {
         NavigationStack(path: $router.path) {
@@ -21,24 +35,10 @@ struct StartView: View {
                 Image("welcome-to-clio")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .padding(.horizontal, 32)
+
                 Spacer()
-
-                HStack(alignment:.top) {
-                    Spacer()
-                    CustomButton(buttonAction: {
-                        Mixpanel.mainInstance().track(event: "Play Local Tapped")
-                        router.goToPlayersView()
-                    }, icon: "single-device-icon", text: "Jogar nesse dispositivo")
-
-                    Spacer()
-
-                    CustomButton(buttonAction: {
-                        Mixpanel.mainInstance().track(event: "Play Online Tapped")
-                        isPopupPresented.toggle()
-                    }, icon: "multi-device-icon", text: "Jogar online")
-
-                    Spacer()
-                }
+                ButtonGrid(buttons: buttons)
                 Spacer()
             }
             .applyHelpButton(.Start)
@@ -50,7 +50,7 @@ struct StartView: View {
                 isPopupPresented = false
             }
             .popupNavigationView(show: $isPopupPresented) {
-                CustomAlert(isPopupPresented: $isPopupPresented, 
+                CustomAlert(isPopupPresented: $isPopupPresented,
                             title: "Oops",
                             text: "Infelizmente esse modo de jogo ainda não está disponível!")
             }
