@@ -10,24 +10,26 @@ import SwiftUI
 struct UserAvatar: View {
     let userName: String
     let picture: String
+    let topAlignment: Bool
 
     var body: some View {
         HStack {
             Image(systemName: "person.circle.fill")
                 .resizable()
-                    .frame(width: 50, height: 50)
-                    .overlay {
-                        Circle()
-                            .stroke(lineWidth: 3.0)
-                            .foregroundColor(.black)
-                    }
-                    .applyColor(picture)
+                .frame(width: 30, height: 30)
+                .overlay {
+                    Circle()
+                        .stroke(lineWidth: 2.0)
+                        .foregroundColor(.black)
+                }
+                .applyColor(picture)
 
             Text(userName)
                 .foregroundStyle(.black)
                 .font(.itimRegular(fontType: .body))
         }
-        .padding(.vertical, 10)
+        .padding(.top, topAlignment ? 6 : 30)
+        .padding(.bottom, topAlignment ? 30 : 6)
         .padding(.horizontal, 18)
         .foregroundColor(.black)
         .background {
@@ -39,6 +41,7 @@ struct UserAvatar: View {
 #Preview {
     UserAvatar(
         userName: "Name",
-        picture: "Lilac"
+        picture: "Lilac",
+        topAlignment: true
     )
 }

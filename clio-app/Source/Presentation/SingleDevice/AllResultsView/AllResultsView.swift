@@ -28,86 +28,105 @@ struct AllResultsView: View {
                 .frame(width: geo.size.width)
                 .transition(.move(edge: .leading))
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        withAnimation {
-                            vm.changeState()
-                        }
-                    }
+                    goToVisualization()
                 }
+                .onTapGesture {
+                    goToVisualization()
+                }
+                
             case .presentArtifacts:
-                ScrollView {
-                    VStack (spacing: geo.size.height * 0.11) {
-                        DescriptionCard(description: gameSession.gameFlowParameters.firstRoundPrompt)
-                        ForEach(0..<gameSession.gameFlowParameters.didPlay.count, id: \.self) { index in
-                            VStack(spacing: 24) {
-                                UserAvatar(
-                                    userName: gameSession.gameFlowParameters.didPlay[index].name,
-                                    picture: gameSession.gameFlowParameters.didPlay[index].picture
-                                )
-                                if let imageData = gameSession.gameFlowParameters.didPlay[index].artefact?.picture {
-                                    ImageCard(imageData: imageData)
-                                        .onTapGesture {
-                                            vm.showZoomImage = true
-                                            vm.selectedImage = imageData
-                                        }
-                                        .frame(
-                                            width: geo.size.width * 0.8,
-                                            height: geo.size.width * 0.8
-                                        )
-                                        .overlay {
-                                            if let emojiName = gameSession.getEmojiName(index: index) {
-                                                EmojiReaction(emojiName: emojiName)
-                                                    .frame(
-                                                        width: geo.size.width * 0.8,
-                                                        height: geo.size.width * 0.8,
-                                                        alignment: .bottomTrailing
-                                                    )
-                                            }
-                                        }
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        VStack (spacing: 42) {
+                            InitialPhrase(phrase: gameSession.gameFlowParameters.firstRoundPrompt)
+                                .frame(width: geo.size.width * 0.8)
+                            
+                            ForEach(0...vm.currentLastIndex, id: \.self) { index in
+                                let (userName, userPicture) = gameSession.getDidPlayPlayerBy(index: index)
+                                
+                                if let description = gameSession.getArtifactDescriptionBy(index: index) {
+                                    DescriptionAnswer(
+                                        description: description,
+                                        userName: userName, userPicture: userPicture
+                                    )
+                                    .frame(width: geo.size.width * 0.8)
                                 }
-                                if let description = gameSession.gameFlowParameters.didPlay[index].artefact?.description {
-                                    DescriptionCard(description: description)
-                                        .padding(.horizontal, 2)
+                                
+                                if let imageData = gameSession.getArtifactImageDataBy(index: index) {
+                                    if vm.isToShowImageFor(index: index) {
+                                        ImageAnswer(
+                                            userName: userName, userPicture: userPicture,
+                                            imageData: imageData,
+                                            emojiName: gameSession.getEmojiName(index: index)) {
+                                                vm.showZoomImage = true
+                                                vm.selectedImage = imageData
+                                            }
+                                            .frame(
+                                                width: geo.size.width * 0.8,
+                                                height: geo.size.width
+                                            )
+                                    }
                                 }
                             }
+                            
+                        }
+                        .frame(width: geo.size.width * 0.9)
+                        
+                        if vm.isFinished() {
+                            VStack {
+                                ActionButton(
+                                    title: "Jogar Novamente",
+                                    foregroundColor: .lapisLazuli,
+                                    backgroundColor: .offWhite,
+                                    hasBorder: true) {
+                                        gameSession.restartGame()
+                                        router.restartGameWithPlayers()
+                                    }
+                                    .padding(.horizontal)
+                                    .frame(height: 60)
+                                    .padding(.bottom)
+                                    .disabled(vm.showZoomImage)
+                                    .opacity(vm.showZoomImage ? 0.3 : 1)
+                                ActionButton(
+                                    title: "Sair",
+                                    foregroundColor: .sky,
+                                    backgroundColor: .offWhite,
+                                    hasBorder: true) {
+                                        gameSession.fullResetGame()
+                                        router.clear()
+                                    }
+                                    .padding(.horizontal)
+                                    .frame(height: 60)
+                                    .disabled(vm.showZoomImage)
+                                    .opacity(vm.showZoomImage ? 0.3 : 1)
+                            }
+                            .frame(width: geo.size.width * 0.9)
+                            .padding(.top, geo.size.height * 0.11)
+                            .padding(.bottom)
+                            .id("LastElement")
+                        } else {
+                            VStack {
+                                if vm.currentAnswer == .image {
+                                    LoadingPoints()
+                                        .frame(width: geo.size.width * 0.8, alignment: .trailing)
+                                }
+                                
+                                ArrowDownButton {
+                                    vm.addAnswer()
+                                    scrollToLastId(proxy)
+                                }
+                            }
+                            .padding(.bottom)
+                            .id("LastElement")
                         }
                     }
-                    .frame(width: geo.size.width * 0.8)
-                    VStack {
-                        ActionButton(
-                            title: "Jogar Novamente",
-                            foregroundColor: .lapisLazuli,
-                            backgroundColor: .offWhite,
-                            hasBorder: true) {
-                                gameSession.restartGame()
-                                router.restartGameWithPlayers()
-                            }
-                            .padding(.horizontal)
-                            .frame(width: geo.size.width * 0.9, height: 60)
-                            .padding(.bottom)
-                            .disabled(vm.showZoomImage)
-                            .opacity(vm.showZoomImage ? 0.3 : 1)
-                        ActionButton(
-                            title: "Sair",
-                            foregroundColor: .sky,
-                            backgroundColor: .offWhite,
-                            hasBorder: true) {
-                                gameSession.fullResetGame()
-                                router.clear()
-                            }
-                            .padding(.horizontal)
-                            .frame(width: geo.size.width * 0.9, height: 60)
-                            .disabled(vm.showZoomImage)
-                            .opacity(vm.showZoomImage ? 0.3 : 1)
-                    }
-                    .padding(.top, geo.size.height * 0.11)
-                    .padding(.bottom)
+                    .frame(width: geo.size.width)
+                    .scrollIndicators(.hidden)
+                    .clipped()
+                    .transition(.move(edge: .trailing))
+                    .padding(.top, 1)
+                    
                 }
-                .frame(width: geo.size.width)
-                .scrollIndicators(.hidden)
-                .clipped()
-                .transition(.move(edge: .trailing))
-                .padding(.top, 1)
             }
         }
         .navigationBarBackButtonHidden()
@@ -122,6 +141,25 @@ struct AllResultsView: View {
             }
         }
         .applyHelpButton(.AllResultsVisualization)
+        .onAppear {
+            vm.set(size: gameSession.gameFlowParameters.didPlay.count)
+        }
+    }
+    
+    func scrollToLastId(_ proxy : ScrollViewProxy) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            withAnimation {
+                proxy.scrollTo("LastElement")
+            }
+        }
+    }
+    
+    func goToVisualization() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            withAnimation {
+                vm.changeState()
+            }
+        }
     }
 }
 

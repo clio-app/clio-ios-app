@@ -12,7 +12,7 @@ struct DescriptionCard: View {
     
     var body: some View {
         Text(description)
-            .font(.itimRegular(fontType: .title3))
+            .font(.itimRegular(fontType: .body))
             .foregroundStyle(.black)
             .multilineTextAlignment(.center)
             .lineLimit(nil)
