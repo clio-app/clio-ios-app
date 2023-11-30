@@ -23,13 +23,13 @@ struct PhotoArtifactView: View {
     var body: some View {
         GeometryReader { geo in
             VStack {
-                themeCard
-                    .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.2)
-                    .background{
-                        BorderedBackground(foregroundColor: .white, hasBorder: false)
-                    }
-                    .padding(.top, 5)
-                    .padding(.bottom)
+                TakePickInstructionCard(
+                    theme: $theme,
+                    width: geo.size.width * 0.8,
+                    height: geo.size.height * 0.2
+                )
+                .padding(.top, 5)
+                .padding(.bottom)
                 
                 
                 ZStack {
@@ -41,9 +41,8 @@ struct PhotoArtifactView: View {
                             }
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                             .background {
-                                cameraPlaceholder
+                                CameraPlaceholder()
                             }
-                        
                     }
                     
                     if let _ = vm.imageData {
@@ -145,31 +144,6 @@ struct PhotoArtifactView: View {
 }
 
 extension PhotoArtifactView {
-    var themeCard: some View {
-        Group {
-            Text(LocalizedStringKey("Tire uma foto que se relacione com:"))
-                .foregroundColor(.black)
-                .font(.itimRegular(size: 18))
-            + Text("\n \(theme)")
-                .foregroundColor(.lapisLazuli)
-                .font(.itimRegular(size: 20))
-        }
-        .multilineTextAlignment(.center)
-        .padding()
-    }
-    
-    var cameraPlaceholder: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(.black)
-            Image(systemName: "camera.viewfinder")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 100, height: 100)
-                .foregroundColor(.white)
-        }
-    }
-    
     var takePhotoOverlay: some View {
         VStack {
             Spacer()
