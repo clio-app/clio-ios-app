@@ -49,7 +49,7 @@ struct DescriptionArtifactView: View {
                                 }
                                 .overlay {
                                     image
-                                        .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.45)
+                                        .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.45, alignment: .top)
                                         .clipped()
                                         .clipShape(RoundedRectangle(cornerRadius: 30))
                                         .allowsHitTesting(false)
