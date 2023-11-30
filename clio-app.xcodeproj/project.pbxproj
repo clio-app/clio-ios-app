@@ -245,6 +245,7 @@
 		FF6FD1CD2AB4A2BD00A2D681 /* Nighty DEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nighty DEMO.otf"; sourceTree = "<group>"; };
 		FF6FD1CF2AB4A67600A2D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FF6FD1D02AB4A85000A2D681 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		FF8B48492B14C8E600AB8B85 /* HomologConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = HomologConfig.xcconfig; sourceTree = "<group>"; };
 		FFA354D32AE0169D00E23ADC /* PhotoArtifactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoArtifactView.swift; sourceTree = "<group>"; };
 		FFA354D52AE0170B00E23ADC /* PhotoArtifactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoArtifactViewModel.swift; sourceTree = "<group>"; };
 		FFA354D82AE0193100E23ADC /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
@@ -311,7 +312,7 @@
 		00BFF8ED2AB4914B0068A5F2 = {
 			isa = PBXGroup;
 			children = (
-				7EF4FA192B14D009007AF025 /* HomologConfig.xcconfig */,
+				FF8B48492B14C8E600AB8B85 /* HomologConfig.xcconfig */,
 				7E32B0722AC5B5D000A62D28 /* clio-app.xctestplan */,
 				00BFF8F82AB4914B0068A5F2 /* clio-app */,
 				7E7667302AC47045009064C8 /* Clio.app */,
@@ -1075,7 +1076,7 @@
 /* Begin XCBuildConfiguration section */
 		00BFF9182AB4914D0068A5F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EF4FA192B14D009007AF025 /* HomologConfig.xcconfig */;
+			baseConfigurationReference = FF8B48492B14C8E600AB8B85 /* HomologConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1136,6 +1137,7 @@
 		};
 		00BFF9192AB4914D0068A5F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF8B48492B14C8E600AB8B85 /* HomologConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1196,7 +1198,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 44U668YQTW;
+				DEVELOPMENT_TEAM = NTS86MKTBV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
@@ -1234,7 +1236,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 44U668YQTW;
+				DEVELOPMENT_TEAM = NTS86MKTBV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";

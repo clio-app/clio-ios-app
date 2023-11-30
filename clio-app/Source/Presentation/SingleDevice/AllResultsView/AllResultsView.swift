@@ -27,6 +27,13 @@ struct AllResultsView: View {
                 }
                 .frame(width: geo.size.width)
                 .transition(.move(edge: .leading))
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        withAnimation {
+                            vm.changeState()
+                        }
+                    }
+                }
             case .presentArtifacts:
                 ScrollView {
                     VStack (spacing: geo.size.height * 0.11) {
@@ -100,18 +107,11 @@ struct AllResultsView: View {
                 .scrollIndicators(.hidden)
                 .clipped()
                 .transition(.move(edge: .trailing))
-            }
-        }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                withAnimation {
-                    vm.changeState()
-                }
+                .padding(.top, 1)
             }
         }
         .navigationBarBackButtonHidden()
         .clioBackground()
-        .applyHelpButton(.AllResultsVisualization)
         .overlay {
             if vm.showZoomImage {
                 ZoomImage(
@@ -121,6 +121,7 @@ struct AllResultsView: View {
                 .edgesIgnoringSafeArea(.top)
             }
         }
+        .applyHelpButton(.AllResultsVisualization)
     }
 }
 

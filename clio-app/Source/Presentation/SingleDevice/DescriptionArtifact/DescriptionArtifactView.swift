@@ -111,6 +111,7 @@ struct DescriptionArtifactView: View {
                     isShowing: $showPopup
                 )
                 .frame(width: geo.size.width, height: geo.size.height)
+                .toolbar(.hidden, for: .navigationBar)
             }
             .onTapGesture {
                 UIApplication.shared.endEditing()
