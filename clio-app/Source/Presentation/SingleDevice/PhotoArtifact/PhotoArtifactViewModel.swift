@@ -101,13 +101,16 @@ final class PhotoArtifactViewModel: NSObject, ObservableObject {
     
     func takePhoto() {
         self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+        cameraToggle()
     }
 }
 
 extension PhotoArtifactViewModel: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        guard let capturedPhoto = photo.fileDataRepresentation() else { return }
+        guard let capturedPhoto = photo.fileDataRepresentation() else {
+            cameraToggle()
+            return
+        }
         self.imageData = capturedPhoto
-        self.cameraToggle()
     }
 }
