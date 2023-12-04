@@ -663,6 +663,7 @@
     },
     "Já foi atingido o máximo de jogadores" : {
       "comment" : "max players reached",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -931,6 +932,7 @@
     },
     "Opa! O nome do jogador não pode estar vazio." : {
       "comment" : "name is blank",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

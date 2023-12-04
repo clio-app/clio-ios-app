@@ -28,7 +28,6 @@
 		00C0CA282AE7F3C7009F74BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C0CA272AE7F3C7009F74BB /* AppDelegate.swift */; };
 		00C11FFF2ADEB62E0042E152 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C11FFE2ADEB62E0042E152 /* StartView.swift */; };
 		00C120022ADEBDC90042E152 /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120012ADEBDC90042E152 /* PlayersView.swift */; };
-		00C120092ADEBF140042E152 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120082ADEBF140042E152 /* GameSession.swift */; };
 		00C120102ADEC2E00042E152 /* RaffleThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C1200F2ADEC2E00042E152 /* RaffleThemeView.swift */; };
 		00C120132AE05C3A0042E152 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120122AE05C3A0042E152 /* ResultsView.swift */; };
 		00C120192AE0685D0042E152 /* UserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C120182AE0685D0042E152 /* UserAvatar.swift */; };
@@ -160,7 +159,6 @@
 		00C0CA272AE7F3C7009F74BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00C11FFE2ADEB62E0042E152 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		00C120012ADEBDC90042E152 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
-		00C120082ADEBF140042E152 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		00C1200F2ADEC2E00042E152 /* RaffleThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaffleThemeView.swift; sourceTree = "<group>"; };
 		00C120122AE05C3A0042E152 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		00C120182AE0685D0042E152 /* UserAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAvatar.swift; sourceTree = "<group>"; };
@@ -373,7 +371,6 @@
 			isa = PBXGroup;
 			children = (
 				00D9C9BF2ABC7D5A00F66421 /* API */,
-				00C120032ADEBE9E0042E152 /* Domain */,
 				00BFF9262AB491AE0068A5F2 /* Presentation */,
 			);
 			path = Source;
@@ -448,22 +445,6 @@
 				7EA6DC912AE7FB6D003368E8 /* Components */,
 			);
 			path = PlayersView;
-			sourceTree = "<group>";
-		};
-		00C120032ADEBE9E0042E152 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				00C120072ADEBF0D0042E152 /* GameSession */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		00C120072ADEBF0D0042E152 /* GameSession */ = {
-			isa = PBXGroup;
-			children = (
-				00C120082ADEBF140042E152 /* GameSession.swift */,
-			);
-			path = GameSession;
 			sourceTree = "<group>";
 		};
 		00C1200C2ADEC2980042E152 /* RaffleTheme */ = {
@@ -983,7 +964,6 @@
 				7E68A6102AFE3F34006FAA1A /* CustomFirstPrompt.swift in Sources */,
 				7E61A3E42AE57E430009425C /* Router.swift in Sources */,
 				FFE132F82AEBEE600069670A /* LoadingPlayer.swift in Sources */,
-				00C120092ADEBF140042E152 /* GameSession.swift in Sources */,
 				7EA6DC972AE80025003368E8 /* ThemeSlot.swift in Sources */,
 				FFD59DC62AFA5D1B001C06B0 /* DescriptionCard.swift in Sources */,
 				FF04AC952AB8BCFF00516135 /* TextFieldView.swift in Sources */,
