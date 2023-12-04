@@ -6,7 +6,7 @@
       "location" : "https://github.com/clio-app/clio-entities.git",
       "state" : {
         "branch" : "main",
-        "revision" : "b450400b210b5ee3ec93cd006176bb81dd146e02"
+        "revision" : "65ed9cc17c474d258da69311a0176abdb10673b2"
       }
     },
     {
@@ -15,7 +15,7 @@
       "location" : "https://github.com/mixpanel/mixpanel-swift",
       "state" : {
         "branch" : "master",
-        "revision" : "1ce27d937009d5ecce74dad97d69898ffea49c75"
+        "revision" : "c6336881a077d283db6f6d6e2f242977250230bd"
       }
     }
   ],

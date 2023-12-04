@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		002EF68B2AFE58D600E17620 /* PickImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002EF68A2AFE58D600E17620 /* PickImageView.swift */; };
 		002EF68D2AFE58E000E17620 /* PickImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002EF68C2AFE58E000E17620 /* PickImageViewModel.swift */; };
 		002EF68F2AFE5F5300E17620 /* PickImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002EF68E2AFE5F5300E17620 /* PickImageModel.swift */; };
+		006671BB2B1DF6F400D4E9DC /* ClioDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 006671BA2B1DF6F400D4E9DC /* ClioDomain */; };
 		00AA0DCE2B00778400F8CE44 /* SearchImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA0DCD2B00778400F8CE44 /* SearchImageView.swift */; };
 		00AA0DD02B00778E00F8CE44 /* SearchImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA0DCF2B00778E00F8CE44 /* SearchImageViewModel.swift */; };
 		00AA0DD22B0077BA00F8CE44 /* SearchImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA0DD12B0077BA00F8CE44 /* SearchImageModel.swift */; };
@@ -231,7 +232,6 @@
 		7EBA9CE32AD23CF700C25970 /* PieProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieProgress.swift; sourceTree = "<group>"; };
 		7ED105532AE5CD830038B149 /* RaffleThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaffleThemeViewModel.swift; sourceTree = "<group>"; };
 		7EE152CF2AD4181B00CA8F9F /* PieTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieTimer.swift; sourceTree = "<group>"; };
-		7EF4FA192B14D009007AF025 /* HomologConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = HomologConfig.xcconfig; sourceTree = "<group>"; };
 		FF04AC922AB8BCFF00516135 /* StrokeText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
 		FF04AC932AB8BCFF00516135 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		FF3A15E92AB9C97A00E31DCA /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
@@ -272,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00C0CA262AE7F27C009F74BB /* Mixpanel in Frameworks */,
+				006671BB2B1DF6F400D4E9DC /* ClioDomain in Frameworks */,
 				7E8612382AD02502008F2FAA /* ClioEntities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -834,6 +835,7 @@
 			packageProductDependencies = (
 				7E8612372AD02502008F2FAA /* ClioEntities */,
 				00C0CA252AE7F27C009F74BB /* Mixpanel */,
+				006671BA2B1DF6F400D4E9DC /* ClioDomain */,
 			);
 			productName = "clio-app";
 			productReference = 7E7667302AC47045009064C8 /* Clio.app */;
@@ -889,6 +891,7 @@
 			packageReferences = (
 				7E8612362AD02502008F2FAA /* XCRemoteSwiftPackageReference "clio-entities" */,
 				00C0CA242AE7F27C009F74BB /* XCRemoteSwiftPackageReference "mixpanel-swift" */,
+				006671B92B1DF6F400D4E9DC /* XCLocalSwiftPackageReference "../clio-domain" */,
 			);
 			productRefGroup = 00BFF8ED2AB4914B0068A5F2;
 			projectDirPath = "";
@@ -1198,7 +1201,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = NTS86MKTBV;
+				DEVELOPMENT_TEAM = 685GVH2XJC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
@@ -1236,7 +1239,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"clio-app/Preview Content\"";
-				DEVELOPMENT_TEAM = NTS86MKTBV;
+				DEVELOPMENT_TEAM = 685GVH2XJC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "clio-app/Info.plist";
@@ -1345,6 +1348,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		006671B92B1DF6F400D4E9DC /* XCLocalSwiftPackageReference "../clio-domain" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../clio-domain";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		00C0CA242AE7F27C009F74BB /* XCRemoteSwiftPackageReference "mixpanel-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -1365,6 +1375,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		006671BA2B1DF6F400D4E9DC /* ClioDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ClioDomain;
+		};
 		00C0CA252AE7F27C009F74BB /* Mixpanel */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 00C0CA242AE7F27C009F74BB /* XCRemoteSwiftPackageReference "mixpanel-swift" */;

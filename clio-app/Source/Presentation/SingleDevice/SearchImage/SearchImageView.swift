@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import ClioDomain
 
 struct SearchImageView: View {
     @EnvironmentObject var session: GameSession

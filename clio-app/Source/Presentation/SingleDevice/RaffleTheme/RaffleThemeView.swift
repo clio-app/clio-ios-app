@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ClioEntities
+import ClioDomain
 
 struct RaffleThemeView: View {
     @EnvironmentObject var gameSession: GameSession

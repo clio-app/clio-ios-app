@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Mixpanel
+import ClioDomain
 
 struct PlayersView: View {
     @EnvironmentObject var session: GameSession

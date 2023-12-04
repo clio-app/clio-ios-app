@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ClioDomain
 
 struct SelectPlayerView: View {
     @StateObject var vm: SelectPlayerViewModel = SelectPlayerViewModel()

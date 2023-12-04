@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ClioEntities
+import ClioDomain
 
 struct AllResultsView: View {
     @EnvironmentObject var gameSession: GameSession
@@ -152,9 +153,9 @@ struct AllResultsView: View {
             name: user2.name,
             picture: user2.picture,
             artefacts: SessionArtefacts(
+                masterId: user2.id,
                 picture: UIImage(named: "liquid-bg")!.pngData()!,
-                description: nil,
-                masterId: user2.id
+                description: nil
             )
         )
     )
@@ -165,9 +166,9 @@ struct AllResultsView: View {
             name: user1.name,
             picture: user1.picture,
             artefacts: SessionArtefacts(
+                masterId: user1.id,
                 picture: UIImage(named: "AppIcon")!.pngData()!,
-                description: "Funny description dvjsdfbvajkvadkjvbadjhbvadf kaidbvkjhad f majhsvdchabd v mdjbadf v jadcjhbad kjbsdjvbsdjhvs SkdjbvhJSd SDjbvJHSDv kbsdhjvbzdjhv",
-                masterId: user1.id
+                description: "Funny description dvjsdfbvajkvadkjvbadjhbvadf kaidbvkjhad f majhsvdchabd v mdjbadf v jadcjhbad kjbsdjvbsdjhvs SkdjbvhJSd SDjbvJHSDv kbsdhjvbzdjhv"
             )
         )
     )
@@ -178,9 +179,9 @@ struct AllResultsView: View {
             name: user3.name,
             picture: user3.picture,
             artefacts: SessionArtefacts(
+                masterId: user1.id,
                 picture: nil,
-                description: "Funny description",
-                masterId: user1.id
+                description: "Funny description"
             )
         )
     )

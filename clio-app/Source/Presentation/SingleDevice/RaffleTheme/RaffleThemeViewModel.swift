@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import ClioDomain
 
 final class RaffleThemeViewModel: ObservableObject {
     @Published var selectedTheme: String = ""

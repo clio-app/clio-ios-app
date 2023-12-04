@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Mixpanel
+import ClioDomain
 
 struct StartView: View {
     @StateObject private var gameSession = GameSession()    // state for reference

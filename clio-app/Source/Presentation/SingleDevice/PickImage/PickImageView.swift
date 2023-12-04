@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ClioDomain
 
 struct PickImageView: View {
     @EnvironmentObject var router: Router

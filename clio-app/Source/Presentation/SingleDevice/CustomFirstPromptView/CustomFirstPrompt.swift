@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ClioDomain
 
 struct CustomFirstPrompt: View {
     @EnvironmentObject var session: GameSession

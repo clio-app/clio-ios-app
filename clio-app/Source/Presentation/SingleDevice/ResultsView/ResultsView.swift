@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ClioDomain
 
 struct ResultsView: View {
     @EnvironmentObject var gameSession: GameSession
