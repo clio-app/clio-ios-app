@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0021EB962B1DFBE700FD2513 /* ClioDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 0021EB952B1DFBE700FD2513 /* ClioDomain */; };
 		002977C02B04601E005C59AC /* RoundedBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002977BF2B04601E005C59AC /* RoundedBorder.swift */; };
 		002977C22B04608B005C59AC /* PickImageViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002977C12B04608B005C59AC /* PickImageViewLayout.swift */; };
 		002977C42B0461E4005C59AC /* SelectedCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002977C32B0461E4005C59AC /* SelectedCircle.swift */; };
@@ -270,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00C0CA262AE7F27C009F74BB /* Mixpanel in Frameworks */,
+				0021EB962B1DFBE700FD2513 /* ClioDomain in Frameworks */,
 				006671BB2B1DF6F400D4E9DC /* ClioDomain in Frameworks */,
 				7E8612382AD02502008F2FAA /* ClioEntities in Frameworks */,
 			);
@@ -817,6 +819,7 @@
 				7E8612372AD02502008F2FAA /* ClioEntities */,
 				00C0CA252AE7F27C009F74BB /* Mixpanel */,
 				006671BA2B1DF6F400D4E9DC /* ClioDomain */,
+				0021EB952B1DFBE700FD2513 /* ClioDomain */,
 			);
 			productName = "clio-app";
 			productReference = 7E7667302AC47045009064C8 /* Clio.app */;
@@ -872,7 +875,7 @@
 			packageReferences = (
 				7E8612362AD02502008F2FAA /* XCRemoteSwiftPackageReference "clio-entities" */,
 				00C0CA242AE7F27C009F74BB /* XCRemoteSwiftPackageReference "mixpanel-swift" */,
-				006671B92B1DF6F400D4E9DC /* XCLocalSwiftPackageReference "../clio-domain" */,
+				0021EB942B1DFBE700FD2513 /* XCRemoteSwiftPackageReference "clio-domain" */,
 			);
 			productRefGroup = 00BFF8ED2AB4914B0068A5F2;
 			projectDirPath = "";
@@ -1328,14 +1331,15 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		006671B92B1DF6F400D4E9DC /* XCLocalSwiftPackageReference "../clio-domain" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../clio-domain";
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
+		0021EB942B1DFBE700FD2513 /* XCRemoteSwiftPackageReference "clio-domain" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/clio-app/clio-domain";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		00C0CA242AE7F27C009F74BB /* XCRemoteSwiftPackageReference "mixpanel-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mixpanel/mixpanel-swift";
@@ -1355,6 +1359,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0021EB952B1DFBE700FD2513 /* ClioDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0021EB942B1DFBE700FD2513 /* XCRemoteSwiftPackageReference "clio-domain" */;
+			productName = ClioDomain;
+		};
 		006671BA2B1DF6F400D4E9DC /* ClioDomain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ClioDomain;

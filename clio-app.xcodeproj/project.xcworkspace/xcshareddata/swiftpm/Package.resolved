@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "clio-domain",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/clio-app/clio-domain",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ded7a398e8bd1f29571f6bfd0b3bc9dce994c2af"
+      }
+    },
+    {
       "identity" : "clio-entities",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/clio-app/clio-entities.git",
