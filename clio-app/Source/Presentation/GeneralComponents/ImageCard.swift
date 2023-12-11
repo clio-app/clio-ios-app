@@ -24,7 +24,8 @@ struct ImageCard: View {
                         .scaledToFill()
                         .frame(
                             width: geo.size.width-2,
-                            height: geo.size.width-2
+                            height: geo.size.width-2,
+                            alignment: .top
                         )
                         .clipShape(
                             RoundedRectangle(cornerRadius: 20, style: .continuous)

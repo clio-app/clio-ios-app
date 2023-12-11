@@ -58,6 +58,27 @@ final class GameSession: ObservableObject {
     func hasReachedPlayerLimit() -> Bool {
         return gameFlowParameters.players.count > 4
     }
+    
+    func getDidPlayPlayerBy(index: Int) -> (String, String) {
+        if index < gameFlowParameters.didPlay.count {
+            return ( gameFlowParameters.didPlay[index].name, gameFlowParameters.didPlay[index].picture )
+        }
+        return ( "", "")
+    }
+    
+    func getArtifactDescriptionBy(index : Int) -> String? {
+        if index < gameFlowParameters.didPlay.count {
+            return gameFlowParameters.didPlay[index].artefact?.description
+        }
+        return nil
+    }
+    
+    func getArtifactImageDataBy(index: Int) -> Data? {
+        if index < gameFlowParameters.didPlay.count {
+            return gameFlowParameters.didPlay[index].artefact?.picture
+        }
+        return nil
+    }
 
     // MARK: - Raffle Theme Functions
     func randomizeThemes() {

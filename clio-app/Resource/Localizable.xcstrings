@@ -124,6 +124,7 @@
       }
     },
     "A frase era..." : {
+      "comment" : "The phrase was",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -1186,6 +1187,7 @@
       }
     },
     "Search Images Empty State Sentence" : {
+      "comment" : "Empty state",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
